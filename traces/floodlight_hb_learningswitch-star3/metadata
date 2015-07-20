@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_hb_learningswitch.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310128   11491080    4819048     228916     735924    3057428\n-/+ buffers/cache:    7697728    8612400\nSwap:     16650236          0   16650236",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "20:50:57 up 13:02,  4 users,  load average: 0.11, 0.30, 0.38"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "e83ebd1b704d507d1bbd99c9ea08d41dd363e454",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "e59e7f0244a133038ada16ab262df98e7a8fe049",
+      "diff": "diff --git a/config/fuzzer_params.py b/config/fuzzer_params.py\nindex e4eed14..b0e4dd3 100644\n--- a/config/fuzzer_params.py\n+++ b/config/fuzzer_params.py\n@@ -10,7 +10,7 @@ ofp_flow_mod_failure_rate = 0.0\n link_failure_rate = 0.0\n link_recovery_rate = 1.0\n controller_crash_rate = 0.0\n-controller_recovery_rate = 0.0\n+controller_recovery_rate = 1.0\n traffic_generation_rate = 0.0\n host_migration_rate = 0.0\n intracontroller_block_rate = 0.0",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/fuzzer_params.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tconfig/floodlight_hb_default_replay.py\n\tconfig/trace_floodlight_hb_circuitpusher.py\n\tconfig/trace_floodlight_hb_learningswitch.py\n\ttraces/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.2 LTS",
+    "uname": "Linux espresso 3.13.0-58-generic #97-Ubuntu SMP Wed Jul 8 02:56:15 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_07_14_20_50_57",
+  "user": "jeremie"
+}

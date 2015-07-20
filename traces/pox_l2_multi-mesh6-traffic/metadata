@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_pox_l2_multi.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310128   12728724    3581404     235724     749528    3803968\n-/+ buffers/cache:    8175228    8134900\nSwap:     16650236          0   16650236",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "23:47:00 up 15:58,  3 users,  load average: 1.04, 0.63, 0.54"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "e83ebd1b704d507d1bbd99c9ea08d41dd363e454",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "61d3d0170fa2697c1ae2bebb9b35d14f7111e3e7",
+      "diff": "diff --git a/config/fuzzer_params.py b/config/fuzzer_params.py\nindex b0e4dd3..fd415bd 100644\n--- a/config/fuzzer_params.py\n+++ b/config/fuzzer_params.py\n@@ -11,7 +11,7 @@ link_failure_rate = 0.0\n link_recovery_rate = 1.0\n controller_crash_rate = 0.0\n controller_recovery_rate = 1.0\n-traffic_generation_rate = 0.0\n+traffic_generation_rate = 0.1\n host_migration_rate = 0.0\n intracontroller_block_rate = 0.0\n intracontroller_unblock_rate = 0.0\ndiff --git a/config/trace_pox_l2_multi.py b/config/trace_pox_l2_multi.py\nindex 074533a..4cf3ca3 100644\n--- a/config/trace_pox_l2_multi.py\n+++ b/config/trace_pox_l2_multi.py\n@@ -23,7 +23,7 @@ topology_class = MeshTopology\n topology_params = \"num_switches=6\"\n \n # Where should the output files be written to\n-results_dir = \"traces/pox_l2_multi-mesh6\"\n+results_dir = \"traces/pox_l2_multi-mesh6-traffic\"\n \n apps = None",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/fuzzer_params.py\n\tmodified:   config/trace_pox_l2_multi.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\ttraces/pox_l2_multi-mesh6-traffic/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.2 LTS",
+    "uname": "Linux espresso 3.13.0-58-generic #97-Ubuntu SMP Wed Jul 8 02:56:15 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_07_14_23_47_00",
+  "user": "jeremie"
+}
