@@ -1,0 +1,214 @@
+Using file hb.json
+Read in 461 events.
+Total write operations: 19
+Total read operations: 45
+Processing 171 w/w combinations
+10% 
+20% 
+30% 
+40% 
+50% 
+60% 
+70% 
+80% 
+90% 
+100% 
+Processing 855 r/w combinations
+10% 
+20% 
+30% 
+40% 
+50% 
+60% 
+70% 
+80% 
+90% 
+100% 
++-------------------------------------------+
+| Commuting (w/w):     1325 <---> 1331      |
++-------------------------------------------+
+| op # 1325                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=3)] buffer_id=-1
++-------------------------------------------+
+| op # 1331                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 3
+  dl_src: 12:34:56:78:0b:03
+  dl_dst: 12:34:56:78:0b:02
+  dl_vlan: 65535, actions=[ofp_action_output(port=2)] buffer_id=-1
++-------------------------------------------+
++-------------------------------------------+
+| Commuting (w/w):     1503 <---> 1509      |
++-------------------------------------------+
+| op # 1503                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 1
+  dl_src: 12:34:56:78:0b:03
+  dl_dst: 12:34:56:78:0a:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=3)] buffer_id=-1
++-------------------------------------------+
+| op # 1509                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 3
+  dl_src: 12:34:56:78:0a:03
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=1)] buffer_id=-1
++-------------------------------------------+
++-------------------------------------------+
+| Commuting (r/w):     1569 <---> 1331      |
++-------------------------------------------+
+| op # 1569                                 |
++-------------------------------------------+
+| Read rule: priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=3)] buffer_id=-1
+| For packet: ofp_match
+  wildcards:  (0 = 0x0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535
+  dl_vlan_pcp: 0
+  dl_type: 0x800
+  nw_tos: 0
+  nw_proto: 1
+  nw_src: 123.123.11.2
+  nw_dst: 123.123.11.3
+  tp_src: 0
+  tp_dst: 0
++-------------------------------------------+
+| op # 1331                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 3
+  dl_src: 12:34:56:78:0b:03
+  dl_dst: 12:34:56:78:0b:02
+  dl_vlan: 65535, actions=[ofp_action_output(port=2)] buffer_id=-1
++-------------------------------------------+
++-------------------------------------------+
+| Harmful   (r/w):     1569 >-!-< 1325      |
++-------------------------------------------+
+| op # 1569                                 |
++-------------------------------------------+
+| Read rule: priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=3)] buffer_id=-1
+| For packet: ofp_match
+  wildcards:  (0 = 0x0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535
+  dl_vlan_pcp: 0
+  dl_type: 0x800
+  nw_tos: 0
+  nw_proto: 1
+  nw_src: 123.123.11.2
+  nw_dst: 123.123.11.3
+  tp_src: 0
+  tp_dst: 0
++-------------------------------------------+
+| op # 1325                                 |
++-------------------------------------------+
+| Write: OFPFC_ADD => priority=100, cookie=10000000000000, idle_timeoout=5, hard_timeout=0, match=ofp_match
+  wildcards: nw_tos|tp_dst|dl_vlan_pcp|nw_proto|tp_src|dl_type|nw_src(/0)|nw_dst(/0) (1110000010000011110000 = 0x3820f0)
+  in_port: 2
+  dl_src: 12:34:56:78:0b:02
+  dl_dst: 12:34:56:78:0b:03
+  dl_vlan: 65535, actions=[ofp_action_output(port=3)] buffer_id=-1
++-------------------------------------------+
++-------------------------------------------+
+|  887: HbPacketHandle               (read) |
+|  896: HbPacketHandle               (read) |
+|  905: HbPacketHandle               (read) |
+|  914: HbPacketHandle               (read) |
+|  923: HbPacketHandle               (read) |
+|  932: HbPacketHandle               (read) |
+|  941: HbPacketHandle               (read) |
+|  950: HbPacketHandle               (read) |
+|  959: HbPacketHandle               (read) |
+|  968: HbPacketHandle               (read) |
+|  977: HbPacketHandle               (read) |
+|  986: HbPacketHandle               (read) |
+|  995: HbPacketHandle               (read) |
+| 1004: HbPacketHandle               (read) |
+| 1013: HbPacketHandle               (read) |
+| 1022: HbPacketHandle               (read) |
+| 1048: HbPacketHandle               (read) |
+| 1060: HbPacketHandle               (read) |
+| 1085: HbPacketHandle               (read) |
+| 1114: HbPacketHandle               (read) |
+| 1122: HbPacketHandle               (read) |
+| 1130: HbPacketHandle               (read) |
+| 1139: HbPacketHandle               (read) |
+| 1148: HbPacketHandle               (read) |
+| 1157: HbPacketHandle               (read) |
+| 1166: HbPacketHandle               (read) |
+| 1208: HbPacketHandle               (read) |
+| 1217: HbPacketHandle               (read) |
+| 1226: HbPacketHandle               (read) |
+| 1235: HbPacketHandle               (read) |
+| 1244: HbPacketHandle               (read) |
+| 1364: HbPacketHandle               (read) |
+| 1374: HbPacketHandle               (read) |
+| 1382: HbPacketHandle               (read) |
+| 1391: HbPacketHandle               (read) |
+| 1399: HbPacketHandle               (read) |
+| 1408: HbPacketHandle               (read) |
+| 1419: HbPacketHandle               (read) |
+| 1428: HbPacketHandle               (read) |
+| 1438: HbPacketHandle               (read) |
+| 1448: HbPacketHandle               (read) |
+| 1551: HbPacketHandle               (read) |
+| 1560: HbPacketHandle               (read) |
+| 1569: HbPacketHandle               (read) |
+| 1579: HbPacketHandle               (read) |
+|  667: HbMessageHandle             (write) |
+|  686: HbMessageHandle             (write) |
+|  741: HbMessageHandle             (write) |
+|  750: HbMessageHandle             (write) |
+|  759: HbMessageHandle             (write) |
+|  768: HbMessageHandle             (write) |
+|  777: HbMessageHandle             (write) |
+|  786: HbMessageHandle             (write) |
+|  795: HbMessageHandle             (write) |
+|  804: HbMessageHandle             (write) |
+|  813: HbMessageHandle             (write) |
+|  822: HbMessageHandle             (write) |
+|  831: HbMessageHandle             (write) |
+|  840: HbMessageHandle             (write) |
+|  849: HbMessageHandle             (write) |
+| 1325: HbMessageHandle             (write) |
+| 1331: HbMessageHandle             (write) |
+| 1503: HbMessageHandle             (write) |
+| 1509: HbMessageHandle             (write) |
+| Total operations:      64                 |
+|-------------------------------------------|
+| Total commuting races: 3                  |
+| Total harmful races:   1                  |
+| Total filtered races:  55                 |
++-------------------------------------------+
+Done. Time elapsed: 0.325460910797s
+load_trace: 0.306073904037s
+detect_races: 0.0148279666901s
+print_races: 0.00019097328186s
+store_graph: 0.00436806678772s

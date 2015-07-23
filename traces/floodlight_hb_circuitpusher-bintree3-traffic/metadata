@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_hb_circuitpusher.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310128   12165724    4144404     145360      45584    5879900\n-/+ buffers/cache:    6240240   10069888\nSwap:     16650236       2404   16647832",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "17:59:30 up  8:06,  3 users,  load average: 0.73, 0.52, 0.43"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "e83ebd1b704d507d1bbd99c9ea08d41dd363e454",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "54aedec1575872ee958e595015b20bddb3f0ca48",
+      "diff": "diff --git a/config/trace_floodlight_hb_circuitpusher.py b/config/trace_floodlight_hb_circuitpusher.py\nindex 5f7c4da..08c06f4 100644\n--- a/config/trace_floodlight_hb_circuitpusher.py\n+++ b/config/trace_floodlight_hb_circuitpusher.py\n@@ -59,6 +59,7 @@ control_flow = Fuzzer(simulation_config,\n                       send_all_to_all=False,\n                       check_interval=1,\n                       delay=0.1,\n+                      steps=100,\n                       halt_on_violation=True,\n #                       invariant_check_name=\"check_everything\",\n                       invariant_check_name=\"InvariantChecker.check_liveness\",",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_hb_circuitpusher.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.2 LTS",
+    "uname": "Linux espresso 3.13.0-58-generic #97-Ubuntu SMP Wed Jul 8 02:56:15 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_07_23_17_59_30",
+  "user": "jeremie"
+}
