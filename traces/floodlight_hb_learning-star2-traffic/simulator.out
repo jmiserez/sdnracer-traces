@@ -1,0 +1,288 @@
+WARNING:setup:No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+INFO:Controller: =====> Starting Controller <===== 
+INFO:Controller:Launching controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/hb_learningswitch.properties
+INFO:simulation:Launched controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/hb_learningswitch.properties [PID 6078]
+INFO:simulation:Creating topology...
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+Error connecting.  -- [Errno 111] Connection refused. Backing off 2 seconds ...
+[c1] 18:13:32.392 INFO [n.f.c.m.FloodlightModuleLoader:main] Loading default modules
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 4 seconds ...
+[c1] 18:13:35.481 INFO [n.f.c.i.Controller:main] Controller role set to MASTER
+
+[c1] 18:13:35.536 INFO [n.f.c.i.Controller:main] Flush switches on reconnect -- Disabled
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 8 seconds ...
+[c1] 18:13:40.996 INFO [n.f.l.i.LinkDiscoveryManager:main] Setting autoportfast feature to OFF
+
+[c1] 18:13:43.242 INFO [o.s.s.i.c.FallbackCCProvider:main] Cluster not yet configured; using fallback local configuration
+
+[c1] 18:13:43.244 INFO [o.s.s.i.SyncManager:main] [32767] Updating sync configuration ClusterConfig [allNodes={32767=Node [hostname=localhost, port=6642, nodeId=32767, domainId=32767]}, authScheme=CHALLENGE_RESPONSE, keyStorePath=/etc/floodlight/auth_credentials.jceks, keyStorePassword is unset]
+
+[c1] 18:13:43.984 INFO [o.s.s.i.r.RPCService:main] Listening for internal floodlight RPC on localhost/127.0.0.1:6642
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 16 seconds ...
+[c1] 18:13:46.645 INFO [n.f.c.i.Controller:main] Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+
+[c1] 18:13:59.841 INFO [n.f.j.JythonServer:debugserver-main] Starting DebugServer on :6655
+
+INFO:control_flow:Waiting until first OpenFlow message received..
+[c1] 18:14:00.600 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] New switch connection from /127.0.0.1:49629
+
+Controller log: 0 log lines, 1 STS events not matched.
+YYYY Sw recv hello SoftSwitch(1) 4294967295
+YYYY Switch send hello SoftSwitch(1) 4294967295 4294967295
+Controller log: 0 log lines, 2 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 3 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 4 completed.
+Round 5 completed.
+[c1] 18:14:01.150 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:49629 DPID[00:00:00:00:00:00:00:01]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 1
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 6 completed.
+[c1] 18:14:01.252 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] Clearing all flows on switch OFSwitchBase [/127.0.0.1:49629 DPID[00:00:00:00:00:00:00:01]]
+
+[c1] 18:14:01.298 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:01 connected.
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 7 completed.
+Round 8 completed.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 2 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [00:00:00:00:01:01>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:01><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f98628c61d0><pox.lib.packet.lldp.unknown_tlv object at 0x7f98628c6190><pox.lib.packet.lldp.unknown_tlv object at 0x7f98628c6250><tlv end> on interface eth1
+Round 9 completed.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 2 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f98628d9250><pox.lib.packet.lldp.unknown_tlv object at 0x7f98628d9210><pox.lib.packet.lldp.unknown_tlv object at 0x7f98628d92d0><tlv end> on interface eth1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [00:00:00:00:01:01>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Round 10 completed.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f33[123.123.1.1>123.123.1.1]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f30[123.123.1.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 15 completed.
+Round 16 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Round 17 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 18 completed.
+Round 19 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 20 completed.
+Round 21 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Round 22 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 23 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Round 24 completed.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+INFO:control_flow:Done initializing
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 25 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 26 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 27 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2b[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 28 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 29 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2c[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2b[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 30 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2a[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 31 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 32 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f2a[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 33 completed.
+No correctness violations!
+Round 34 completed.
+No correctness violations!
+Round 35 completed.
+No correctness violations!
+Round 36 completed.
+No correctness violations!
+Round 37 completed.
+No correctness violations!
+Round 38 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f29[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 39 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 40 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f29[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 41 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f28[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 42 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 43 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:6f28[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 44 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 45 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:6f27[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 46 completed.
+No correctness violations!
+Round 47 completed.
+No correctness violations!
+Round 48 completed.
+No correctness violations!
+Round 49 completed.
+No correctness violations!
+Round 50 completed.
+INFO:control_flow:Terminating fuzzing after 50 rounds
+INFO:control_flow:Pending Receives:
+INFO:control_flow:Pending Sends:
+Killing controller c1 (pid 6078)
+Terminating child controllers... OK

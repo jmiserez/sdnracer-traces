@@ -1,0 +1,42 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-c",
+    "config/trace_floodlight_hb_learningswitch.py"
+  ],
+  "cwd": "/home/ahassany/repos/jsts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:       4045268     301768    3743500       5672      23580     186048\n-/+ buffers/cache:      92140    3953128\nSwap:      4192252          0    4192252",
+    "name": "stsdev",
+    "num_cores": "2",
+    "uptime": "18:13:02 up  5:48,  1 user,  load average: 0.59, 0.30, 0.19"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "HEAD",
+      "commit": "e83ebd1b704d507d1bbd99c9ea08d41dd363e454",
+      "diff": "diff --git a/pox/openflow/software_switch.py b/pox/openflow/software_switch.py\nindex 1bc26fd..1d14a78 100644\n--- a/pox/openflow/software_switch.py\n+++ b/pox/openflow/software_switch.py\n@@ -166,7 +166,8 @@ class SoftwareSwitch(EventMixin):\n     # NOTE(jm): -> There is no need to prevent infinite loops as the idea is to send a\n     #              a Hello message once at startup, not to reply to received messages.\n     # TODO(jm): Send message only once at startup\n-    self.send_hello()\n+    print \"YYYY Sw recv hello\", self.name, ofp.xid\n+    self.send_hello(ofp.xid)\n \n   def _receive_echo(self, ofp):\n     \"\"\"Reply to echo request\n@@ -309,11 +310,12 @@ class SoftwareSwitch(EventMixin):\n   # ==================================== #\n   #    Proactive OFP processing          #\n   # ==================================== #\n-  def send_hello(self):\n+  def send_hello(self, xid=None):\n     \"\"\"Send hello\n     \"\"\"\n     self.log.debug(\"Send hello %s \", self.name)\n-    msg = ofp_hello()\n+    msg = ofp_hello(xid=xid)\n+    print \"YYYY Switch send hello\", self.name, xid, msg.xid\n     self.send(msg)\n \n   def send_packet_in(self, in_port, buffer_id=None, packet=\"\", xid=None, reason=None):",
+      "status": "HEAD detached at e83ebd1\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   pox/openflow/software_switch.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "54aedec1575872ee958e595015b20bddb3f0ca48",
+      "diff": "diff --git a/config/trace_floodlight_hb_circuitpusher.py b/config/trace_floodlight_hb_circuitpusher.py\nindex 5f7c4da..7e57289 100644\n--- a/config/trace_floodlight_hb_circuitpusher.py\n+++ b/config/trace_floodlight_hb_circuitpusher.py\n@@ -17,21 +17,22 @@ start_cmd = ('''java -ea -Dlogback.configurationFile=./src/main/resources/logbac\n # Uncomment this if you are running Floodlight separately, e.g. for debugging in Eclipse. There must be a controller listening on port 6633.\n # start_cmd = '''echo \"no-op\"'''\n \n-controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633)]\n+controllers = [ControllerConfig(start_cmd, cwd='../jfloodlight', address=\"127.0.0.1\", port=6633)]\n \n-# topology_class = StarTopology\n-# topology_params = \"num_hosts=3\"\n-# topology_class = MeshTopology\n-# topology_params = \"num_switches=8\"\n-topology_class = BinaryLeafTreeTopology\n-topology_params = \"num_levels=3\"\n+#topology_class = StarTopology\n+#topology_params = \"num_hosts=3\"\n+topology_class = MeshTopology\n+topology_params = \"num_switches=2\"\n+#topology_class = BinaryLeafTreeTopology\n+#topology_params = \"num_levels=3\"\n # topology_class = GridTopology\n # topology_params = \"num_rows=3, num_columns=3\"\n \n # Where should the output files be written to\n-results_dir = \"traces/floodlight_hb_circuitpusher-bintree3-traffic\"\n+#results_dir = \"traces/floodlight_hb_circuitpusher-bintree3-traffic\"\n+results_dir = \"traces/test\"\n \n-apps = [AppCircuitPusher('circuitpusher', cwd='../floodlight/apps/circuitpusher', runtime='python', script='circuitpusher.py', controller='localhost:8080')]\n+apps = [AppCircuitPusher('circuitpusher', cwd='../jfloodlight/apps/circuitpusher', runtime='python', script='circuitpusher.py', controller='localhost:8080')]\n \n # include all defaults\n simulation_config = SimulationConfig(controller_configs=controllers,\ndiff --git a/config/trace_floodlight_hb_learningswitch.py b/config/trace_floodlight_hb_learningswitch.py\nindex 67015c3..fcf75ff 100644\n--- a/config/trace_floodlight_hb_learningswitch.py\n+++ b/config/trace_floodlight_hb_learningswitch.py\n@@ -17,15 +17,18 @@ start_cmd = ('''java -ea -Dlogback.configurationFile=./src/main/resources/logbac\n # Uncomment this if you are running Floodlight separately, e.g. for debugging in Eclipse. There must be a controller listening on port 6633.\n # start_cmd = '''echo \"no-op\"'''\n \n-controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633)]\n+controllers = [ControllerConfig(start_cmd, cwd='../jfloodlight', address=\"127.0.0.1\", port=6633)]\n \n \n \n topology_class = StarTopology\n-topology_params = \"num_hosts=3\"\n+topology_params = \"num_hosts=2\"\n+#topology_class = MeshTopology\n+#topology_params = \"num_switches=2\"\n \n # Where should the output files be written to\n-results_dir = \"traces/floodlight_hb_learningswitch-star3\"\n+#results_dir = \"traces/floodlight_hb_learningswitch-star3\"\n+results_dir = \"traces/test4\"\n \n #apps = [AppCircuitPusher('circuitpusher', cwd='../floodlight/apps/circuitpusher', runtime='python', script='circuitpusher.py', controller='localhost:8080')]\n apps = None\n@@ -55,6 +58,7 @@ control_flow = Fuzzer(simulation_config,\n                       initialization_rounds=10,\n                       send_all_to_all=True,\n                       check_interval=1,\n+                      steps=50,\n                       delay=0.1,\n                       halt_on_violation=True,\n #                       invariant_check_name=\"check_everything\",\ndiff --git a/pox b/pox\n--- a/pox\n+++ b/pox\n@@ -1 +1 @@\n-Subproject commit e83ebd1b704d507d1bbd99c9ea08d41dd363e454\n+Subproject commit e83ebd1b704d507d1bbd99c9ea08d41dd363e454-dirty\ndiff --git a/sts/traffic_generator.py b/sts/traffic_generator.py\nindex 7a11168..eb3b9b7 100644\n--- a/sts/traffic_generator.py\n+++ b/sts/traffic_generator.py\n@@ -155,7 +155,7 @@ class TrafficGenerator (object):\n     '''\n     if host is None:\n       if len(hosts) == 0:\n-        raise RuntimeError(\"No host to choose from!\")\n+        raise RuntimeError(\"No host to choose from! len %d and host is %s\" % (len(hosts), host))\n       host = self.random.choice(hosts)\n     if host in self.topology.hid2host.keys():\n       host = self.topology.hid2host[host]",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n  (commit or discard the untracked or modified content in submodules)\n\n\tmodified:   config/trace_floodlight_hb_circuitpusher.py\n\tmodified:   config/trace_floodlight_hb_learningswitch.py\n\tmodified:   pox (modified content)\n\tmodified:   sts/traffic_generator.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tgen.sh\n\tgen.sh~\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 15.04",
+    "uname": "Linux stsdev 3.19.0-15-generic #15-Ubuntu SMP Thu Apr 16 23:32:37 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_07_23_18_13_02",
+  "user": "ahassany"
+}
