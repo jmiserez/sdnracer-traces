@@ -1,0 +1,63 @@
+strict digraph G {
+427 [shape=oval, event=<HbPacketSend, eid: 427>, label="ID 427 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+420 [shape=box, style=bold, event=<HbMessageHandle, eid: 420>, label="ID 420 
+ HbMessageHandle
+Op: FlowTableWrite
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+421 [shape=oval, event=<HbControllerHandle, eid: 421>, label="ID 421 
+ HbControllerHandle"];
+422 [shape=oval, event=<HbControllerSend, eid: 422>, label="ID 422 
+ HbControllerSend"];
+391 [shape=oval, event=<HbHostSend, eid: 391>, label="ID 391 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+395 [shape=box, event=<HbPacketHandle, eid: 395>, label="ID 395 
+ HbPacketHandle
+Op: FlowTableRead
+DPID: 1
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+431 [shape=oval, event=<HbHostHandle, eid: 431>, label="ID 431 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+400 [shape=oval, event=<HbMessageSend, eid: 400>, label="ID 400 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+427 -> 431  [rel=pid, label=pid];
+420 -> 427  [rel=pid, label=pid];
+421 -> 422  [rel=mid, label=mid];
+422 -> 420  [rel=mid, label=mid];
+391 -> 395  [rel=pid, label=pid];
+395 -> 400  [rel=mid, label=mid];
+400 -> 421  [rel=mid, label=mid];
+}

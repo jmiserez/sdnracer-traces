@@ -1,0 +1,63 @@
+strict digraph G {
+384 [shape=oval, event=<HbPacketSend, eid: 384>, label="ID 384 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+388 [shape=oval, event=<HbHostHandle, eid: 388>, label="ID 388 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+364 [shape=oval, event=<HbHostSend, eid: 364>, label="ID 364 
+ HbHostSend
+HID: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+367 [shape=box, event=<HbPacketHandle, eid: 367>, label="ID 367 
+ HbPacketHandle
+Op: FlowTableRead
+DPID: 1
+InPort: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+372 [shape=oval, event=<HbMessageSend, eid: 372>, label="ID 372 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+377 [shape=box, style=bold, event=<HbMessageHandle, eid: 377>, label="ID 377 
+ HbMessageHandle
+Op: FlowTableWrite
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+378 [shape=oval, event=<HbControllerHandle, eid: 378>, label="ID 378 
+ HbControllerHandle"];
+379 [shape=oval, event=<HbControllerSend, eid: 379>, label="ID 379 
+ HbControllerSend"];
+384 -> 388  [rel=pid, label=pid];
+364 -> 367  [rel=pid, label=pid];
+367 -> 372  [rel=mid, label=mid];
+372 -> 378  [rel=mid, label=mid];
+377 -> 384  [rel=pid, label=pid];
+378 -> 379  [rel=mid, label=mid];
+379 -> 377  [rel=mid, label=mid];
+}

@@ -1,0 +1,63 @@
+strict digraph G {
+257 [shape=box, event=<HbPacketHandle, eid: 257>, label="ID 257 
+ HbPacketHandle
+Op: FlowTableRead
+DPID: 1
+InPort: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+291 [shape=oval, event=<HbHostHandle, eid: 291>, label="ID 291 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+262 [shape=oval, event=<HbMessageSend, eid: 262>, label="ID 262 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+277 [shape=box, style=bold, event=<HbMessageHandle, eid: 277>, label="ID 277 
+ HbMessageHandle
+Op: FlowTableWrite
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+278 [shape=oval, event=<HbControllerHandle, eid: 278>, label="ID 278 
+ HbControllerHandle"];
+279 [shape=oval, event=<HbControllerSend, eid: 279>, label="ID 279 
+ HbControllerSend"];
+250 [shape=oval, event=<HbHostSend, eid: 250>, label="ID 250 
+ HbHostSend
+HID: 3
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+284 [shape=oval, event=<HbPacketSend, eid: 284>, label="ID 284 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:03>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.3>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+257 -> 262  [rel=mid, label=mid];
+262 -> 278  [rel=mid, label=mid];
+277 -> 284  [rel=pid, label=pid];
+278 -> 279  [rel=mid, label=mid];
+279 -> 277  [rel=mid, label=mid];
+250 -> 257  [rel=pid, label=pid];
+284 -> 291  [rel=pid, label=pid];
+}
