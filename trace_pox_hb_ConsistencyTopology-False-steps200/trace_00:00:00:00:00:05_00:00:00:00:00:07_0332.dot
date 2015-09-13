@@ -1,0 +1,78 @@
+strict digraph G {
+8736 [shape=oval, event=<hb_events.HbPacketSend object at 0x108a6abd0>, label="ID 8736 
+ HbPacketSend
+DPID: 6
+Out Port: 2
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8611 [shape=oval, event=<hb_events.HbPacketSend object at 0x1089f3c50>, label="ID 8611 
+ HbPacketSend
+DPID: 1
+Out Port: 5
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8516 [shape=oval, event=<hb_events.HbHostSend object at 0x1089abc50>, label="ID 8516 
+ HbHostSend
+HID: 4
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8847 [shape=oval, event=<hb_events.HbHostHandle object at 0x108ac9750>, label="ID 8847 
+ HbHostHandle
+HID: 6
+InPort: 00:00:00:00:00:07
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8708 [shape=oval, event=<hb_events.HbPacketSend object at 0x108a56350>, label="ID 8708 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8730 [shape=box, event=<hb_events.HbPacketHandle object at 0x108a63cd0>, label="ID 8730 
+ HbPacketHandle
+t: 1442168706.153196
+Op: FlowTableRead
+DPID: 6
+InPort: 3
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8605 [shape=box, event=<hb_events.HbPacketHandle object at 0x108a0f050>, label="ID 8605 
+ HbPacketHandle
+t: 1442168705.896321
+Op: FlowTableRead
+DPID: 1
+InPort: 4
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8702 [shape=box, event=<hb_events.HbPacketHandle object at 0x108a562d0>, label="ID 8702 
+ HbPacketHandle
+t: 1442168706.039074
+Op: FlowTableRead
+DPID: 2
+InPort: 1
+Pkt: ETH: [00:00:00:00:00:05>00:00:00:00:00:07:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.5>128.0.0.3])
+ICMP: {t:ECHO_REPLY c:0}{id:20585 seq:28263}"];
+8736 -> 8847  [rel=pid, label=pid];
+8611 -> 8702  [rel=pid, label=pid];
+8708 -> 8730  [rel=pid, label=pid];
+8516 -> 8605  [rel=pid, label=pid];
+8730 -> 8736  [rel=pid, label=pid];
+8605 -> 8611  [rel=pid, label=pid];
+8702 -> 8708  [rel=pid, label=pid];
+}

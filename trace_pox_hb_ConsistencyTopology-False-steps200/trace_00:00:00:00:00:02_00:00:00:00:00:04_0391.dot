@@ -1,0 +1,38 @@
+strict digraph G {
+10179 [shape=box, event=<hb_events.HbPacketHandle object at 0x108f41310>, label="ID 10179 
+ HbPacketHandle
+t: 1442168709.044174
+Op: FlowTableRead
+DPID: 1
+InPort: 1
+Pkt: ETH: [00:00:00:00:00:02>00:00:00:00:00:04:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.2>10.0.0.4])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+10213 [shape=oval, event=<hb_events.HbHostHandle object at 0x108f65cd0>, label="ID 10213 
+ HbHostHandle
+HID: 3
+InPort: 00:00:00:00:00:04
+Pkt: ETH: [00:00:00:00:00:02>00:00:00:00:00:04:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.2>10.0.0.4])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+10185 [shape=oval, event=<hb_events.HbPacketSend object at 0x108f41750>, label="ID 10185 
+ HbPacketSend
+DPID: 1
+Out Port: 3
+Pkt: ETH: [00:00:00:00:00:02>00:00:00:00:00:04:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.2>10.0.0.4])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+10139 [shape=oval, event=<hb_events.HbHostSend object at 0x108f26f10>, label="ID 10139 
+ HbHostSend
+HID: 1
+Pkt: ETH: [00:00:00:00:00:02>00:00:00:00:00:04:IP]
+
+IPv4([ttl:64]ICMP[10.0.0.2>10.0.0.4])
+ICMP: {t:ECHO_REQUEST c:0}{id:20585 seq:28263}"];
+10179 -> 10185  [rel=pid, label=pid];
+10185 -> 10213  [rel=pid, label=pid];
+10139 -> 10179  [rel=pid, label=pid];
+}

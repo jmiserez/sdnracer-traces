@@ -1,0 +1,42 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-c",
+    "config/trace_pox_l2_consistency.py"
+  ],
+  "cwd": "/home/ahassany/repos/jsts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:       4045244     545952    3499292       5664      35492     396108\n-/+ buffers/cache:     114352    3930892\nSwap:      4192252          0    4192252",
+    "name": "stsdev",
+    "num_cores": "2",
+    "uptime": "20:24:42 up 1 day, 14:40,  1 user,  load average: 0.05, 0.03, 0.05"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "75562c1df203b998be87e80b47cd1f6a06619521",
+      "diff": "diff --git a/pox/forwarding/l2_learning.py b/pox/forwarding/l2_learning.py\nindex e9d3855..2e52803 100644\n--- a/pox/forwarding/l2_learning.py\n+++ b/pox/forwarding/l2_learning.py\n@@ -165,6 +165,7 @@ class LearningSwitch (EventMixin):\n         msg.hard_timeout = 30\n         msg.actions.append(of.ofp_action_output(port = port))\n         msg.buffer_id = event.ofp.buffer_id # 6a\n+        self.connection.send(msg)\n \n class l2_learning (EventMixin):\n   \"\"\"",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   pox/forwarding/l2_learning.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "6cdfb5fb7bb6f1520e5b5a4e3d18ea0a5ed52263",
+      "diff": "diff --git a/config/fuzzer_params.py b/config/fuzzer_params.py\nindex 9c29ae3..aeabd0c 100644\n--- a/config/fuzzer_params.py\n+++ b/config/fuzzer_params.py\n@@ -11,7 +11,7 @@ link_failure_rate = 0.0\n link_recovery_rate = 1.0\n controller_crash_rate = 0.0\n controller_recovery_rate = 1.0\n-traffic_generation_rate = 0.1\n+traffic_generation_rate = 0.20\n host_migration_rate = 0.0\n intracontroller_block_rate = 0.0\n intracontroller_unblock_rate = 0.0\ndiff --git a/pox b/pox\nindex 1550032..75562c1 160000\n--- a/pox\n+++ b/pox\n@@ -1 +1 @@\n-Subproject commit 1550032d297926ca54e12f75e9fb5244d2d6cd34\n+Subproject commit 75562c1df203b998be87e80b47cd1f6a06619521-dirty\ndiff --git a/sts/happensbefore/hb_graph.py b/sts/happensbefore/hb_graph.py\nindex 530e2f4..07ffb0f 100755\n--- a/sts/happensbefore/hb_graph.py\n+++ b/sts/happensbefore/hb_graph.py\n@@ -716,6 +716,34 @@ class HappensBeforeGraph(object):\n             if other not in cmds:\n               print \"RACE version\", version, \" eid: \", cmd, \" other eid\", other\n \n+  def check_traces_equal(self, trace1, trace2):\n+    send1 = trace1.graph['host_send']\n+    send2 = trace2.graph['host_send']\n+    # False if the two graph have different number of events\n+    if len(trace2) != len(trace2):\n+      return False\n+    # Check if all the events passed through the same path\n+    dfs1 = nx.dfs_preorder_nodes(trace1, send1.eid)\n+    dfs2 = nx.dfs_preorder_nodes(trace2, send2.eid)\n+    events1 = [trace1.node[eid]['event'] for eid in dfs1]\n+    events2 = [trace2.node[eid]['event'] for eid in dfs2]\n+    for i in range(len(events1)):\n+      if getattr(events1[i], 'hid', None) != getattr(events1[i], 'hid', None):\n+        return False\n+      if getattr(events2[i], 'dpid', None) != getattr(events2[i], 'dpid', None):\n+        return False\n+    return True\n+\n+  def filter_packet_traces(self):\n+    \"\"\"Removes all the events related to packet traces if they're the same\"\"\"\n+    for trace1 in self.packet_traces:\n+      for trace2 in self.packet_traces:\n+        if trace1 == trace2:\n+          continue\n+        if self.check_traces_equal(trace1, trace2):\n+          for eid in trace2.nodes_iter():\n+            self.g.remove_node(eid)\n+\n \n class Main(object):\n   \ndiff --git a/sts/happensbefore/hb_race_detector.py b/sts/happensbefore/hb_race_detector.py\nindex 64a95eb..852bfc5 100644\n--- a/sts/happensbefore/hb_race_detector.py\n+++ b/sts/happensbefore/hb_race_detector.py\n@@ -242,6 +242,7 @@ class RaceDetector(object):\n     self.total_races = self.total_harmful + self.total_commute\n \n   def print_races(self):\n+    \"\"\"\n     for race in self.races_commute:\n       print \"+-------------------------------------------+\"\n       print \"| Commuting ({}):     {:>4} <---> {:>4}      |\".format(race.rtype, race.i_event.eid, race.k_event.eid)\n@@ -272,6 +273,7 @@ class RaceDetector(object):\n     for ev in self.write_operations:\n       print \"| {:>4}: {:27} (write) |\".format(ev[0].eid, ev[0].type)\n     print \"| Total operations:      {:<18} |\".format(self.total_operations)\n+    \"\"\"\n     print \"|-------------------------------------------|\"\n     print \"| Total commuting races: {:<18} |\".format(self.total_commute)\n     print \"| Total harmful races:   {:<18} |\".format(self.total_harmful)",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\nYou are currently editing a commit while rebasing branch 'op_time' on 'c6fc729'.\n  (use \"git commit --amend\" to amend the current commit)\n  (use \"git rebase --continue\" once you are satisfied with your changes)\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n  (commit or discard the untracked or modified content in submodules)\n\n\tmodified:   config/fuzzer_params.py\n\tmodified:   pox (new commits, modified content)\n\tmodified:   sts/happensbefore/hb_graph.py\n\tmodified:   sts/happensbefore/hb_race_detector.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tconfig/pox_consistency.py\n\tconfig/trace_onos_hb_learningswitch.py\n\tconfig/trace_pox_l2_consistency.py\n\tgen.sh\n\tgen.sh~\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 15.04",
+    "uname": "Linux stsdev 3.19.0-26-generic #28-Ubuntu SMP Tue Aug 11 14:16:32 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_09_13_20_24_42",
+  "user": "ahassany"
+}
