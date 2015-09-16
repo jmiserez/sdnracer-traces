@@ -1,0 +1,205 @@
+digraph G {
+130 [label="ID: 130\nDPID: \nEvent: HbHostHandle\n
+InPort: 12:34:56:78:02:02
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] ;
+132 [label="ID: 132\nDPID: \nEvent: HbHostSend\n
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])\nICMP: {t:ECHO_REPLY c:0}{id:7568 seq:1}"] ;
+135 [label="ID: 135\nDPID: \nEvent: HbControllerHandle\n"] ;
+172 [label="ID: 172\nDPID: \nEvent: HbControllerSend\n"] ;
+139 [label="ID: 139\nDPID: 2\nEvent: HbPacketHandle\n
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])\nICMP: {t:ECHO_REPLY c:0}{id:7568 seq:1}"] [shape="box"];
+145 [label="ID: 145\nDPID: 2\nEvent: HbMessageSend\n
+MsgType: OFPT_PACKET_IN"] ;
+148 [label="ID: 148\nDPID: 2\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+149 [label="ID: 149\nDPID: \nEvent: HbControllerSend\n"] ;
+153 [label="ID: 153\nDPID: 2\nEvent: HbMessageHandle\n
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"] ;
+154 [label="ID: 154\nDPID: \nEvent: HbControllerSend\n"] ;
+156 [label="ID: 156\nDPID: 2\nEvent: HbMessageSend\n
+MsgType: OFPT_BARRIER_REPLY"] ;
+160 [label="ID: 160\nDPID: \nEvent: HbControllerHandle\n"] ;
+164 [label="ID: 164\nDPID: \nEvent: HbControllerHandle\n"] ;
+38 [label="ID: 38\nDPID: 1\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+167 [label="ID: 167\nDPID: \nEvent: HbControllerSend\n"] ;
+42 [label="ID: 42\nDPID: 1\nEvent: HbMessageHandle\n
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"] ;
+171 [label="ID: 171\nDPID: 2\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+44 [label="ID: 44\nDPID: 1\nEvent: HbMessageSend\n
+MsgType: OFPT_BARRIER_REPLY"] ;
+176 [label="ID: 176\nDPID: 2\nEvent: HbMessageHandle\n
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"] ;
+177 [label="ID: 177\nDPID: \nEvent: HbControllerSend\n"] ;
+50 [label="ID: 50\nDPID: 2\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+179 [label="ID: 179\nDPID: 2\nEvent: HbMessageSend\n
+MsgType: OFPT_BARRIER_REPLY"] ;
+54 [label="ID: 54\nDPID: 2\nEvent: HbMessageHandle\n
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"] ;
+56 [label="ID: 56\nDPID: 2\nEvent: HbMessageSend\n
+MsgType: OFPT_BARRIER_REPLY"] ;
+185 [label="ID: 185\nDPID: 1\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+186 [label="ID: 186\nDPID: \nEvent: HbControllerSend\n"] ;
+60 [label="ID: 60\nDPID: \nEvent: HbControllerHandle\n"] ;
+61 [label="ID: 61\nDPID: \nEvent: HbControllerHandle\n"] ;
+63 [label="ID: 63\nDPID: \nEvent: HbHostSend\n
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:62455 seq:0}"] ;
+65 [label="ID: 65\nDPID: 1\nEvent: HbPacketHandle\n
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:62455 seq:0}"] [shape="box"];
+182 [label="ID: 182\nDPID: \nEvent: HbControllerHandle\n"] ;
+71 [label="ID: 71\nDPID: 1\nEvent: HbMessageSend\n
+MsgType: OFPT_PACKET_IN"] ;
+74 [label="ID: 74\nDPID: \nEvent: HbControllerHandle\n"] ;
+78 [label="ID: 78\nDPID: 1\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+79 [label="ID: 79\nDPID: \nEvent: HbControllerSend\n"] ;
+83 [label="ID: 83\nDPID: 1\nEvent: HbMessageHandle\n
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"] ;
+84 [label="ID: 84\nDPID: \nEvent: HbControllerSend\n"] ;
+86 [label="ID: 86\nDPID: 1\nEvent: HbMessageSend\n
+MsgType: OFPT_BARRIER_REPLY"] ;
+89 [label="ID: 89\nDPID: \nEvent: HbControllerHandle\n"] ;
+92 [label="ID: 92\nDPID: 2\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+93 [label="ID: 93\nDPID: \nEvent: HbControllerSend\n"] ;
+97 [label="ID: 97\nDPID: \nEvent: HbHostSend\n
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] ;
+99 [label="ID: 99\nDPID: 1\nEvent: HbPacketHandle\n
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] [shape="box"];
+166 [label="ID: 166\nDPID: 1\nEvent: HbMessageHandle\n
+Op: FlowTableWrite
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"] [shape=box style="bold"];
+105 [label="ID: 105\nDPID: 1\nEvent: HbPacketSend\n
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] ;
+109 [label="ID: 109\nDPID: 2\nEvent: HbPacketHandle\n
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] [shape="box"];
+115 [label="ID: 115\nDPID: 2\nEvent: HbPacketSend\n
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])\nICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"] ;
+119 [label="ID: 119\nDPID: \nEvent: HbHostSend\n
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])\nICMP: {t:ECHO_REQUEST c:0}{id:41578 seq:2}"] ;
+121 [label="ID: 121\nDPID: 2\nEvent: HbPacketHandle\n
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]\n\nIPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])\nICMP: {t:ECHO_REQUEST c:0}{id:41578 seq:2}"] [shape="box"];
+127 [label="ID: 127\nDPID: 2\nEvent: HbMessageSend\n
+MsgType: OFPT_PACKET_IN"] ;
+    109 -> 115;
+    127 -> 135;
+    50 -> 139;
+    132 -> 139;
+    65 -> 71;
+    71 -> 74;
+    139 -> 145;
+    93 -> 92;
+    135 -> 154;
+    38 -> 65;
+    63 -> 65;
+    84 -> 83;
+    78 -> 83;
+    42 -> 44;
+    38 -> 42;
+    160 -> 177;
+    135 -> 149;
+    115 -> 130;
+    79 -> 78;
+    176 -> 179;
+    149 -> 148;
+    167 -> 166;
+    121 -> 127;
+    182 -> 186;
+    179 -> 182;
+    50 -> 54;
+    172 -> 171;
+    74 -> 79;
+    160 -> 172;
+    186 -> 185;
+    89 -> 93;
+    145 -> 160;
+    105 -> 109;
+    50 -> 109;
+    171 -> 176;
+    177 -> 176;
+    153 -> 156;
+    130 -> 132;
+    50 -> 121;
+    119 -> 121;
+    54 -> 56;
+    44 -> 60;
+    156 -> 164;
+    56 -> 61;
+    164 -> 167;
+    86 -> 89;
+    99 -> 105;
+    74 -> 84;
+    148 -> 153;
+    154 -> 153;
+    92 -> 153;
+    83 -> 86;
+    97 -> 99;
+    38 -> 99;
+edge[constraint=false arrowhead="none"];
+    148 -> 171 [style="dotted"];
+    148 -> 92 [style="dotted"];
+    171 -> 92 [style="dotted"];
+    185 -> 78 [style="dotted"];
+    185 -> 166 [style="dotted"];
+    139 -> 92 [style="dotted"];
+    65 -> 185 [style="dotted"];
+    99 -> 166 [style="dotted"];
+    109 -> 148 [style="dotted"];
+    121 -> 92 [style="dotted"];
+    148 -> 50 [style="bold", color="red"];
+    38 -> 185 [style="bold", color="red"];
+    38 -> 78 [style="bold", color="red"];
+    38 -> 166 [style="bold", color="red"];
+    171 -> 50 [style="bold", color="red"];
+    50 -> 92 [style="bold", color="red"];
+    139 -> 148 [style="bold", color="red"];
+    99 -> 78 [style="bold", color="red"];
+    109 -> 92 [style="bold", color="red"];
+    121 -> 171 [style="bold", color="red"];
+}

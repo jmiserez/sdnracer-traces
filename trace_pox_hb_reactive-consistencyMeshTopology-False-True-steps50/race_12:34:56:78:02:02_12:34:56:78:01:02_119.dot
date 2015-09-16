@@ -1,0 +1,112 @@
+strict digraph G {
+171 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10aa05610>, label="ID 171 
+ HbMessageHandle
+t: 1442411230.91497
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+164 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10a9ffd10>, label="ID 164 
+ HbControllerHandle"];
+121 [shape=box, event=<hb_events.HbPacketHandle object at 0x10a9f7250>, label="ID 121 
+ HbPacketHandle
+t: 1442411230.684444
+Op: FlowTableRead
+DPID: 2
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:41578 seq:2}"];
+166 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10aa053d0>, label="ID 166 
+ HbMessageHandle
+t: 1442411230.911244
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+167 [shape=oval, event=<hb_events.HbControllerSend object at 0x10a9ffdd0>, label="ID 167 
+ HbControllerSend"];
+135 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10a9ff050>, label="ID 135 
+ HbControllerHandle"];
+50 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10b0ceb10>, label="ID 50 
+ HbMessageHandle
+t: 1442411227.787751
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: *
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+148 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10a9ffb90>, label="ID 148 
+ HbMessageHandle
+t: 1442411230.799631
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+149 [shape=oval, event=<hb_events.HbControllerSend object at 0x10a9ff9d0>, label="ID 149 
+ HbControllerSend"];
+119 [shape=oval, event=<hb_events.HbHostSend object at 0x10a9f0fd0>, label="ID 119 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:41578 seq:2}"];
+153 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10a9ffa90>, label="ID 153 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"];
+154 [shape=oval, event=<hb_events.HbControllerSend object at 0x10a9ffc50>, label="ID 154 
+ HbControllerSend"];
+38 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10b0c5590>, label="ID 38 
+ HbMessageHandle
+t: 1442411227.783357
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: *
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+156 [shape=oval, event=<hb_events.HbMessageSend object at 0x10a9ffd90>, label="ID 156 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY"];
+127 [shape=oval, event=<hb_events.HbMessageSend object at 0x10a9f7b50>, label="ID 127 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:41578 seq:2}"];
+164 -> 167  [rel=mid, label=mid];
+38 -> 166  [harmful=True, color=red, style=bold, rel=race, label=race];
+135 -> 154  [rel=mid, label=mid];
+135 -> 149  [rel=mid, label=mid];
+167 -> 166  [rel=mid, label=mid];
+148 -> 153  [rel=barrier_pre, label=barrier_pre];
+148 -> 50  [harmful=True, color=red, style=bold, rel=race, label=race];
+149 -> 148  [rel=mid, label=mid];
+119 -> 121  [rel=pid, label=pid];
+153 -> 156  [rel=mid, label=mid];
+121 -> 171  [harmful=True, color=red, style=bold, rel=race, label=race];
+121 -> 127  [rel=mid, label=mid];
+154 -> 153  [rel=mid, label=mid];
+156 -> 164  [rel=mid, label=mid];
+127 -> 135  [rel=mid, label=mid];
+}

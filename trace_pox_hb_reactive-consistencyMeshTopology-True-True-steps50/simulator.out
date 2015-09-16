@@ -1,0 +1,336 @@
+INFO:Controller: =====> Starting POX Controller <===== 
+Starting POX controller c1
+INFO:Controller:Launching controller c1: ./pox.py --verbose forwarding.l2_fwd --consistent=True --use_barrier=True openflow.of_01 --address=127.0.0.1 --port=6633
+INFO:simulation:Launched controller c1: ./pox.py --verbose forwarding.l2_fwd --consistent=True --use_barrier=True openflow.of_01 --address=127.0.0.1 --port=6633 [PID 20382]
+INFO:simulation:Creating topology...
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] POX 0.0.0 / Copyright 2011 James McCauley
+
+[c1] DEBUG:core:POX 0.0.0 going up...
+
+[c1] DEBUG:core:Running on CPython (2.7.9/Apr 2 2015 15:33:21)
+
+[c1] INFO:core:POX 0.0.0 is up.
+
+[c1] DEBUG:openflow.of_01:Listening for connections on ('127.0.0.1', 6633)
+
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+INFO:control_flow:Waiting until first OpenFlow message received..
+Controller log: 0 log lines, 1 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 3 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 3 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAAAs=]
+
+INFO:hb_logger:Adding controller handle (44 -> *): mid_out:14.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAAAs=]
+
+[c1] INFO:openflow.of_01:of_01 [Con 1/1] Connected to 00-00-00-00-00-01
+
+[c1] DEBUG:forwarding.l2_fwd:Connection [Con 1/1]
+
+[c1] DEBUG:S1:Initialized S1
+
+[c1] INFO:S1:BARRIER REPLY: xid=11
+
+[c1] ERROR:S1:Received a barrier reply with unknown xid: 11 , current xids: []
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAAAs=:2:AQ4ASAAAABEAEAAfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAACAAP///////wAA]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAAAs=:2:AQ4ASAAAABEAEAAfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAACAAP///////wAA]
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAAAs=:2:ARIACAAAABM=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAAAs=:2:ARIACAAAABM=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (44 -> 53): mid_out:14 -> mid_in:20.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (44 -> 58): mid_out:14 -> mid_in:21.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 4 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAABM=]
+
+INFO:hb_logger:Adding controller handle (63 -> *): mid_out:23.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAABM=]
+
+[c1] INFO:openflow.of_01:of_01 [Con 2/2] Connected to 00-00-00-00-00-02
+
+[c1] DEBUG:forwarding.l2_fwd:Connection [Con 2/2]
+
+[c1] DEBUG:S2:Initialized S2
+
+[c1] INFO:S2:BARRIER REPLY19
+
+[c1] ERROR:S2:Received a barrier reply with unknown xid: 19 , current xids: []
+
+Round 5 completed.
+Round 6 completed.
+Round 7 completed.
+Round 8 completed.
+Round 9 completed.
+Round 10 completed.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+Round 20 completed.
+Round 21 completed.
+Round 22 completed.
+Round 23 completed.
+Round 24 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dea[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:9fbe}{id:22593 seq:0}
+Round 25 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 26 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA]
+
+INFO:hb_logger:Adding controller handle (76 -> *): mid_out:29.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA]
+
+[c1] INFO:S2:XXXX PacketIN
+
+[c1] INFO:S2:XXX Consistent Packet in 12:34:56:78:02:02->12:34:56:78:01:02, in_port: 2
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA:1:AQ4AUAAAABUAEAAXAAAAAAAAAAASNFZ4AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA:1:AQ4AUAAAABUAEAAXAAAAAAAAAAASNFZ4AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+[c1] INFO:S2:XXX (2 hops) Installed  s2 12:34:56:78:02:02->12:34:56:78:01:02 out on: 1
+
+[c1] INFO:S2:XXX Requesting Barrier on s1 before updating s2, xid=1000
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA:1:ARIACAAAA+g=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:AQoAPAAAAAH/////ADwAAgAAEjRWeAECEjRWeAICCABFAAAccv0AAEABDep7ewICe3sBAggAn75YQQAA:1:ARIACAAAA+g=]
+
+INFO:hb_logger:Adding controller send with edge (76 -> 81): mid_out:29 -> mid_in:31.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (76 -> 86): mid_out:29 -> mid_in:32.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 27 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAA+g=]
+
+INFO:hb_logger:Adding controller handle (91 -> *): mid_out:34.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAA+g=]
+
+[c1] INFO:S1:BARRIER REPLY: xid=1000
+
+[c1] INFO:S1:XXX (2 hops) sending after barrier
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAA+g=:2:AQ4AUAAAABcAEAAXAAAAAAAAAAASNFZ4AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:ARMACAAAA+g=:2:AQ4AUAAAABcAEAAXAAAAAAAAAAASNFZ4AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+INFO:hb_logger:Adding controller send with edge (91 -> 95): mid_out:34 -> mid_in:36.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 28 completed.
+Round 29 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:de4[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:21ad}{id:54865 seq:1}
+No correctness violations!
+Round 30 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:ddf[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:aa1b}{id:19938 seq:2}
+Round 31 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 32 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC]
+
+INFO:hb_logger:Adding controller handle (132 -> *): mid_out:49.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC]
+
+[c1] INFO:S1:XXXX PacketIN
+
+[c1] INFO:S1:XXX Consistent Packet in 12:34:56:78:01:02->12:34:56:78:02:02, in_port: 2
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC:2:AQ4AUAAAABkAEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC:2:AQ4AUAAAABkAEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+[c1] INFO:S1:XXX (2 hops) Installed  s2 12:34:56:78:01:02->12:34:56:78:02:02 out on: 2
+
+[c1] INFO:S1:XXX Requesting Barrier on s2 before updating s1, xid=1001
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC:2:ARIACAAAA+k=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAH/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccwgAAEABDd97ewECe3sCAggAqhtN4gAC:2:ARIACAAAA+k=]
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:de4[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:21ad}{id:54865 seq:1} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:54865 seq:1}
+INFO:hb_logger:Adding controller send with edge (132 -> 142): mid_out:49 -> mid_in:53.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (132 -> 147): mid_out:49 -> mid_in:54.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 33 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAA+k=]
+
+INFO:hb_logger:Adding controller handle (152 -> *): mid_out:56.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAA+k=]
+
+[c1] INFO:S2:BARRIER REPLY1001
+
+[c1] INFO:S2:XXX (2 hops) sending after barrier
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:ARMACAAAA+k=:1:AQ4AUAAAABsAEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:ARMACAAAA+k=:1:AQ4AUAAAABsAEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+Forwarding dataplane event
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (152 -> 165): mid_out:56 -> mid_in:61.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 34 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB]
+
+INFO:hb_logger:Adding controller handle (169 -> *): mid_out:60.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB]
+
+[c1] INFO:S1:XXXX PacketIN
+
+[c1] INFO:S1:XXX Consistent Packet in 12:34:56:78:01:02->12:34:56:78:02:02, in_port: 2
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB:2:AQ4AUAAAAB0AEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB:2:AQ4AUAAAAB0AEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAACAAA=]
+
+[c1] INFO:S1:XXX (2 hops) Installed  s2 12:34:56:78:01:02->12:34:56:78:02:02 out on: 2
+
+[c1] INFO:S1:XXX Requesting Barrier on s2 before updating s1, xid=1002
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB:2:ARIACAAAA+o=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAL/////ADwAAgAAEjRWeAICEjRWeAECCABFAAAccxEAAEABDdZ7ewECe3sCAgAAKa3WUQAB:2:ARIACAAAA+o=]
+
+INFO:hb_logger:Adding controller send with edge (169 -> 174): mid_out:60 -> mid_in:63.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (169 -> 179): mid_out:60 -> mid_in:64.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 35 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAA+o=]
+
+INFO:hb_logger:Adding controller handle (184 -> *): mid_out:66.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[2:ARMACAAAA+o=]
+
+[c1] INFO:S2:BARRIER REPLY1002
+
+[c1] INFO:S2:XXX (2 hops) sending after barrier
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:ARMACAAAA+o=:1:AQ4AUAAAAB8AEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[2:ARMACAAAA+o=:1:AQ4AUAAAAB8AEAAXAAAAAAAAAAASNFZ4AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAP///////wAAAAAACAABAAA=]
+
+INFO:hb_logger:Adding controller send with edge (184 -> 188): mid_out:66 -> mid_in:68.
+Controller log: 0 log lines, 4 STS events not matched.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dcf[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e3fc}{id:5120 seq:3}
+Round 36 completed.
+Forwarding dataplane event
+Round 37 completed.
+Forwarding dataplane event
+Round 38 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dcf[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e3fc}{id:5120 seq:3} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:5120 seq:3}
+Round 39 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dc1[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:b501}{id:17146 seq:4}
+No correctness violations!
+Round 40 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:db9[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:9fdb}{id:22559 seq:5}
+Round 41 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dc7[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ebfc}{id:5120 seq:3} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 42 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dc1[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:b501}{id:17146 seq:4} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:17146 seq:4}
+Round 43 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:db9[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:9fdb}{id:22559 seq:5} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:22559 seq:5}
+Round 44 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 45 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:dad[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:bd01}{id:17146 seq:4} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 46 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:da7[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:a7db}{id:22559 seq:5} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 47 completed.
+Round 48 completed.
+Round 49 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:d99[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7123}{id:34518 seq:6}
+No correctness violations!
+Round 50 completed.
+INFO:control_flow:Terminating fuzzing after 50 rounds
+INFO:control_flow:Pending Receives:
+INFO:control_flow:Pending Sends:
+Killing controller c1 (pid 20382)
+Terminating child controllers... OK

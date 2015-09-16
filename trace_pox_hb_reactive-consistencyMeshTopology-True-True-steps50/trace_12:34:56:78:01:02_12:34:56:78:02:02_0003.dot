@@ -1,0 +1,79 @@
+strict digraph G {
+161 [shape=oval, event=<hb_events.HbMessageSend object at 0x1089e8210>, label="ID 161 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:54865 seq:1}"];
+155 [shape=box, event=<hb_events.HbPacketHandle object at 0x1089e0450>, label="ID 155 
+ HbPacketHandle
+t: 1442411268.51489
+Op: FlowTableRead
+DPID: 1
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:54865 seq:1}"];
+169 [shape=oval, event=<hb_events.HbControllerHandle object at 0x1089e84d0>, label="ID 169 
+ HbControllerHandle"];
+138 [shape=oval, event=<hb_events.HbHostSend object at 0x1089d8e90>, label="ID 138 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:54865 seq:1}"];
+173 [event=<hb_events.HbMessageHandle object at 0x1089e8a90>, shape=box, style=bold, label="ID 173 
+ HbMessageHandle
+t: 1442411268.625913
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:02:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+174 [shape=oval, event=<hb_events.HbControllerSend object at 0x1089e8350>, label="ID 174 
+ HbControllerSend"];
+178 [shape=oval, event=<hb_events.HbMessageHandle object at 0x1089e8c10>, label="ID 178 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"];
+179 [shape=oval, event=<hb_events.HbControllerSend object at 0x1089e8b50>, label="ID 179 
+ HbControllerSend"];
+181 [shape=oval, event=<hb_events.HbMessageSend object at 0x1089e8d10>, label="ID 181 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY"];
+184 [shape=oval, event=<hb_events.HbControllerHandle object at 0x1089e8cd0>, label="ID 184 
+ HbControllerHandle"];
+187 [event=<hb_events.HbMessageHandle object at 0x1089e8610>, shape=box, style=bold, label="ID 187 
+ HbMessageHandle
+t: 1442411268.733627
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:02:02
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+188 [shape=oval, event=<hb_events.HbControllerSend object at 0x1089e8c90>, label="ID 188 
+ HbControllerSend"];
+161 -> 169  [rel=mid, label=mid];
+169 -> 179  [rel=mid, label=mid];
+169 -> 174  [rel=mid, label=mid];
+138 -> 155  [rel=pid, label=pid];
+173 -> 178  [rel=barrier_pre, label=barrier_pre];
+174 -> 173  [rel=mid, label=mid];
+178 -> 181  [rel=mid, label=mid];
+179 -> 178  [rel=mid, label=mid];
+181 -> 184  [rel=mid, label=mid];
+184 -> 188  [rel=mid, label=mid];
+155 -> 161  [rel=mid, label=mid];
+188 -> 187  [rel=mid, label=mid];
+}

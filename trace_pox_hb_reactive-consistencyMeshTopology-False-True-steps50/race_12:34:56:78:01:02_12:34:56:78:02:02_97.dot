@@ -1,0 +1,191 @@
+strict digraph G {
+130 [shape=oval, event=<hb_events.HbHostHandle object at 0x10a9f7b90>, label="ID 130 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:02:02
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+132 [shape=oval, event=<hb_events.HbHostSend object at 0x10a9f7dd0>, label="ID 132 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:7568 seq:1}"];
+139 [shape=box, event=<hb_events.HbPacketHandle object at 0x10a9ff090>, label="ID 139 
+ HbPacketHandle
+t: 1442411230.794254
+Op: FlowTableRead
+DPID: 2
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:7568 seq:1}"];
+145 [shape=oval, event=<hb_events.HbMessageSend object at 0x10a9ff990>, label="ID 145 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_PACKET_IN
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:7568 seq:1}"];
+148 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10a9ffb90>, label="ID 148 
+ HbMessageHandle
+t: 1442411230.799631
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+160 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10a9ffd50>, label="ID 160 
+ HbControllerHandle"];
+38 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10b0c5590>, label="ID 38 
+ HbMessageHandle
+t: 1442411227.783357
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: *
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+171 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10aa05610>, label="ID 171 
+ HbMessageHandle
+t: 1442411230.91497
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+172 [shape=oval, event=<hb_events.HbControllerSend object at 0x10aa05490>, label="ID 172 
+ HbControllerSend"];
+176 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10aa05b90>, label="ID 176 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+InPort: None
+Pkt: None"];
+177 [shape=oval, event=<hb_events.HbControllerSend object at 0x10aa05ad0>, label="ID 177 
+ HbControllerSend"];
+50 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10b0ceb10>, label="ID 50 
+ HbMessageHandle
+t: 1442411227.787751
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: *
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+179 [shape=oval, event=<hb_events.HbMessageSend object at 0x10aa05c90>, label="ID 179 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY"];
+182 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10aa05c50>, label="ID 182 
+ HbControllerHandle"];
+185 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10aa05510>, label="ID 185 
+ HbMessageHandle
+t: 1442411231.0235
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:01:02
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+186 [shape=oval, event=<hb_events.HbControllerSend object at 0x10aa05c10>, label="ID 186 
+ HbControllerSend"];
+78 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10a9dbb50>, label="ID 78 
+ HbMessageHandle
+t: 1442411230.151923
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:02:02
+DPID: 1
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+92 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10a9e71d0>, label="ID 92 
+ HbMessageHandle
+t: 1442411230.260402
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: dl_dst: 12:34:56:78:02:02
+DPID: 2
+MsgType: OFPT_FLOW_MOD
+InPort: None
+Pkt: None"];
+97 [shape=oval, event=<hb_events.HbHostSend object at 0x10a9e7290>, label="ID 97 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+99 [shape=box, event=<hb_events.HbPacketHandle object at 0x10a9e7710>, label="ID 99 
+ HbPacketHandle
+t: 1442411230.47008
+Op: FlowTableRead
+DPID: 1
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+105 [shape=oval, event=<hb_events.HbPacketSend object at 0x10a9e7b90>, label="ID 105 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+109 [shape=box, event=<hb_events.HbPacketHandle object at 0x10a9f0390>, label="ID 109 
+ HbPacketHandle
+t: 1442411230.577385
+Op: FlowTableRead
+DPID: 2
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+115 [shape=oval, event=<hb_events.HbPacketSend object at 0x10a9f0810>, label="ID 115 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:7568 seq:1}"];
+130 -> 132  [rel=pid, label=pid];
+132 -> 139  [rel=pid, label=pid];
+139 -> 145  [rel=mid, label=mid];
+139 -> 148  [harmful=True, color=red, style=bold, rel=race, label=race];
+145 -> 160  [rel=mid, label=mid];
+160 -> 177  [rel=mid, label=mid];
+160 -> 172  [rel=mid, label=mid];
+38 -> 185  [harmful=True, color=red, style=bold, rel=race, label=race];
+171 -> 176  [rel=barrier_pre, label=barrier_pre];
+171 -> 50  [harmful=True, color=red, style=bold, rel=race, label=race];
+172 -> 171  [rel=mid, label=mid];
+176 -> 179  [rel=mid, label=mid];
+177 -> 176  [rel=mid, label=mid];
+179 -> 182  [rel=mid, label=mid];
+182 -> 186  [rel=mid, label=mid];
+186 -> 185  [rel=mid, label=mid];
+97 -> 99  [rel=pid, label=pid];
+99 -> 105  [rel=pid, label=pid];
+99 -> 78  [harmful=True, color=red, style=bold, rel=race, label=race];
+105 -> 109  [rel=pid, label=pid];
+109 -> 115  [rel=pid, label=pid];
+109 -> 92  [harmful=True, color=red, style=bold, rel=race, label=race];
+115 -> 130  [rel=pid, label=pid];
+}
