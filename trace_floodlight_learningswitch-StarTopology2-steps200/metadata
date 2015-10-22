@@ -10,10 +10,10 @@
   "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
   "host": {
     "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
-    "free": "total       used       free     shared    buffers     cached\nMem:      16310124   13253080    3057044     188492     844892    4426004\n-/+ buffers/cache:    7982184    8327940\nSwap:     16650236          0   16650236",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124   12138736    4171388      67136     299404    7864492\n-/+ buffers/cache:    3974840   12335284\nSwap:     16650236          0   16650236",
     "name": "espresso",
     "num_cores": "8",
-    "uptime": "07:37:36 up 18:53,  6 users,  load average: 1.98, 1.60, 1.21"
+    "uptime": "17:20:55 up  1:41,  6 users,  load average: 1.64, 2.47, 2.85"
   },
   "modules": {
     "hassel": {
@@ -24,21 +24,21 @@
     },
     "pox": {
       "branch": "hb",
-      "commit": "1ce3d8777c2a1bbaea68c4727a6f1ff59fe7a5d9",
+      "commit": "ff35fb1f40f8055b757e2a60e49097e5eb751f0b",
       "diff": "",
       "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
     },
     "sts": {
       "branch": "hb",
-      "commit": "473945de1540b7ab6d953d12c9780eb97ff274ec",
-      "diff": "diff --git a/config/trace_floodlight_forwarding.py b/config/trace_floodlight_forwarding.py\nindex b1b98e0..b62df3f 100644\n--- a/config/trace_floodlight_forwarding.py\n+++ b/config/trace_floodlight_forwarding.py\n@@ -19,8 +19,8 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n num = 2\n-#topology_class = StarTopology\n-#topology_params = \"num_hosts=%d\" % num\n+# topology_class = StarTopology\n+# topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\n #topology_params = \"num_switches=%d\" % num\n # topology_class = GridTopology\n@@ -28,7 +28,7 @@ num = 2\n topology_class = BinaryLeafTreeTopology\n topology_params = \"num_levels=%d\" % num\n \n-steps = 100\n+steps = 200\n results_dir = \"traces/trace_floodlight_forwarding-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \n apps = None\ndiff --git a/config/trace_floodlight_learningswitch.py b/config/trace_floodlight_learningswitch.py\nindex 1cb03d1..bb6c934 100644\n--- a/config/trace_floodlight_learningswitch.py\n+++ b/config/trace_floodlight_learningswitch.py\n@@ -18,7 +18,7 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 3\n+num = 2\n topology_class = StarTopology\n topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\n@@ -28,7 +28,7 @@ topology_params = \"num_hosts=%d\" % num\n # topology_class = BinaryLeafTreeTopology\n # topology_params = \"num_levels=%d\" % num\n \n-steps = 100\n+steps = 200\n results_dir = \"traces/trace_floodlight_learningswitch-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \n apps = None",
-      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_forwarding.py\n\tmodified:   config/trace_floodlight_learningswitch.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+      "commit": "bc92a8c11a66a21a8633e1710b0f42a18d00861d",
+      "diff": "diff --git a/config/trace_floodlight_learningswitch.py b/config/trace_floodlight_learningswitch.py\nindex 04274fb..bb6c934 100644\n--- a/config/trace_floodlight_learningswitch.py\n+++ b/config/trace_floodlight_learningswitch.py\n@@ -18,17 +18,17 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 1\n-# topology_class = StarTopology\n-# topology_params = \"num_hosts=%d\" % num\n+num = 2\n+topology_class = StarTopology\n+topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\n #topology_params = \"num_switches=%d\" % num\n # topology_class = GridTopology\n # topology_params = \"num_rows=3, num_columns=3\"\n-topology_class = BinaryLeafTreeTopology\n-topology_params = \"num_levels=%d\" % num\n+# topology_class = BinaryLeafTreeTopology\n+# topology_params = \"num_levels=%d\" % num\n \n-steps = 100\n+steps = 200\n results_dir = \"traces/trace_floodlight_learningswitch-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \n apps = None\ndiff --git a/plot.py b/plot.py\nindex ddde179..48a0523 100755\n--- a/plot.py\n+++ b/plot.py\n@@ -5,6 +5,7 @@ import argparse\n import csv\n import glob\n import os\n+import itertools\n from pylab import *\n import matplotlib.pyplot as plt\n from matplotlib.backends.backend_pdf import PdfPages\n@@ -47,6 +48,39 @@ per_pkt_consistency =  ['num_per_pkt_races', 'num_per_pkt_inconsistent',\n                         'num_per_pkt_entry_version_race']\n prefixes = ['True-','False-']\n \n+# http://matplotlib.org/api/markers_api.html\n+markers = ['*',\n+           '+',\n+           ',',\n+           '.',\n+           '1',\n+           '2',\n+           '3',\n+           '4',\n+           '8',\n+           '<',\n+           '>',\n+           'D',\n+           'H',\n+           '^',\n+           '_',\n+           'd',\n+           'h',\n+           'o',\n+           'p',\n+           's',\n+           'v',\n+           'x',\n+           '|',\n+           0,\n+           1,\n+           2,\n+           3,\n+           4,\n+           5,\n+           6,\n+           7,]\n+\n def main(result_dirs):\n   tables = {}\n   for p in prefixes:\n@@ -142,13 +176,14 @@ def plot_with_delta_multiple(tables, prefix, name, keys, out_name, use_log=True,\n   ax = fig.add_subplot(111)\n   ax.grid(True)\n \n+  marker = itertools.cycle(('x', '+', '.', 'o', '*')) # repeat forever\n \n   ax.set_xlabel('$\\epsilon$')\n   #ax.set_ylabel(key)\n   table = tables[name]\n   for key in keys:\n     values = [formatter(x) for x in table[key]]\n-    ax.plot(table['key/t'], values, label=get_short_name(key), marker='x')\n+    ax.plot(table['key/t'], values, label=get_short_name(key), marker=marker.next())\n \n   if use_log:\n     ax.set_yscale('log')\ndiff --git a/pox b/pox\nindex 2b08665..ff35fb1 160000\n--- a/pox\n+++ b/pox\n@@ -1 +1 @@\n-Subproject commit 2b0866561adcb7ba032d2c194b9f5b88a0751f21\n+Subproject commit ff35fb1f40f8055b757e2a60e49097e5eb751f0b",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_learningswitch.py\n\tmodified:   plot.py\n\tmodified:   pox (new commits)\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
     }
   },
   "sys": {
-    "lsb_release": "Ubuntu 14.04.2 LTS",
-    "uname": "Linux espresso 3.13.0-63-generic #103-Ubuntu SMP Fri Aug 14 21:42:59 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-66-generic #108-Ubuntu SMP Wed Oct 7 15:20:27 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
   },
-  "timestamp": "2015_09_22_07_37_36",
+  "timestamp": "2015_10_22_17_20_55",
   "user": "jeremie"
 }
