@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_learningswitch.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124    7058764    9251360      88520     396820     859392\n-/+ buffers/cache:    5802552   10507572\nSwap:     16650236     251224   16399012",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "11:09:50 up 19:30,  6 users,  load average: 1.60, 0.91, 0.52"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "ff35fb1f40f8055b757e2a60e49097e5eb751f0b",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "cdf55f8fc8f75130d8d0a846ec96671b30461ddd",
+      "diff": "diff --git a/config/trace_floodlight_forwarding.py b/config/trace_floodlight_forwarding.py\nindex 9da6188..b62df3f 100644\n--- a/config/trace_floodlight_forwarding.py\n+++ b/config/trace_floodlight_forwarding.py\n@@ -18,7 +18,7 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 1\n+num = 2\n # topology_class = StarTopology\n # topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\ndiff --git a/config/trace_floodlight_learningswitch.py b/config/trace_floodlight_learningswitch.py\nindex 9e7537a..0aeb5dd 100644\n--- a/config/trace_floodlight_learningswitch.py\n+++ b/config/trace_floodlight_learningswitch.py\n@@ -18,7 +18,7 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 1\n+num = 2\n # topology_class = StarTopology\n # topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_forwarding.py\n\tmodified:   config/trace_floodlight_learningswitch.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tgen.sh~\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-66-generic #108-Ubuntu SMP Wed Oct 7 15:20:27 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_10_23_11_09_50",
+  "user": "jeremie"
+}

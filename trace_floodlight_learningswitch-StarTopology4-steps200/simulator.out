@@ -1,0 +1,1472 @@
+2015-10-23 11:18:52,570 - setup - WARNING - No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+2015-10-23 11:18:52,570 - Controller - INFO -  =====> Starting Controller <===== 
+2015-10-23 11:18:52,570 - Controller - INFO - Launching controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_learningswitch.properties
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] 11:18:52.862 INFO [n.f.c.m.FloodlightModuleLoader:main] Loading modules from file ./src/main/resources/trace_learningswitch.properties
+
+[c1] 11:18:53.125 INFO [n.f.c.i.Controller:main] Controller role set to MASTER
+
+[c1] 11:18:53.130 INFO [n.f.c.i.Controller:main] Flush switches on reconnect -- Disabled
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 2 seconds ...
+[c1] 11:18:53.865 INFO [o.s.s.i.c.FallbackCCProvider:main] Cluster not yet configured; using fallback local configuration
+
+[c1] 11:18:53.866 INFO [o.s.s.i.SyncManager:main] [32767] Updating sync configuration ClusterConfig [allNodes={32767=Node [hostname=localhost, port=6642, nodeId=32767, domainId=32767]}, authScheme=NO_AUTH, keyStorePath=null, keyStorePassword is unset]
+
+[c1] 11:18:53.909 INFO [o.s.s.i.r.RPCService:main] Listening for internal floodlight RPC on localhost/127.0.0.1:6642
+
+[c1] 11:18:54.014 INFO [n.f.c.i.Controller:main] Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+
+[c1] 11:18:55.594 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] New switch connection from /127.0.0.1:58921
+
+Controller log: 0 log lines, 1 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 3 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 4 completed.
+[c1] 11:18:55.920 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:58921 DPID[00:00:00:00:00:00:00:01]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 1
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 5 completed.
+[c1] 11:18:56.014 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] Clearing all flows on switch OFSwitchBase [/127.0.0.1:58921 DPID[00:00:00:00:00:00:00:01]]
+
+[c1] 11:18:56.016 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:01 connected.
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 6 completed.
+2015-10-23 11:18:56,117 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+2015-10-23 11:18:56,118 - hb_logger - INFO - Adding controller handle (67 -> *): mid_out:23.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+Round 7 completed.
+Round 8 completed.
+Round 9 completed.
+Round 10 completed.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+Round 20 completed.
+Round 21 completed.
+Round 22 completed.
+Injecting a random packet
+2015-10-23 11:18:57,821 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8669[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:2a5b}{id:52644 seq:0}
+Injecting a random packet
+2015-10-23 11:18:57,822 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8666[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1c47}{id:56247 seq:1}
+Round 23 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 24 completed.
+2015-10-23 11:18:57,932 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+30AAEABhml7ewEBe3sBAwgAKlvNpAAA]
+
+2015-10-23 11:18:57,932 - hb_logger - INFO - Adding controller handle (92 -> *): mid_out:31.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+30AAEABhml7ewEBe3sBAwgAKlvNpAAA]
+
+2015-10-23 11:18:57,936 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+30AAEABhml7ewEBe3sBAwgAKlvNpAAA:1:AQ0AGAAAAAAAAAABAAEACAAAAAj/+wAA]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+30AAEABhml7ewEBe3sBAwgAKlvNpAAA:1:AQ0AGAAAAAAAAAABAAEACAAAAAj/+wAA]
+
+2015-10-23 11:18:57,937 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAIAAAACADwAAwAAEjRWeAECEjRWeAEDCABFAAAc+38AAEABhmZ7ewEDe3sBAggAHEfbtwAB]
+
+2015-10-23 11:18:57,938 - hb_logger - INFO - Adding controller handle (93 -> *): mid_out:34.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAIAAAACADwAAwAAEjRWeAECEjRWeAEDCABFAAAc+38AAEABhmZ7ewEDe3sBAggAHEfbtwAB]
+
+2015-10-23 11:18:57,938 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAIAAAACADwAAwAAEjRWeAECEjRWeAEDCABFAAAc+38AAEABhmZ7ewEDe3sBAggAHEfbtwAB:1:AQ0AGAAAAAAAAAACAAMACAAAAAj/+wAA]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAIAAAACADwAAwAAEjRWeAECEjRWeAEDCABFAAAc+38AAEABhmZ7ewEDe3sBAggAHEfbtwAB:1:AQ0AGAAAAAAAAAACAAMACAAAAAj/+wAA]
+
+2015-10-23 11:18:58,028 - hb_logger - INFO - Adding controller send with edge (92 -> 99): mid_out:31 -> mid_in:37.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,031 - hb_logger - INFO - Adding controller send with edge (93 -> 113): mid_out:34 -> mid_in:44.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 25 completed.
+Forwarding dataplane event
+2015-10-23 11:18:58,133 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8666[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1c47}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,133 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,133 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:56247 seq:1}
+Forwarding dataplane event
+2015-10-23 11:18:58,134 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8669[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:2a5b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,135 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,135 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:52644 seq:0}
+Forwarding dataplane event
+2015-10-23 11:18:58,136 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8666[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1c47}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,136 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,136 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:56247 seq:1}
+Forwarding dataplane event
+2015-10-23 11:18:58,137 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8669[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:2a5b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,137 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,137 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:52644 seq:0}
+Forwarding dataplane event
+2015-10-23 11:18:58,138 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8669[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:2a5b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,138 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,138 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:52644 seq:0}
+Forwarding dataplane event
+2015-10-23 11:18:58,139 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8666[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1c47}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,139 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,139 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:56247 seq:1}
+Round 26 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 27 completed.
+2015-10-23 11:18:58,253 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,253 - hb_logger - INFO - Adding controller handle (214 -> *): mid_out:65.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,253 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAABAAIACAAAAAgAAf//]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAABAAIACAAAAAgAAf//]
+
+2015-10-23 11:18:58,254 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+2015-10-23 11:18:58,255 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAc+5YAAEABhlF7ewECe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+2015-10-23 11:18:58,257 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,259 - hb_logger - INFO - Adding controller handle (215 -> *): mid_out:68.
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,259 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAACAAMACAAAAAgAAf//]
+
+Controller log: 4 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAACAAMACAAAAAgAAf//]
+
+2015-10-23 11:18:58,270 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQH//wAACAAAAQAAe3sBA3t7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+Controller log: 5 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQH//wAACAAAAQAAe3sBA3t7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+2015-10-23 11:18:58,273 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQP//wAACAAAAQAAe3sBAXt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 6 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAACADwAAwAAEjRWeAEBEjRWeAEDCABFAAAc+58AAEABhkd7ewEDe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQP//wAACAAAAQAAe3sBAXt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+2015-10-23 11:18:58,276 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,280 - hb_logger - INFO - Adding controller handle (234 -> *): mid_out:71.
+Controller log: 6 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,280 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAADAAEACAAAAAgAA///]
+
+Controller log: 7 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAADAAEACAAAAAgAA///]
+
+2015-10-23 11:18:58,284 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQP//wAACAAAAQAAe3sBAXt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 8 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQP//wAACAAAAQAAe3sBAXt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+2015-10-23 11:18:58,289 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQH//wAACAAAAQAAe3sBA3t7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+Controller log: 9 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAADADwAAQAAEjRWeAEDEjRWeAEBCABFAAAc+5kAAEABhk17ewEBe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQH//wAACAAAAQAAe3sBA3t7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+2015-10-23 11:18:58,295 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,300 - hb_logger - INFO - Adding controller handle (235 -> *): mid_out:74.
+Controller log: 9 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA]
+
+2015-10-23 11:18:58,300 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAAEAAQACAAAAAgAAf//]
+
+Controller log: 10 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ0AGAAAAAAAAAAEAAQACAAAAAgAAf//]
+
+2015-10-23 11:18:58,306 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQH//wAACAAAAQAAe3sBBHt7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+Controller log: 11 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQH//wAACAAAAQAAe3sBBHt7AQEAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAB//8=]
+
+2015-10-23 11:18:58,312 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQT//wAACAAAAQAAe3sBAXt7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 12 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAEADwABAAAEjRWeAEBEjRWeAEECABFAAAc+5wAAEABhkl7ewEEe3sBAQAAMlvNpAAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQT//wAACAAAAQAAe3sBAXt7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:18:58,318 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,325 - hb_logger - INFO - Adding controller handle (236 -> *): mid_out:77.
+Controller log: 12 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,325 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAAFAAIACAAAAAgAA///]
+
+Controller log: 13 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAAFAAIACAAAAAgAA///]
+
+2015-10-23 11:18:58,333 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQP//wAACAAAAQAAe3sBAnt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 14 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQP//wAACAAAAQAAe3sBAnt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+2015-10-23 11:18:58,341 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQL//wAACAAAAQAAe3sBA3t7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+Controller log: 15 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAFADwAAgAAEjRWeAEDEjRWeAECCABFAAAc+6IAAEABhkN7ewECe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQL//wAACAAAAQAAe3sBA3t7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+2015-10-23 11:18:58,349 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,359 - hb_logger - INFO - Adding controller handle (238 -> *): mid_out:80.
+Controller log: 15 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB]
+
+2015-10-23 11:18:58,359 - hb_logger - INFO - Adding controller send with edge (214 -> 241): mid_out:65 -> mid_in:87.
+Controller log: 14 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,373 - hb_logger - INFO - Adding controller send with edge (214 -> 251): mid_out:65 -> mid_in:90.
+Controller log: 13 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,381 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAAGAAQACAAAAAgAA///]
+
+Controller log: 14 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ0AGAAAAAAAAAAGAAQACAAAAAgAA///]
+
+2015-10-23 11:18:58,392 - hb_logger - INFO - Adding controller send with edge (214 -> 257): mid_out:65 -> mid_in:91.
+Controller log: 13 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,403 - hb_logger - INFO - Adding controller send with edge (215 -> 263): mid_out:68 -> mid_in:92.
+Controller log: 12 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,411 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 13 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+2015-10-23 11:18:58,422 - hb_logger - INFO - Adding controller send with edge (215 -> 273): mid_out:68 -> mid_in:95.
+Controller log: 12 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,435 - hb_logger - INFO - Adding controller send with edge (215 -> 279): mid_out:68 -> mid_in:96.
+Controller log: 11 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,442 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 12 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAGADwABAAAEjRWeAEDEjRWeAEECABFAAAc+5MAAEABhlB7ewEEe3sBAwAAJEfbtwAB:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:18:58,451 - hb_logger - INFO - Adding controller send with edge (234 -> 285): mid_out:71 -> mid_in:97.
+Controller log: 11 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,461 - hb_logger - INFO - Adding controller send with edge (235 -> 295): mid_out:74 -> mid_in:100.
+Controller log: 10 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,470 - hb_logger - INFO - Adding controller send with edge (235 -> 305): mid_out:74 -> mid_in:103.
+Controller log: 9 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,481 - hb_logger - INFO - Adding controller send with edge (235 -> 311): mid_out:74 -> mid_in:104.
+Controller log: 8 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,490 - hb_logger - INFO - Adding controller send with edge (236 -> 317): mid_out:77 -> mid_in:105.
+Controller log: 7 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,497 - hb_logger - INFO - Adding controller send with edge (236 -> 327): mid_out:77 -> mid_in:108.
+Controller log: 6 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,506 - hb_logger - INFO - Adding controller send with edge (236 -> 333): mid_out:77 -> mid_in:109.
+Controller log: 5 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,514 - hb_logger - INFO - Adding controller send with edge (238 -> 339): mid_out:80 -> mid_in:110.
+Controller log: 4 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,520 - hb_logger - INFO - Adding controller send with edge (238 -> 349): mid_out:80 -> mid_in:113.
+Controller log: 3 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,530 - hb_logger - INFO - Adding controller send with edge (238 -> 355): mid_out:80 -> mid_in:114.
+Controller log: 2 log lines, 2 STS events not matched.
+Injecting a random packet
+2015-10-23 11:18:58,536 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8615[123.123.1.2>123.123.1.4]){t:ECHO_REQUEST c:0 chk:e78f}{id:4206 seq:2}
+Round 28 completed.
+Forwarding dataplane event
+2015-10-23 11:18:58,637 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8650[123.123.1.4>123.123.1.3]){t:ECHO_REPLY c:0 chk:2447}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,637 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:18:58,638 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8649[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:325b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,638 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:18:58,639 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8643[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:2447}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,639 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Controller log: 2 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-10-23 11:18:58,647 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8647[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:325b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,647 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:18:58,648 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8651[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:325b}{id:52644 seq:0} on interface eth1
+2015-10-23 11:18:58,648 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:18:58,648 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:864d[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:2447}{id:56247 seq:1} on interface eth1
+2015-10-23 11:18:58,649 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+2015-10-23 11:18:58,651 - hb_logger - INFO - Adding controller send with edge (234 -> 390): mid_out:71 -> mid_in:120.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,658 - hb_logger - INFO - Adding controller send with edge (234 -> 396): mid_out:71 -> mid_in:121.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 29 completed.
+2015-10-23 11:18:58,664 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC]
+
+2015-10-23 11:18:58,665 - hb_logger - INFO - Adding controller handle (400 -> *): mid_out:119.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC]
+
+2015-10-23 11:18:58,665 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ0AGAAAAAAAAAABAAIACAAAAAgABP//]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ0AGAAAAAAAAAABAAIACAAAAAgABP//]
+
+2015-10-23 11:18:58,667 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQT//wAACAAAAQAAe3sBAnt7AQQACAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQT//wAACAAAAQAAe3sBAnt7AQQACAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:18:58,669 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQL//wAACAAAAQAAe3sBBHt7AQIAAAAIABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAkAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc+88AAEABhhV7ewECe3sBBAgA548QbgAC:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQL//wAACAAAAQAAe3sBBHt7AQIAAAAIABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+2015-10-23 11:18:58,765 - hb_logger - INFO - Adding controller send with edge (400 -> 407): mid_out:119 -> mid_in:123.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,769 - hb_logger - INFO - Adding controller send with edge (400 -> 417): mid_out:119 -> mid_in:126.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:18:58,777 - hb_logger - INFO - Adding controller send with edge (400 -> 423): mid_out:119 -> mid_in:127.
+Controller log: 0 log lines, 2 STS events not matched.
+No correctness violations!
+Round 30 completed.
+Forwarding dataplane event
+2015-10-23 11:18:58,884 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8615[123.123.1.2>123.123.1.4]){t:ECHO_REQUEST c:0 chk:e78f}{id:4206 seq:2} on interface eth1
+2015-10-23 11:18:58,885 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:58,885 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:4206 seq:2}
+Round 31 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:18:58,994 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:85ff[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8226}{id:30166 seq:3}
+Round 32 completed.
+Forwarding dataplane event
+2015-10-23 11:18:59,096 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8606[123.123.1.4>123.123.1.2]){t:ECHO_REPLY c:0 chk:ef8f}{id:4206 seq:2} on interface eth1
+2015-10-23 11:18:59,096 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 33 completed.
+Forwarding dataplane event
+2015-10-23 11:18:59,205 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:85ff[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8226}{id:30166 seq:3} on interface eth1
+2015-10-23 11:18:59,205 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:59,206 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:30166 seq:3}
+Round 34 completed.
+Forwarding dataplane event
+Round 35 completed.
+Forwarding dataplane event
+2015-10-23 11:18:59,415 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:85f9[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:8a26}{id:30166 seq:3} on interface eth1
+2015-10-23 11:18:59,415 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:18:59,416 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85f6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5798}{id:41059 seq:4}
+Round 36 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:18:59,525 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:85ef[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:a63a}{id:20928 seq:5}
+Injecting a random packet
+2015-10-23 11:18:59,526 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85ed[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:dea3}{id:6486 seq:6}
+Round 37 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:18:59,634 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85f6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5798}{id:41059 seq:4} on interface eth1
+2015-10-23 11:18:59,634 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:59,634 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:41059 seq:4}
+Forwarding dataplane event
+Round 38 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:18:59,750 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:85ef[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:a63a}{id:20928 seq:5} on interface eth1
+2015-10-23 11:18:59,750 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:59,750 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:20928 seq:5}
+Forwarding dataplane event
+2015-10-23 11:18:59,751 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85ed[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:dea3}{id:6486 seq:6} on interface eth1
+2015-10-23 11:18:59,751 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:18:59,751 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:6486 seq:6}
+Round 39 completed.
+Forwarding dataplane event
+2015-10-23 11:18:59,853 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85ea[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:5f98}{id:41059 seq:4} on interface eth1
+2015-10-23 11:18:59,853 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 40 completed.
+Forwarding dataplane event
+2015-10-23 11:18:59,970 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:85dc[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:e6a3}{id:6486 seq:6} on interface eth1
+2015-10-23 11:18:59,970 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:18:59,971 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85df[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:ae3a}{id:20928 seq:5} on interface eth1
+2015-10-23 11:18:59,971 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 41 completed.
+Round 42 completed.
+Round 43 completed.
+Injecting a random packet
+2015-10-23 11:19:00,274 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85d2[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:8552}{id:29350 seq:7}
+Round 44 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:00,383 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:85cb[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:b252}{id:17829 seq:8}
+Round 45 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:00,491 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85d2[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:8552}{id:29350 seq:7} on interface eth1
+2015-10-23 11:19:00,491 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:00,491 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:29350 seq:7}
+Round 46 completed.
+Forwarding dataplane event
+2015-10-23 11:19:00,593 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:85cb[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:b252}{id:17829 seq:8} on interface eth1
+2015-10-23 11:19:00,593 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:00,593 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:17829 seq:8}
+Forwarding dataplane event
+Round 47 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:00,709 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85c8[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:8d52}{id:29350 seq:7} on interface eth1
+2015-10-23 11:19:00,709 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:00,710 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85bb[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:aa6c}{id:19850 seq:9}
+Round 48 completed.
+Forwarding dataplane event
+2015-10-23 11:19:00,811 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85c3[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:ba52}{id:17829 seq:8} on interface eth1
+2015-10-23 11:19:00,812 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 49 completed.
+Forwarding dataplane event
+2015-10-23 11:19:00,920 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85bb[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:aa6c}{id:19850 seq:9} on interface eth1
+2015-10-23 11:19:00,921 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:00,921 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:19850 seq:9}
+No correctness violations!
+Round 50 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:01,030 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:85ad[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:d577}{id:8830 seq:10}
+Round 51 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:01,139 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85b5[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:b26c}{id:19850 seq:9} on interface eth1
+2015-10-23 11:19:01,139 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 52 completed.
+Forwarding dataplane event
+2015-10-23 11:19:01,241 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:85ad[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:d577}{id:8830 seq:10} on interface eth1
+2015-10-23 11:19:01,241 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,241 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:8830 seq:10}
+Injecting a random packet
+2015-10-23 11:19:01,242 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85a6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:2fe9}{id:51211 seq:11}
+Round 53 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:01,358 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:859e[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:93d6}{id:25629 seq:12}
+Round 54 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:01,466 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:85a7[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:dd77}{id:8830 seq:10} on interface eth1
+2015-10-23 11:19:01,466 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:01,467 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:85a6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:2fe9}{id:51211 seq:11} on interface eth1
+2015-10-23 11:19:01,467 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,467 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:51211 seq:11}
+Injecting a random packet
+2015-10-23 11:19:01,469 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8594[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:fed4}{id:63773 seq:13}
+Injecting a random packet
+2015-10-23 11:19:01,469 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8591[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d961}{id:7824 seq:14}
+Injecting a random packet
+2015-10-23 11:19:01,470 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:858f[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:996c}{id:24196 seq:15}
+Round 55 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:01,579 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:859e[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:93d6}{id:25629 seq:12} on interface eth1
+2015-10-23 11:19:01,579 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,579 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:25629 seq:12}
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 56 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:01,710 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8591[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d961}{id:7824 seq:14} on interface eth1
+2015-10-23 11:19:01,710 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,710 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:7824 seq:14}
+Forwarding dataplane event
+2015-10-23 11:19:01,711 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8598[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:37e9}{id:51211 seq:11} on interface eth1
+2015-10-23 11:19:01,711 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:01,712 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8594[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:fed4}{id:63773 seq:13} on interface eth1
+2015-10-23 11:19:01,712 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,712 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:63773 seq:13}
+Forwarding dataplane event
+2015-10-23 11:19:01,713 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:858f[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:996c}{id:24196 seq:15} on interface eth1
+2015-10-23 11:19:01,713 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:01,713 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:24196 seq:15}
+Round 57 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:01,822 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:858c[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:9bd6}{id:25629 seq:12} on interface eth1
+2015-10-23 11:19:01,822 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 58 completed.
+Forwarding dataplane event
+2015-10-23 11:19:01,937 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8574[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:a16c}{id:24196 seq:15} on interface eth1
+2015-10-23 11:19:01,937 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:01,938 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8578[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:6d5}{id:63773 seq:13} on interface eth1
+2015-10-23 11:19:01,938 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:01,938 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:857b[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:e161}{id:7824 seq:14} on interface eth1
+2015-10-23 11:19:01,938 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 59 completed.
+No correctness violations!
+Round 60 completed.
+Round 61 completed.
+Injecting a random packet
+2015-10-23 11:19:02,241 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8562[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:3cc3}{id:47916 seq:16}
+Round 62 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:02,357 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8561[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ee43}{id:2475 seq:17}
+Round 63 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:02,466 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8562[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:3cc3}{id:47916 seq:16} on interface eth1
+2015-10-23 11:19:02,466 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:02,466 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:47916 seq:16}
+Round 64 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:02,575 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8561[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ee43}{id:2475 seq:17} on interface eth1
+2015-10-23 11:19:02,575 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:02,575 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:2475 seq:17}
+Injecting a random packet
+2015-10-23 11:19:02,576 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8553[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:1603}{id:57834 seq:18}
+Round 65 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:02,685 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8558[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:44c3}{id:47916 seq:16} on interface eth1
+2015-10-23 11:19:02,685 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:02,692 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8549[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:c59e}{id:12878 seq:19}
+Round 66 completed.
+Forwarding dataplane event
+2015-10-23 11:19:02,794 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8553[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:1603}{id:57834 seq:18} on interface eth1
+2015-10-23 11:19:02,794 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:02,794 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:57834 seq:18}
+Forwarding dataplane event
+2015-10-23 11:19:02,796 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8556[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:f643}{id:2475 seq:17} on interface eth1
+2015-10-23 11:19:02,796 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 67 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:02,920 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8549[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:c59e}{id:12878 seq:19} on interface eth1
+2015-10-23 11:19:02,920 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:02,920 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:12878 seq:19}
+Round 68 completed.
+Forwarding dataplane event
+2015-10-23 11:19:03,022 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8548[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:1e03}{id:57834 seq:18} on interface eth1
+2015-10-23 11:19:03,022 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:03,030 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8535[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d6cc}{id:8479 seq:20}
+Round 69 completed.
+Forwarding dataplane event
+2015-10-23 11:19:03,131 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:853d[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:cd9e}{id:12878 seq:19} on interface eth1
+2015-10-23 11:19:03,131 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+No correctness violations!
+Round 70 completed.
+Forwarding dataplane event
+2015-10-23 11:19:03,241 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8535[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d6cc}{id:8479 seq:20} on interface eth1
+2015-10-23 11:19:03,241 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:03,241 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:8479 seq:20}
+Round 71 completed.
+Forwarding dataplane event
+Round 72 completed.
+Forwarding dataplane event
+2015-10-23 11:19:03,451 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:852f[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:decc}{id:8479 seq:20} on interface eth1
+2015-10-23 11:19:03,451 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 73 completed.
+Round 74 completed.
+Round 75 completed.
+Round 76 completed.
+Round 77 completed.
+Round 78 completed.
+Round 79 completed.
+No correctness violations!
+Round 80 completed.
+Injecting a random packet
+2015-10-23 11:19:04,257 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8528[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:7950}{id:32410 seq:21}
+Round 81 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 82 completed.
+2015-10-23 11:19:04,379 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABDsAMADwAAISNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSLpxoEABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:04,380 - hb_logger - INFO - Adding controller handle (1010 -> *): mid_out:316.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABDsAMADwAAISNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSLpxoEABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:04,380 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABDsAMADwAAISNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSLpxoEABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAISNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAgAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABDsAMADwAAISNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSLpxoEABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAISNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAgAAAAAACAAC//8=]
+
+2015-10-23 11:19:04,383 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABFUAMADwAAQSNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSJ3SckABQAAAAAAAAAAAAEAAAAAAAAAKg==]
+
+2015-10-23 11:19:04,384 - hb_logger - INFO - Adding controller handle (1013 -> *): mid_out:318.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABFUAMADwAAQSNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSJ3SckABQAAAAAAAAAAAAEAAAAAAAAAKg==]
+
+2015-10-23 11:19:04,384 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABFUAMADwAAQSNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSJ3SckABQAAAAAAAAAAAAEAAAAAAAAAKg==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABFUAMADwAAQSNFZ4AQQSNFZ4AQL//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABSJ3SckABQAAAAAAAAAAAAEAAAAAAAAAKg==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQISNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+Forwarding dataplane event
+2015-10-23 11:19:04,479 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8528[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:7950}{id:32410 seq:21} on interface eth1
+2015-10-23 11:19:04,479 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:04,479 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:32410 seq:21}
+2015-10-23 11:19:04,482 - hb_logger - INFO - Adding controller send with edge (1010 -> 1022): mid_out:316 -> mid_in:326.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:19:04,490 - hb_logger - INFO - Adding controller send with edge (1013 -> 1028): mid_out:318 -> mid_in:327.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 83 completed.
+Forwarding dataplane event
+Round 84 completed.
+Forwarding dataplane event
+2015-10-23 11:19:04,704 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8523[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:8150}{id:32410 seq:21} on interface eth1
+2015-10-23 11:19:04,704 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:04,705 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:851e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:c9d1}{id:11800 seq:22}
+Round 85 completed.
+Forwarding dataplane event
+Round 86 completed.
+Forwarding dataplane event
+2015-10-23 11:19:04,914 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:851e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:c9d1}{id:11800 seq:22} on interface eth1
+2015-10-23 11:19:04,914 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:04,914 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:11800 seq:22}
+Round 87 completed.
+Forwarding dataplane event
+Round 88 completed.
+Forwarding dataplane event
+2015-10-23 11:19:05,124 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8519[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:d1d1}{id:11800 seq:22} on interface eth1
+2015-10-23 11:19:05,124 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 89 completed.
+No correctness violations!
+Round 90 completed.
+Round 91 completed.
+Round 92 completed.
+Injecting a random packet
+2015-10-23 11:19:05,527 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8512[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:97b1}{id:24631 seq:23}
+Round 93 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:05,635 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:850b[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d3d2}{id:9237 seq:24}
+Round 94 completed.
+Forwarding dataplane event
+2015-10-23 11:19:05,736 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8512[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:97b1}{id:24631 seq:23} on interface eth1
+2015-10-23 11:19:05,736 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:05,737 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:24631 seq:23}
+Forwarding dataplane event
+Round 95 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:05,852 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:850b[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d3d2}{id:9237 seq:24} on interface eth1
+2015-10-23 11:19:05,852 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:05,852 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:9237 seq:24}
+Injecting a random packet
+2015-10-23 11:19:05,853 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:84ff[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:1607}{id:57823 seq:25}
+Round 96 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:05,961 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:850b[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:9fb1}{id:24631 seq:23} on interface eth1
+2015-10-23 11:19:05,961 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 97 completed.
+Forwarding dataplane event
+2015-10-23 11:19:06,069 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8500[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:dbd2}{id:9237 seq:24} on interface eth1
+2015-10-23 11:19:06,069 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:06,070 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:84ff[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:1607}{id:57823 seq:25} on interface eth1
+2015-10-23 11:19:06,070 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:06,070 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:57823 seq:25}
+Round 98 completed.
+Forwarding dataplane event
+Round 99 completed.
+Forwarding dataplane event
+2015-10-23 11:19:06,279 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84f5[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:1e07}{id:57823 seq:25} on interface eth1
+2015-10-23 11:19:06,279 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 100 completed.
+Injecting a random packet
+2015-10-23 11:19:06,381 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84ec[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:aef}{id:60662 seq:26}
+Round 101 completed.
+Forwarding dataplane event
+Round 102 completed.
+Forwarding dataplane event
+2015-10-23 11:19:06,589 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84ec[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:aef}{id:60662 seq:26} on interface eth1
+2015-10-23 11:19:06,589 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:06,589 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:60662 seq:26}
+Round 103 completed.
+Forwarding dataplane event
+Round 104 completed.
+Forwarding dataplane event
+2015-10-23 11:19:06,798 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84e7[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:12ef}{id:60662 seq:26} on interface eth1
+2015-10-23 11:19:06,798 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Round 105 completed.
+Injecting a random packet
+2015-10-23 11:19:06,900 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84e1[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:b6ac}{id:16696 seq:27}
+Round 106 completed.
+Forwarding dataplane event
+Round 107 completed.
+Forwarding dataplane event
+2015-10-23 11:19:07,109 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84e1[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:b6ac}{id:16696 seq:27} on interface eth1
+2015-10-23 11:19:07,109 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:07,109 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:16696 seq:27}
+Round 108 completed.
+Forwarding dataplane event
+Round 109 completed.
+Forwarding dataplane event
+2015-10-23 11:19:07,319 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:84dc[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:beac}{id:16696 seq:27} on interface eth1
+2015-10-23 11:19:07,319 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 110 completed.
+Round 111 completed.
+Round 112 completed.
+Round 113 completed.
+Round 114 completed.
+Injecting a random packet
+2015-10-23 11:19:07,823 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84d5[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:38a2}{id:48961 seq:28}
+Round 115 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 116 completed.
+2015-10-23 11:19:07,942 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABa0AMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRfjggMABQAAAAAAAAAAAAIAAAAAAAAAVA==]
+
+2015-10-23 11:19:07,943 - hb_logger - INFO - Adding controller handle (1250 -> *): mid_out:394.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABa0AMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRfjggMABQAAAAAAAAAAAAIAAAAAAAAAVA==]
+
+2015-10-23 11:19:07,943 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABa0AMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRfjggMABQAAAAAAAAAAAAIAAAAAAAAAVA==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABa0AMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRfjggMABQAAAAAAAAAAAAIAAAAAAAAAVA==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+2015-10-23 11:19:07,946 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABcMAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRddK/4ABQAAAAAAAAAAAAIAAAAAAAAAVA==]
+
+2015-10-23 11:19:07,947 - hb_logger - INFO - Adding controller handle (1253 -> *): mid_out:396.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAABcMAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRddK/4ABQAAAAAAAAAAAAIAAAAAAAAAVA==]
+
+2015-10-23 11:19:07,947 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABcMAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRddK/4ABQAAAAAAAAAAAAIAAAAAAAAAVA==:1:AQ4AUAAAAAAAMADxAAMSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAwAAAAAACAAD//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAABcMAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAACRddK/4ABQAAAAAAAAAAAAIAAAAAAAAAVA==:1:AQ4AUAAAAAAAMADxAAMSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAwAAAAAACAAD//8=]
+
+Forwarding dataplane event
+2015-10-23 11:19:08,043 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84d5[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:38a2}{id:48961 seq:28} on interface eth1
+2015-10-23 11:19:08,043 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,043 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:48961 seq:28}
+2015-10-23 11:19:08,045 - hb_logger - INFO - Adding controller send with edge (1250 -> 1262): mid_out:394 -> mid_in:404.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:19:08,053 - hb_logger - INFO - Adding controller send with edge (1253 -> 1268): mid_out:396 -> mid_in:405.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 117 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:08,164 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84c9[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b8d8}{id:16138 seq:29}
+Round 118 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,265 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:84d0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:40a2}{id:48961 seq:28} on interface eth1
+2015-10-23 11:19:08,265 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:08,272 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84c3[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:ee32}{id:2479 seq:30}
+Round 119 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:08,379 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84c9[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b8d8}{id:16138 seq:29} on interface eth1
+2015-10-23 11:19:08,379 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,379 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:16138 seq:29}
+No correctness violations!
+Round 120 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,481 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84c3[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:ee32}{id:2479 seq:30} on interface eth1
+2015-10-23 11:19:08,481 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,481 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:2479 seq:30}
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:08,489 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84b7[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:6a09}{id:36311 seq:31}
+Round 121 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,590 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84be[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:c0d8}{id:16138 seq:29} on interface eth1
+2015-10-23 11:19:08,590 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:08,603 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:84ac[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:d83a}{id:8101 seq:32}
+Injecting a random packet
+2015-10-23 11:19:08,604 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84aa[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:25e6}{id:53752 seq:33}
+Round 122 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,705 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84b7[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:6a09}{id:36311 seq:31} on interface eth1
+2015-10-23 11:19:08,705 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,705 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:36311 seq:31}
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:08,712 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:84bb[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:f632}{id:2479 seq:30} on interface eth1
+2015-10-23 11:19:08,712 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:08,719 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:849e[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:88b1}{id:28460 seq:34}
+Round 123 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,820 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:84ac[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:d83a}{id:8101 seq:32} on interface eth1
+2015-10-23 11:19:08,820 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,820 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:8101 seq:32}
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:08,827 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:84aa[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:25e6}{id:53752 seq:33} on interface eth1
+2015-10-23 11:19:08,827 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,828 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:53752 seq:33}
+Forwarding dataplane event
+Round 124 completed.
+Forwarding dataplane event
+2015-10-23 11:19:08,935 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:849e[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:88b1}{id:28460 seq:34} on interface eth1
+2015-10-23 11:19:08,935 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:08,935 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:28460 seq:34}
+Forwarding dataplane event
+2015-10-23 11:19:08,936 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:84aa[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:7209}{id:36311 seq:31} on interface eth1
+2015-10-23 11:19:08,937 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 125 completed.
+Forwarding dataplane event
+2015-10-23 11:19:09,049 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:849c[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:e03a}{id:8101 seq:32} on interface eth1
+2015-10-23 11:19:09,049 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:09,055 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8496[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:2de6}{id:53752 seq:33} on interface eth1
+2015-10-23 11:19:09,055 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 126 completed.
+Forwarding dataplane event
+2015-10-23 11:19:09,157 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8490[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:90b1}{id:28460 seq:34} on interface eth1
+2015-10-23 11:19:09,157 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 127 completed.
+Round 128 completed.
+Round 129 completed.
+Injecting a random packet
+2015-10-23 11:19:09,459 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8481[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:7ce0}{id:31484 seq:35}
+No correctness violations!
+Round 130 completed.
+Forwarding dataplane event
+Round 131 completed.
+Forwarding dataplane event
+2015-10-23 11:19:09,667 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8481[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:7ce0}{id:31484 seq:35} on interface eth1
+2015-10-23 11:19:09,667 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:09,668 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:31484 seq:35}
+Injecting a random packet
+2015-10-23 11:19:09,669 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8478[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:f9b1}{id:65065 seq:36}
+Round 132 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 133 completed.
+Forwarding dataplane event
+2015-10-23 11:19:09,881 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8478[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:f9b1}{id:65065 seq:36} on interface eth1
+2015-10-23 11:19:09,882 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:09,882 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:65065 seq:36}
+Forwarding dataplane event
+2015-10-23 11:19:09,883 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:847c[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:84e0}{id:31484 seq:35} on interface eth1
+2015-10-23 11:19:09,883 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 134 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:09,991 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8469[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:f85e}{id:65403 seq:37}
+Round 135 completed.
+Forwarding dataplane event
+2015-10-23 11:19:10,092 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8470[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:1b2}{id:65065 seq:36} on interface eth1
+2015-10-23 11:19:10,092 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:10,099 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8461[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d4c6}{id:8979 seq:38}
+Round 136 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-10-23 11:19:10,205 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8469[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:f85e}{id:65403 seq:37} on interface eth1
+2015-10-23 11:19:10,205 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,206 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:65403 seq:37}
+Round 137 completed.
+2015-10-23 11:19:10,207 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAoAAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/YIAAEABhGF7ewEEe3sBAwgA1MYjEwAm]
+
+2015-10-23 11:19:10,208 - hb_logger - INFO - Adding controller handle (1553 -> *): mid_out:498.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAoAAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/YIAAEABhGF7ewEEe3sBAwgA1MYjEwAm]
+
+2015-10-23 11:19:10,208 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAoAAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/YIAAEABhGF7ewEEe3sBAwgA1MYjEwAm:1:AQ0AGAAAAAAAAAABAAQACAAAAAj/+wAA]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAoAAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/YIAAEABhGF7ewEEe3sBAwgA1MYjEwAm:1:AQ0AGAAAAAAAAAABAAQACAAAAAj/+wAA]
+
+Forwarding dataplane event
+2015-10-23 11:19:10,314 - hb_logger - INFO - Adding controller send with edge (1553 -> 1568): mid_out:498 -> mid_in:505.
+Controller log: 0 log lines, 2 STS events not matched.
+Injecting a random packet
+2015-10-23 11:19:10,316 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8452[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:8cee}{id:27370 seq:39}
+Round 138 completed.
+Forwarding dataplane event
+2015-10-23 11:19:10,417 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8461[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d4c6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,417 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,417 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:8979 seq:38}
+Forwarding dataplane event
+2015-10-23 11:19:10,418 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:845d[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:5f}{id:65403 seq:37} on interface eth1
+2015-10-23 11:19:10,419 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:10,419 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8461[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d4c6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,419 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,419 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:8979 seq:38}
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:10,426 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8461[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d4c6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,426 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,426 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:8979 seq:38}
+Round 139 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-10-23 11:19:10,538 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8452[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:8cee}{id:27370 seq:39} on interface eth1
+2015-10-23 11:19:10,539 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,539 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:27370 seq:39}
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:10,546 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8435[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:49cc}{id:44555 seq:40}
+No correctness violations!
+Round 140 completed.
+2015-10-23 11:19:10,547 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm]
+
+2015-10-23 11:19:10,547 - hb_logger - INFO - Adding controller handle (1646 -> *): mid_out:525.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm]
+
+2015-10-23 11:19:10,547 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ0AGAAAAAAAAAABAAIACAAAAAgABP//]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ0AGAAAAAAAAAABAAIACAAAAAgABP//]
+
+2015-10-23 11:19:10,548 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQT//wAACAAAAQAAe3sBAnt7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQT//wAACAAAAQAAe3sBAnt7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:19:10,549 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQL//wAACAAAAQAAe3sBBHt7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAsAAAABADwAAgAAEjRWeAEEEjRWeAECCABFAAAc/ZUAAEABhE97ewECe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQL//wAACAAAAQAAe3sBBHt7AQIAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAC//8=]
+
+2015-10-23 11:19:10,554 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm]
+
+2015-10-23 11:19:10,557 - hb_logger - INFO - Adding controller handle (1653 -> *): mid_out:528.
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm]
+
+2015-10-23 11:19:10,557 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ0AGAAAAAAAAAACAAMACAAAAAgABP//]
+
+Controller log: 4 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ0AGAAAAAAAAAACAAMACAAAAAgABP//]
+
+2015-10-23 11:19:10,559 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 5 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:19:10,562 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 6 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAwAAAACADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/ZkAAEABhEp7ewEDe3sBBAAA3MYjEwAm:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Forwarding dataplane event
+2015-10-23 11:19:10,647 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8446[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:dcc6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,647 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:10,659 - hb_logger - INFO - Adding controller send with edge (1646 -> 1680): mid_out:525 -> mid_in:544.
+Controller log: 5 log lines, 2 STS events not matched.
+2015-10-23 11:19:10,665 - hb_logger - INFO - Adding controller send with edge (1646 -> 1690): mid_out:525 -> mid_in:547.
+Controller log: 4 log lines, 2 STS events not matched.
+2015-10-23 11:19:10,674 - hb_logger - INFO - Adding controller send with edge (1646 -> 1696): mid_out:525 -> mid_in:548.
+Controller log: 3 log lines, 2 STS events not matched.
+2015-10-23 11:19:10,681 - hb_logger - INFO - Adding controller send with edge (1653 -> 1702): mid_out:528 -> mid_in:549.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-10-23 11:19:10,685 - hb_logger - INFO - Adding controller send with edge (1653 -> 1712): mid_out:528 -> mid_in:552.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:19:10,693 - hb_logger - INFO - Adding controller send with edge (1653 -> 1718): mid_out:528 -> mid_in:553.
+Controller log: 0 log lines, 2 STS events not matched.
+Injecting a random packet
+2015-10-23 11:19:10,700 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8426[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:c535}{id:12961 seq:41}
+Injecting a random packet
+2015-10-23 11:19:10,700 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8423[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:fff3}{id:63457 seq:42}
+Round 141 completed.
+Forwarding dataplane event
+2015-10-23 11:19:10,801 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:843b[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:94ee}{id:27370 seq:39} on interface eth1
+2015-10-23 11:19:10,802 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:10,802 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:844f[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:dcc6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,802 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:10,803 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:844a[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:dcc6}{id:8979 seq:38} on interface eth1
+2015-10-23 11:19:10,803 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:10,838 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8435[123.123.1.3>123.123.1.2]){t:ECHO_REQUEST c:0 chk:49cc}{id:44555 seq:40} on interface eth1
+2015-10-23 11:19:10,838 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,839 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:44555 seq:40}
+Round 142 completed.
+Forwarding dataplane event
+2015-10-23 11:19:10,940 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8426[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:c535}{id:12961 seq:41} on interface eth1
+2015-10-23 11:19:10,940 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,941 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:12961 seq:41}
+Forwarding dataplane event
+2015-10-23 11:19:10,942 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8423[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:fff3}{id:63457 seq:42} on interface eth1
+2015-10-23 11:19:10,943 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:10,943 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:63457 seq:42}
+Forwarding dataplane event
+Round 143 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,053 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8419[123.123.1.2>123.123.1.3]){t:ECHO_REPLY c:0 chk:51cc}{id:44555 seq:40} on interface eth1
+2015-10-23 11:19:11,053 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:11,082 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8407[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:e60}{id:59764 seq:43}
+Round 144 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,183 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8412[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:7f4}{id:63457 seq:42} on interface eth1
+2015-10-23 11:19:11,183 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:11,191 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8416[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:cd35}{id:12961 seq:41} on interface eth1
+2015-10-23 11:19:11,191 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:11,192 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8400[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d384}{id:9295 seq:44}
+Round 145 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,293 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8407[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:e60}{id:59764 seq:43} on interface eth1
+2015-10-23 11:19:11,293 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,294 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:59764 seq:43}
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:11,302 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83f7[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:d638}{id:8602 seq:45}
+Round 146 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:11,417 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8400[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:d384}{id:9295 seq:44} on interface eth1
+2015-10-23 11:19:11,417 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,418 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:9295 seq:44}
+Injecting a random packet
+2015-10-23 11:19:11,419 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83ec[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:dc39}{id:7064 seq:46}
+Round 147 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,520 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83f7[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:d638}{id:8602 seq:45} on interface eth1
+2015-10-23 11:19:11,520 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,520 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:8602 seq:45}
+Forwarding dataplane event
+2015-10-23 11:19:11,522 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83fe[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:1660}{id:59764 seq:43} on interface eth1
+2015-10-23 11:19:11,522 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:11,537 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83e1[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ed4e}{id:2690 seq:47}
+Injecting a random packet
+2015-10-23 11:19:11,537 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:83dd[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:e517}{id:4792 seq:48}
+Round 148 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,639 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83ec[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:dc39}{id:7064 seq:46} on interface eth1
+2015-10-23 11:19:11,639 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,639 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:7064 seq:46}
+Forwarding dataplane event
+2015-10-23 11:19:11,640 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83f0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:db84}{id:9295 seq:44} on interface eth1
+2015-10-23 11:19:11,640 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:11,662 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83d1[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:98b3}{id:24347 seq:49}
+Round 149 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,763 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:83ea[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:de38}{id:8602 seq:45} on interface eth1
+2015-10-23 11:19:11,763 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:11,771 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83e1[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ed4e}{id:2690 seq:47} on interface eth1
+2015-10-23 11:19:11,771 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,771 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:2690 seq:47}
+Forwarding dataplane event
+2015-10-23 11:19:11,772 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:83dd[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:e517}{id:4792 seq:48} on interface eth1
+2015-10-23 11:19:11,772 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,772 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:4792 seq:48}
+Forwarding dataplane event
+No correctness violations!
+Round 150 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,881 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:83dc[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:e439}{id:7064 seq:46} on interface eth1
+2015-10-23 11:19:11,881 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:11,889 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83d1[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:98b3}{id:24347 seq:49} on interface eth1
+2015-10-23 11:19:11,890 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:11,890 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:24347 seq:49}
+Forwarding dataplane event
+Round 151 completed.
+Forwarding dataplane event
+2015-10-23 11:19:11,999 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:83c5[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:ed17}{id:4792 seq:48} on interface eth1
+2015-10-23 11:19:11,999 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:12,007 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:83ca[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:f54e}{id:2690 seq:47} on interface eth1
+2015-10-23 11:19:12,007 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Round 152 completed.
+Forwarding dataplane event
+2015-10-23 11:19:12,108 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:83be[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:a0b3}{id:24347 seq:49} on interface eth1
+2015-10-23 11:19:12,108 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:12,110 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:83b2[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7355}{id:33912 seq:50}
+Round 153 completed.
+Forwarding dataplane event
+Round 154 completed.
+Forwarding dataplane event
+2015-10-23 11:19:12,319 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:83b2[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7355}{id:33912 seq:50} on interface eth1
+2015-10-23 11:19:12,319 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:12,319 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:33912 seq:50}
+Round 155 completed.
+Forwarding dataplane event
+Round 156 completed.
+Forwarding dataplane event
+2015-10-23 11:19:12,530 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83ad[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:7b55}{id:33912 seq:50} on interface eth1
+2015-10-23 11:19:12,530 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 157 completed.
+Round 158 completed.
+Round 159 completed.
+Injecting a random packet
+2015-10-23 11:19:12,833 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:83a4[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:ca53}{id:11641 seq:51}
+Injecting a random packet
+2015-10-23 11:19:12,833 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83a2[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ab5f}{id:19564 seq:52}
+No correctness violations!
+Round 160 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:12,950 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:839b[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:65fb}{id:37327 seq:53}
+Round 161 completed.
+Forwarding dataplane event
+2015-10-23 11:19:13,051 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:83a4[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:ca53}{id:11641 seq:51} on interface eth1
+2015-10-23 11:19:13,051 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:13,051 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:11641 seq:51}
+Forwarding dataplane event
+2015-10-23 11:19:13,053 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:83a2[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:ab5f}{id:19564 seq:52} on interface eth1
+2015-10-23 11:19:13,053 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:13,053 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:19564 seq:52}
+Forwarding dataplane event
+Round 162 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:13,176 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:839b[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:65fb}{id:37327 seq:53} on interface eth1
+2015-10-23 11:19:13,176 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:13,176 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:37327 seq:53}
+Forwarding dataplane event
+Round 163 completed.
+Forwarding dataplane event
+2015-10-23 11:19:13,285 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8395[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:b35f}{id:19564 seq:52} on interface eth1
+2015-10-23 11:19:13,285 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:13,286 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8398[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:d253}{id:11641 seq:51} on interface eth1
+2015-10-23 11:19:13,286 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 164 completed.
+Forwarding dataplane event
+2015-10-23 11:19:13,394 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:838d[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:6dfb}{id:37327 seq:53} on interface eth1
+2015-10-23 11:19:13,394 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 165 completed.
+Round 166 completed.
+Round 167 completed.
+Injecting a random packet
+2015-10-23 11:19:13,697 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8381[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:88cd}{id:28412 seq:54}
+Round 168 completed.
+Forwarding dataplane event
+Round 169 completed.
+Forwarding dataplane event
+2015-10-23 11:19:13,907 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8381[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:88cd}{id:28412 seq:54} on interface eth1
+2015-10-23 11:19:13,907 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:13,907 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:28412 seq:54}
+No correctness violations!
+Round 170 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:14,017 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8375[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:ccf6}{id:10962 seq:55}
+Round 171 completed.
+Forwarding dataplane event
+2015-10-23 11:19:14,118 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:837c[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:90cd}{id:28412 seq:54} on interface eth1
+2015-10-23 11:19:14,118 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 172 completed.
+Forwarding dataplane event
+2015-10-23 11:19:14,227 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8375[123.123.1.2>123.123.1.3]){t:ECHO_REQUEST c:0 chk:ccf6}{id:10962 seq:55} on interface eth1
+2015-10-23 11:19:14,227 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:14,227 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:10962 seq:55}
+Round 173 completed.
+Forwarding dataplane event
+Round 174 completed.
+Forwarding dataplane event
+2015-10-23 11:19:14,437 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:836f[123.123.1.3>123.123.1.2]){t:ECHO_REPLY c:0 chk:d4f6}{id:10962 seq:55} on interface eth1
+2015-10-23 11:19:14,437 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 175 completed.
+Injecting a random packet
+2015-10-23 11:19:14,539 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8369[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:7e71}{id:31062 seq:56}
+Round 176 completed.
+Forwarding dataplane event
+Round 177 completed.
+Forwarding dataplane event
+2015-10-23 11:19:14,748 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8369[123.123.1.1>123.123.1.3]){t:ECHO_REQUEST c:0 chk:7e71}{id:31062 seq:56} on interface eth1
+2015-10-23 11:19:14,748 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:14,748 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:31062 seq:56}
+Injecting a random packet
+2015-10-23 11:19:14,750 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8360[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:9ce}{id:60920 seq:57}
+Round 178 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 179 completed.
+Forwarding dataplane event
+2015-10-23 11:19:14,965 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8360[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:9ce}{id:60920 seq:57} on interface eth1
+2015-10-23 11:19:14,965 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:14,965 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:60920 seq:57}
+Forwarding dataplane event
+2015-10-23 11:19:14,966 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8364[123.123.1.3>123.123.1.1]){t:ECHO_REPLY c:0 chk:8671}{id:31062 seq:56} on interface eth1
+2015-10-23 11:19:14,967 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:14,968 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8354[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:906e}{id:26455 seq:58}
+No correctness violations!
+Round 180 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:15,086 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:834b[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b019}{id:18347 seq:59}
+Round 181 completed.
+Forwarding dataplane event
+2015-10-23 11:19:15,187 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8354[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:906e}{id:26455 seq:58} on interface eth1
+2015-10-23 11:19:15,187 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:15,187 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:26455 seq:58}
+Forwarding dataplane event
+2015-10-23 11:19:15,188 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8358[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:11ce}{id:60920 seq:57} on interface eth1
+2015-10-23 11:19:15,188 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 182 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-10-23 11:19:15,306 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:834b[123.123.1.4>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b019}{id:18347 seq:59} on interface eth1
+2015-10-23 11:19:15,306 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:15,306 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:18347 seq:59}
+Round 183 completed.
+Forwarding dataplane event
+2015-10-23 11:19:15,408 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:834a[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:986e}{id:26455 seq:58} on interface eth1
+2015-10-23 11:19:15,408 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+2015-10-23 11:19:15,417 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:833b[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b7c6}{id:16381 seq:60}
+Injecting a random packet
+2015-10-23 11:19:15,418 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8337[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:3739}{id:49289 seq:61}
+Round 184 completed.
+Forwarding dataplane event
+2015-10-23 11:19:15,519 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:833f[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:b819}{id:18347 seq:59} on interface eth1
+2015-10-23 11:19:15,519 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 185 completed.
+Forwarding dataplane event
+2015-10-23 11:19:15,635 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8337[123.123.1.4>123.123.1.1]){t:ECHO_REQUEST c:0 chk:3739}{id:49289 seq:61} on interface eth1
+2015-10-23 11:19:15,636 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:15,636 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:49289 seq:61}
+Forwarding dataplane event
+2015-10-23 11:19:15,637 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:833b[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b7c6}{id:16381 seq:60} on interface eth1
+2015-10-23 11:19:15,637 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:15,637 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:16381 seq:60}
+Injecting a random packet
+2015-10-23 11:19:15,638 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8329[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:e4d7}{id:4842 seq:62}
+Round 186 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 187 completed.
+2015-10-23 11:19:15,773 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAAC8sAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQMdPcEABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:15,775 - hb_logger - INFO - Adding controller handle (2398 -> *): mid_out:766.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAAC8sAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQMdPcEABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:15,776 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAAC8sAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQMdPcEABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAMSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAwAAAAAACAAD//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAAC8sAMADwAAMSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQMdPcEABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAMSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8AAwAAAAAACAAD//8=]
+
+2015-10-23 11:19:15,777 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAAC+UAMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQKhR94ABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:15,779 - hb_logger - INFO - Adding controller handle (2401 -> *): mid_out:768.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQsAWAAAC+UAMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQKhR94ABQAAAAAAAAAAAAAAAAAAAAAAAA==]
+
+2015-10-23 11:19:15,779 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAAC+UAMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQKhR94ABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQsAWAAAC+UAMADwAAQSNFZ4AQQSNFZ4AQP//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAZAAAAAAABQKhR94ABQAAAAAAAAAAAAAAAAAAAAAAAA==:1:AQ4AUAAAAAAAMADxAAQSNFZ4AQMSNFZ4AQT//wAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAwAFAAAAZP////8ABAAAAAAACAAE//8=]
+
+Forwarding dataplane event
+2015-10-23 11:19:15,874 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:832e[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:3f39}{id:49289 seq:61} on interface eth1
+2015-10-23 11:19:15,874 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:15,875 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:8329[123.123.1.3>123.123.1.1]){t:ECHO_REQUEST c:0 chk:e4d7}{id:4842 seq:62} on interface eth1
+2015-10-23 11:19:15,875 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:15,875 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:0}{id:4842 seq:62}
+Forwarding dataplane event
+2015-10-23 11:19:15,877 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:832d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:bfc6}{id:16381 seq:60} on interface eth1
+2015-10-23 11:19:15,877 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+2015-10-23 11:19:15,879 - hb_logger - INFO - Adding controller send with edge (2398 -> 2416): mid_out:766 -> mid_in:782.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:19:15,887 - hb_logger - INFO - Adding controller send with edge (2401 -> 2422): mid_out:768 -> mid_in:783.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 188 completed.
+Forwarding dataplane event
+Round 189 completed.
+Forwarding dataplane event
+2015-10-23 11:19:16,101 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:831d[123.123.1.1>123.123.1.3]){t:ECHO_REPLY c:0 chk:ecd7}{id:4842 seq:62} on interface eth1
+2015-10-23 11:19:16,101 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REPLY, not responding.
+Injecting a random packet
+2015-10-23 11:19:16,103 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8312[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8b47}{id:27769 seq:63}
+No correctness violations!
+Round 190 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 191 completed.
+2015-10-23 11:19:16,213 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAA0AAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/tEAAEABgxJ7ewEEe3sBAwgAi0dseQA/]
+
+2015-10-23 11:19:16,213 - hb_logger - INFO - Adding controller handle (2450 -> *): mid_out:791.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAA0AAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/tEAAEABgxJ7ewEEe3sBAwgAi0dseQA/]
+
+2015-10-23 11:19:16,214 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA0AAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/tEAAEABgxJ7ewEEe3sBAwgAi0dseQA/:1:AQ0AGAAAAAAAAAABAAQACAAAAAj/+wAA]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA0AAAABADwABAAAEjRWeAEDEjRWeAEECABFAAAc/tEAAEABgxJ7ewEEe3sBAwgAi0dseQA/:1:AQ0AGAAAAAAAAAABAAQACAAAAAj/+wAA]
+
+2015-10-23 11:19:16,313 - hb_logger - INFO - Adding controller send with edge (2450 -> 2455): mid_out:791 -> mid_in:793.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 192 completed.
+Forwarding dataplane event
+2015-10-23 11:19:16,416 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8312[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8b47}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,416 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:16,417 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:27769 seq:63}
+Forwarding dataplane event
+2015-10-23 11:19:16,418 - host:[IPAddr('123.123.1.3')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8312[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8b47}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,418 - host:[IPAddr('123.123.1.3')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:16,418 - host:[IPAddr('123.123.1.3')] - INFO - sending packet on interface eth1: [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:27769 seq:63}
+Forwarding dataplane event
+2015-10-23 11:19:16,419 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8312[123.123.1.4>123.123.1.3]){t:ECHO_REQUEST c:0 chk:8b47}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,419 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:16,419 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:0}{id:27769 seq:63}
+Round 193 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Round 194 completed.
+2015-10-23 11:19:16,545 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/]
+
+2015-10-23 11:19:16,545 - hb_logger - INFO - Adding controller handle (2511 -> *): mid_out:811.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/]
+
+2015-10-23 11:19:16,545 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ0AGAAAAAAAAAABAAMACAAAAAgABP//]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ0AGAAAAAAAAAABAAMACAAAAAgABP//]
+
+2015-10-23 11:19:16,546 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ4AUAAAAAAAMADwAAMSNFZ4AQMSNFZ4AQT//wAACAAAAQAAe3sBA3t7AQQAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAE//8=]
+
+2015-10-23 11:19:16,549 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAA4AAAABADwAAwAAEjRWeAEEEjRWeAEDCABFAAAc/t8AAEABgwR7ewEDe3sBBAAAk0dseQA/:1:AQ4AUAAAAAAAMADwAAQSNFZ4AQQSNFZ4AQP//wAACAAAAQAAe3sBBHt7AQMAAAAAABAAAAAAAAAAAAAFAAAAZP///////wABAAAACAAD//8=]
+
+Forwarding dataplane event
+2015-10-23 11:19:16,645 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8303[123.123.1.1>123.123.1.4]){t:ECHO_REPLY c:0 chk:9347}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,645 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+2015-10-23 11:19:16,646 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8308[123.123.1.2>123.123.1.4]){t:ECHO_REPLY c:0 chk:9347}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,646 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+2015-10-23 11:19:16,647 - hb_logger - INFO - Adding controller send with edge (2511 -> 2524): mid_out:811 -> mid_in:816.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-10-23 11:19:16,651 - hb_logger - INFO - Adding controller send with edge (2511 -> 2534): mid_out:811 -> mid_in:819.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-10-23 11:19:16,658 - hb_logger - INFO - Adding controller send with edge (2511 -> 2540): mid_out:811 -> mid_in:820.
+Controller log: 0 log lines, 2 STS events not matched.
+Injecting a random packet
+2015-10-23 11:19:16,665 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:82f1[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:cc4}{id:60155 seq:64}
+Round 195 completed.
+Forwarding dataplane event
+2015-10-23 11:19:16,766 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:03>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:8304[123.123.1.3>123.123.1.4]){t:ECHO_REPLY c:0 chk:9347}{id:27769 seq:63} on interface eth1
+2015-10-23 11:19:16,766 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 196 completed.
+Forwarding dataplane event
+2015-10-23 11:19:16,875 - host:[IPAddr('123.123.1.4')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:82f1[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:cc4}{id:60155 seq:64} on interface eth1
+2015-10-23 11:19:16,875 - host:[IPAddr('123.123.1.4')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-10-23 11:19:16,875 - host:[IPAddr('123.123.1.4')] - INFO - sending packet on interface eth1: [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:60155 seq:64}
+Round 197 completed.
+Forwarding dataplane event
+Round 198 completed.
+Forwarding dataplane event
+2015-10-23 11:19:17,084 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:04>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:82eb[123.123.1.4>123.123.1.1]){t:ECHO_REPLY c:0 chk:14c4}{id:60155 seq:64} on interface eth1
+2015-10-23 11:19:17,085 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 199 completed.
+Injecting a random packet
+2015-10-23 11:19:17,186 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:04:IP]|([v:4hl:5l:28t:64]ICMP cs:82e4[123.123.1.1>123.123.1.4]){t:ECHO_REQUEST c:0 chk:5af7}{id:40135 seq:65}
+No correctness violations!
+Round 200 completed.
+Killing controller c1 (pid 2702)
+Terminating child controllers... OK

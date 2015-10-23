@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_learningswitch.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124    7199136    9110988      88500     398540     952988\n-/+ buffers/cache:    5847608   10462516\nSwap:     16650236     251120   16399116",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "11:15:22 up 19:35,  6 users,  load average: 0.32, 0.82, 0.63"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "ff35fb1f40f8055b757e2a60e49097e5eb751f0b",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "cdf55f8fc8f75130d8d0a846ec96671b30461ddd",
+      "diff": "diff --git a/config/trace_floodlight_forwarding.py b/config/trace_floodlight_forwarding.py\nindex 9da6188..b62df3f 100644\n--- a/config/trace_floodlight_forwarding.py\n+++ b/config/trace_floodlight_forwarding.py\n@@ -18,7 +18,7 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 1\n+num = 2\n # topology_class = StarTopology\n # topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\ndiff --git a/plot.py b/plot.py\nindex f460ae4..089d9eb 100755\n--- a/plot.py\n+++ b/plot.py\n@@ -117,32 +117,35 @@ def main(result_dirs):\n         short_name = os.path.basename(os.path.normpath(name))\n         tables[p][short_name] = table[p]\n   \n+  # Create aggregate csv over multiple summary.csv files\n+  for \n+\n \n   keys_to_plot = ['num_harmful', 'num_commute', 'num_races', 'num_rw_time_edges', 'num_ww_time_edges',\n             'num_per_pkt_races', 'num_per_pkt_inconsistent', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race', 'num_per_pkt_inconsistent_no_repeat']\n \n   # Plot summaries for all values\n-  for p in prefixes:\n-    for key in keys_to_plot:\n-      plot_with_delta(tables[p], p, key, False)\n-  \n-    for name in tables[p]:\n-      plot_with_delta_multiple(tables[p], p, name,\n-                               out_name=get_short_name(name) + \"_pkt_consist\",\n-                               keys=per_pkt_consistency,\n-                               use_log=False)\n-      plot_with_delta_multiple(tables[p], p, name,\n-                               out_name=get_short_name(name) + \"_overview_covered_races\",\n-                               keys=['num_harmful', \n-                                     'num_covered'],\n-                               use_log=True)\n-      plot_with_delta_multiple(tables[p], p, name,\n-                               out_name=get_short_name(name) + \"_overview_covered_traces\",\n-                               keys=['num_per_pkt_inconsistent',\n-                                     'num_per_pkt_inconsistent_covered',\n-                                     'num_per_pkt_entry_version_race',\n-                                     'num_per_pkt_inconsistent_no_repeat'],\n-                               use_log=True)\n+#   for p in prefixes:\n+#     for key in keys_to_plot:\n+#       plot_with_delta(tables[p], p, key, False)\n+#   \n+#     for name in tables[p]:\n+#       plot_with_delta_multiple(tables[p], p, name,\n+#                                out_name=get_short_name(name) + \"_pkt_consist\",\n+#                                keys=per_pkt_consistency,\n+#                                use_log=False)\n+#       plot_with_delta_multiple(tables[p], p, name,\n+#                                out_name=get_short_name(name) + \"_overview_covered_races\",\n+#                                keys=['num_harmful', \n+#                                      'num_covered'],\n+#                                use_log=True)\n+#       plot_with_delta_multiple(tables[p], p, name,\n+#                                out_name=get_short_name(name) + \"_overview_covered_traces\",\n+#                                keys=['num_per_pkt_inconsistent',\n+#                                      'num_per_pkt_inconsistent_covered',\n+#                                      'num_per_pkt_entry_version_race',\n+#                                      'num_per_pkt_inconsistent_no_repeat'],\n+#                                use_log=True)\n \n \n def get_short_name(name):",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_forwarding.py\n\tmodified:   plot.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tgen.sh~\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-66-generic #108-Ubuntu SMP Wed Oct 7 15:20:27 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_10_23_11_15_22",
+  "user": "jeremie"
+}
