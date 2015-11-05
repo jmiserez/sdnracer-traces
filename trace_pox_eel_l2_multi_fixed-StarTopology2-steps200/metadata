@@ -1,0 +1,42 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-c",
+    "config/trace_pox_l2_multi_new.py"
+  ],
+  "cwd": "/home/ahassany/repos/jsts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:       4045244     312712    3732532       5664      27928     173776\n-/+ buffers/cache:     111008    3934236\nSwap:      4192252          0    4192252",
+    "name": "stsdev",
+    "num_cores": "2",
+    "uptime": "16:19:12 up 1 day, 22:58,  1 user,  load average: 0.18, 0.06, 0.06"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "bdd8a411b6fbbd7cfd50088fc67a86d5a282d5b0",
+      "diff": "diff --git a/pox/openflow/of_01.py b/pox/openflow/of_01.py\nindex 966b408..add65c4 100644\n--- a/pox/openflow/of_01.py\n+++ b/pox/openflow/of_01.py\n@@ -656,8 +656,10 @@ class Connection (EventMixin):\n                       of.ofp_type_rev_map['OFPT_BARRIER_REPLY']):\n         encoded_msgin = self.base64_encode_raw(self.buf[0:packet_length])\n         self.print_msgin(self.dpid, encoded_msgin)\n+        print \"XXX SET CURRENT MSGIN\", (self.dpid, self.buf)\n         Connection._hb_current_msgin = (self.dpid, encoded_msgin)\n       else:\n+        print \"XXX CURRENT MSGIN IS NONE\", self.dpid, ofp_type\n         Connection._hb_current_msgin = None\n       \n       msg = classes[ofp_type]()\n@@ -681,6 +683,7 @@ class Connection (EventMixin):\n                       (\"\\n\" + str(self) + \" \").join(str(msg).split('\\n')))\n         continue\n       finally:\n+        print \"XXX EXCEPTION MSGIN IS NONE\", self.dpid, ofp_type\n         Connection._hb_current_msgin = None\n     return True",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   pox/openflow/of_01.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "33e0ad55049e5cd0ec272a428b6b813aeb294837",
+      "diff": "diff --git a/config/fuzzer_params.py b/config/fuzzer_params.py\nindex 300d22f..1807a9a 100644\n--- a/config/fuzzer_params.py\n+++ b/config/fuzzer_params.py\n@@ -11,7 +11,7 @@ link_failure_rate = 0.0\n link_recovery_rate = 1.0\n controller_crash_rate = 0.0\n controller_recovery_rate = 1.0\n-traffic_generation_rate = 0.05\n+traffic_generation_rate = 0.10\n host_migration_rate = 0.0\n intracontroller_block_rate = 0.0\n intracontroller_unblock_rate = 0.0\ndiff --git a/config/trace_floodlight_learningswitch.py b/config/trace_floodlight_learningswitch.py\nindex 9e7537a..dc020c8 100644\n--- a/config/trace_floodlight_learningswitch.py\n+++ b/config/trace_floodlight_learningswitch.py\n@@ -12,7 +12,7 @@ start_cmd = ('''java -ea -Dlogback.configurationFile=./src/main/resources/logbac\n              '''./target/floodlight.jar '''\n               '''-cf ./src/main/resources/trace_learningswitch.properties''')\n \n-controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633)]\n+controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n # Uncomment this if you are running Floodlight separately, e.g. for debugging in Eclipse. There must be a controller listening on port 6633.\n # start_cmd = '''echo \"no-op\"'''\ndiff --git a/config/trace_pox_l2_multi.py b/config/trace_pox_l2_multi.py\nindex a935594..2b148c1 100644\n--- a/config/trace_pox_l2_multi.py\n+++ b/config/trace_pox_l2_multi.py\n@@ -19,17 +19,17 @@ start_cmd = ('''./pox.py --verbose '''\n \n controllers = [ControllerConfig(start_cmd, cwd=\"pox/\")]\n \n-num = 2\n-#topology_class = StarTopology\n-#topology_params = \"num_hosts=%d\" % num\n+num = 4\n+topology_class = StarTopology\n+topology_params = \"num_hosts=%d\" % num\n #topology_class = MeshTopology\n #topology_params = \"num_switches=%d\" % num\n # topology_class = GridTopology\n # topology_params = \"num_rows=3, num_columns=3\"\n-topology_class = BinaryLeafTreeTopology\n-topology_params = \"num_levels=%d\" % num\n+#topology_class = BinaryLeafTreeTopology\n+#topology_params = \"num_levels=%d\" % num\n \n-steps = 100\n+steps = 200\n # Where should the output files be written to\n results_dir = \"traces/trace_pox_l2_multi-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \ndiff --git a/pox b/pox\n--- a/pox\n+++ b/pox\n@@ -1 +1 @@\n-Subproject commit bdd8a411b6fbbd7cfd50088fc67a86d5a282d5b0\n+Subproject commit bdd8a411b6fbbd7cfd50088fc67a86d5a282d5b0-dirty",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n  (commit or discard the untracked or modified content in submodules)\n\n\tmodified:   config/fuzzer_params.py\n\tmodified:   config/trace_floodlight_learningswitch.py\n\tmodified:   config/trace_pox_l2_multi.py\n\tmodified:   pox (modified content)\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\t59629CROSS_FILE\n\tCROSS_TIMINGS_FILE\n\tconfig/floodlight_loxigen_learningswitch.py\n\tconfig/pox_consistency.py\n\tconfig/trace_pox_l2_multi_new.py\n\tcross_summary.csv\n\tcross_summary_timings.csv\n\tgen.sh~\n\tshort.txt\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 15.04",
+    "uname": "Linux stsdev 3.19.0-26-generic #28-Ubuntu SMP Tue Aug 11 14:16:32 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_11_05_16_19_12",
+  "user": "ahassany"
+}
