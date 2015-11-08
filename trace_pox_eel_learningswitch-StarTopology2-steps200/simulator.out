@@ -1,0 +1,584 @@
+WARNING:setup:No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+INFO:Controller: =====> Starting POX Controller <===== 
+Starting POX controller c1
+INFO:Controller:Launching controller c1: ./pox.py --verbose forwarding.l2_learning openflow.of_01 --address=127.0.0.1 --port=6633
+INFO:simulation:Launched controller c1: ./pox.py --verbose forwarding.l2_learning openflow.of_01 --address=127.0.0.1 --port=6633 [PID 16070]
+INFO:simulation:Creating topology...
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] POX 0.5.0 (eel) / Copyright 2011-2014 James McCauley, et al.
+
+[c1] DEBUG:core:POX 0.5.0 (eel) going up...
+
+[c1] DEBUG:core:Running on CPython (2.7.9/Apr 2 2015 15:33:21)
+
+[c1] DEBUG:core:Platform is Linux-3.19.0-26-generic-x86_64-with-Ubuntu-15.04-vivid
+
+[c1] INFO:core:POX 0.5.0 (eel) is up.
+
+[c1] DEBUG:openflow.of_01:Listening on 127.0.0.1:6633
+
+Controller log: 0 log lines, 1 STS events not matched.
+INFO:control_flow:Waiting until first OpenFlow message received..
+Controller log: 0 log lines, 2 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 3 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAAAY=]
+
+INFO:hb_logger:Adding controller handle (43 -> *): mid_out:14.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:ARMACAAAAAY=]
+
+[c1] INFO:openflow.of_01:[00-00-00-00-00-01 1] connected
+
+[c1] DEBUG:forwarding.l2_learning:Connection [00-00-00-00-00-01 1]
+
+Round 4 completed.
+Round 5 completed.
+Round 6 completed.
+Round 7 completed.
+Round 8 completed.
+Round 9 completed.
+Round 10 completed.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+Round 20 completed.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:58a9[123.123.1.1>123.123.1.1]){t:ECHO_REQUEST c:0 chk:4361}{id:46238 seq:0}
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:58a5[123.123.1.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b81e}{id:16352 seq:1}
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 21 completed.
+Round 22 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA]
+
+INFO:hb_logger:Adding controller handle (68 -> *): mid_out:22.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA]
+
+[c1] WARNING:forwarding.l2_learning:Same port for packet from 12:34:56:78:01:01 -> 12:34:56:78:01:01 on 00-00-00-00-00-01.1.  Drop.
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA:1:AQ4ASAAAAAcAAAABAAASNFZ4AQESNFZ4AQH//wAACAAAAQAAe3sBAXt7AQEACAAAAAAAAAAAAAAAAAAKAAqAAAAAAAH//wAA]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA:1:AQ4ASAAAAAcAAAABAAASNFZ4AQESNFZ4AQH//wAACAAAAQAAe3sBAXt7AQEACAAAAAAAAAAAAAAAAAAKAAqAAAAAAAH//wAA]
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA]
+
+[c1] WARNING:forwarding.l2_learning:Same port for packet from 12:34:56:78:01:02 -> 12:34:56:78:01:02 on 00-00-00-00-00-01.2.  Drop.
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA:1:AQ4ASAAAAAgAAAABAAASNFZ4AQISNFZ4AQL//wAACAAAAQAAe3sBAnt7AQIACAAAAAAAAAAAAAAAAAAKAAqAAAAAAAL//wAA]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAQAAEjRWeAEBEjRWeAEBCABFAAAcKUAAAEABWKl7ewEBe3sBAQgAQ2G0ngAA:1:AQ4ASAAAAAgAAAABAAASNFZ4AQISNFZ4AQL//wAACAAAAQAAe3sBAnt7AQIACAAAAAAAAAAAAAAAAAAKAAqAAAAAAAL//wAA]
+
+INFO:hb_logger:Adding controller send with edge (68 -> 74): mid_out:22 -> mid_in:27.
+Controller log: 2 log lines, 2 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (68 -> 82): mid_out:22 -> mid_in:28.
+Controller log: 1 log lines, 2 STS events not matched.
+Round 23 completed.
+Round 24 completed.
+Round 25 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5896[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d6c4}{id:8505 seq:2}
+Round 26 completed.
+Forwarding dataplane event
+Controller log: 1 log lines, 2 STS events not matched.
+Round 27 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKVIAAEABWJZ7ewEBe3sBAggA1sQhOQAC]
+
+INFO:hb_logger:Adding controller handle (99 -> *): mid_out:33.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKVIAAEABWJZ7ewEBe3sBAggA1sQhOQAC]
+
+[c1] DEBUG:forwarding.l2_learning:installing flow for 12:34:56:78:01:01.1 -> 12:34:56:78:01:02.2
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKVIAAEABWJZ7ewEBe3sBAggA1sQhOQAC:1:AQ4AUAAAAAkAAAAAAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIACAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAACAAA=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKVIAAEABWJZ7ewEBe3sBAggA1sQhOQAC:1:AQ4AUAAAAAkAAAAAAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIACAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAACAAA=]
+
+INFO:hb_logger:Adding controller send with edge (99 -> 104): mid_out:33 -> mid_in:35.
+Controller log: 1 log lines, 2 STS events not matched.
+Round 28 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5896[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d6c4}{id:8505 seq:2} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:8505 seq:2}
+Round 29 completed.
+Forwarding dataplane event
+Controller log: 1 log lines, 2 STS events not matched.
+No correctness violations!
+Round 30 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKVsAAEABWI17ewECe3sBAQAA3sQhOQAC]
+
+INFO:hb_logger:Adding controller handle (127 -> *): mid_out:42.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKVsAAEABWI17ewECe3sBAQAA3sQhOQAC]
+
+[c1] DEBUG:forwarding.l2_learning:installing flow for 12:34:56:78:01:02.2 -> 12:34:56:78:01:01.1
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKVsAAEABWI17ewECe3sBAQAA3sQhOQAC:1:AQ4AUAAAAAoAAAAAAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEAAAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAABAAA=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKVsAAEABWI17ewECe3sBAQAA3sQhOQAC:1:AQ4AUAAAAAoAAAAAAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEAAAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAABAAA=]
+
+INFO:hb_logger:Adding controller send with edge (127 -> 132): mid_out:42 -> mid_in:44.
+Controller log: 1 log lines, 2 STS events not matched.
+Round 31 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:588d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:dec4}{id:8505 seq:2} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5882[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:222e}{id:54734 seq:3}
+Round 32 completed.
+Forwarding dataplane event
+Round 33 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5882[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:222e}{id:54734 seq:3} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:54734 seq:3}
+Round 34 completed.
+Forwarding dataplane event
+Round 35 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:587d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:2a2e}{id:54734 seq:3} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 36 completed.
+Round 37 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5876[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7d5d}{id:31390 seq:4}
+Round 38 completed.
+Forwarding dataplane event
+Round 39 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5876[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7d5d}{id:31390 seq:4} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:31390 seq:4}
+No correctness violations!
+Round 40 completed.
+Forwarding dataplane event
+Round 41 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5871[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:855d}{id:31390 seq:4} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 42 completed.
+Round 43 completed.
+Round 44 completed.
+Round 45 completed.
+Round 46 completed.
+Round 47 completed.
+Round 48 completed.
+Round 49 completed.
+No correctness violations!
+Round 50 completed.
+Round 51 completed.
+Round 52 completed.
+Round 53 completed.
+Round 54 completed.
+Round 55 completed.
+Round 56 completed.
+Round 57 completed.
+Round 58 completed.
+Round 59 completed.
+No correctness violations!
+Round 60 completed.
+Round 61 completed.
+Round 62 completed.
+Round 63 completed.
+Round 64 completed.
+Round 65 completed.
+Round 66 completed.
+Round 67 completed.
+Round 68 completed.
+Round 69 completed.
+No correctness violations!
+Round 70 completed.
+Round 71 completed.
+Round 72 completed.
+Round 73 completed.
+Round 74 completed.
+Round 75 completed.
+Round 76 completed.
+Round 77 completed.
+Round 78 completed.
+Round 79 completed.
+No correctness violations!
+Round 80 completed.
+Round 81 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:586a[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:3ec}{id:62478 seq:5}
+Round 82 completed.
+Forwarding dataplane event
+Controller log: 1 log lines, 2 STS events not matched.
+Round 83 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKX4AAEABWGp7ewECe3sBAQgAA+z0DgAF]
+
+INFO:hb_logger:Adding controller handle (215 -> *): mid_out:71.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKX4AAEABWGp7ewECe3sBAQgAA+z0DgAF]
+
+[c1] DEBUG:forwarding.l2_learning:installing flow for 12:34:56:78:01:02.2 -> 12:34:56:78:01:01.1
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKX4AAEABWGp7ewECe3sBAQgAA+z0DgAF:1:AQ4AUAAAAAsAAAAAAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEACAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAABAAA=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAABADwAAgAAEjRWeAEBEjRWeAECCABFAAAcKX4AAEABWGp7ewECe3sBAQgAA+z0DgAF:1:AQ4AUAAAAAsAAAAAAAISNFZ4AQISNFZ4AQH//wAACAAAAQAAe3sBAnt7AQEACAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAABAAA=]
+
+INFO:hb_logger:Adding controller send with edge (215 -> 220): mid_out:71 -> mid_in:73.
+Controller log: 1 log lines, 2 STS events not matched.
+Round 84 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:586a[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:3ec}{id:62478 seq:5} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:62478 seq:5}
+Round 85 completed.
+Forwarding dataplane event
+Controller log: 1 log lines, 2 STS events not matched.
+Round 86 completed.
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKYcAAEABWGF7ewEBe3sBAgAAC+z0DgAF]
+
+INFO:hb_logger:Adding controller handle (243 -> *): mid_out:80.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKYcAAEABWGF7ewEBe3sBAgAAC+z0DgAF]
+
+[c1] DEBUG:forwarding.l2_learning:installing flow for 12:34:56:78:01:01.1 -> 12:34:56:78:01:02.2
+
+INFO:hb_logger:Controller instrumentation: INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKYcAAEABWGF7ewEBe3sBAgAAC+z0DgAF:1:AQ4AUAAAAAwAAAAAAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAACAAA=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] INFO:openflow.of_01:pox.openflow.of_01.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAABADwAAQAAEjRWeAECEjRWeAEBCABFAAAcKYcAAEABWGF7ewEBe3sBAgAAC+z0DgAF:1:AQ4AUAAAAAwAAAAAAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAAAAAAAAAAAAAAAAKAB6AAAAAAAH//wAAAAAACAACAAA=]
+
+INFO:hb_logger:Adding controller send with edge (243 -> 248): mid_out:80 -> mid_in:82.
+Controller log: 1 log lines, 2 STS events not matched.
+Round 87 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5861[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:bec}{id:62478 seq:5} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 88 completed.
+Round 89 completed.
+No correctness violations!
+Round 90 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5856[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:72c8}{id:34097 seq:6}
+Round 91 completed.
+Forwarding dataplane event
+Round 92 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5856[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:72c8}{id:34097 seq:6} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:34097 seq:6}
+Round 93 completed.
+Forwarding dataplane event
+Round 94 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5851[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:7ac8}{id:34097 seq:6} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 95 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:584a[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:826}{id:61394 seq:7}
+Round 96 completed.
+Forwarding dataplane event
+Round 97 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:584a[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:826}{id:61394 seq:7} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:61394 seq:7}
+Round 98 completed.
+Forwarding dataplane event
+Round 99 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5845[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:1026}{id:61394 seq:7} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:583e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:a340}{id:21687 seq:8}
+No correctness violations!
+Round 100 completed.
+Forwarding dataplane event
+Round 101 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:583e[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:a340}{id:21687 seq:8} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:21687 seq:8}
+Round 102 completed.
+Forwarding dataplane event
+Round 103 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5839[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:ab40}{id:21687 seq:8} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 104 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5832[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:cb07}{id:11503 seq:9}
+Round 105 completed.
+Forwarding dataplane event
+Round 106 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5832[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:cb07}{id:11503 seq:9} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:11503 seq:9}
+Round 107 completed.
+Forwarding dataplane event
+Round 108 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:582d[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:d307}{id:11503 seq:9} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 109 completed.
+No correctness violations!
+Round 110 completed.
+Round 111 completed.
+Round 112 completed.
+Round 113 completed.
+Round 114 completed.
+Round 115 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5826[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1a8d}{id:56680 seq:10}
+Round 116 completed.
+Forwarding dataplane event
+Round 117 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5826[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:1a8d}{id:56680 seq:10} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:56680 seq:10}
+Round 118 completed.
+Forwarding dataplane event
+Round 119 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5821[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:228d}{id:56680 seq:10} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 120 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:581a[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:ad47}{id:19117 seq:11}
+Round 121 completed.
+Forwarding dataplane event
+Round 122 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:581a[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:ad47}{id:19117 seq:11} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:19117 seq:11}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5812[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:da9d}{id:7510 seq:12}
+Round 123 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 124 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5815[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:b547}{id:19117 seq:11} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5812[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:da9d}{id:7510 seq:12} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:7510 seq:12}
+Round 125 completed.
+Forwarding dataplane event
+Round 126 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:5809[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e29d}{id:7510 seq:12} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 127 completed.
+Round 128 completed.
+Round 129 completed.
+No correctness violations!
+Round 130 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5802[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:94a5}{id:25421 seq:13}
+Round 131 completed.
+Forwarding dataplane event
+Round 132 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:5802[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:94a5}{id:25421 seq:13} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:25421 seq:13}
+Round 133 completed.
+Forwarding dataplane event
+Round 134 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57fd[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:9ca5}{id:25421 seq:13} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 135 completed.
+Round 136 completed.
+Round 137 completed.
+Round 138 completed.
+Round 139 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57f6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:9d90}{id:23137 seq:14}
+No correctness violations!
+Round 140 completed.
+Forwarding dataplane event
+Round 141 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57f6[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:9d90}{id:23137 seq:14} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:23137 seq:14}
+Round 142 completed.
+Forwarding dataplane event
+Round 143 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57f1[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:a590}{id:23137 seq:14} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 144 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57ea[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:4546}{id:45738 seq:15}
+Round 145 completed.
+Forwarding dataplane event
+Round 146 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57ea[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:4546}{id:45738 seq:15} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:45738 seq:15}
+Round 147 completed.
+Forwarding dataplane event
+Round 148 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57e5[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:4d46}{id:45738 seq:15} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 149 completed.
+No correctness violations!
+Round 150 completed.
+Round 151 completed.
+Round 152 completed.
+Round 153 completed.
+Round 154 completed.
+Round 155 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57de[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:9315}{id:25818 seq:16}
+Round 156 completed.
+Forwarding dataplane event
+Round 157 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57de[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:9315}{id:25818 seq:16} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:25818 seq:16}
+Round 158 completed.
+Forwarding dataplane event
+Round 159 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57d9[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:9b15}{id:25818 seq:16} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 160 completed.
+Round 161 completed.
+Round 162 completed.
+Round 163 completed.
+Round 164 completed.
+Round 165 completed.
+Round 166 completed.
+Round 167 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57d2[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d535}{id:8889 seq:17}
+Round 168 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57cd[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:dc08}{id:7141 seq:18}
+Round 169 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57d2[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:d535}{id:8889 seq:17} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:8889 seq:17}
+No correctness violations!
+Round 170 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57cd[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:dc08}{id:7141 seq:18} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:7141 seq:18}
+Round 171 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57c8[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:dd35}{id:8889 seq:17} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 172 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57c2[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e408}{id:7141 seq:18} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 173 completed.
+Round 174 completed.
+Round 175 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57ba[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:16d}{id:63103 seq:19}
+Round 176 completed.
+Forwarding dataplane event
+Round 177 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57ba[123.123.1.2>123.123.1.1]){t:ECHO_REQUEST c:0 chk:16d}{id:63103 seq:19} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:63103 seq:19}
+Round 178 completed.
+Forwarding dataplane event
+Round 179 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57b5[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:96d}{id:63103 seq:19} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+No correctness violations!
+Round 180 completed.
+Round 181 completed.
+Round 182 completed.
+Round 183 completed.
+Round 184 completed.
+Round 185 completed.
+Round 186 completed.
+Round 187 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57ae[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:76da}{id:33041 seq:20}
+Round 188 completed.
+Forwarding dataplane event
+Round 189 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57ae[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:76da}{id:33041 seq:20} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:33041 seq:20}
+No correctness violations!
+Round 190 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.1')]:sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57a3[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5646}{id:41380 seq:21}
+Round 191 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:57a9[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:7eda}{id:33041 seq:20} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 192 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:57a3[123.123.1.1>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5646}{id:41380 seq:21} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}{id:41380 seq:21}
+Round 193 completed.
+Forwarding dataplane event
+Round 194 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.1')]:Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:28t:64]ICMP cs:579d[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:5e46}{id:41380 seq:21} on interface eth1
+INFO:host:[IPAddr('123.123.1.1')]:Received ECHO_REPLY, not responding.
+Round 195 completed.
+Round 196 completed.
+Round 197 completed.
+Round 198 completed.
+Round 199 completed.
+No correctness violations!
+Round 200 completed.
+INFO:control_flow:Terminating fuzzing after 200 rounds
+INFO:control_flow:Pending Receives:
+INFO:control_flow:Pending Sends:
+Killing controller c1 (pid 16070)
+Terminating child controllers... OK
