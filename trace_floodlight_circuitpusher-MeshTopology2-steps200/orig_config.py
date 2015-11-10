@@ -21,12 +21,12 @@ controllers = [ControllerConfig(start_cmd, cwd='../jfloodlight', address="127.0.
 num = 2
 #topology_class = StarTopology
 #topology_params = "num_hosts=%d" % num
-#topology_class = MeshTopology
-#topology_params = "num_switches=%d" % num
+topology_class = MeshTopology
+topology_params = "num_switches=%d" % num
 # topology_class = GridTopology
 # topology_params = "num_rows=3, num_columns=3"
-topology_class = BinaryLeafTreeTopology
-topology_params = "num_levels=%d" % num
+#topology_class = BinaryLeafTreeTopology
+#topology_params = "num_levels=%d" % num
 
 steps = 200
 results_dir = "traces/trace_floodlight_circuitpusher-%s%d-steps%s" % (topology_class.__name__, num, steps)
@@ -64,4 +64,4 @@ control_flow = Fuzzer(simulation_config,
 #                       invariant_check_name="check_everything",
                       invariant_check_name="InvariantChecker.check_liveness",
                       apps=apps)
-raise RuntimeError("Please add this parameter to Fuzzer: fuzzer_params='traces/trace_floodlight_circuitpusher-BinaryLeafTreeTopology2-steps200/fuzzer_params.py'")
+raise RuntimeError("Please add this parameter to Fuzzer: fuzzer_params='traces/trace_floodlight_circuitpusher-MeshTopology2-steps200/fuzzer_params.py'")
