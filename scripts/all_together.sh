@@ -10,7 +10,7 @@ export RESET_FILEs=0
 ./scripts/cross_summary.sh *learningswitch-MeshTopology2-steps200
 ./scripts/cross_summary.sh *learningswitch-BinaryLeafTreeTopology1-steps200
 ./scripts/cross_summary.sh *learningswitch-BinaryLeafTreeTopology2-steps200
-./scripts/cross_summary.sh trace_floodlight_circuitpusher-BinaryLeafTreeTopology1-steps200
+./scripts/cross_summary.sh *circuitpusher-*-steps200
 
 
 rm -rf data/*.csv

@@ -115,9 +115,9 @@ def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
   subheader = [val for sublist in subheader for val in sublist]
   values_rows = [val for sublist in values_rows for val in sublist]
 
-  header = [k for k in special_keys_order]
+  header = ['' for k in special_keys_order]
   header.extend(timing_header)
-  second_header = ['' for k in special_keys_order]
+  second_header = [k for k in special_keys_order]
   second_header.extend(subheader)
   values = [special_keys[k] for k in special_keys_order]
   values.extend(values_rows)
@@ -141,8 +141,8 @@ def main(filename, consistency, print_headers):
   pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Inconsistent No Repeat'
   pretty_names['num_racing_versions'] = 'Inconsistent Updates'
   
-  pretty_names['num_writes'] = 'WRs'
-  pretty_names['num_read'] = 'RDs'
+  pretty_names['num_writes'] = 'Writes'
+  pretty_names['num_read'] = 'Reads'
   pretty_names['num_races'] = 'Races'
   pretty_names['num_commute'] = 'Commute'
   pretty_names['num_covered'] = 'Covered'
