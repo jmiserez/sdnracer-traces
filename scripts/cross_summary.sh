@@ -73,23 +73,27 @@ function read_files {
 
   case $app in
    *"StarTopology2"*)
-    topology="Star2"
+    topology="Star"
     app="${app/StarTopology2-/}"
     ;;
    *"StarTopology4"*)
      topology="Star4"
      app="${app/StarTopology4-/}"
      ;;
+  *"StarTopology8"*)
+       topology="Star8"
+       app="${app/StarTopology4-/}"
+       ;;
    *"MeshTopology2"*)
-    topology="Mesh2"
+    topology="Linear"
     app="${app/MeshTopology2-/}"
     ;;
    *"BinaryLeafTreeTopology1"*)
-    topology="BinTree1"
+    topology="Linear3"
     app="${app/BinaryLeafTreeTopology1-/}"
     ;;
    *"BinaryLeafTreeTopology2"*)
-    topology="BinTree2"
+    topology="BinTree"
     app="${app/BinaryLeafTreeTopology2-/}"
     ;;
    esac

@@ -75,7 +75,7 @@ def read_matrix(filename, special_keys, selected_keys, value_keys):
   return matrix, special_keys
 
 
-def summarize(matrix, special_keys, special_keys_order):
+def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
   columns = []
   timings = None
 
@@ -100,10 +100,20 @@ def summarize(matrix, special_keys, special_keys_order):
   subheader = [used_keys for t in timings[1:]]
 
 
+  summarize_timing_header = []
+  summarize_subheader = []
+  summarize_values_rows = []
+  for i in filter_indcies:
+    summarize_timing_header.append(timing_header[i])
+    summarize_subheader.append(subheader[i])
+    summarize_values_rows.append(values_rows[i])
+  timing_header = summarize_timing_header
+  subheader = summarize_subheader
+  values_rows = summarize_values_rows
+
   timing_header = [val for sublist in timing_header for val in sublist]
   subheader = [val for sublist in subheader for val in sublist]
   values_rows = [val for sublist in values_rows for val in sublist]
-
 
   header = [k for k in special_keys_order]
   header.extend(timing_header)

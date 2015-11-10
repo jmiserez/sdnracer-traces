@@ -3,7 +3,7 @@
 
 apps=('LearningSwitch' 'Forwarding' 'CircuitPusher')
 ctrls=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
-topos=('Star2' 'Mesh2' 'BinTree1' 'BinTree2')
+topos=('Star' 'Linear' 'BinTree')
 steps=200
 alt='False'
 #reg="${app},${ctrl},${topo},${steps},*,*,${alt}"
