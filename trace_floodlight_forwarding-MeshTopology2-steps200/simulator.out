@@ -1,0 +1,2247 @@
+WARNING:setup:No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+INFO:Controller: =====> Starting Controller <===== 
+INFO:Controller:Launching controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_forwarding.properties
+INFO:simulation:Launched controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_forwarding.properties [PID 20610]
+INFO:simulation:Creating topology...
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] 11:47:28.273 INFO [n.f.c.m.FloodlightModuleLoader:main] Loading modules from file ./src/main/resources/trace_forwarding.properties
+
+[c1] 11:47:28.280 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting module loader
+
+[c1] 11:47:28.512 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.core.module.ApplicationLoader
+
+[c1] 11:47:28.513 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.core.internal.FloodlightProvider
+
+[c1] 11:47:28.527 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.storage.memory.MemoryStorageSource
+
+[c1] 11:47:28.535 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl
+
+[c1] 11:47:28.544 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager
+
+[c1] 11:47:28.547 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.topology.TopologyManager
+
+[c1] 11:47:28.561 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.forwarding.Forwarding
+
+[c1] 11:47:28.562 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.flowcache.FlowReconcileManager
+
+[c1] 11:47:28.568 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.core.OFMessageFilterManager
+
+[c1] 11:47:28.570 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.staticflowentry.StaticFlowEntryPusher
+
+[c1] 11:47:28.572 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.perfmon.PktInProcessingTime
+
+[c1] 11:47:28.573 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.perfmon.NullPktInProcessingTime
+
+[c1] 11:47:28.574 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.restserver.RestApiServer
+
+[c1] 11:47:28.576 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.learningswitch.LearningSwitch
+
+[c1] 11:47:28.577 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.hub.Hub
+
+[c1] 11:47:28.578 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.jython.JythonDebugInterface
+
+[c1] 11:47:28.579 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.counter.CounterStore
+
+[c1] 11:47:28.581 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.counter.NullCounterStore
+
+[c1] 11:47:28.584 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.debugcounter.DebugCounter
+
+[c1] 11:47:28.587 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.debugevent.DebugEvent
+
+[c1] 11:47:28.588 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.threadpool.ThreadPool
+
+[c1] 11:47:28.592 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.ui.web.StaticWebRoutable
+
+[c1] 11:47:28.594 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.virtualnetwork.VirtualNetworkFilter
+
+[c1] 11:47:28.599 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.firewall.Firewall
+
+[c1] 11:47:28.608 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.loadbalancer.LoadBalancer
+
+[c1] 11:47:28.615 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module org.sdnplatform.sync.internal.SyncManager
+
+[c1] 11:47:28.616 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module org.sdnplatform.sync.internal.SyncTorture
+
+[c1] 11:47:28.619 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier
+
+[c1] 11:47:28.639 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.happensbefore.HappensBefore
+
+[c1] 11:47:28.641 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Found module net.floodlightcontroller.happensbefore.FlawedFirewall
+
+[c1] 11:47:28.642 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.storage.memory.MemoryStorageSource@7a187f14  as provider for net.floodlightcontroller.storage.IStorageSourceService
+
+[c1] 11:47:28.704 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.core.internal.Controller@7fc2413d  as provider for net.floodlightcontroller.core.IFloodlightProviderService
+
+[c1] 11:47:28.704 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.counter.CounterStore@6d3af739  as provider for net.floodlightcontroller.counter.ICounterStoreService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.perfmon.PktInProcessingTime@5579bb86  as provider for net.floodlightcontroller.perfmon.IPktInProcessingTimeService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.core.OFMessageFilterManager@2641e737  as provider for net.floodlightcontroller.core.IOFMessageFilterManagerService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.restserver.RestApiServer@5fdba6f9  as provider for net.floodlightcontroller.restserver.IRestApiService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.debugcounter.DebugCounter@73d4cc9e  as provider for net.floodlightcontroller.debugcounter.IDebugCounterService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.debugevent.DebugEvent@69379752  as provider for net.floodlightcontroller.debugevent.IDebugEventService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.threadpool.ThreadPool@4f51b3e0  as provider for net.floodlightcontroller.threadpool.IThreadPoolService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting org.sdnplatform.sync.internal.SyncManager@641147d0  as provider for org.sdnplatform.sync.ISyncService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl@45820e51  as provider for net.floodlightcontroller.devicemanager.IDeviceService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.topology.TopologyManager@462d5aee  as provider for net.floodlightcontroller.routing.IRoutingService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.topology.TopologyManager@462d5aee  as provider for net.floodlightcontroller.topology.ITopologyService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.flowcache.FlowReconcileManager@eb21112  as provider for net.floodlightcontroller.flowcache.IFlowReconcileService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier@516be40f  as provider for net.floodlightcontroller.devicemanager.IEntityClassifierService
+
+[c1] 11:47:28.705 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Setting net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager@87f383f  as provider for net.floodlightcontroller.linkdiscovery.ILinkDiscoveryService
+
+[c1] 11:47:28.706 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.happensbefore.HappensBefore
+
+[c1] 11:47:28.706 DEBUG [n.f.h.HappensBefore:main] HappensBefore logger loading.
+
+[c1] 11:47:28.706 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.storage.memory.MemoryStorageSource
+
+[c1] 11:47:28.706 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.core.internal.FloodlightProvider
+
+[c1] 11:47:28.715 DEBUG [n.f.c.i.Controller:main] OpenFlow port set to 6633
+
+[c1] 11:47:28.715 DEBUG [n.f.c.i.Controller:main] Number of worker threads set to 0
+
+[c1] 11:47:28.716 INFO [n.f.c.i.Controller:main] Controller role set to MASTER
+
+[c1] 11:47:28.725 INFO [n.f.c.i.Controller:main] Flush switches on reconnect -- Disabled
+
+[c1] 11:47:28.728 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.counter.CounterStore
+
+[c1] 11:47:28.729 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.perfmon.PktInProcessingTime
+
+[c1] 11:47:28.729 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.core.OFMessageFilterManager
+
+[c1] 11:47:28.729 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.forwarding.Forwarding
+
+[c1] 11:47:28.730 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.restserver.RestApiServer
+
+[c1] 11:47:28.730 DEBUG [n.f.r.RestApiServer:main] REST port set to 8080
+
+[c1] 11:47:28.730 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.debugcounter.DebugCounter
+
+[c1] 11:47:28.730 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.debugevent.DebugEvent
+
+[c1] 11:47:28.730 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.threadpool.ThreadPool
+
+[c1] 11:47:28.731 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing org.sdnplatform.sync.internal.SyncManager
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 2 seconds ...
+[c1] 11:47:29.490 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl
+
+[c1] 11:47:29.495 DEBUG [n.f.d.i.DeviceManagerImpl:main] DeviceListeners: deviceDebugEventLogger,
+
+[c1] 11:47:29.495 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.topology.TopologyManager
+
+[c1] 11:47:29.497 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.flowcache.FlowReconcileManager
+
+[c1] 11:47:29.498 DEBUG [n.f.f.FlowReconcileManager:main] FlowReconcile is true
+
+[c1] 11:47:29.498 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier
+
+[c1] 11:47:29.498 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Initializing net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager
+
+[c1] 11:47:29.498 DEBUG [n.f.l.i.LinkDiscoveryManager:main] Event history size set to 1024
+
+[c1] 11:47:29.500 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.happensbefore.HappensBefore
+
+[c1] 11:47:29.500 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.storage.memory.MemoryStorageSource
+
+[c1] 11:47:29.502 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.core.internal.FloodlightProvider
+
+[c1] 11:47:29.524 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.counter.CounterStore
+
+[c1] 11:47:29.524 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.perfmon.PktInProcessingTime
+
+[c1] 11:47:29.525 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.core.OFMessageFilterManager
+
+[c1] 11:47:29.525 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.forwarding.Forwarding
+
+[c1] 11:47:29.525 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.restserver.RestApiServer
+
+[c1] 11:47:29.525 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.debugcounter.DebugCounter
+
+[c1] 11:47:29.526 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.debugevent.DebugEvent
+
+[c1] 11:47:29.527 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.threadpool.ThreadPool
+
+[c1] 11:47:29.527 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting org.sdnplatform.sync.internal.SyncManager
+
+[c1] 11:47:29.734 INFO [o.s.s.i.c.FallbackCCProvider:main] Cluster not yet configured; using fallback local configuration
+
+[c1] 11:47:29.734 INFO [o.s.s.i.SyncManager:main] [32767] Updating sync configuration ClusterConfig [allNodes={32767=Node [hostname=localhost, port=6642, nodeId=32767, domainId=32767]}, authScheme=NO_AUTH, keyStorePath=null, keyStorePassword is unset]
+
+[c1] 11:47:29.794 INFO [o.s.s.i.r.RPCService:main] Listening for internal floodlight RPC on localhost/127.0.0.1:6642
+
+[c1] 11:47:29.799 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl
+
+[c1] 11:47:29.800 TRACE [n.f.f.FlowReconcileManager:main] FlowMod listeners: devicemanager,
+
+[c1] 11:47:29.813 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.topology.TopologyManager
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] -----------------------------------------------
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] Links: {}
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] broadcastDomainPorts: []
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] tunnelPorts: []
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] clusters: []
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] destinationRootedTrees: {}
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] clusterBroadcastNodePorts: {}
+
+[c1] 11:47:29.846 TRACE [n.f.t.TopologyInstance:main] -----------------------------------------------
+
+[c1] 11:47:29.851 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.flowcache.FlowReconcileManager
+
+[c1] 11:47:29.851 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier
+
+[c1] 11:47:29.851 DEBUG [n.f.c.m.FloodlightModuleLoader:main] Starting net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager
+
+[c1] 11:47:29.852 INFO [n.f.l.i.LinkDiscoveryManager:main] Setting autoportfast feature to OFF
+
+[c1] 11:47:29.854 TRACE [n.f.l.i.LinkDiscoveryManager:main] Setup: Rescheduling discovery task. role = MASTER
+
+[c1] 11:47:29.858 DEBUG [n.f.r.RestApiServer:main] REST API routables: StorageWebRoutable (/wm/storage), CoreWebRoutable (/wm/core), PerfWebRoutable (/wm/performance), DebugCounterRoutable (/wm/debugcounter), DebugEventRoutable (/wm/debugevent), DeviceRoutable (/wm/device), TopologyWebRoutable (/wm/topology), LinkDiscoveryWebRoutable (/wm/linkdiscovery),
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding org.sdnplatform.sync.ISyncService for service org.sdnplatform.sync.internal.SyncManager@641147d0 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.core.IOFMessageFilterManagerService for service net.floodlightcontroller.core.OFMessageFilterManager@2641e737 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.perfmon.IPktInProcessingTimeService for service net.floodlightcontroller.perfmon.PktInProcessingTime@5579bb86 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.core.module.IModuleService for service net.floodlightcontroller.core.module.FloodlightModuleLoader@2f48b3d2 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.threadpool.IThreadPoolService for service net.floodlightcontroller.threadpool.ThreadPool@4f51b3e0 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.debugcounter.IDebugCounterService for service net.floodlightcontroller.debugcounter.DebugCounter@73d4cc9e into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.counter.ICounterStoreService for service net.floodlightcontroller.counter.CounterStore@6d3af739 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.devicemanager.IEntityClassifierService for service net.floodlightcontroller.devicemanager.internal.DefaultEntityClassifier@516be40f into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.restserver.IRestApiService for service net.floodlightcontroller.restserver.RestApiServer@5fdba6f9 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.core.IFloodlightProviderService for service net.floodlightcontroller.core.internal.Controller@7fc2413d into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.devicemanager.IDeviceService for service net.floodlightcontroller.devicemanager.internal.DeviceManagerImpl@45820e51 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.linkdiscovery.ILinkDiscoveryService for service net.floodlightcontroller.linkdiscovery.internal.LinkDiscoveryManager@87f383f into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.debugevent.IDebugEventService for service net.floodlightcontroller.debugevent.DebugEvent@69379752 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.routing.IRoutingService for service net.floodlightcontroller.topology.TopologyManager@462d5aee into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.storage.IStorageSourceService for service net.floodlightcontroller.storage.memory.MemoryStorageSource@7a187f14 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.flowcache.IFlowReconcileService for service net.floodlightcontroller.flowcache.FlowReconcileManager@eb21112 into context
+
+[c1] 11:47:29.935 TRACE [n.f.r.RestApiServer:main] Adding net.floodlightcontroller.topology.ITopologyService for service net.floodlightcontroller.topology.TopologyManager@462d5aee into context
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for PACKET_OUT: messageFilterManager,HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for BARRIER_REPLY: HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for BARRIER_REQUEST: HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for PORT_STATUS: linkdiscovery,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for FLOW_REMOVED: HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for FLOW_MOD: messageFilterManager,HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for PORT_MOD: HappensBefore,
+
+[c1] 11:47:30.010 DEBUG [n.f.c.i.Controller:main] OFListeners for PACKET_IN: HappensBefore,linkdiscovery,topology,devicemanager,messageFilterManager,forwarding,
+
+[c1] 11:47:30.011 DEBUG [n.f.c.i.Controller:main] HAListeners: linkdiscovery, topology, devicemanager,
+
+[c1] 11:47:30.016 INFO [n.f.c.i.Controller:main] Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+
+Controller log: 0 log lines, 1 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 2 STS events not matched.
+INFO:control_flow:Waiting until first OpenFlow message received..
+[c1] 11:47:30.855 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Rescheduling discovery task as role = MASTER
+
+[c1] 11:47:30.858 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] New switch connection from /127.0.0.1:41328
+
+[c1] 11:47:30.859 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] New switch connection from /127.0.0.1:41329
+
+Controller log: 0 log lines, 3 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 3 completed.
+[c1] 11:47:31.088 TRACE [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Config Reply from switch [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] confirms miss length set to 0xffff
+
+[c1] 11:47:31.089 TRACE [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] Config Reply from switch [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] confirms miss length set to 0xffff
+
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 4 completed.
+[c1] 11:47:31.217 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] Switch OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 2
+
+[c1] 11:47:31.218 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 1
+
+[c1] 11:47:31.220 TRACE [n.f.c.i.Controller:New I/O server worker #2-2] 11:47:31.219      [Unknown Packet]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.221 TRACE [n.f.c.i.Controller:New I/O server worker #2-1] 11:47:31.221      [Unknown Packet]
+
+[c1] 
+
+[c1] 
+
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 5 completed.
+[c1] 11:47:31.303 DEBUG [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Received role reply message from OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]], setting role to MASTER
+
+[c1] 11:47:31.304 DEBUG [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] Received role reply message from OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]], setting role to MASTER
+
+[c1] 11:47:31.304 DEBUG [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] Switch OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] activated. Role is now MASTER
+
+[c1] 11:47:31.304 DEBUG [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] activated. Role is now MASTER
+
+[c1] 11:47:31.311 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] Clearing all flows on switch OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]]
+
+[c1] 11:47:31.314 TRACE [n.f.c.i.Controller:main] Dispatching switch update 00:00:00:00:00:00:00:02 ADDED
+
+[c1] 11:47:31.315 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:02 connected.
+
+[c1] 11:47:31.315 TRACE [n.f.c.i.Controller:main] Dispatching switch update 00:00:00:00:00:00:00:02 ACTIVATED
+
+[c1] 11:47:31.316 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:31.316 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:31.316 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/1
+
+[c1] 11:47:31.341 INFO [n.f.c.OFSwitchBase:main] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:02:01:88:cc:02:07:04:00:00:00:00:00:02:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.341 TRACE [n.f.c.i.Controller:main] 11:47:31.341      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.351 INFO [n.f.h.HappensBefore:main] Received message 2:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:31.352 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:31.352 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:31.352 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/2
+
+[c1] 11:47:31.352 INFO [n.f.c.OFSwitchBase:main] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:02:02:88:cc:02:07:04:00:00:00:00:00:02:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.352 TRACE [n.f.c.i.Controller:main] 11:47:31.352      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.353 INFO [n.f.h.HappensBefore:main] Received message 2:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+
+[c1] 11:47:31.356 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Switch Updated 00:00:00:00:00:00:00:02 0 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.358 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:02]]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 11:47:31.361 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] Clearing all flows on switch OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]]
+
+[c1] 11:47:31.361 TRACE [n.f.c.i.Controller:main] Dispatching switch update 00:00:00:00:00:00:00:01 ADDED
+
+[c1] 11:47:31.362 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:01 connected.
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:31.362 TRACE [n.f.c.i.Controller:main] Dispatching switch update 00:00:00:00:00:00:00:01 ACTIVATED
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+
+[c1] 11:47:31.362 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:31.362 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:31.362 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/1
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:31.362 INFO [n.f.c.OFSwitchBase:main] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:01:01:88:cc:02:07:04:00:00:00:00:00:01:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+
+[c1] 11:47:31.362 TRACE [n.f.c.i.Controller:main] 11:47:31.362      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 
+
+[c1] 11:47:31.362 INFO [n.f.h.HappensBefore:main] Received message 1:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:main] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/2
+
+[c1] 11:47:31.363 INFO [n.f.c.OFSwitchBase:main] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:01:02:88:cc:02:07:04:00:00:00:00:00:01:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:31.363 TRACE [n.f.c.i.Controller:main] 11:47:31.363      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.363 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/1
+
+Controller log: 0 log lines, 4 STS events not matched. [c1] 11:47:31.363 INFO [n.f.h.HappensBefore:main] Received message 1:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+
+Controller log: 0 log lines, 4 STS events not matched.[c1] 11:47:31.364 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Switch Updated 00:00:00:00:00:00:00:01 0 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] 11:47:31.364 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:01]]
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:31.366 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:02:01:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:02:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.366 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:31.366      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.366 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 2:AQ0AXQAAAAD///////8ACAAAAAgAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:31.366 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:31.366 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:31.366 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/2
+
+[c1] 11:47:31.367 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:02:02:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:02:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.367 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:31.367      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.367 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 2:AQ0AXQAAAAD///////8ACAAAAAgAAgAA////////AAAAAAICiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgACBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:31.367 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:31.367 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+Controller log: 0 log lines, 4 STS events not matched.[c1] 11:47:31.367 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/1
+
+
+[c1] 11:47:31.367 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:01:01:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:01:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:31.367 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:31.367      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.367 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 1:AQ0AXQAAAAD///////8ACAAAAAgAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:31.368 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:31.368 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:31.372 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/2
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 11:47:31.373 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:01:02:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:01:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:31.374 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:31.373      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+Controller log: 0 log lines, 4 STS events not matched.[c1] actions: [OUTPUT[2]]
+
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:31.375 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 1:AQ0AXQAAAAD///////8ACAAAAAgAAgAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:31.377 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Port Up 00:00:00:00:00:00:00:02 1 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.377 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=1]]
+
+[c1] 11:47:31.378 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Port Up 00:00:00:00:00:00:00:02 2 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.378 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=2]]
+
+Controller log: 0 log lines, 4 STS events not matched.[c1] 11:47:31.378 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Port Up 00:00:00:00:00:00:00:01 1 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+
+[c1] 11:47:31.378 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=1]]
+
+[c1] 11:47:31.378 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Port Up 00:00:00:00:00:00:00:01 2 00:00:00:00:00:00:00:00 0 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.378 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=2]]
+
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [00:00:00:00:02:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth2
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f3f3489b410><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f3489b1d0><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f3489b250><tlv end> on interface eth1
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [00:00:00:00:02:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:02><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f3f348e90d0><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f348e9290><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f348e91d0><tlv end> on interface eth2
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Round 6 completed.
+[c1] 11:47:31.481 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:ARMACAAAAAM=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+INFO:hb_logger:Adding controller handle (270 -> *): mid_out:42.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+[c1] 11:47:31.482 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:ARMACAAAAAM=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:ARMACAAAAAM=]
+
+INFO:hb_logger:Adding controller handle (271 -> *): mid_out:66.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:ARMACAAAAAM=]
+
+Round 7 completed.
+[c1] 11:47:31.587 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==]
+
+INFO:hb_logger:Adding controller handle (276 -> *): mid_out:89.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==]
+
+[c1] 11:47:31.590 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] unicast
+
+[c1] 11:47:31.590 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoAVwAAAAEAAAABAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAEAAAABAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA]
+
+INFO:hb_logger:Adding controller handle (277 -> *): mid_out:95.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAEAAAABAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA]
+
+[c1] 11:47:31.594 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1]
+
+[c1] 11:47:31.594 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-2] Link added: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1]
+
+[c1] 11:47:31.597 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+[c1] 11:47:31.598 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] multicast
+
+[c1] 11:47:31.598 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Link Updated 00:00:00:00:00:00:00:01 1 00:00:00:00:00:00:00:02 1 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.598 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-1] Link added: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1]
+
+[c1] 11:47:31.598 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:01, srcPort=1, dst=00:00:00:00:00:00:00:02, dstPort=1, type=internal]]
+
+[c1] 11:47:31.598 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+[c1] 11:47:31.598 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] multicast
+
+[c1] 11:47:31.598 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Link Updated 00:00:00:00:00:00:00:02 1 00:00:00:00:00:00:00:01 1 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.598 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=external]]
+
+[c1] 11:47:31.598 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+[c1] 11:47:31.599 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoATwAAAAIAAAACAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAIAAAACAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==]
+
+INFO:hb_logger:Adding controller handle (278 -> *): mid_out:98.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAIAAAACAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==]
+
+[c1] 11:47:31.599 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] unicast
+
+[c1] 11:47:31.599 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] Inter-switch link updated: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1]
+
+[c1] 11:47:31.599 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-1] Link updated: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1]
+
+[c1] 11:47:31.599 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+[c1] 11:47:31.601 TRACE [n.f.l.i.LinkDiscoveryManager:Topology Updates] Dispatching link discovery update Link Updated 00:00:00:00:00:00:00:02 1 00:00:00:00:00:00:00:01 1 for [net.floodlightcontroller.topology.TopologyManager@462d5aee]
+
+[c1] 11:47:31.601 TRACE [n.f.t.TopologyManager:Topology Updates] Queuing update: [LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=internal]]
+
+[c1] 11:47:31.601 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA]
+
+INFO:hb_logger:Adding controller handle (279 -> *): mid_out:92.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA]
+
+[c1] 11:47:31.605 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] multicast
+
+[c1] 11:47:31.606 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+[c1] 11:47:31.606 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] multicast
+
+[c1] 11:47:31.606 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+Round 8 completed.
+Round 9 completed.
+[c1] 11:47:31.851 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:02]
+
+[c1] 11:47:31.852 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:01]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=1]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=2]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=1]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=2]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:01, srcPort=1, dst=00:00:00:00:00:00:00:02, dstPort=1, type=internal]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=external]
+
+[c1] 11:47:31.853 TRACE [n.f.t.TopologyManager:Scheduled-1] Applying update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=internal]
+
+[c1] 11:47:31.856 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+[c1] 11:47:31.856 TRACE [n.f.t.TopologyInstance:Scheduled-1] -----------------------------------------------
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] Links: {[id=00:00:00:00:00:00:00:02, port=1]=[Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1], Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1]], [id=00:00:00:00:00:00:00:01, port=1]=[Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1], Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1]]}
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] broadcastDomainPorts: []
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] tunnelPorts: []
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] clusters: [[Cluster id=00:00:00:00:00:00:00:01, [1, 2]]]
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] destinationRootedTrees: {1=[00:00:00:00:00:00:00:01: cost=0, null][00:00:00:00:00:00:00:02: cost=1, Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1]], 2=[00:00:00:00:00:00:00:01: cost=1, Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1]][00:00:00:00:00:00:00:02: cost=0, null]}
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] clusterBroadcastNodePorts: {1=[[id=00:00:00:00:00:00:00:02, port=1], [id=00:00:00:00:00:00:00:01, port=1]]}
+
+[c1] 11:47:31.857 TRACE [n.f.t.TopologyInstance:Scheduled-1] -----------------------------------------------
+
+[c1] 11:47:31.857 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:02]
+
+[c1] 11:47:31.857 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:01]
+
+[c1] 11:47:31.857 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=1]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:02, srcPort=2]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=1]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=2]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:01, srcPort=1, dst=00:00:00:00:00:00:00:02, dstPort=1, type=internal]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=external]
+
+[c1] 11:47:31.858 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-1] Topo update: LDUpdate [operation=Link Updated, src=00:00:00:00:00:00:00:02, srcPort=1, dst=00:00:00:00:00:00:00:01, dstPort=1, type=internal]
+
+Round 10 completed.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+[c1] 11:47:32.857 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-4] Rescheduling discovery task as role = MASTER
+
+Round 20 completed.
+Round 21 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b5a9[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:9cd4}{id:23339 seq:0}
+Round 22 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 23 completed.
+[c1] 11:47:33.203 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+INFO:hb_logger:Adding controller handle (292 -> *): mid_out:109.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+[c1] 11:47:33.210 DEBUG [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] New device created: Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] deviceKey=0, entity=Entity [macAddress=12:34:56:78:01:02, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447152453205, activeSince=1447152453205]
+
+[c1] 11:47:33.212 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Dispatching device update: DeviceUpdate [device=DefaultEntityClass::12:34:56:78:01:02, change=ADD, fieldsChanged=null]
+
+[c1] 11:47:33.215 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:02:02
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.2.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 11:47:33.220 TRACE [n.f.f.Forwarding:New I/O server worker #2-1] No decision was made for PacketIn=packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3, forwarding
+
+[c1] 11:47:33.221 TRACE [n.f.f.Forwarding:New I/O server worker #2-1] Writing flood PacketOut switch=OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] packet-in=packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3 packet-out=OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[-5]], actionsLength=8, bufferId=0xffffffff, inPort=2, packetData=12:34:56:78:02:02:12:34:56:78:01:02:08:00:45:00:00:1c:cb:3d:00:00:40:01:b5:a9:7b:7b:01:02:7b:7b:02:02:08:00:9c:d4:5b:2b:00:00]
+
+[c1] 11:47:33.222 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[-5]], actionsLength=8, bufferId=0xffffffff, inPort=2, packetData=12:34:56:78:02:02:12:34:56:78:01:02:08:00:45:00:00:1c:cb:3d:00:00:40:01:b5:a9:7b:7b:01:02:7b:7b:02:02:08:00:9c:d4:5b:2b:00:00]
+
+[c1] 11:47:33.222 TRACE [n.f.c.i.Controller:New I/O server worker #2-1] 11:47:33.222      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: 2
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[-5]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:33.225 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQ0AQgAAAAD/////AAIACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+INFO:hb_logger:Adding controller send with edge (292 -> 297): mid_out:109 -> mid_in:111.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 24 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 25 completed.
+[c1] 11:47:33.410 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoAPAAAAAMAAAADADwAAQAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAPAAAAAMAAAADADwAAQAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+INFO:hb_logger:Adding controller handle (316 -> *): mid_out:118.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAPAAAAAMAAAADADwAAQAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+[c1] 11:47:33.411 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-2] Received PI: packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3 on switch 00:00:00:00:00:00:00:02, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:02:02
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.2.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 11:47:33.411 TRACE [n.f.f.Forwarding:New I/O server worker #2-2] No decision was made for PacketIn=packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3, forwarding
+
+[c1] 11:47:33.411 TRACE [n.f.f.Forwarding:New I/O server worker #2-2] Writing flood PacketOut switch=OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] packet-in=packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3 packet-out=OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[-5]], actionsLength=8, bufferId=0xffffffff, inPort=1, packetData=12:34:56:78:02:02:12:34:56:78:01:02:08:00:45:00:00:1c:cb:3d:00:00:40:01:b5:a9:7b:7b:01:02:7b:7b:02:02:08:00:9c:d4:5b:2b:00:00]
+
+[c1] 11:47:33.411 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[-5]], actionsLength=8, bufferId=0xffffffff, inPort=1, packetData=12:34:56:78:02:02:12:34:56:78:01:02:08:00:45:00:00:1c:cb:3d:00:00:40:01:b5:a9:7b:7b:01:02:7b:7b:02:02:08:00:9c:d4:5b:2b:00:00]
+
+[c1] 11:47:33.411 TRACE [n.f.c.i.Controller:New I/O server worker #2-2] 11:47:33.411      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: 1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[-5]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:33.411 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQ0AQgAAAAD/////AAEACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAMAAAADADwAAQAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA:2:AQ0AQgAAAAD/////AAEACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAMAAAADADwAAQAAEjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA:2:AQ0AQgAAAAD/////AAEACAAAAAj/+///EjRWeAICEjRWeAECCABFAAAcyz0AAEABtal7ewECe3sCAggAnNRbKwAA]
+
+INFO:hb_logger:Adding controller send with edge (316 -> 320): mid_out:118 -> mid_in:120.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 26 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b5a9[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:9cd4}{id:23339 seq:0} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:23339 seq:0}
+Round 27 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 28 completed.
+[c1] 11:47:33.724 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA]
+
+INFO:hb_logger:Adding controller handle (343 -> *): mid_out:129.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA]
+
+[c1] 11:47:33.724 DEBUG [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-2] New device created: Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:02:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:02, port=2, errorStatus=null]]] deviceKey=1, entity=Entity [macAddress=12:34:56:78:02:02, ipv4Address=0.0.0.0, vlan=null, switchDPID=2, switchPort=2, lastSeenTimestamp=1447152453724, activeSince=1447152453724]
+
+[c1] 11:47:33.724 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-2] Dispatching device update: DeviceUpdate [device=DefaultEntityClass::12:34:56:78:02:02, change=ADD, fieldsChanged=null]
+
+[c1] 11:47:33.725 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-2] Received PI: packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4 on switch 00:00:00:00:00:00:00:02, port 2 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:02:02
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.2.2
+
+[c1] nw_dst: 123.123.1.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:02:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:02, port=2, errorStatus=null]]] *** dstDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] ***
+
+[c1] 11:47:33.725 TRACE [n.f.f.Forwarding:New I/O server worker #2-2] No decision was made for PacketIn=packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4, forwarding
+
+[c1] 11:47:33.739 TRACE [n.f.t.TopologyInstance:New I/O server worker #2-2] buildroute: Route [id=RouteId [src=00:00:00:00:00:00:00:02 dst=00:00:00:00:00:00:00:01], switchPorts=[[id=00:00:00:00:00:00:00:02, port=1], [id=00:00:00:00:00:00:00:01, port=1]]]
+
+[c1] 11:47:33.741 TRACE [n.f.t.TopologyInstance:New I/O server worker #2-2] getRoute: RouteId [src=00:00:00:00:00:00:00:02 dst=00:00:00:00:00:00:00:01] -> Route [id=RouteId [src=00:00:00:00:00:00:00:02 dst=00:00:00:00:00:00:00:01], switchPorts=[[id=00:00:00:00:00:00:00:02, port=1], [id=00:00:00:00:00:00:00:01, port=1]]]
+
+[c1] 11:47:33.742 TRACE [n.f.f.Forwarding:New I/O server worker #2-2] pushRoute match=OFMatch[in_port=2,dl_dst=12:34:56:78:01:02,dl_src=12:34:56:78:02:02,dl_type=0x800,dl_vlan=0xffff,dl_vlan_pcp=0,nw_dst=123.123.1.2,nw_src=123.123.2.2,nw_proto=1,nw_tos=0,tp_dst=0,tp_src=0] route=Route [id=RouteId [src=00:00:00:00:00:00:00:02 dst=00:00:00:00:00:00:00:01], switchPorts=[[id=00:00:00:00:00:00:00:02, port=2], [id=00:00:00:00:00:00:00:02, port=1], [id=00:00:00:00:00:00:00:01, port=1], [id=00:00:00:00:00:00:00:01, port=2]]] destination=1:2
+
+[c1] 11:47:33.742 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-2] Pushing Route flowmod routeIndx=3 sw=OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] inPort=1 outPort=2
+
+[c1] 11:47:33.743 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] XXXXX, writing message OFFlowMod [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], bufferId=-1, command=0, cookie=20000000000000, flags=0, hardTimeout=0, idleTimeout=5, match=OFMatch[in_port=1,dl_dst=12:34:56:78:01:02,dl_src=12:34:56:78:02:02,dl_vlan=0xffff,nw_dst=123.123.1.2,nw_src=123.123.2.2], outPort=-1, priority=0, length=80, type=FLOW_MOD, version=1, xid=0]
+
+[c1] 11:47:33.744 TRACE [n.f.c.i.Controller:New I/O server worker #2-2] 11:47:33.744      flow_mod           [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:02:02
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.2.2
+
+[c1] nw_dst: 123.123.1.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1
+
+[c1] ADD: cookie: 9007199254740992 idle: 5 hard: 0 pri: 0 buf: -1 flg: 0
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:33.746 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 1:AQ4AUAAAAAAAMADwAAESNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:1:AQ4AUAAAAAAAMADwAAESNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+[c1] 11:47:33.749 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-2] Pushing Route flowmod routeIndx=1 sw=OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] inPort=2 outPort=1
+
+[c1] 11:47:33.751 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] XXXXX, writing message OFFlowMod [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], bufferId=-1, command=0, cookie=20000000000000, flags=0, hardTimeout=0, idleTimeout=5, match=OFMatch[in_port=2,dl_dst=12:34:56:78:01:02,dl_src=12:34:56:78:02:02,dl_vlan=0xffff,nw_dst=123.123.1.2,nw_src=123.123.2.2], outPort=-1, priority=0, length=80, type=FLOW_MOD, version=1, xid=0]
+
+[c1] 11:47:33.752 TRACE [n.f.c.i.Controller:New I/O server worker #2-2] 11:47:33.752      flow_mod           [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:02:02
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.2.2
+
+[c1] nw_dst: 123.123.1.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1
+
+[c1] ADD: cookie: 9007199254740992 idle: 5 hard: 0 pri: 0 buf: -1 flg: 0
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:33.752 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQ4AUAAAAAAAMADwAAISNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:2:AQ4AUAAAAAAAMADwAAISNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:2:AQ4AUAAAAAAAMADwAAISNFZ4AgISNFZ4AQL//wAACAAAAQAAe3sCAnt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+[c1] 11:47:33.752 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-2] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] pi=packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4
+
+[c1] 11:47:33.752 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=2, packetData=12:34:56:78:01:02:12:34:56:78:02:02:08:00:45:00:00:1c:cb:4d:00:00:40:01:b5:99:7b:7b:02:02:7b:7b:01:02:00:00:a4:d4:5b:2b:00:00]
+
+[c1] 11:47:33.752 TRACE [n.f.c.i.Controller:New I/O server worker #2-2] 11:47:33.752      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: 2
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:33.753 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:2:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA]
+
+Controller log: 3 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[2:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA:2:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAECEjRWeAICCABFAAAcy00AAEABtZl7ewICe3sBAgAApNRbKwAA]
+
+INFO:hb_logger:Adding controller send with edge (343 -> 350): mid_out:129 -> mid_in:131.
+Controller log: 2 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (343 -> 356): mid_out:129 -> mid_in:132.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (343 -> 362): mid_out:129 -> mid_in:133.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 29 completed.
+[c1] 11:47:33.858 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b58c[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:5a6e}{id:40336 seq:1}
+No correctness violations!
+Round 30 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b599[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:a4d4}{id:23339 seq:0} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Round 31 completed.
+[c1] 11:47:34.050 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB]
+
+INFO:hb_logger:Adding controller handle (396 -> *): mid_out:145.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB]
+
+[c1] 11:47:34.051 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447152453205, lastSeen=1447152454050]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447152454050, activeSince=1447152453205]]
+
+[c1] 11:47:34.051 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:02:02
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.2.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:02:02, IPs=[], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:02, port=2, errorStatus=null]]] ***
+
+[c1] 11:47:34.051 TRACE [n.f.f.Forwarding:New I/O server worker #2-1] No decision was made for PacketIn=packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4, forwarding
+
+[c1] 11:47:34.051 TRACE [n.f.t.TopologyInstance:New I/O server worker #2-1] buildroute: Route [id=RouteId [src=00:00:00:00:00:00:00:01 dst=00:00:00:00:00:00:00:02], switchPorts=[[id=00:00:00:00:00:00:00:01, port=1], [id=00:00:00:00:00:00:00:02, port=1]]]
+
+[c1] 11:47:34.051 TRACE [n.f.t.TopologyInstance:New I/O server worker #2-1] getRoute: RouteId [src=00:00:00:00:00:00:00:01 dst=00:00:00:00:00:00:00:02] -> Route [id=RouteId [src=00:00:00:00:00:00:00:01 dst=00:00:00:00:00:00:00:02], switchPorts=[[id=00:00:00:00:00:00:00:01, port=1], [id=00:00:00:00:00:00:00:02, port=1]]]
+
+[c1] 11:47:34.051 TRACE [n.f.f.Forwarding:New I/O server worker #2-1] pushRoute match=OFMatch[in_port=2,dl_dst=12:34:56:78:02:02,dl_src=12:34:56:78:01:02,dl_type=0x800,dl_vlan=0xffff,dl_vlan_pcp=0,nw_dst=123.123.2.2,nw_src=123.123.1.2,nw_proto=1,nw_tos=0,tp_dst=0,tp_src=8] route=Route [id=RouteId [src=00:00:00:00:00:00:00:01 dst=00:00:00:00:00:00:00:02], switchPorts=[[id=00:00:00:00:00:00:00:01, port=2], [id=00:00:00:00:00:00:00:01, port=1], [id=00:00:00:00:00:00:00:02, port=1], [id=00:00:00:00:00:00:00:02, port=2]]] destination=2:2
+
+[c1] 11:47:34.051 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-1] Pushing Route flowmod routeIndx=3 sw=OFSwitchBase [/127.0.0.1:41329 DPID[00:00:00:00:00:00:00:02]] inPort=1 outPort=2
+
+[c1] 11:47:34.052 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] XXXXX, writing message OFFlowMod [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], bufferId=-1, command=0, cookie=20000000000000, flags=0, hardTimeout=0, idleTimeout=5, match=OFMatch[in_port=1,dl_dst=12:34:56:78:02:02,dl_src=12:34:56:78:01:02,dl_vlan=0xffff,nw_dst=123.123.2.2,nw_src=123.123.1.2], outPort=-1, priority=0, length=80, type=FLOW_MOD, version=1, xid=0]
+
+[c1] 11:47:34.052 TRACE [n.f.c.i.Controller:New I/O server worker #2-1] 11:47:34.052      flow_mod           [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:02:02
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.2.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1
+
+[c1] ADD: cookie: 9007199254740992 idle: 5 hard: 0 pri: 0 buf: -1 flg: 0
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:34.052 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 2:AQ4AUAAAAAAAMADwAAESNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:2:AQ4AUAAAAAAAMADwAAESNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:2:AQ4AUAAAAAAAMADwAAESNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+[c1] 11:47:34.052 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-1] Pushing Route flowmod routeIndx=1 sw=OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] inPort=2 outPort=1
+
+[c1] 11:47:34.052 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] XXXXX, writing message OFFlowMod [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], bufferId=-1, command=0, cookie=20000000000000, flags=0, hardTimeout=0, idleTimeout=5, match=OFMatch[in_port=2,dl_dst=12:34:56:78:02:02,dl_src=12:34:56:78:01:02,dl_vlan=0xffff,nw_dst=123.123.2.2,nw_src=123.123.1.2], outPort=-1, priority=0, length=80, type=FLOW_MOD, version=1, xid=0]
+
+[c1] 11:47:34.052 TRACE [n.f.c.i.Controller:New I/O server worker #2-1] 11:47:34.052      flow_mod           [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:02:02
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.2.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1
+
+[c1] ADD: cookie: 9007199254740992 idle: 5 hard: 0 pri: 0 buf: -1 flg: 0
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:34.052 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+Controller log: 2 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AgL//wAACAAAAQAAe3sBAnt7AgIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+[c1] 11:47:34.052 TRACE [n.f.r.ForwardingBase:New I/O server worker #2-1] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:41328 DPID[00:00:00:00:00:00:00:01]] pi=packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4
+
+[c1] 11:47:34.053 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=2, packetData=12:34:56:78:02:02:12:34:56:78:01:02:08:00:45:00:00:1c:cb:5a:00:00:40:01:b5:8c:7b:7b:01:02:7b:7b:02:02:08:00:5a:6e:9d:90:00:01]
+
+[c1] 11:47:34.053 TRACE [n.f.c.i.Controller:New I/O server worker #2-1] 11:47:34.053      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: 2
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:34.053 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:1:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB]
+
+Controller log: 3 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB:1:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAICEjRWeAECCABFAAAcy1oAAEABtYx7ewECe3sCAggAWm6dkAAB]
+
+INFO:hb_logger:Adding controller send with edge (396 -> 402): mid_out:145 -> mid_in:147.
+Controller log: 2 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (396 -> 408): mid_out:145 -> mid_in:148.
+Controller log: 1 log lines, 4 STS events not matched.
+INFO:hb_logger:Adding controller send with edge (396 -> 419): mid_out:145 -> mid_in:153.
+Controller log: 0 log lines, 4 STS events not matched.
+Round 32 completed.
+Forwarding dataplane event
+Round 33 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b58c[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:5a6e}{id:40336 seq:1} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:40336 seq:1}
+Round 34 completed.
+Forwarding dataplane event
+Round 35 completed.
+Forwarding dataplane event
+Round 36 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b57f[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:626e}{id:40336 seq:1} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 37 completed.
+Round 38 completed.
+[c1] 11:47:34.858 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Rescheduling discovery task as role = MASTER
+
+Round 39 completed.
+No correctness violations!
+Round 40 completed.
+Round 41 completed.
+Round 42 completed.
+Round 43 completed.
+Round 44 completed.
+Round 45 completed.
+Round 46 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b575[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a66a}{id:20883 seq:2}
+Round 47 completed.
+Forwarding dataplane event
+Round 48 completed.
+[c1] 11:47:35.859 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-4] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b56d[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a023}{id:22489 seq:3}
+Round 49 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b575[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a66a}{id:20883 seq:2} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:20883 seq:2}
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b565[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5bf7}{id:39940 seq:4}
+No correctness violations!
+Round 50 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 51 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b56d[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a023}{id:22489 seq:3} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:22489 seq:3}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 52 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b56b[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ae6a}{id:20883 seq:2} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b565[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:5bf7}{id:39940 seq:4} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:39940 seq:4}
+Forwarding dataplane event
+Round 53 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 54 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b55a[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:a823}{id:22489 seq:3} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b540[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:19ba}{id:56896 seq:5}
+Round 55 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b550[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:63f7}{id:39940 seq:4} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 56 completed.
+Forwarding dataplane event
+Round 57 completed.
+[c1] 11:47:36.859 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b540[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:19ba}{id:56896 seq:5} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:56896 seq:5}
+Round 58 completed.
+Forwarding dataplane event
+Round 59 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 60 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b537[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:21ba}{id:56896 seq:5} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 61 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b52d[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e473}{id:4998 seq:6}
+Round 62 completed.
+Forwarding dataplane event
+Round 63 completed.
+Forwarding dataplane event
+Round 64 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b52d[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e473}{id:4998 seq:6} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:4998 seq:6}
+Round 65 completed.
+Forwarding dataplane event
+Round 66 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b51c[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e44c}{id:5036 seq:7}
+Round 67 completed.
+[c1] 11:47:37.860 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b525[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ec73}{id:4998 seq:6} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 68 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b513[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:4d4b}{id:43692 seq:8}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b511[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4e65}{id:43409 seq:9}
+Round 69 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b51c[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e44c}{id:5036 seq:7} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:5036 seq:7}
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 70 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 71 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b511[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4e65}{id:43409 seq:9} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:43409 seq:9}
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b513[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:4d4b}{id:43692 seq:8} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:43692 seq:8}
+Forwarding dataplane event
+Round 72 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b50f[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ec4c}{id:5036 seq:7} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 73 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 74 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4fa[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:554b}{id:43692 seq:8} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4fd[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:5665}{id:43409 seq:9} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 75 completed.
+Round 76 completed.
+[c1] 11:47:38.861 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Round 77 completed.
+Round 78 completed.
+Round 79 completed.
+No correctness violations!
+Round 80 completed.
+Round 81 completed.
+Round 82 completed.
+Round 83 completed.
+Round 84 completed.
+Round 85 completed.
+Round 86 completed.
+[c1] 11:47:39.862 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-4] Rescheduling discovery task as role = MASTER
+
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4e5[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:42cf}{id:46374 seq:10}
+Round 87 completed.
+Forwarding dataplane event
+Round 88 completed.
+Forwarding dataplane event
+Round 89 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4e5[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:42cf}{id:46374 seq:10} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:46374 seq:10}
+No correctness violations!
+Round 90 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4d7[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:d5df}{id:8725 seq:11}
+Round 91 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 92 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4dd[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:4acf}{id:46374 seq:10} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 93 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4d7[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:d5df}{id:8725 seq:11} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:8725 seq:11}
+Round 94 completed.
+Forwarding dataplane event
+Round 95 completed.
+[c1] 11:47:40.863 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-1] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Round 96 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4cb[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:dddf}{id:8725 seq:11} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4c1[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:dbe1}{id:7186 seq:12}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4bf[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:a0bc}{id:22326 seq:13}
+Round 97 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 98 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 99 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4bf[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:a0bc}{id:22326 seq:13} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:22326 seq:13}
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4c1[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:dbe1}{id:7186 seq:12} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:7186 seq:12}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4ab[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:60ba}{id:38711 seq:14}
+No correctness violations!
+Round 100 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 101 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 102 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4ae[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:e3e1}{id:7186 seq:12} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4ab[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:60ba}{id:38711 seq:14} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:38711 seq:14}
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b4b1[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:a8bc}{id:22326 seq:13} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b492[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:3ee0}{id:47376 seq:15}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b490[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7712}{id:32989 seq:16}
+Round 103 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Round 104 completed.
+Forwarding dataplane event
+[c1] 11:47:41.863 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Forwarding dataplane event
+Round 105 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b490[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:7712}{id:32989 seq:16} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:32989 seq:16}
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b496[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:68ba}{id:38711 seq:14} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b492[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:3ee0}{id:47376 seq:15} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:47376 seq:15}
+Round 106 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 107 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 108 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b478[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:46e0}{id:47376 seq:15} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b47c[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:7f12}{id:32989 seq:16} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 109 completed.
+No correctness violations!
+Round 110 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b467[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:7fbf}{id:30767 seq:17}
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b465[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:a3ae}{id:21567 seq:18}
+Round 111 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 112 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 113 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b465[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:a3ae}{id:21567 seq:18} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:21567 seq:18}
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b467[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:7fbf}{id:30767 seq:17} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:30767 seq:17}
+Round 114 completed.
+[c1] 11:47:42.864 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b44b[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:68a7}{id:36677 seq:19}
+Round 115 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b440[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:6ce}{id:61725 seq:20}
+Round 116 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b454[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:87bf}{id:30767 seq:17} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b457[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:abae}{id:21567 seq:18} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 117 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b44b[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:68a7}{id:36677 seq:19} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:36677 seq:19}
+Forwarding dataplane event
+Round 118 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b440[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:6ce}{id:61725 seq:20} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:61725 seq:20}
+Forwarding dataplane event
+Round 119 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 120 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b436[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:70a7}{id:36677 seq:19} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b420[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:c4cb}{id:13087 seq:21}
+Round 121 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b430[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ece}{id:61725 seq:20} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b41a[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e658}{id:4497 seq:22}
+Round 122 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b412[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4e3e}{id:43434 seq:23}
+Round 123 completed.
+[c1] 11:47:43.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-1] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b420[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:c4cb}{id:13087 seq:21} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:13087 seq:21}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 124 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b41a[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:e658}{id:4497 seq:22} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:4497 seq:22}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 125 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b412[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4e3e}{id:43434 seq:23} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:43434 seq:23}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 126 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b410[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:cccb}{id:13087 seq:21} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 127 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b407[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:ee58}{id:4497 seq:22} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 128 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3fe[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:563e}{id:43434 seq:23} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 129 completed.
+No correctness violations!
+Round 130 completed.
+Round 131 completed.
+Round 132 completed.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:44.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP out on all ports.
+
+[c1] 11:47:44.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packets out of all the enabled ports
+
+[c1] 11:47:44.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:44.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:44.865 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/1
+
+[c1] 11:47:44.865 INFO [n.f.c.OFSwitchBase:Scheduled-0] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:01:01:88:cc:02:07:04:00:00:00:00:00:01:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.866 TRACE [n.f.c.i.Controller:Scheduled-0] 11:47:44.866      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.866 INFO [n.f.h.HappensBefore:Scheduled-0] Received message 1:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:44.866 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:44.866 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:44.866 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/2
+
+[c1] 11:47:44.866 INFO [n.f.c.OFSwitchBase:Scheduled-0] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:01:02:88:cc:02:07:04:00:00:00:00:00:01:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.866 TRACE [n.f.c.i.Controller:Scheduled-0] 11:47:44.866      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.866 INFO [n.f.h.HappensBefore:Scheduled-0] Received message 1:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:44.866 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:44.867 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+
+[c1] 11:47:44.867 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/1
+
+[c1] 11:47:44.867 INFO [n.f.c.OFSwitchBase:Scheduled-0] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:02:01:88:cc:02:07:04:00:00:00:00:00:02:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.867 TRACE [n.f.c.i.Controller:Scheduled-0] 11:47:44.867      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.870 INFO [n.f.h.HappensBefore:Scheduled-0] Received message 2:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:44.871 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:44.871 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:44.871 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/2
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+[c1] 11:47:44.871 INFO [n.f.c.OFSwitchBase:Scheduled-0] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=01:80:c2:00:00:0e:00:00:00:00:02:02:88:cc:02:07:04:00:00:00:00:00:02:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] 11:47:44.871 TRACE [n.f.c.i.Controller:Scheduled-0] 11:47:44.871      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.[c1] in_port: -1
+
+
+[c1] actions_len: 8
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.871 INFO [n.f.h.HappensBefore:Scheduled-0] Received message 2:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+
+[c1] 11:47:44.871 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Rescheduling discovery task as role = MASTER
+
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Round 133 completed.
+[c1] 11:47:44.955 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:44.955 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 1
+
+[c1] 11:47:44.956 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/1
+
+[c1] 11:47:44.956 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:01:01:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:01:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.956 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:44.956      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.956 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 1:AQ0AXQAAAAD///////8ACAAAAAgAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:44.956 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:44.956 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:01, port: 2
+
+[c1] 11:47:44.956 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:01/2
+
+[c1] 11:47:44.957 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:01:02:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:01:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:01:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.957 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:44.957      packet_out         [ Controller -> 00:00:00:00:00:00:00:01 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.957 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 1:AQ0AXQAAAAD///////8ACAAAAAgAAgAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:44.957 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:44.957 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 1
+
+[c1] 11:47:44.957 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/1
+
+[c1] 11:47:44.958 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[1]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:02:01:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:02:04:03:02:00:01:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.958 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:44.958      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[1]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.958 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 2:AQ0AXQAAAAD///////8ACAAAAAgAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+[c1] 11:47:44.959 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:44.959 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP packet out of swich: 00:00:00:00:00:00:00:02, port: 2
+
+[c1] 11:47:44.959 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Sending LLDP out of interface: 00:00:00:00:00:00:00:02/2
+
+[c1] 11:47:44.959 INFO [n.f.c.OFSwitchBase:Scheduled-3] XXXXX, writing message OFPacketOut [actionFactory=SINGLETON_INSTANCE, actions=[OUTPUT[2]], actionsLength=8, bufferId=0xffffffff, inPort=-1, packetData=ff:ff:ff:ff:ff:ff:00:00:00:00:02:02:89:42:20:00:06:04:00:02:00:00:02:07:04:00:00:00:00:00:02:04:03:02:00:02:06:02:00:78:fe:0c:00:26:e1:00:00:00:00:00:00:00:00:02:18:08:0f:34:06:0c:5f:38:71:ee:e6:01:01:00:00]
+
+[c1] 11:47:44.959 TRACE [n.f.c.i.Controller:Scheduled-3] 11:47:44.959      packet_out         [ Controller -> 00:00:00:00:00:00:00:02 ]
+
+[c1] in_port: -1
+
+[c1] actions_len: 8
+
+[c1] actions: [OUTPUT[2]]
+
+[c1] 
+
+[c1] 
+
+[c1] 11:47:44.959 INFO [n.f.h.HappensBefore:Scheduled-3] Received message 2:AQ0AXQAAAAD///////8ACAAAAAgAAgAA////////AAAAAAICiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgACBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f3f32e4cb50><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f32e4cc10><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f32e4cc50><tlv end> on interface eth1
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [00:00:00:00:02:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:02><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7f3f32e55510><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f32e555d0><pox.lib.packet.lldp.unknown_tlv object at 0x7f3f32e55610><tlv end> on interface eth2
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (12)
+INFO:packet:(lldp tlv parse) warning unknown tlv type (115)
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Controller log: 0 log lines, 4 STS events not matched.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3e9[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:ac37}{id:19376 seq:24}
+Round 134 completed.
+[c1] 11:47:45.025 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==]
+
+INFO:hb_logger:Adding controller handle (1676 -> *): mid_out:542.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAIBiMwCBwQAAAAAAAIEAwIAAQYCAHj+DAAm4QAAAAAAAAAAAhgIDzQGDF84ce7mAQEAAA==]
+
+[c1] 11:47:45.025 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] unicast
+
+[c1] 11:47:45.026 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+[c1] 11:47:45.026 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==]
+
+INFO:hb_logger:Adding controller handle (1677 -> *): mid_out:539.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAUAAAAFAE8AAQAAAYDCAAAOAAAAAAEBiMwCBwQAAAAAAAEEAwIAAQYCAHj+DAAm4QAAAAAAAAAAARgIDzQGDF84ce7mAQEAAA==]
+
+[c1] 11:47:45.026 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] unicast
+
+[c1] 11:47:45.026 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [00:00:00:00:02:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth2
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 4 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [00:00:00:00:01:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3e4[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a9a2}{id:20036 seq:25}
+Round 135 completed.
+[c1] 11:47:45.142 INFO [n.f.h.HappensBefore:New I/O server worker #2-1] Received message 1:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA]
+
+INFO:hb_logger:Adding controller handle (1716 -> *): mid_out:569.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAIBiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgABBgIAeP4MACbhAAAAAAAAAAACGAgPNAYMXzhx7uYBAQAA]
+
+[c1] 11:47:45.142 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] multicast
+
+[c1] 11:47:45.142 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+[c1] 11:47:45.142 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] multicast
+
+[c1] 11:47:45.143 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-1] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+[c1] 11:47:45.144 INFO [n.f.h.HappensBefore:New I/O server worker #2-2] Received message 2:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA
+
+INFO:hb_logger:Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA]
+
+INFO:hb_logger:Adding controller handle (1717 -> *): mid_out:572.
+Controller log: 0 log lines, 4 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAYAAAAGAFcAAQAA////////AAAAAAEBiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgABBgIAeP4MACbhAAAAAAAAAAABGAgPNAYMXzhx7uYBAQAA]
+
+[c1] 11:47:45.144 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:01 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=1] multicast
+
+[c1] 11:47:45.144 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:01-1-00:00:00:00:00:00:00:02-1]]
+
+[c1] 11:47:45.144 TRACE [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] addOrUpdateLink: Link [src=00:00:00:00:00:00:00:02 outPort=1, dst=00:00:00:00:00:00:00:01, inPort=1] multicast
+
+[c1] 11:47:45.144 TRACE [n.f.s.AbstractStorageSource:New I/O server worker #2-2] Notifying storage listeneres: StorageNotification[table=controller_link; action=MODIFY; keys=[00:00:00:00:00:00:00:02-1-00:00:00:00:00:00:00:01-1]]
+
+Forwarding dataplane event
+Forwarding dataplane event
+Round 136 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3e9[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:ac37}{id:19376 seq:24} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:19376 seq:24}
+Forwarding dataplane event
+Round 137 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3e4[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:a9a2}{id:20036 seq:25} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:20036 seq:25}
+Forwarding dataplane event
+Round 138 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 139 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3dc[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:b437}{id:19376 seq:24} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3c6[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:3d78}{id:47725 seq:26}
+No correctness violations!
+Round 140 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3d6[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:b1a2}{id:20036 seq:25} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3c0[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:603e}{id:38822 seq:27}
+Round 141 completed.
+[c1] 11:47:45.872 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+Forwarding dataplane event
+Round 142 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3c6[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:3d78}{id:47725 seq:26} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:47725 seq:26}
+Forwarding dataplane event
+Round 143 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3c0[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:603e}{id:38822 seq:27} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:38822 seq:27}
+Forwarding dataplane event
+Round 144 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 145 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3b8[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:4578}{id:47725 seq:26} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 146 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3b2[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:683e}{id:38822 seq:27} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 147 completed.
+Round 148 completed.
+Round 149 completed.
+No correctness violations!
+Round 150 completed.
+Round 151 completed.
+[c1] 11:47:46.872 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-4] Rescheduling discovery task as role = MASTER
+
+Round 152 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3a1[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:215c}{id:54919 seq:28}
+Round 153 completed.
+Forwarding dataplane event
+Round 154 completed.
+Forwarding dataplane event
+Round 155 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b3a1[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:215c}{id:54919 seq:28} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:54919 seq:28}
+Round 156 completed.
+Forwarding dataplane event
+Round 157 completed.
+Forwarding dataplane event
+Round 158 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b399[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:295c}{id:54919 seq:28} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 159 completed.
+No correctness violations!
+Round 160 completed.
+[c1] 11:47:47.873 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-3] Rescheduling discovery task as role = MASTER
+
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b38f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4efa}{id:43240 seq:29}
+Round 161 completed.
+Forwarding dataplane event
+Round 162 completed.
+Forwarding dataplane event
+Round 163 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b38f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:4efa}{id:43240 seq:29} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:43240 seq:29}
+Round 164 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b381[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:117d}{id:58980 seq:30}
+Round 165 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 166 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b387[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:56fa}{id:43240 seq:29} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 167 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b381[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:117d}{id:58980 seq:30} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:58980 seq:30}
+Round 168 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b36f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:6547}{id:37529 seq:31}
+Round 169 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 170 completed.
+[c1] 11:47:48.873 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-2] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b375[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:197d}{id:58980 seq:30} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 171 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b36f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:6547}{id:37529 seq:31} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:37529 seq:31}
+Round 172 completed.
+Forwarding dataplane event
+Round 173 completed.
+Forwarding dataplane event
+Round 174 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b363[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:6d47}{id:37529 seq:31} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Round 175 completed.
+Round 176 completed.
+Round 177 completed.
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b359[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b963}{id:15996 seq:32}
+Round 178 completed.
+Forwarding dataplane event
+Round 179 completed.
+[c1] 11:47:49.873 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-0] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+No correctness violations!
+Round 180 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b359[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:b963}{id:15996 seq:32} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:15996 seq:32}
+Round 181 completed.
+Forwarding dataplane event
+Round 182 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b348[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:aa7e}{id:19808 seq:33}
+Round 183 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b351[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:c163}{id:15996 seq:32} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 184 completed.
+Forwarding dataplane event
+Round 185 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b348[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:aa7e}{id:19808 seq:33} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:19808 seq:33}
+Round 186 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b339[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:7ccb}{id:31506 seq:34}
+Round 187 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 188 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b33f[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:b27e}{id:19808 seq:33} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 189 completed.
+[c1] 11:47:50.874 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-4] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b339[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:7ccb}{id:31506 seq:34} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:31506 seq:34}
+No correctness violations!
+Round 190 completed.
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b327[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:881a}{id:28610 seq:35}
+Round 191 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b31f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:74bf}{id:33564 seq:36}
+Round 192 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b32d[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:84cb}{id:31506 seq:34} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b316[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:beb6}{id:14628 seq:37}
+Round 193 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b327[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:881a}{id:28610 seq:35} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:28610 seq:35}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 194 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b31f[123.123.2.2>123.123.1.2]){t:ECHO_REQUEST c:0 chk:74bf}{id:33564 seq:36} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.1.2')]:sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:0}{id:33564 seq:36}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 195 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b316[123.123.1.2>123.123.2.2]){t:ECHO_REQUEST c:0 chk:beb6}{id:14628 seq:37} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REQUEST, Generating ping echo reply.
+INFO:host:[IPAddr('123.123.2.2')]:sending packet on interface eth2: [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}{id:14628 seq:37}
+Forwarding dataplane event
+Forwarding dataplane event
+Round 196 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b314[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:901a}{id:28610 seq:35} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 197 completed.
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.2.2')]:Received packet [12:34:56:78:01:02>12:34:56:78:02:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b30b[123.123.1.2>123.123.2.2]){t:ECHO_REPLY c:0 chk:7cbf}{id:33564 seq:36} on interface eth2
+INFO:host:[IPAddr('123.123.2.2')]:Received ECHO_REPLY, not responding.
+Forwarding dataplane event
+Round 198 completed.
+[c1] 11:47:51.874 TRACE [n.f.l.i.LinkDiscoveryManager:Scheduled-1] Rescheduling discovery task as role = MASTER
+
+Forwarding dataplane event
+INFO:host:[IPAddr('123.123.1.2')]:Received packet [12:34:56:78:02:02>12:34:56:78:01:02:IP]|([v:4hl:5l:28t:64]ICMP cs:b302[123.123.2.2>123.123.1.2]){t:ECHO_REPLY c:0 chk:c6b6}{id:14628 seq:37} on interface eth1
+INFO:host:[IPAddr('123.123.1.2')]:Received ECHO_REPLY, not responding.
+Round 199 completed.
+No correctness violations!
+Round 200 completed.
+INFO:control_flow:Terminating fuzzing after 200 rounds
+INFO:control_flow:Pending Receives:
+INFO:control_flow:Pending Sends:
+Killing controller c1 (pid 20610)
+Terminating child controllers... OK
