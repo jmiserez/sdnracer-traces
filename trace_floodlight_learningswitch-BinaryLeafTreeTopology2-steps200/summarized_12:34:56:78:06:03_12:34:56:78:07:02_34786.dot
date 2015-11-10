@@ -1,0 +1,125 @@
+strict digraph G {
+34592 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10ef24590>, label="ID 34592 
+ HbMessageHandle
+DPID: 6
+t: 1442900202.559411
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 3 dl_src: 12:34:56:78:06:03 dl_dst: 12:34:56:78:07:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+34786 [shape=oval, event=<hb_events.HbHostSend object at 0x10efad450>, label="ID 34786 
+ HbHostSend
+HID: 5
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+35907 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f3a86d0>, label="ID 35907 
+ HbPacketHandle
+DPID: 7
+t: 1442900203.694898
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+35620 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f24a1d0>, label="ID 35620 
+ HbPacketSend
+DPID: 3
+Out Port: 2
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+36342 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f59f410>, label="ID 36342 
+ HbMessageHandle
+DPID: 7
+t: 1442900204.12726
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:06:03 dl_dst: 12:34:56:78:07:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+35176 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f0e6510>, label="ID 35176 
+ HbPacketSend
+DPID: 6
+Out Port: 1
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+35913 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f3a8cd0>, label="ID 35913 
+ HbMessageSend
+DPID: 7
+MsgType: OFPT_PACKET_IN
+XID: 112
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+35170 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f0dad50>, label="ID 35170 
+ HbPacketHandle
+DPID: 6
+t: 1442900203.041297
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+36333 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f58b310>, label="ID 36333 
+ HbMessageHandle
+DPID: 7
+MsgType: OFPT_PACKET_OUT
+XID: 0
+InPort: 1
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+36338 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f58b890>, label="ID 36338 
+ HbPacketSend
+DPID: 7
+Out Port: 2
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+36566 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f607d10>, label="ID 36566 
+ HbHostHandle
+HID: 8
+InPort: 12:34:56:78:07:02
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+35614 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f24a150>, label="ID 35614 
+ HbPacketHandle
+DPID: 3
+t: 1442900203.387542
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.7.2])
+ICMP: {t:ECHO_REPLY c:0}{id:36392 seq:91}"];
+34786 -> 35170  [rel=pid, label=pid];
+35907 -> 35913  [rel=mid, label=mid];
+35907 -> 36333  [rel=pid, label=pid];
+35907 -> 36342  [harmful=True, color=red, style=bold, rel=race, label=race];
+35620 -> 35907  [rel=pid, label=pid];
+35176 -> 35614  [rel=pid, label=pid];
+35170 -> 35176  [rel=pid, label=pid];
+35170 -> 34592  [harmful=True, color=red, style=bold, rel=race, label=race];
+36333 -> 36338  [rel=pid, label=pid];
+36338 -> 36566  [rel=pid, label=pid];
+35614 -> 35620  [rel=pid, label=pid];
+}

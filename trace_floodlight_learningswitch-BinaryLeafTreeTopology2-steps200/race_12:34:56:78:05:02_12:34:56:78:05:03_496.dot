@@ -1,0 +1,72 @@
+strict digraph G {
+592 [shape=oval, event=<hb_events.HbHostHandle object at 0x1078a3bd0>, label="ID 592 
+ HbHostHandle
+HID: 3
+InPort: 12:34:56:78:05:03
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+516 [shape=oval, event=<hb_events.HbMessageSend object at 0x107890290>, label="ID 516 
+ HbMessageSend
+DPID: 5
+MsgType: OFPT_PACKET_IN
+XID: 2
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+496 [shape=oval, event=<hb_events.HbHostSend object at 0x107889150>, label="ID 496 
+ HbHostSend
+HID: 4
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+565 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10789e7d0>, label="ID 565 
+ HbMessageHandle
+DPID: 5
+MsgType: OFPT_PACKET_OUT
+XID: 0
+InPort: 2
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+570 [shape=oval, event=<hb_events.HbPacketSend object at 0x10789ecd0>, label="ID 570 
+ HbPacketSend
+DPID: 5
+Out Port: 3
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+574 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1078a3090>, label="ID 574 
+ HbMessageHandle
+DPID: 5
+t: 1442900137.303888
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:05:02 dl_dst: 12:34:56:78:05:03 dl_vlan: 65535 
+Actions: [ofp_action_output(port=3)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+510 [shape=box, event=<hb_events.HbPacketHandle object at 0x107889b10>, label="ID 510 
+ HbPacketHandle
+DPID: 5
+t: 1442900137.192513
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:05:02>12:34:56:78:05:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.5.2>123.123.5.3])
+ICMP: {t:ECHO_REPLY c:0}{id:17376 seq:0}"];
+496 -> 510  [rel=pid, label=pid];
+565 -> 570  [rel=pid, label=pid];
+570 -> 592  [rel=pid, label=pid];
+510 -> 516  [rel=mid, label=mid];
+510 -> 565  [rel=pid, label=pid];
+510 -> 574  [harmful=True, color=red, style=bold, rel=race, label=race];
+}

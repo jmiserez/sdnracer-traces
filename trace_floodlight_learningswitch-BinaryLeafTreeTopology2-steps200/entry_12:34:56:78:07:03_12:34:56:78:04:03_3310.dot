@@ -1,0 +1,131 @@
+strict digraph G {
+3552 [shape=oval, event=<hb_events.HbPacketSend object at 0x10840b750>, label="ID 3552 
+ HbPacketSend
+DPID: 7
+Out Port: 1
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3938 [shape=oval, event=<hb_events.HbPacketSend object at 0x1085c2cd0>, label="ID 3938 
+ HbPacketSend
+DPID: 1
+Out Port: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3749 [shape=oval, event=<hb_events.HbPacketSend object at 0x1084e7610>, label="ID 3749 
+ HbPacketSend
+DPID: 3
+Out Port: 4
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+4488 [shape=oval, event=<hb_events.HbHostHandle object at 0x1088a4710>, label="ID 4488 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:04:03
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+4298 [shape=box, event=<hb_events.HbPacketHandle object at 0x1087caf10>, label="ID 4298 
+ HbPacketHandle
+DPID: 4
+t: 1442900141.451239
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3310 [shape=oval, event=<hb_events.HbHostSend object at 0x10831d6d0>, label="ID 3310 
+ HbHostSend
+HID: 7
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+4304 [shape=oval, event=<hb_events.HbPacketSend object at 0x1087ddb50>, label="ID 4304 
+ HbPacketSend
+DPID: 4
+Out Port: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+4180 [shape=box, event=<hb_events.HbPacketHandle object at 0x108714950>, label="ID 4180 
+ HbPacketHandle
+DPID: 2
+t: 1442900141.24153
+Op: FlowTableRead
+InPort: 4
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3161 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1082661d0>, label="ID 3161 
+ HbMessageHandle
+DPID: 7
+t: 1442900139.847203
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 3 dl_src: 12:34:56:78:07:03 dl_dst: 12:34:56:78:04:03 dl_vlan: 65535 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+3546 [shape=box, event=<hb_events.HbPacketHandle object at 0x10840b1d0>, label="ID 3546 
+ HbPacketHandle
+DPID: 7
+t: 1442900140.404612
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3932 [shape=box, event=<hb_events.HbPacketHandle object at 0x108597750>, label="ID 3932 
+ HbPacketHandle
+DPID: 1
+t: 1442900140.924324
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+4186 [shape=oval, event=<hb_events.HbPacketSend object at 0x108721cd0>, label="ID 4186 
+ HbPacketSend
+DPID: 2
+Out Port: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3743 [shape=box, event=<hb_events.HbPacketHandle object at 0x1084e7410>, label="ID 3743 
+ HbPacketHandle
+DPID: 3
+t: 1442900140.651266
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:55640 seq:6}"];
+3552 -> 3743  [rel=pid, label=pid];
+3938 -> 4180  [rel=pid, label=pid];
+3749 -> 3932  [rel=pid, label=pid];
+4298 -> 4304  [rel=pid, label=pid];
+3310 -> 3546  [rel=pid, label=pid];
+4304 -> 4488  [rel=pid, label=pid];
+4180 -> 4186  [rel=pid, label=pid];
+3546 -> 3552  [rel=pid, label=pid];
+3546 -> 3161  [harmful=True, color=red, style=bold, rel=race, label=race];
+3932 -> 3938  [rel=pid, label=pid];
+4186 -> 4298  [rel=pid, label=pid];
+3743 -> 3749  [rel=pid, label=pid];
+}

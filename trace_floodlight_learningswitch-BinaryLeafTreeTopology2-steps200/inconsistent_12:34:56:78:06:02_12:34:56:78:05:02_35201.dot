@@ -1,0 +1,183 @@
+strict digraph G {
+35201 [shape=oval, event=<hb_events.HbHostSend object at 0x1124900d0>, label="ID 35201 
+ HbHostSend
+HID: 6
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+36866 [shape=box, event=<hb_events.HbPacketHandle object at 0x112c40a90>, label="ID 36866 
+ HbPacketHandle
+DPID: 5
+t: 1442900204.843222
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+32324 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x111eac250>, label="ID 32324 
+ HbMessageHandle
+DPID: 6
+t: 1442900201.005066
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:05:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+33286 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x112005d10>, label="ID 33286 
+ HbMessageHandle
+DPID: 1
+t: 1442900201.634495
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:05:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=3)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+36294 [shape=box, event=<hb_events.HbPacketHandle object at 0x11290bf10>, label="ID 36294 
+ HbPacketHandle
+DPID: 1
+t: 1442900204.091437
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+36872 [shape=oval, event=<hb_events.HbPacketSend object at 0x112c40f90>, label="ID 36872 
+ HbPacketSend
+DPID: 5
+Out Port: 2
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+36300 [shape=oval, event=<hb_events.HbPacketSend object at 0x1128e28d0>, label="ID 36300 
+ HbPacketSend
+DPID: 1
+Out Port: 3
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+34573 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1122b3b90>, label="ID 34573 
+ HbMessageHandle
+DPID: 3
+t: 1442900202.545794
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 3 dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:05:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=4)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+36689 [shape=box, event=<hb_events.HbPacketHandle object at 0x112b58890>, label="ID 36689 
+ HbPacketHandle
+DPID: 2
+t: 1442900204.589516
+Op: FlowTableRead
+InPort: 4
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+32242 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x111e8db10>, label="ID 32242 
+ HbMessageHandle
+DPID: 3
+t: 1442900200.983449
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:05:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=4)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+37302 [shape=oval, event=<hb_events.HbHostHandle object at 0x112e65e10>, label="ID 37302 
+ HbHostHandle
+HID: 4
+InPort: 12:34:56:78:05:02
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+36695 [shape=oval, event=<hb_events.HbPacketSend object at 0x112b58b50>, label="ID 36695 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+35832 [shape=box, event=<hb_events.HbPacketHandle object at 0x1126a8a90>, label="ID 35832 
+ HbPacketHandle
+DPID: 3
+t: 1442900203.63888
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+35513 [shape=box, event=<hb_events.HbPacketHandle object at 0x112598910>, label="ID 35513 
+ HbPacketHandle
+DPID: 6
+t: 1442900203.323131
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+34143 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1121c6510>, label="ID 34143 
+ HbMessageHandle
+DPID: 2
+t: 1442900202.19636
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 4 dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:05:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+35838 [shape=oval, event=<hb_events.HbPacketSend object at 0x1126d0cd0>, label="ID 35838 
+ HbPacketSend
+DPID: 3
+Out Port: 4
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+35519 [shape=oval, event=<hb_events.HbPacketSend object at 0x112598b90>, label="ID 35519 
+ HbPacketSend
+DPID: 6
+Out Port: 1
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:05:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.5.2])
+ICMP: {t:ECHO_REPLY c:0}{id:25544 seq:89}"];
+35201 -> 35513  [rel=pid, label=pid];
+36866 -> 36872  [rel=pid, label=pid];
+36294 -> 36300  [rel=pid, label=pid];
+36294 -> 33286  [harmful=True, color=red, style=bold, rel=race, label=race];
+36872 -> 37302  [rel=pid, label=pid];
+36300 -> 36689  [rel=pid, label=pid];
+36689 -> 34143  [harmful=True, color=red, style=bold, rel=race, label=race];
+36689 -> 36695  [rel=pid, label=pid];
+36695 -> 36866  [rel=pid, label=pid];
+35832 -> 32242  [harmful=True, color=red, style=bold, rel=race, label=race];
+35832 -> 34573  [harmful=True, color=red, style=bold, rel=race, label=race];
+35832 -> 35838  [rel=pid, label=pid];
+35513 -> 32324  [harmful=True, color=red, style=bold, rel=race, label=race];
+35513 -> 35519  [rel=pid, label=pid];
+35838 -> 36294  [rel=pid, label=pid];
+35519 -> 35832  [rel=pid, label=pid];
+}

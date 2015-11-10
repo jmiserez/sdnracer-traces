@@ -1,0 +1,51 @@
+strict digraph G {
+2792 [shape=box, event=<hb_events.HbPacketHandle object at 0x10b2cb710>, label="ID 2792 
+ HbPacketHandle
+DPID: 6
+t: 1442900139.359525
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:06:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.6.3])
+ICMP: {t:ECHO_REPLY c:0}{id:52054 seq:8}"];
+3096 [shape=oval, event=<hb_events.HbHostHandle object at 0x10b59ef50>, label="ID 3096 
+ HbHostHandle
+HID: 5
+InPort: 12:34:56:78:06:03
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:06:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.6.3])
+ICMP: {t:ECHO_REPLY c:0}{id:52054 seq:8}"];
+2546 [shape=oval, event=<hb_events.HbHostSend object at 0x10b0e7410>, label="ID 2546 
+ HbHostSend
+HID: 6
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:06:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.6.3])
+ICMP: {t:ECHO_REPLY c:0}{id:52054 seq:8}"];
+1154 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10ad4a290>, label="ID 1154 
+ HbMessageHandle
+DPID: 6
+t: 1442900137.933913
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:06:02 dl_dst: 12:34:56:78:06:03 dl_vlan: 65535 
+Actions: [ofp_action_output(port=3)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+2798 [shape=oval, event=<hb_events.HbPacketSend object at 0x10b2d7a90>, label="ID 2798 
+ HbPacketSend
+DPID: 6
+Out Port: 3
+Pkt: ETH: [12:34:56:78:06:02>12:34:56:78:06:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.2>123.123.6.3])
+ICMP: {t:ECHO_REPLY c:0}{id:52054 seq:8}"];
+2792 -> 1154  [harmful=True, color=red, style=bold, rel=race, label=race];
+2792 -> 2798  [rel=pid, label=pid];
+2546 -> 2792  [rel=pid, label=pid];
+2798 -> 3096  [rel=pid, label=pid];
+}

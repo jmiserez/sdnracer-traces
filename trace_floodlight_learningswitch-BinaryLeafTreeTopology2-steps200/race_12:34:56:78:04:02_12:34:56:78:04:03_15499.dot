@@ -1,0 +1,72 @@
+strict digraph G {
+16225 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10b3b9e90>, label="ID 16225 
+ HbMessageHandle
+DPID: 4
+MsgType: OFPT_PACKET_OUT
+XID: 0
+InPort: 2
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+15845 [shape=oval, event=<hb_events.HbMessageSend object at 0x10b2e91d0>, label="ID 15845 
+ HbMessageSend
+DPID: 4
+MsgType: OFPT_PACKET_IN
+XID: 32
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+16230 [shape=oval, event=<hb_events.HbPacketSend object at 0x10b3a5a90>, label="ID 16230 
+ HbPacketSend
+DPID: 4
+Out Port: 3
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+16234 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10b3c3b90>, label="ID 16234 
+ HbMessageHandle
+DPID: 4
+t: 1442900163.123547
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:04:02 dl_dst: 12:34:56:78:04:03 dl_vlan: 65535 
+Actions: [ofp_action_output(port=3)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+15499 [shape=oval, event=<hb_events.HbHostSend object at 0x10b254190>, label="ID 15499 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+15839 [shape=box, event=<hb_events.HbPacketHandle object at 0x10b2e29d0>, label="ID 15839 
+ HbPacketHandle
+DPID: 4
+t: 1442900162.793062
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+16447 [shape=oval, event=<hb_events.HbHostHandle object at 0x10b40b8d0>, label="ID 16447 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:04:03
+Pkt: ETH: [12:34:56:78:04:02>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.4.2>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:9823 seq:45}"];
+16225 -> 16230  [rel=pid, label=pid];
+16230 -> 16447  [rel=pid, label=pid];
+15499 -> 15839  [rel=pid, label=pid];
+15839 -> 16225  [rel=pid, label=pid];
+15839 -> 16234  [harmful=True, color=red, style=bold, rel=race, label=race];
+15839 -> 15845  [rel=mid, label=mid];
+}

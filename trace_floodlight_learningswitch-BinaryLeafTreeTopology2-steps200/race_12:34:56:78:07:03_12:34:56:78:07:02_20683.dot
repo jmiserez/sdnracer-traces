@@ -1,0 +1,72 @@
+strict digraph G {
+21031 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10c749c50>, label="ID 21031 
+ HbMessageHandle
+DPID: 7
+MsgType: OFPT_PACKET_OUT
+XID: 0
+InPort: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+21161 [shape=oval, event=<hb_events.HbHostHandle object at 0x10c7973d0>, label="ID 21161 
+ HbHostHandle
+HID: 8
+InPort: 12:34:56:78:07:02
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+20683 [shape=oval, event=<hb_events.HbHostSend object at 0x10c66e090>, label="ID 20683 
+ HbHostSend
+HID: 7
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+21036 [shape=oval, event=<hb_events.HbPacketSend object at 0x10c74e190>, label="ID 21036 
+ HbPacketSend
+DPID: 7
+Out Port: 2
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+20719 [shape=box, event=<hb_events.HbPacketHandle object at 0x10c679ed0>, label="ID 20719 
+ HbPacketHandle
+DPID: 7
+t: 1442900171.551702
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+21040 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10c74e550>, label="ID 21040 
+ HbMessageHandle
+DPID: 7
+t: 1442900171.902632
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 3 dl_src: 12:34:56:78:07:03 dl_dst: 12:34:56:78:07:02 dl_vlan: 65535 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 0
+InPort: None
+Pkt: None"];
+20725 [shape=oval, event=<hb_events.HbMessageSend object at 0x10c682dd0>, label="ID 20725 
+ HbMessageSend
+DPID: 7
+MsgType: OFPT_PACKET_IN
+XID: 61
+Pkt: ETH: [12:34:56:78:07:03>12:34:56:78:07:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.7.3>123.123.7.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:59088 seq:58}"];
+21031 -> 21036  [rel=pid, label=pid];
+20683 -> 20719  [rel=pid, label=pid];
+21036 -> 21161  [rel=pid, label=pid];
+20719 -> 21040  [harmful=True, color=red, style=bold, rel=race, label=race];
+20719 -> 20725  [rel=mid, label=mid];
+20719 -> 21031  [rel=pid, label=pid];
+}

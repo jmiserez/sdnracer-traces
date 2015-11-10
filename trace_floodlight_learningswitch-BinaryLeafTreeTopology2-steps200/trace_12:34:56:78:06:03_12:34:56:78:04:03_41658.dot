@@ -1,0 +1,71 @@
+strict digraph G {
+41861 [shape=oval, event=<hb_events.HbMessageSend object at 0x110b56290>, label="ID 41861 
+ HbMessageSend
+DPID: 6
+MsgType: OFPT_PACKET_IN
+XID: 116
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+42509 [shape=box, event=<hb_events.HbPacketHandle object at 0x110d62210>, label="ID 42509 
+ HbPacketHandle
+DPID: 3
+t: 1442900218.842079
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+42515 [shape=oval, event=<hb_events.HbMessageSend object at 0x110d629d0>, label="ID 42515 
+ HbMessageSend
+DPID: 3
+MsgType: OFPT_PACKET_IN
+XID: 163
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+42298 [shape=oval, event=<hb_events.HbMessageHandle object at 0x110cb2c90>, label="ID 42298 
+ HbMessageHandle
+DPID: 6
+MsgType: OFPT_PACKET_OUT
+XID: 0
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+42303 [shape=oval, event=<hb_events.HbPacketSend object at 0x110cb81d0>, label="ID 42303 
+ HbPacketSend
+DPID: 6
+Out Port: 1
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+41658 [shape=oval, event=<hb_events.HbHostSend object at 0x110addd90>, label="ID 41658 
+ HbHostSend
+HID: 5
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+41855 [shape=box, event=<hb_events.HbPacketHandle object at 0x110b43d50>, label="ID 41855 
+ HbPacketHandle
+DPID: 6
+t: 1442900218.297228
+Op: FlowTableRead
+InPort: 3
+Pkt: ETH: [12:34:56:78:06:03>12:34:56:78:04:03:IP]
+
+IPv4([ttl:64]ICMP[123.123.6.3>123.123.4.3])
+ICMP: {t:ECHO_REPLY c:0}{id:43317 seq:106}"];
+42509 -> 42515  [rel=mid, label=mid];
+42298 -> 42303  [rel=pid, label=pid];
+41855 -> 42298  [rel=pid, label=pid];
+41855 -> 41861  [rel=mid, label=mid];
+41658 -> 41855  [rel=pid, label=pid];
+42303 -> 42509  [rel=pid, label=pid];
+}
