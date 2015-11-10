@@ -20,10 +20,10 @@ start_cmd = ('''./pox.py --verbose '''
 controllers = [ControllerConfig(start_cmd, cwd="pox/")]
 
 num = 2
-#topology_class = StarTopology
-#topology_params = "num_hosts=%d" % num
-#topology_class = MeshTopology
-#topology_params = "num_switches=%d" % num
+topology_class = StarTopology
+topology_params = "num_hosts=%d" % num
+topology_class = MeshTopology
+topology_params = "num_switches=%d" % num
 # topology_class = GridTopology
 # topology_params = "num_rows=3, num_columns=3"
 topology_class = BinaryLeafTreeTopology
