@@ -47,7 +47,8 @@ con_selected_keys['num_per_pkt_inconsistent_no_repeat'] = None
 con_selected_keys['num_versions'] = None
 con_selected_keys['num_racing_versions'] = None
 
-con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race', 'num_per_pkt_inconsistent',  'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
+#con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race', 'num_per_pkt_inconsistent',  'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
+con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race',  'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
 
 con_special_keys= {}
 con_special_keys['App'] = None
@@ -55,6 +56,7 @@ con_special_keys['Topology'] = None
 con_special_keys['Controller'] = None
 con_special_keys['num_versions'] = None
 con_special_keys_order = ['App', 'Topology', 'Controller',  'num_versions']
+
 
 
 def read_matrix(filename, special_keys, selected_keys, value_keys):
@@ -99,6 +101,11 @@ def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
      timing_header[i][0] = t
   subheader = [used_keys for t in timings[1:]]
 
+  if 'num_harmful' in used_keys and 'num_covered' in used_keys:
+    i_harm = used_keys.index('num_harmful')
+    i_covered = used_keys.index('num_covered')
+    for i, v in enumerate(values_rows):
+      values_rows[i][i_harm] = str(int(v[i_harm]) - int(v[i_covered]))
 
   summarize_timing_header = []
   summarize_subheader = []
@@ -138,8 +145,8 @@ def main(filename, consistency, print_headers):
   pretty_names['num_per_pkt_inconsistent_covered'] = 'Covered'
   pretty_names['num_per_pkt_entry_version_race'] = '1st Switch'
   pretty_names['num_per_pkt_inconsistent'] = 'Inconsistent'
-  pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Inconsistent No Repeat'
-  pretty_names['num_racing_versions'] = 'Inconsistent Updates'
+  pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Incon. Pkt.'
+  pretty_names['num_racing_versions'] = 'Incon. Updates'
   
   pretty_names['num_writes'] = 'Writes'
   pretty_names['num_read'] = 'Reads'
@@ -147,6 +154,7 @@ def main(filename, consistency, print_headers):
   pretty_names['num_commute'] = 'Commute'
   pretty_names['num_covered'] = 'Covered'
   pretty_names['num_harmful'] = 'Harmful'
+  pretty_names['num_versions'] = 'Versions'
 
   for i, v in enumerate(header):
     if v in pretty_names:
