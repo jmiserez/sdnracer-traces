@@ -1,16 +1,15 @@
 #!/bin/bash
 
+
+# Get the traces we're interested in
+source scripts/traces.sh
+
 export RESET_FILEs=1
-./scripts/cross_summary.sh *l2_multi*steps200
-export RESET_FILEs=0
-./scripts/cross_summary.sh *forwarding*steps200
-./scripts/cross_summary.sh *onos*steps200
-#./scripts/cross_summary.sh *learning*steps200
-./scripts/cross_summary.sh *learningswitch-StarTopology2-steps200
-./scripts/cross_summary.sh *learningswitch-MeshTopology2-steps200
-./scripts/cross_summary.sh *learningswitch-BinaryLeafTreeTopology1-steps200
-./scripts/cross_summary.sh *learningswitch-BinaryLeafTreeTopology2-steps200
-./scripts/cross_summary.sh *circuitpusher-*-steps200
+for trace in ${ALL_TRACES[@]}
+do
+  ./scripts/cross_summary.sh $trace
+  RESET_FILEs=0
+done
 
 
 rm -rf data/*.csv
