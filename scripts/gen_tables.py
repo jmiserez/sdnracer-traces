@@ -22,7 +22,7 @@ races_selected_keys['num_commute'] = None
 races_selected_keys['num_races'] = None
 races_selected_keys['num_covered'] = None
 
-races_value_keys = ['rw_delta', 'num_races', 'num_commute', 'num_covered', 'num_harmful' ]
+races_value_keys = ['rw_delta', 'num_covered', 'num_harmful' ]
 
 races_special_keys= {}
 races_special_keys['App'] = None
@@ -30,7 +30,9 @@ races_special_keys['Topology'] = None
 races_special_keys['Controller'] = None
 races_special_keys['num_writes'] = None
 races_special_keys['num_read'] = None
-races_special_keys_order = ['App', 'Topology', 'Controller',  'num_writes', 'num_read']
+races_special_keys['num_races'] = None
+races_special_keys['num_commute'] = None
+races_special_keys_order = ['App', 'Topology', 'Controller',  'num_writes', 'num_read', 'num_races', 'num_commute']
 
 
 con_selected_keys = {}
@@ -100,13 +102,13 @@ def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
   for i, t in enumerate(timings[1:]):
      timing_header[i][0] = t
   subheader = [used_keys for t in timings[1:]]
-
+  """
   if 'num_harmful' in used_keys and 'num_covered' in used_keys:
     i_harm = used_keys.index('num_harmful')
     i_covered = used_keys.index('num_covered')
     for i, v in enumerate(values_rows):
       values_rows[i][i_harm] = str(int(v[i_harm]) - int(v[i_covered]))
-
+  """
   summarize_timing_header = []
   summarize_subheader = []
   summarize_values_rows = []
