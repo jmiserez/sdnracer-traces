@@ -21,8 +21,8 @@ races_selected_keys['num_harmful'] = None
 races_selected_keys['num_commute'] = None
 races_selected_keys['num_races'] = None
 races_selected_keys['num_covered'] = None
-
-races_value_keys = ['rw_delta', 'num_covered', 'num_harmful' ]
+races_selected_keys['num_time_filtered_races'] = None
+races_value_keys = ['rw_delta', 'num_covered', 'num_harmful', 'num_time_filtered_races' ]
 
 races_special_keys= {}
 races_special_keys['App'] = None
@@ -79,7 +79,7 @@ def read_matrix(filename, special_keys, selected_keys, value_keys):
   return matrix, special_keys
 
 
-def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
+def summarize(matrix, special_keys, special_keys_order, summarize, filter_indcies=[2, -1]):
   columns = []
   timings = None
 
@@ -109,16 +109,17 @@ def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
     for i, v in enumerate(values_rows):
       values_rows[i][i_harm] = str(int(v[i_harm]) - int(v[i_covered]))
   """
-  summarize_timing_header = []
-  summarize_subheader = []
-  summarize_values_rows = []
-  for i in filter_indcies:
-    summarize_timing_header.append(timing_header[i])
-    summarize_subheader.append(subheader[i])
-    summarize_values_rows.append(values_rows[i])
-  timing_header = summarize_timing_header
-  subheader = summarize_subheader
-  values_rows = summarize_values_rows
+  if summarize:
+    summarize_timing_header = []
+    summarize_subheader = []
+    summarize_values_rows = []
+    for i in filter_indcies:
+      summarize_timing_header.append(timing_header[i])
+      summarize_subheader.append(subheader[i])
+      summarize_values_rows.append(values_rows[i])
+    timing_header = summarize_timing_header
+    subheader = summarize_subheader
+    values_rows = summarize_values_rows
 
   timing_header = [val for sublist in timing_header for val in sublist]
   subheader = [val for sublist in subheader for val in sublist]
@@ -133,13 +134,13 @@ def summarize(matrix, special_keys, special_keys_order, filter_indcies=[2, -1]):
   return header, second_header, values
 
 
-def main(filename, consistency, print_headers):
+def main(filename, consistency, time_filter, print_headers):
   if consistency:
     matrix, special_keys = read_matrix(filename, con_special_keys, con_selected_keys, con_value_keys)
-    header, second_header, values = summarize(matrix, special_keys, con_special_keys_order)
+    header, second_header, values = summarize(matrix, special_keys, con_special_keys_order, time_filter)
   else:
     matrix, special_keys = read_matrix(filename, races_special_keys, races_selected_keys, races_value_keys)
-    header, second_header, values = summarize(matrix, special_keys, races_special_keys_order)
+    header, second_header, values = summarize(matrix, special_keys, races_special_keys_order, time_filter)
   
   pretty_names = {}
   pretty_names['rw_delta'] = 't'
@@ -174,7 +175,8 @@ def main(filename, consistency, print_headers):
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('filename')
+  parser.add_argument('-s', dest='summary', action='store_true', default=False, help='Generate only data for t=2 and t=inf')
   parser.add_argument('-p', dest='print_headers', action='store_true', default=False)
   parser.add_argument('-c', dest='consistency', action='store_true', default=False)
   args = parser.parse_args()
-  main(args.filename, args.consistency, args.print_headers)
+  main(args.filename, args.consistency, args.summary, args.print_headers)

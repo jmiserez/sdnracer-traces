@@ -42,10 +42,14 @@ do
       then
         python scripts/gen_tables.py -p "${f}" > races_table.csv
         python scripts/gen_tables.py -c -p "${f}" > consistency_table.csv
+        python scripts/gen_tables.py -s -p "${f}" > races_table_sum.csv
+        python scripts/gen_tables.py -s -c -p "${f}" > consistency_table_sum.csv
         SETHEADER=0
       else
         python scripts/gen_tables.py "${f}" >> races_table.csv
         python scripts/gen_tables.py -c "${f}" >> consistency_table.csv
+        python scripts/gen_tables.py -s "${f}" >> races_table_sum.csv
+        python scripts/gen_tables.py -s -c "${f}" >> consistency_table_sum.csv
       fi
     done
   done
