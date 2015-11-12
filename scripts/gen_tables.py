@@ -22,7 +22,7 @@ races_selected_keys['num_commute'] = None
 races_selected_keys['num_races'] = None
 races_selected_keys['num_covered'] = None
 races_selected_keys['num_time_filtered_races'] = None
-races_value_keys = ['rw_delta', 'num_covered', 'num_harmful', 'num_time_filtered_races' ]
+races_value_keys = ['rw_delta', 'num_covered', 'num_time_filtered_races', 'num_harmful' ]
 
 races_special_keys= {}
 races_special_keys['App'] = None
@@ -158,6 +158,7 @@ def main(filename, consistency, time_filter, print_headers):
   pretty_names['num_covered'] = 'Covered'
   pretty_names['num_harmful'] = 'Harmful'
   pretty_names['num_versions'] = 'Versions'
+  pretty_names['num_time_filtered_races'] = 'Time'
 
   for i, v in enumerate(header):
     if v in pretty_names:
