@@ -58,18 +58,8 @@ def extract_data(matrix):
     tfiltered.append([int(v) for v in get_column(matrix, keys['num_time_filtered_races'][i])])
     x = [races[i] - harmful[-1][i] for i in range(len(harmful[-1]))]
     y = [tfiltered[-1][i] + covered[-1][i] + commute[i] for i in range(len(harmful[-1]))]
-    for o,_ in enumerate(x):
-      if x[o] != y[o]:
-        print i, t
-        print "Races", races[o]
-        print "Commute", commute[o]
-        print "Time", tfiltered[-1][o]
-        print "covered", covered[-1][o]
-        print "harmful", harmful[-1][o]
-        print  "x[o] %d == y[o] %d " % (x[o], y[o])
-        #assert x[o] == y[o], "x[o] %d == y[o] %d " % (x[o], y[o])
     #total_reduction.append([races[i] - harmful[-1][i] for i in range(len(harmful[-1]))])
-    total_reduction.append([races[i] - harmful[-1][i] for i in range(len(harmful[-1]))])
+    total_reduction.append(y)
   return races, commute, covered, harmful, tfiltered, total_reduction
 
 
