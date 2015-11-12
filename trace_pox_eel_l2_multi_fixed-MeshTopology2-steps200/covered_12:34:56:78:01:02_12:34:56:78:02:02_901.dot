@@ -1,0 +1,240 @@
+strict digraph G {
+899 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f9ae0d0>, label="ID 899 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:9620 seq:5}"];
+901 [shape=oval, event=<hb_events.HbHostSend object at 0x10f9ae310>, label="ID 901 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+398 [event=<hb_events.HbMessageHandle object at 0x10f81b450>, shape=box, cmd_type="Reactive to 369", style=bold, label="ID 398 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.099425
+Reactive to 369
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 28
+InPort: None
+Pkt: None"];
+408 [shape=oval, cmd_type="Reactive to 369", event=<hb_events.HbMessageHandle object at 0x10f81b6d0>, label="ID 408 
+ HbMessageHandle
+DPID: 1
+Reactive to 369
+MsgType: OFPT_BARRIER_REQUEST
+XID: 29
+InPort: None
+Pkt: None"];
+539 [event=<hb_events.HbMessageHandle object at 0x10f84a3d0>, shape=box, cmd_type="Reactive to 501", style=bold, label="ID 539 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.680311
+Reactive to 501
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 39
+InPort: None
+Pkt: None"];
+412 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f81b650>, label="ID 412 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 29"];
+545 [shape=oval, cmd_type="Reactive to 501", event=<hb_events.HbMessageHandle object at 0x10f84a590>, label="ID 545 
+ HbMessageHandle
+DPID: 2
+Reactive to 501
+MsgType: OFPT_BARRIER_REQUEST
+XID: 40
+InPort: None
+Pkt: None"];
+558 [event=<hb_events.HbMessageHandle object at 0x10f850b10>, shape=box, cmd_type=Proactive, style=bold, label="ID 558 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.692789
+Proactive
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 43
+InPort: None
+Pkt: None"];
+432 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f822050>, label="ID 432 
+ HbControllerHandle"];
+946 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f956090>, label="ID 946 
+ HbPacketHandle
+DPID: 1
+t: 1446898429.028473
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+435 [event=<hb_events.HbMessageHandle object at 0x10f822690>, shape=box, cmd_type="Reactive to 369", style=bold, label="ID 435 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.322055
+Reactive to 369
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 32
+InPort: None
+Pkt: None"];
+437 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f8224d0>, label="ID 437 
+ HbControllerSend"];
+952 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f947c10>, label="ID 952 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+441 [shape=oval, cmd_type="Reactive to 369", event=<hb_events.HbMessageHandle object at 0x10f822850>, label="ID 441 
+ HbMessageHandle
+DPID: 2
+Reactive to 369
+MsgType: OFPT_BARRIER_REQUEST
+XID: 33
+InPort: None
+Pkt: None"];
+443 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f822750>, label="ID 443 
+ HbControllerSend"];
+829 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f92fe10>, label="ID 829 
+ HbPacketHandle
+DPID: 2
+t: 1446898428.654293
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:9620 seq:5}"];
+448 [shape=box, cmd_type="Reactive to 369", event=<hb_events.HbMessageHandle object at 0x10f822950>, label="ID 448 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.328767
+Reactive to 369
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 34
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+835 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f924190>, label="ID 835 
+ HbPacketSend
+DPID: 2
+Out Port: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:9620 seq:5}"];
+986 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f970290>, label="ID 986 
+ HbPacketHandle
+DPID: 2
+t: 1446898429.152211
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+992 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f975b10>, label="ID 992 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+1004 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f9710d0>, label="ID 1004 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:02:02
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9620 seq:5}"];
+879 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f9a22d0>, label="ID 879 
+ HbPacketHandle
+DPID: 1
+t: 1446898428.785093
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:9620 seq:5}"];
+885 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f9a2690>, label="ID 885 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:9620 seq:5}"];
+504 [event=<hb_events.HbMessageHandle object at 0x10f8444d0>, shape=box, cmd_type="Reactive to 471", style=bold, label="ID 504 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.556272
+Reactive to 471
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 35
+InPort: None
+Pkt: None"];
+899 -> 901  [rel=pid, label=pid];
+901 -> 946  [rel=pid, label=pid];
+398 -> 408  [rel=barrier_pre, label=barrier_pre];
+398 -> 946  [rel=dep_raw, label=dep_raw];
+408 -> 504  [rel=barrier_post, label=barrier_post];
+408 -> 412  [rel=mid, label=mid];
+539 -> 545  [rel=barrier_pre, label=barrier_pre];
+412 -> 432  [rel=mid, label=mid];
+545 -> 558  [rel=barrier_post, label=barrier_post];
+558 -> 829  [rel=dep_raw, label=dep_raw];
+432 -> 443  [rel=mid, label=mid];
+432 -> 437  [rel=mid, label=mid];
+946 -> 952  [rel=pid, label=pid];
+946 -> 398  [harmful=True, color=blue, style=bold, rel=covered, label=covered];
+435 -> 441  [rel=barrier_pre, label=barrier_pre];
+435 -> 986  [rel=dep_raw, label=dep_raw];
+437 -> 435  [rel=mid, label=mid];
+952 -> 986  [rel=pid, label=pid];
+441 -> 448  [rel=barrier_post, label=barrier_post];
+441 -> 539  [rel=barrier_post, label=barrier_post];
+443 -> 441  [rel=mid, label=mid];
+829 -> 835  [rel=pid, label=pid];
+448 -> 545  [rel=barrier_pre, label=barrier_pre];
+835 -> 879  [rel=pid, label=pid];
+986 -> 992  [rel=pid, label=pid];
+986 -> 435  [harmful=True, color=blue, style=bold, rel=covered, label=covered];
+992 -> 1004  [rel=pid, label=pid];
+879 -> 885  [rel=pid, label=pid];
+885 -> 899  [rel=pid, label=pid];
+504 -> 879  [rel=dep_raw, label=dep_raw];
+}

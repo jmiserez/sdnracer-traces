@@ -1,0 +1,612 @@
+strict digraph G {
+385 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f815c50>, label="ID 385 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.091429
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 26
+InPort: None
+Pkt: None"];
+642 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f86be50>, label="ID 642 
+ HbPacketHandle
+DPID: 2
+t: 1446898428.046191
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26739 seq:2}"];
+387 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f815910>, label="ID 387 
+ HbControllerSend"];
+406 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f81b510>, label="ID 406 
+ HbControllerHandle"];
+391 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f815d90>, label="ID 391 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 27
+InPort: None
+Pkt: None"];
+648 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f879190>, label="ID 648 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26739 seq:2}"];
+393 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f815d10>, label="ID 393 
+ HbControllerSend"];
+395 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f815e10>, label="ID 395 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 27"];
+514 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f844710>, label="ID 514 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 36"];
+398 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f81b450>, label="ID 398 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.099425
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 28
+InPort: None
+Pkt: None"];
+726 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f8a25d0>, label="ID 726 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:57139 seq:1}"];
+400 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f815dd0>, label="ID 400 
+ HbControllerSend"];
+536 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f8445d0>, label="ID 536 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 38"];
+707 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f88a110>, label="ID 707 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:57139 seq:1}"];
+532 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f844a50>, label="ID 532 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 38
+InPort: None
+Pkt: None"];
+558 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f850b10>, label="ID 558 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.692789
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 43
+InPort: None
+Pkt: None"];
+662 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f87f490>, label="ID 662 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 46
+InPort: None
+Pkt: None"];
+408 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f81b6d0>, label="ID 408 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 29
+InPort: None
+Pkt: None"];
+410 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f81b390>, label="ID 410 
+ HbControllerSend"];
+539 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f84a3d0>, label="ID 539 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.680311
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 39
+InPort: None
+Pkt: None"];
+412 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f81b650>, label="ID 412 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 29"];
+666 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f87f510>, label="ID 666 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 46"];
+671 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f87f4d0>, label="ID 671 
+ HbControllerSend"];
+545 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f84a590>, label="ID 545 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 40
+InPort: None
+Pkt: None"];
+619 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f864dd0>, label="ID 619 
+ HbControllerSend"];
+677 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f884e90>, label="ID 677 
+ HbPacketSend
+DPID: 2
+Out Port: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:57139 seq:1}"];
+423 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f81bed0>, label="ID 423 
+ HbControllerSend"];
+552 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f850150>, label="ID 552 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.689333
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 8 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 41
+InPort: None
+Pkt: None"];
+425 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f81bf90>, label="ID 425 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 31"];
+517 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f844890>, label="ID 517 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.565834
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 8 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 37
+InPort: None
+Pkt: None"];
+686 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f88b410>, label="ID 686 
+ HbControllerHandle"];
+669 [shape=box, event=<hb_events.HbMessageHandle object at 0x10f87f590>, label="ID 669 
+ HbMessageHandle
+DPID: 2
+t: 1446898428.059752
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 52
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:57139 seq:1}"];
+432 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f822050>, label="ID 432 
+ HbControllerHandle"];
+456 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f828450>, label="ID 456 
+ HbPacketSend
+DPID: 2
+Out Port: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+435 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f822690>, label="ID 435 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.322055
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 32
+InPort: None
+Pkt: None"];
+625 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f871050>, label="ID 625 
+ HbControllerSend"];
+565 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f850310>, label="ID 565 
+ HbControllerHandle"];
+577 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f856d10>, label="ID 577 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 48
+InPort: None
+Pkt: None"];
+569 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f8502d0>, label="ID 569 
+ HbControllerHandle"];
+415 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f81b850>, label="ID 415 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.211812
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 30
+InPort: None
+Pkt: None"];
+445 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f8228d0>, label="ID 445 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 33"];
+437 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f8224d0>, label="ID 437 
+ HbControllerSend"];
+448 [shape=box, event=<hb_events.HbMessageHandle object at 0x10f822950>, label="ID 448 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.328767
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 34
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+701 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f893e90>, label="ID 701 
+ HbPacketHandle
+DPID: 1
+t: 1446898428.17818
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:57139 seq:1}"];
+450 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f822890>, label="ID 450 
+ HbControllerSend"];
+579 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f856a10>, label="ID 579 
+ HbControllerSend"];
+581 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f856c90>, label="ID 581 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 48"];
+417 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f81b710>, label="ID 417 
+ HbControllerSend"];
+584 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f850cd0>, label="ID 584 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 42
+InPort: None
+Pkt: None"];
+588 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f850e50>, label="ID 588 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 42"];
+623 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f86bb50>, label="ID 623 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 51
+InPort: None
+Pkt: None"];
+591 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f85db10>, label="ID 591 
+ HbMessageHandle
+DPID: 2
+t: 1446898427.816155
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 0 tp_dst: 8 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 45
+InPort: None
+Pkt: None"];
+721 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f89eb10>, label="ID 721 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:02:02
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26739 seq:2}"];
+598 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f85db90>, label="ID 598 
+ HbControllerHandle"];
+441 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f822850>, label="ID 441 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 33
+InPort: None
+Pkt: None"];
+600 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f85dad0>, label="ID 600 
+ HbControllerHandle"];
+474 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f832b90>, label="ID 474 
+ HbPacketHandle
+DPID: 1
+t: 1446898427.44016
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+463 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f828910>, label="ID 463 
+ HbControllerHandle"];
+604 [shape=box, event=<hb_events.HbMessageHandle object at 0x10f850c50>, label="ID 604 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.927138
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 49
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26739 seq:2}"];
+433 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f822090>, label="ID 433 
+ HbControllerHandle"];
+606 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f85da90>, label="ID 606 
+ HbControllerSend"];
+421 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f81bf50>, label="ID 421 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 31
+InPort: None
+Pkt: None"];
+480 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f837590>, label="ID 480 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+571 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f856bd0>, label="ID 571 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.801864
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:02:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.2.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 47
+InPort: None
+Pkt: None"];
+612 [shape=oval, event=<hb_events.HbPacketSend object at 0x10f864b90>, label="ID 612 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26739 seq:2}"];
+357 [shape=oval, event=<hb_events.HbHostSend object at 0x10f80c690>, label="ID 357 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+593 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f850dd0>, label="ID 593 
+ HbControllerSend"];
+617 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f8710d0>, label="ID 617 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.935201
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 8 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 50
+InPort: None
+Pkt: None"];
+664 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f87f350>, label="ID 664 
+ HbControllerSend"];
+363 [shape=box, event=<hb_events.HbPacketHandle object at 0x10f80c910>, label="ID 363 
+ HbPacketHandle
+DPID: 2
+t: 1446898426.97947
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+492 [shape=oval, event=<hb_events.HbHostHandle object at 0x10f837850>, label="ID 492 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+549 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f84a4d0>, label="ID 549 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 40"];
+573 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f850d10>, label="ID 573 
+ HbControllerSend"];
+369 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f815250>, label="ID 369 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_PACKET_IN
+XID: 5
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:45681 seq:0}"];
+627 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f86bc90>, label="ID 627 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 51"];
+638 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f86bdd0>, label="ID 638 
+ HbControllerHandle"];
+630 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f86bc50>, label="ID 630 
+ HbMessageHandle
+DPID: 2
+MsgType: OFPT_BARRIER_REQUEST
+XID: 44
+InPort: None
+Pkt: None"];
+504 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10f8444d0>, label="ID 504 
+ HbMessageHandle
+DPID: 1
+t: 1446898427.556272
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 35
+InPort: None
+Pkt: None"];
+633 [shape=oval, event=<hb_events.HbMessageSend object at 0x10f86bd90>, label="ID 633 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_BARRIER_REPLY
+XID: 44"];
+379 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f8152d0>, label="ID 379 
+ HbControllerHandle"];
+443 [shape=oval, event=<hb_events.HbControllerSend object at 0x10f822750>, label="ID 443 
+ HbControllerSend"];
+510 [shape=oval, event=<hb_events.HbMessageHandle object at 0x10f844610>, label="ID 510 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 36
+InPort: None
+Pkt: None"];
+639 [shape=oval, event=<hb_events.HbControllerHandle object at 0x10f86be10>, label="ID 639 
+ HbControllerHandle"];
+385 -> 391  [rel=barrier_pre, label=barrier_pre];
+642 -> 648  [rel=pid, label=pid];
+387 -> 385  [rel=mid, label=mid];
+406 -> 417  [rel=mid, label=mid];
+406 -> 423  [rel=mid, label=mid];
+391 -> 395  [rel=mid, label=mid];
+391 -> 398  [rel=barrier_post, label=barrier_post];
+648 -> 721  [rel=pid, label=pid];
+393 -> 391  [rel=mid, label=mid];
+395 -> 406  [rel=mid, label=mid];
+369 -> 379  [rel=mid, label=mid];
+398 -> 408  [rel=barrier_pre, label=barrier_pre];
+400 -> 398  [rel=mid, label=mid];
+536 -> 565  [rel=mid, label=mid];
+579 -> 577  [rel=mid, label=mid];
+532 -> 536  [rel=mid, label=mid];
+532 -> 571  [rel=barrier_post, label=barrier_post];
+662 -> 666  [rel=mid, label=mid];
+662 -> 669  [rel=barrier_post, label=barrier_post];
+408 -> 504  [rel=barrier_post, label=barrier_post];
+408 -> 412  [rel=mid, label=mid];
+410 -> 408  [rel=mid, label=mid];
+539 -> 545  [rel=barrier_pre, label=barrier_pre];
+412 -> 432  [rel=mid, label=mid];
+666 -> 686  [rel=mid, label=mid];
+671 -> 669  [rel=mid, label=mid];
+545 -> 552  [rel=barrier_post, label=barrier_post];
+545 -> 549  [rel=mid, label=mid];
+545 -> 558  [rel=barrier_post, label=barrier_post];
+363 -> 448  [rel=pid, label=pid];
+363 -> 369  [rel=mid, label=mid];
+677 -> 701  [rel=pid, label=pid];
+423 -> 421  [rel=mid, label=mid];
+552 -> 584  [rel=barrier_pre, label=barrier_pre];
+425 -> 433  [rel=mid, label=mid];
+517 -> 532  [rel=barrier_pre, label=barrier_pre];
+558 -> 584  [rel=barrier_pre, label=barrier_pre];
+669 -> 677  [rel=pid, label=pid];
+432 -> 443  [rel=mid, label=mid];
+432 -> 437  [rel=mid, label=mid];
+584 -> 588  [rel=mid, label=mid];
+584 -> 591  [rel=barrier_post, label=barrier_post];
+573 -> 571  [rel=mid, label=mid];
+435 -> 441  [rel=barrier_pre, label=barrier_pre];
+565 -> 664  [rel=mid, label=mid];
+565 -> 593  [rel=mid, label=mid];
+569 -> 579  [rel=mid, label=mid];
+569 -> 573  [rel=mid, label=mid];
+415 -> 421  [rel=barrier_pre, label=barrier_pre];
+445 -> 463  [rel=mid, label=mid];
+437 -> 435  [rel=mid, label=mid];
+448 -> 456  [rel=pid, label=pid];
+448 -> 545  [rel=barrier_pre, label=barrier_pre];
+577 -> 617  [rel=barrier_post, label=barrier_post];
+577 -> 604  [rel=barrier_post, label=barrier_post];
+577 -> 581  [rel=mid, label=mid];
+450 -> 448  [rel=mid, label=mid];
+707 -> 726  [rel=pid, label=pid];
+581 -> 598  [rel=mid, label=mid];
+417 -> 415  [rel=mid, label=mid];
+456 -> 474  [rel=pid, label=pid];
+588 -> 600  [rel=mid, label=mid];
+623 -> 627  [rel=mid, label=mid];
+591 -> 630  [rel=barrier_pre, label=barrier_pre];
+433 -> 450  [rel=mid, label=mid];
+441 -> 448  [rel=barrier_post, label=barrier_post];
+441 -> 539  [rel=barrier_post, label=barrier_post];
+441 -> 445  [rel=mid, label=mid];
+600 -> 625  [rel=mid, label=mid];
+600 -> 619  [rel=mid, label=mid];
+474 -> 480  [rel=pid, label=pid];
+604 -> 612  [rel=pid, label=pid];
+604 -> 623  [rel=barrier_pre, label=barrier_pre];
+598 -> 606  [rel=mid, label=mid];
+606 -> 604  [rel=mid, label=mid];
+421 -> 425  [rel=mid, label=mid];
+421 -> 435  [rel=barrier_post, label=barrier_post];
+480 -> 492  [rel=pid, label=pid];
+571 -> 577  [rel=barrier_pre, label=barrier_pre];
+612 -> 642  [rel=pid, label=pid];
+357 -> 363  [rel=pid, label=pid];
+593 -> 591  [rel=mid, label=mid];
+617 -> 623  [rel=barrier_pre, label=barrier_pre];
+664 -> 662  [rel=mid, label=mid];
+619 -> 617  [rel=mid, label=mid];
+549 -> 569  [rel=mid, label=mid];
+701 -> 707  [rel=pid, label=pid];
+625 -> 623  [rel=mid, label=mid];
+627 -> 638  [rel=mid, label=mid];
+510 -> 514  [rel=mid, label=mid];
+510 -> 517  [rel=barrier_post, label=barrier_post];
+630 -> 633  [rel=mid, label=mid];
+504 -> 510  [rel=barrier_pre, label=barrier_pre];
+633 -> 639  [rel=mid, label=mid];
+379 -> 400  [rel=mid, label=mid];
+379 -> 393  [rel=mid, label=mid];
+379 -> 410  [rel=mid, label=mid];
+379 -> 387  [rel=mid, label=mid];
+443 -> 441  [rel=mid, label=mid];
+639 -> 671  [rel=mid, label=mid];
+}
