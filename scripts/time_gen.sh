@@ -9,9 +9,9 @@ do
   for i in {1..20};
   do
     export INRUN=${i}
-    echo "In run ${i} for trace: ${trace}"
+    echo "XXXXXXXXXXXXXXX In run ${i} for trace: ${trace} XXXXXXXXXXXXXXXXX"
     cd ../jsts
-    ./gen.sh ../sdnracer-traces/"${trace}" #2>&1 1>/dev/null
+    ./gen.sh ../sdnracer-traces/"${trace}" 2>&1 1>/dev/null
     cd ../sdnracer-traces
   done
 done
