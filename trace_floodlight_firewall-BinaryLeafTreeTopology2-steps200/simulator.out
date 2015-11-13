@@ -1,0 +1,1504 @@
+2015-11-13 14:46:45,995 - setup - WARNING - No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+2015-11-13 14:46:45,996 - Controller - INFO -  =====> Starting Controller <===== 
+2015-11-13 14:46:45,996 - Controller - INFO - Launching controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_firewall.properties
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] 14:46:46.280 INFO [n.f.c.m.FloodlightModuleLoader:main] Loading modules from file ./src/main/resources/trace_firewall.properties
+
+[c1] 14:46:46.545 INFO [n.f.c.i.Controller:main] Controller role set to MASTER
+
+[c1] 14:46:46.552 INFO [n.f.c.i.Controller:main] Flush switches on reconnect -- Disabled
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 2 seconds ...
+[c1] 14:46:47.257 INFO [n.f.l.i.LinkDiscoveryManager:main] Setting autoportfast feature to OFF
+
+[c1] 14:46:47.412 INFO [o.s.s.i.c.FallbackCCProvider:main] Cluster not yet configured; using fallback local configuration
+
+[c1] 14:46:47.413 INFO [o.s.s.i.SyncManager:main] [32767] Updating sync configuration ClusterConfig [allNodes={32767=Node [hostname=localhost, port=6642, nodeId=32767, domainId=32767]}, authScheme=NO_AUTH, keyStorePath=null, keyStorePassword is unset]
+
+[c1] 14:46:47.495 INFO [o.s.s.i.r.RPCService:main] Listening for internal floodlight RPC on localhost/127.0.0.1:6642
+
+[c1] 14:46:47.597 INFO [n.f.c.i.Controller:main] Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+
+Controller log: 0 log lines, 1 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 2 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 3 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 4 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 5 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 6 STS events not matched.
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Controller log: 0 log lines, 7 STS events not matched.
+[c1] 14:46:49.027 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] New switch connection from /127.0.0.1:51023
+
+[c1] 14:46:49.028 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] New switch connection from /127.0.0.1:51024
+
+[c1] 14:46:49.028 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-3] New switch connection from /127.0.0.1:51025
+
+[c1] 14:46:49.028 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-4] New switch connection from /127.0.0.1:51026
+
+[c1] 14:46:49.029 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-5] New switch connection from /127.0.0.1:51027
+
+[c1] 14:46:49.029 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-6] New switch connection from /127.0.0.1:51028
+
+[c1] 14:46:49.029 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-7] New switch connection from /127.0.0.1:51029
+
+[c1] 14:46:49.092 INFO [n.f.f.Firewall:Dispatcher: Thread-11] Setting firewall to true
+
+{u'status': u'success', u'details': u'firewall running'}
+Firewall enabled.
+Installing rule: 123.123.4.3 <-> 123.123.6.2 (id: 0)
+{u'status': u'Rule added', u'rule-id': u'1624353055'}
+Rule added: 1624353055
+{u'status': u'Rule added', u'rule-id': u'566781905'}
+Rule added: 566781905
+{u'status': u'Rule added', u'rule-id': u'-71247817'}
+Rule added: -71247817
+{u'status': u'Rule added', u'rule-id': u'1054715098'}
+Rule added: 1054715098
+Installing rule: 123.123.4.2 <-> 123.123.7.3 (id: 1)
+{u'status': u'Rule added', u'rule-id': u'132970455'}
+Rule added: 132970455
+{u'status': u'Rule added', u'rule-id': u'1068036271'}
+Rule added: 1068036271
+{u'status': u'Rule added', u'rule-id': u'-1117151486'}
+Rule added: -1117151486
+{u'status': u'Rule added', u'rule-id': u'2140413315'}
+Rule added: 2140413315
+Installing rule: 123.123.5.3 <-> 123.123.5.2 (id: 2)
+{u'status': u'Rule added', u'rule-id': u'-2055736646'}
+Rule added: -2055736646
+{u'status': u'Rule added', u'rule-id': u'40337405'}
+Rule added: 40337405
+{u'status': u'Rule added', u'rule-id': u'673190908'}
+Rule added: 673190908
+{u'status': u'Rule added', u'rule-id': u'-1109315011'}
+Rule added: -1109315011
+Installing rule: 123.123.4.3 <-> 123.123.7.3 (id: 3)
+{u'status': u'Rule added', u'rule-id': u'1758357899'}
+Rule added: 1758357899
+{u'status': u'Rule added', u'rule-id': u'1879882958'}
+Rule added: 1879882958
+{u'status': u'Rule added', u'rule-id': u'316254448'}
+Rule added: 316254448
+{u'status': u'Rule added', u'rule-id': u'148032582'}
+Rule added: 148032582
+Installing rule: 123.123.4.2 <-> 123.123.6.2 (id: 4)
+{u'status': u'Rule added', u'rule-id': u'1018513733'}
+Rule added: 1018513733
+{u'status': u'Rule added', u'rule-id': u'1425261717'}
+Rule added: 1425261717
+{u'status': u'Rule added', u'rule-id': u'684635340'}
+Rule added: 684635340
+{u'status': u'Rule added', u'rule-id': u'1315336314'}
+Rule added: 1315336314
+Installing rule: 123.123.5.3 <-> 123.123.6.2 (id: 5)
+{u'status': u'Rule added', u'rule-id': u'624446428'}
+Rule added: 624446428
+{u'status': u'Rule added', u'rule-id': u'1897915922'}
+Rule added: 1897915922
+{u'status': u'Rule added', u'rule-id': u'-1140390214'}
+Rule added: -1140390214
+{u'status': u'Rule added', u'rule-id': u'-1030591362'}
+Rule added: -1030591362
+Installing rule: 123.123.6.3 <-> 123.123.6.2 (id: 6)
+{u'status': u'Rule added', u'rule-id': u'-1846882990'}
+Rule added: -1846882990
+{u'status': u'Rule added', u'rule-id': u'340437641'}
+Rule added: 340437641
+{u'status': u'Rule added', u'rule-id': u'-1165176021'}
+Rule added: -1165176021
+{u'status': u'Rule added', u'rule-id': u'-446084357'}
+Rule added: -446084357
+Installing rule: 123.123.5.2 <-> 123.123.7.3 (id: 7)
+{u'status': u'Rule added', u'rule-id': u'-2028100351'}
+Rule added: -2028100351
+{u'status': u'Rule added', u'rule-id': u'2071627753'}
+Rule added: 2071627753
+{u'status': u'Rule added', u'rule-id': u'-984436729'}
+Rule added: -984436729
+{u'status': u'Rule added', u'rule-id': u'-371366113'}
+Rule added: -371366113
+Installing rule: 123.123.4.3 <-> 123.123.6.3 (id: 8)
+{u'status': u'Rule added', u'rule-id': u'531803612'}
+Rule added: 531803612
+{u'status': u'Rule added', u'rule-id': u'2001912743'}
+Rule added: 2001912743
+{u'status': u'Rule added', u'rule-id': u'1670955533'}
+Rule added: 1670955533
+{u'status': u'Rule added', u'rule-id': u'-584834497'}
+Rule added: -584834497
+Installing rule: 123.123.4.2 <-> 123.123.7.2 (id: 9)
+{u'status': u'Rule added', u'rule-id': u'1631790578'}
+Rule added: 1631790578
+{u'status': u'Rule added', u'rule-id': u'373321023'}
+Rule added: 373321023
+{u'status': u'Rule added', u'rule-id': u'1611252306'}
+Rule added: 1611252306
+{u'status': u'Rule added', u'rule-id': u'1163689285'}
+Rule added: 1163689285
+Installing rule: 123.123.4.2 <-> 123.123.5.3 (id: 10)
+{u'status': u'Rule added', u'rule-id': u'-758177301'}
+Rule added: -758177301
+{u'status': u'Rule added', u'rule-id': u'1966745428'}
+Rule added: 1966745428
+{u'status': u'Rule added', u'rule-id': u'2129497277'}
+Rule added: 2129497277
+{u'status': u'Rule added', u'rule-id': u'1906095538'}
+Rule added: 1906095538
+Installing rule: 123.123.4.2 <-> 123.123.5.2 (id: 11)
+{u'status': u'Rule added', u'rule-id': u'1727184604'}
+Rule added: 1727184604
+{u'status': u'Rule added', u'rule-id': u'-245626626'}
+Rule added: -245626626
+{u'status': u'Rule added', u'rule-id': u'928390468'}
+Rule added: 928390468
+{u'status': u'Rule added', u'rule-id': u'374729814'}
+Rule added: 374729814
+Installing rule: 123.123.5.3 <-> 123.123.6.3 (id: 12)
+{u'status': u'Rule added', u'rule-id': u'-506470952'}
+Rule added: -506470952
+{u'status': u'Rule added', u'rule-id': u'783796856'}
+Rule added: 783796856
+{u'status': u'Rule added', u'rule-id': u'1588297648'}
+Rule added: 1588297648
+{u'status': u'Rule added', u'rule-id': u'2075545071'}
+Rule added: 2075545071
+Installing rule: 123.123.6.3 <-> 123.123.7.3 (id: 13)
+{u'status': u'Rule added', u'rule-id': u'-615721792'}
+Rule added: -615721792
+{u'status': u'Rule added', u'rule-id': u'-352321003'}
+Rule added: -352321003
+{u'status': u'Rule added', u'rule-id': u'348119183'}
+Rule added: 348119183
+{u'status': u'Rule added', u'rule-id': u'510664824'}
+Rule added: 510664824
+Controller log: 0 log lines, 8 STS events not matched.
+Controller log: 0 log lines, 9 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 10 STS events not matched.
+Controller log: 0 log lines, 10 STS events not matched.
+Controller log: 0 log lines, 10 STS events not matched.
+Controller log: 0 log lines, 11 STS events not matched.
+Controller log: 0 log lines, 11 STS events not matched.
+Controller log: 0 log lines, 11 STS events not matched.
+Controller log: 0 log lines, 11 STS events not matched.
+Controller log: 0 log lines, 11 STS events not matched.
+Controller log: 0 log lines, 12 STS events not matched.
+Controller log: 0 log lines, 12 STS events not matched.
+Controller log: 0 log lines, 12 STS events not matched.
+Controller log: 0 log lines, 13 STS events not matched.
+Controller log: 0 log lines, 13 STS events not matched.
+Controller log: 0 log lines, 13 STS events not matched.
+Controller log: 0 log lines, 13 STS events not matched.
+Controller log: 0 log lines, 13 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 3 completed.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 4 completed.
+[c1] 14:46:50.299 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-2] Switch OFSwitchBase [/127.0.0.1:51024 DPID[00:00:00:00:00:00:00:02]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 2
+
+[c1] 14:46:50.299 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-4] Switch OFSwitchBase [/127.0.0.1:51026 DPID[00:00:00:00:00:00:00:04]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 4
+
+[c1] 14:46:50.300 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-5] Switch OFSwitchBase [/127.0.0.1:51027 DPID[00:00:00:00:00:00:00:05]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 5
+
+[c1] 14:46:50.300 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:51023 DPID[00:00:00:00:00:00:00:01]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 1
+
+[c1] 14:46:50.299 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-6] Switch OFSwitchBase [/127.0.0.1:51028 DPID[00:00:00:00:00:00:00:06]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 6
+
+[c1] 14:46:50.299 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-7] Switch OFSwitchBase [/127.0.0.1:51029 DPID[00:00:00:00:00:00:00:07]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 7
+
+[c1] 14:46:50.299 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-3] Switch OFSwitchBase [/127.0.0.1:51025 DPID[00:00:00:00:00:00:00:03]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 3
+
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 5 completed.
+[c1] 14:46:50.391 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-4] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51026 DPID[00:00:00:00:00:00:00:04]]
+
+[c1] 14:46:50.394 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:04 connected.
+
+[c1] 14:46:50.406 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-6] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51028 DPID[00:00:00:00:00:00:00:06]]
+
+[c1] 14:46:50.406 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:06 connected.
+
+[c1] 14:46:50.407 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-3] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51025 DPID[00:00:00:00:00:00:00:03]]
+
+[c1] 14:46:50.408 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:03 connected.
+
+[c1] 14:46:50.412 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-2] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51024 DPID[00:00:00:00:00:00:00:02]]
+
+[c1] 14:46:50.412 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:02 connected.
+
+[c1] 14:46:50.413 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-7] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51029 DPID[00:00:00:00:00:00:00:07]]
+
+[c1] 14:46:50.414 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:07 connected.
+
+[c1] 14:46:50.415 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51023 DPID[00:00:00:00:00:00:00:01]]
+
+[c1] 14:46:50.415 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-5] Clearing all flows on switch OFSwitchBase [/127.0.0.1:51027 DPID[00:00:00:00:00:00:00:05]]
+
+[c1] 14:46:50.416 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:01 connected.
+
+[c1] 14:46:50.417 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:05 connected.
+
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,533 - host:[IPAddr('123.123.5.2')] - INFO - Received packet [00:00:00:00:05:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:05><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac012d9b50><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012d9c10><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012d9c50><tlv end> on interface eth5
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,535 - host:[IPAddr('123.123.5.3')] - INFO - Received packet [00:00:00:00:05:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:05><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac012e40d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012e4190><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012e41d0><tlv end> on interface eth5
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,545 - host:[IPAddr('123.123.6.3')] - INFO - Received packet [00:00:00:00:06:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:06><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0127cc90><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0127cd50><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0127cd90><tlv end> on interface eth6
+Forwarding dataplane event
+2015-11-13 14:46:50,546 - host:[IPAddr('123.123.6.2')] - INFO - Received packet [00:00:00:00:06:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:06><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0127c750><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0127c810><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0127c850><tlv end> on interface eth6
+Forwarding dataplane event
+Forwarding dataplane event
+2015-11-13 14:46:50,546 - host:[IPAddr('123.123.7.2')] - INFO - Received packet [00:00:00:00:07:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:07><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0130c9d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0130cb90><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0130cc50><tlv end> on interface eth7
+Forwarding dataplane event
+2015-11-13 14:46:50,547 - host:[IPAddr('123.123.4.3')] - INFO - Received packet [00:00:00:00:04:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:04><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac012cea50><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012ceb10><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012ceb50><tlv end> on interface eth4
+Forwarding dataplane event
+2015-11-13 14:46:50,548 - host:[IPAddr('123.123.7.3')] - INFO - Received packet [00:00:00:00:07:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:07><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac012b35d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012b3350><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012b3390><tlv end> on interface eth7
+Forwarding dataplane event
+2015-11-13 14:46:50,548 - host:[IPAddr('123.123.4.2')] - INFO - Received packet [00:00:00:00:04:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:04><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac012ce510><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012ce5d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac012ce610><tlv end> on interface eth4
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Round 6 completed.
+2015-11-13 14:46:50,562 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,562 - hb_logger - INFO - Adding controller handle (883 -> *): mid_out:242.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,562 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,563 - hb_logger - INFO - Adding controller handle (884 -> *): mid_out:156.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,563 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,563 - hb_logger - INFO - Adding controller handle (885 -> *): mid_out:137.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,563 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,564 - hb_logger - INFO - Adding controller handle (886 -> *): mid_out:218.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,564 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,564 - hb_logger - INFO - Adding controller handle (887 -> *): mid_out:175.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,564 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,564 - hb_logger - INFO - Adding controller handle (888 -> *): mid_out:261.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,565 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:ARMACAAAAAM=]
+
+2015-11-13 14:46:50,565 - hb_logger - INFO - Adding controller handle (889 -> *): mid_out:199.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:ARMACAAAAAM=]
+
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,683 - host:[IPAddr('123.123.6.2')] - INFO - Received packet [00:00:00:00:06:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth6
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,693 - host:[IPAddr('123.123.7.2')] - INFO - Received packet [00:00:00:00:07:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth7
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,694 - host:[IPAddr('123.123.7.3')] - INFO - Received packet [00:00:00:00:07:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth7
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,696 - host:[IPAddr('123.123.4.3')] - INFO - Received packet [00:00:00:00:04:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth4
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,698 - host:[IPAddr('123.123.4.2')] - INFO - Received packet [00:00:00:00:04:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth4
+Forwarding dataplane event
+2015-11-13 14:46:50,699 - host:[IPAddr('123.123.6.3')] - INFO - Received packet [00:00:00:00:06:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth6
+Round 7 completed.
+2015-11-13 14:46:50,703 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMCiMwCBwQAAAAAAAMEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,704 - hb_logger - INFO - Adding controller handle (1214 -> *): mid_out:293.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMCiMwCBwQAAAAAAAMEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,704 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,705 - hb_logger - INFO - Adding controller handle (1215 -> *): mid_out:290.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,705 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAIDiMwCBwQAAAAAAAIEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,705 - hb_logger - INFO - Adding controller handle (1216 -> *): mid_out:284.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAIDiMwCBwQAAAAAAAIEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,705 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,706 - hb_logger - INFO - Adding controller handle (1217 -> *): mid_out:296.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,706 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,706 - hb_logger - INFO - Adding controller handle (1218 -> *): mid_out:299.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,706 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,707 - hb_logger - INFO - Adding controller handle (1219 -> *): mid_out:287.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,707 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,707 - hb_logger - INFO - Adding controller handle (1220 -> *): mid_out:305.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQEAAA==]
+
+[c1] 14:46:50.705 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-5] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:02 outPort=2, dst=00:00:00:00:00:00:00:05, inPort=1]
+
+[c1] 14:46:50.706 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-5] Link added: Link [src=00:00:00:00:00:00:00:02 outPort=2, dst=00:00:00:00:00:00:00:05, inPort=1]
+
+[c1] 14:46:50.707 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:02 outPort=4, dst=00:00:00:00:00:00:00:01, inPort=3]
+
+[c1] 14:46:50.707 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-1] Link added: Link [src=00:00:00:00:00:00:00:02 outPort=4, dst=00:00:00:00:00:00:00:01, inPort=3]
+
+2015-11-13 14:46:50,710 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[5:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:5:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,711 - hb_logger - INFO - Adding controller send with edge (1219 -> 1226): mid_out:287 -> mid_in:200.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[5:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAICiMwCBwQAAAAAAAIEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:5:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQIAAA==]
+
+[c1] 14:46:50.707 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-4] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:02 outPort=3, dst=00:00:00:00:00:00:00:04, inPort=1]
+
+[c1] 14:46:50.707 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-4] Link added: Link [src=00:00:00:00:00:00:00:02 outPort=3, dst=00:00:00:00:00:00:00:04, inPort=1]
+
+2015-11-13 14:46:50,712 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:1:AQ0AVQAAAAD///////8ACAAAAAgAAwAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,712 - hb_logger - INFO - Adding controller send with edge (1217 -> 1228): mid_out:296 -> mid_in:167.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:1:AQ0AVQAAAAD///////8ACAAAAAgAAwAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+[c1] 14:46:50.708 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-3] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:06 outPort=1, dst=00:00:00:00:00:00:00:03, inPort=3]
+
+2015-11-13 14:46:50,713 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAIDiMwCBwQAAAAAAAIEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:4:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,713 - hb_logger - INFO - Adding controller send with edge (1216 -> 1229): mid_out:284 -> mid_in:176.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAIDiMwCBwQAAAAAAAIEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==:4:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQIAAA==]
+
+[c1] 14:46:50.708 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-3] Link added: Link [src=00:00:00:00:00:00:00:06 outPort=1, dst=00:00:00:00:00:00:00:03, inPort=3]
+
+2015-11-13 14:46:50,714 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,714 - hb_logger - INFO - Adding controller handle (1230 -> *): mid_out:302.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+[c1] 14:46:50.709 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-7] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:03 outPort=2, dst=00:00:00:00:00:00:00:07, inPort=1]
+
+2015-11-13 14:46:50,714 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[3:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==:3:AQ0AVQAAAAD///////8ACAAAAAgAAwAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,715 - hb_logger - INFO - Adding controller send with edge (1215 -> 1231): mid_out:290 -> mid_in:229.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[3:AQoATwAAAAEAAAABAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==:3:AQ0AVQAAAAD///////8ACAAAAAgAAwAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQIAAA==]
+
+[c1] 14:46:50.709 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-7] Link added: Link [src=00:00:00:00:00:00:00:03 outPort=2, dst=00:00:00:00:00:00:00:07, inPort=1]
+
+[c1] 14:46:50.709 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-6] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:03 outPort=3, dst=00:00:00:00:00:00:00:06, inPort=1]
+
+2015-11-13 14:46:50,715 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,715 - hb_logger - INFO - Adding controller handle (1232 -> *): mid_out:308.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQEAAA==]
+
+[c1] 14:46:50.709 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-6] Link added: Link [src=00:00:00:00:00:00:00:03 outPort=3, dst=00:00:00:00:00:00:00:06, inPort=1]
+
+2015-11-13 14:46:50,716 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[7:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMCiMwCBwQAAAAAAAMEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==:7:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,716 - hb_logger - INFO - Adding controller send with edge (1214 -> 1233): mid_out:293 -> mid_in:138.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[7:AQoATwAAAAEAAAABAE8AAQAAAYDCAAAOAAAAAAMCiMwCBwQAAAAAAAMEAwIAAgYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==:7:AQ0AVQAAAAD///////8ACAAAAAgAAQAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQIAAA==]
+
+[c1] 14:46:50.709 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:04 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=3]
+
+[c1] 14:46:50.710 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-2] Link added: Link [src=00:00:00:00:00:00:00:04 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=3]
+
+[c1] 14:46:50.710 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-1] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:03 outPort=4, dst=00:00:00:00:00:00:00:01, inPort=2]
+
+[c1] 14:46:50.710 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-1] Link added: Link [src=00:00:00:00:00:00:00:03 outPort=4, dst=00:00:00:00:00:00:00:01, inPort=2]
+
+[c1] 14:46:50.710 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-3] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:07 outPort=1, dst=00:00:00:00:00:00:00:03, inPort=2]
+
+2015-11-13 14:46:50,717 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAIAAAACAFcAAwAA////////AAAAAAQBiUIgAAYEAAIAAAIHBAAAAAAABAQDAgABBgIAeP4MACbhAAAAAAAAAAAEGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,717 - hb_logger - INFO - Adding controller handle (1234 -> *): mid_out:311.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAIAAAACAFcAAwAA////////AAAAAAQBiUIgAAYEAAIAAAIHBAAAAAAABAQDAgABBgIAeP4MACbhAAAAAAAAAAAEGAgNUKdSES0QB+YBAQAA]
+
+[c1] 14:46:50.710 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-3] Link added: Link [src=00:00:00:00:00:00:00:07 outPort=1, dst=00:00:00:00:00:00:00:03, inPort=2]
+
+2015-11-13 14:46:50,717 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==:1:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,718 - hb_logger - INFO - Adding controller send with edge (1230 -> 1235): mid_out:302 -> mid_in:162.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoATwAAAAIAAAACAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==:1:AQ0AVQAAAAD///////8ACAAAAAgAAgAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,718 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAMAAAADAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,718 - hb_logger - INFO - Adding controller handle (1236 -> *): mid_out:314.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAMAAAADAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,719 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAMAAAADAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,719 - hb_logger - INFO - Adding controller handle (1237 -> *): mid_out:317.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAMAAAADAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+[c1] 14:46:50.711 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-3] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:01 outPort=2, dst=00:00:00:00:00:00:00:03, inPort=4]
+
+[c1] 14:46:50.711 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-3] Link added: Link [src=00:00:00:00:00:00:00:01 outPort=2, dst=00:00:00:00:00:00:00:03, inPort=4]
+
+[c1] 14:46:50.712 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:01 outPort=3, dst=00:00:00:00:00:00:00:02, inPort=4]
+
+[c1] 14:46:50.712 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-2] Link added: Link [src=00:00:00:00:00:00:00:01 outPort=3, dst=00:00:00:00:00:00:00:02, inPort=4]
+
+2015-11-13 14:46:50,719 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAQAAAAEAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:46:50,720 - hb_logger - INFO - Adding controller handle (1238 -> *): mid_out:320.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAQAAAAEAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQEAAA==]
+
+[c1] 14:46:50.712 INFO [n.f.l.i.LinkDiscoveryManager:New I/O server worker #2-2] Inter-switch link detected: Link [src=00:00:00:00:00:00:00:05 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=2]
+
+[c1] 14:46:50.712 WARN [n.f.l.i.L.s.notification:New I/O server worker #2-2] Link added: Link [src=00:00:00:00:00:00:00:05 outPort=1, dst=00:00:00:00:00:00:00:02, inPort=2]
+
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,814 - host:[IPAddr('123.123.5.3')] - INFO - Received packet [00:00:00:00:05:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth5
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:46:50,824 - host:[IPAddr('123.123.5.2')] - INFO - Received packet [00:00:00:00:05:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth5
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Round 8 completed.
+2015-11-13 14:46:50,827 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAUAAAAFAFcABAAA////////AAAAAAEDiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgADBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,827 - hb_logger - INFO - Adding controller handle (1408 -> *): mid_out:434.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAUAAAAFAFcABAAA////////AAAAAAEDiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgADBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,827 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAMCiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgACBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,828 - hb_logger - INFO - Adding controller handle (1409 -> *): mid_out:449.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAMCiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgACBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,828 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAMDiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgADBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,828 - hb_logger - INFO - Adding controller handle (1410 -> *): mid_out:452.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAMDiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgADBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,829 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAMAAAADAFcAAgAA////////AAAAAAMEiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgAEBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,829 - hb_logger - INFO - Adding controller handle (1411 -> *): mid_out:440.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAMAAAADAFcAAgAA////////AAAAAAMEiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgAEBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,829 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAICiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgACBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,830 - hb_logger - INFO - Adding controller handle (1412 -> *): mid_out:437.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAICiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgACBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,830 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAQAAAAEAFcAAwAA////////AAAAAAYBiUIgAAYEAAIAAAIHBAAAAAAABgQDAgABBgIAeP4MACbhAAAAAAAAAAAGGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,830 - hb_logger - INFO - Adding controller handle (1413 -> *): mid_out:425.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAQAAAAEAFcAAwAA////////AAAAAAYBiUIgAAYEAAIAAAIHBAAAAAAABgQDAgABBgIAeP4MACbhAAAAAAAAAAAGGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,831 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAIDiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgADBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,831 - hb_logger - INFO - Adding controller handle (1414 -> *): mid_out:431.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAVwAAAAIAAAACAFcAAQAA////////AAAAAAIDiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgADBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,831 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAQAAAAEAFcAAwAA////////AAAAAAIEiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgAEBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,831 - hb_logger - INFO - Adding controller handle (1415 -> *): mid_out:446.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAQAAAAEAFcAAwAA////////AAAAAAIEiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgAEBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,832 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAUAAAAFAFcABAAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,832 - hb_logger - INFO - Adding controller handle (1416 -> *): mid_out:428.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAUAAAAFAFcABAAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,832 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAYAAAAGAFcAAgAA////////AAAAAAcBiUIgAAYEAAIAAAIHBAAAAAAABwQDAgABBgIAeP4MACbhAAAAAAAAAAAHGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,832 - hb_logger - INFO - Adding controller handle (1417 -> *): mid_out:443.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAYAAAAGAFcAAgAA////////AAAAAAcBiUIgAAYEAAIAAAIHBAAAAAAABwQDAgABBgIAeP4MACbhAAAAAAAAAAAHGAgNUKdSES0QB+YBAQAA]
+
+Round 9 completed.
+2015-11-13 14:46:50,929 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAYAAAAGAFcAAgAA////////AAAAAAUBiUIgAAYEAAIAAAIHBAAAAAAABQQDAgABBgIAeP4MACbhAAAAAAAAAAAFGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,929 - hb_logger - INFO - Adding controller handle (1425 -> *): mid_out:513.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAYAAAAGAFcAAgAA////////AAAAAAUBiUIgAAYEAAIAAAIHBAAAAAAABQQDAgABBgIAeP4MACbhAAAAAAAAAAAFGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:46:50,930 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAcAAAAHAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,930 - hb_logger - INFO - Adding controller handle (1426 -> *): mid_out:522.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAcAAAAHAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,930 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoATwAAAAMAAAADAE8AAQAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,930 - hb_logger - INFO - Adding controller handle (1427 -> *): mid_out:516.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoATwAAAAMAAAADAE8AAQAAAYDCAAAOAAAAAAMDiMwCBwQAAAAAAAMEAwIAAwYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,931 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAcAAAAHAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,931 - hb_logger - INFO - Adding controller handle (1428 -> *): mid_out:519.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAcAAAAHAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,931 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAgAAAAIAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,931 - hb_logger - INFO - Adding controller handle (1429 -> *): mid_out:525.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAgAAAAIAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,931 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAgAAAAIAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,932 - hb_logger - INFO - Adding controller handle (1430 -> *): mid_out:528.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAgAAAAIAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,932 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAkAAAAJAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQIAAA==]
+
+2015-11-13 14:46:50,932 - hb_logger - INFO - Adding controller handle (1431 -> *): mid_out:531.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAkAAAAJAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQIAAA==]
+
+Round 10 completed.
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+Round 20 completed.
+Round 21 completed.
+Round 22 completed.
+Round 23 completed.
+Round 24 completed.
+Round 25 completed.
+Round 26 completed.
+Round 27 completed.
+Injecting a random packet
+2015-11-13 14:46:52,838 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8f20[123.123.6.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:d5eb}{id:8724 seq:0}
+Round 28 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Injecting a random packet
+2015-11-13 14:46:52,942 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8e1a[123.123.5.2>123.123.7.2]){t:ECHO_REQUEST c:0 chk:201b}{id:55267 seq:1}
+Round 29 completed.
+2015-11-13 14:46:52,943 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAUCEjRWeAYCCABFAAAc6cYAAEABjyB7ewYCe3sFAggA1esiFAAA]
+
+2015-11-13 14:46:52,944 - hb_logger - INFO - Adding controller handle (1446 -> *): mid_out:553.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[6:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAUCEjRWeAYCCABFAAAc6cYAAEABjyB7ewYCe3sFAggA1esiFAAA]
+
+2015-11-13 14:46:52,954 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[6:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAUCEjRWeAYCCABFAAAc6cYAAEABjyB7ewYCe3sFAggA1esiFAAA:6:AQ4ASAAAAAAAP///AAISNFZ4BgISNFZ4BQL//wAACAAAAQAAe3sGAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+Controller log: 1 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[6:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAUCEjRWeAYCCABFAAAc6cYAAEABjyB7ewYCe3sFAggA1esiFAAA:6:AQ4ASAAAAAAAP///AAISNFZ4BgISNFZ4BQL//wAACAAAAQAAe3sGAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+Forwarding dataplane event
+Controller log: 1 log lines, 14 STS events not matched.
+2015-11-13 14:46:53,048 - hb_logger - INFO - Adding controller send with edge (1446 -> 1460): mid_out:553 -> mid_in:560.
+Controller log: 0 log lines, 14 STS events not matched.
+No correctness violations!
+Round 30 completed.
+2015-11-13 14:46:53,050 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoAPAAAAAMAAAADADwAAgAAEjRWeAcCEjRWeAUCCABFAAAc6cwAAEABjhp7ewUCe3sHAggAIBvX4wAB]
+
+2015-11-13 14:46:53,051 - hb_logger - INFO - Adding controller handle (1464 -> *): mid_out:559.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[5:AQoAPAAAAAMAAAADADwAAgAAEjRWeAcCEjRWeAUCCABFAAAc6cwAAEABjhp7ewUCe3sHAggAIBvX4wAB]
+
+2015-11-13 14:46:53,051 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[5:AQoAPAAAAAMAAAADADwAAgAAEjRWeAcCEjRWeAUCCABFAAAc6cwAAEABjhp7ewUCe3sHAggAIBvX4wAB:5:AQ4ASAAAAAAAP///AAISNFZ4BQISNFZ4BwL//wAACAAAAQAAe3sFAnt7BwIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+Controller log: 1 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[5:AQoAPAAAAAMAAAADADwAAgAAEjRWeAcCEjRWeAUCCABFAAAc6cwAAEABjhp7ewUCe3sHAggAIBvX4wAB:5:AQ4ASAAAAAAAP///AAISNFZ4BQISNFZ4BwL//wAACAAAAQAAe3sFAnt7BwIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+2015-11-13 14:46:53,152 - hb_logger - INFO - Adding controller send with edge (1464 -> 1469): mid_out:559 -> mid_in:562.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 31 completed.
+Round 32 completed.
+Injecting a random packet
+2015-11-13 14:46:53,356 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8e12[123.123.7.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:d399}{id:9316 seq:2}
+Round 33 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Round 34 completed.
+2015-11-13 14:46:53,460 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoAPAAAAAMAAAADADwAAwAAEjRWeAUDEjRWeAcDCABFAAAc6dIAAEABjhJ7ewcDe3sFAwgA05kkZAAC]
+
+2015-11-13 14:46:53,460 - hb_logger - INFO - Adding controller handle (1484 -> *): mid_out:567.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[7:AQoAPAAAAAMAAAADADwAAwAAEjRWeAUDEjRWeAcDCABFAAAc6dIAAEABjhJ7ewcDe3sFAwgA05kkZAAC]
+
+2015-11-13 14:46:53,460 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[7:AQoAPAAAAAMAAAADADwAAwAAEjRWeAUDEjRWeAcDCABFAAAc6dIAAEABjhJ7ewcDe3sFAwgA05kkZAAC:7:AQ4ASAAAAAAAP///AAMSNFZ4BwMSNFZ4BQP//wAACAAAAQAAe3sHA3t7BQMACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+Controller log: 1 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[7:AQoAPAAAAAMAAAADADwAAwAAEjRWeAUDEjRWeAcDCABFAAAc6dIAAEABjhJ7ewcDe3sFAwgA05kkZAAC:7:AQ4ASAAAAAAAP///AAMSNFZ4BwMSNFZ4BQP//wAACAAAAQAAe3sHA3t7BQMACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+2015-11-13 14:46:53,561 - hb_logger - INFO - Adding controller send with edge (1484 -> 1489): mid_out:567 -> mid_in:569.
+Controller log: 0 log lines, 14 STS events not matched.
+Injecting a random packet
+2015-11-13 14:46:53,563 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:07:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d0d[123.123.6.2>123.123.7.3]){t:ECHO_REQUEST c:0 chk:b5e7}{id:16917 seq:3}
+Round 35 completed.
+Forwarding dataplane event
+Round 36 completed.
+Injecting a random packet
+2015-11-13 14:46:53,768 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:9109[123.123.4.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:2bf9}{id:52226 seq:4}
+Round 37 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Injecting a random packet
+2015-11-13 14:46:53,872 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:9102[123.123.5.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:941a}{id:25568 seq:5}
+Round 38 completed.
+2015-11-13 14:46:53,873 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE]
+
+2015-11-13 14:46:53,874 - hb_logger - INFO - Adding controller handle (1515 -> *): mid_out:576.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE]
+
+2015-11-13 14:46:53,879 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:5:AQ4AUAAAAAAAP//CAAESNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:5:AQ4AUAAAAAAAP//CAAESNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+2015-11-13 14:46:53,884 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:2:AQ4AUAAAAAAAP//CAAMSNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 2 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:2:AQ4AUAAAAAAAP//CAAMSNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+2015-11-13 14:46:53,887 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:4:AQ4AUAAAAAAAP//CAAISNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+Controller log: 3 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:4:AQ4AUAAAAAAAP//CAAISNFZ4BAISNFZ4BQL//wAACAAAAQAAe3sEAnt7BQIACAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+2015-11-13 14:46:53,891 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:4:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE]
+
+Controller log: 4 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAMAAAADADwAAgAAEjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE:4:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAUCEjRWeAQCCABFAAAc6d0AAEABkQl7ewQCe3sFAggAK/nMAgAE]
+
+Forwarding dataplane event
+2015-11-13 14:46:53,981 - hb_logger - INFO - Adding controller send with edge (1515 -> 1530): mid_out:576 -> mid_in:580.
+Controller log: 3 log lines, 14 STS events not matched.
+2015-11-13 14:46:53,987 - hb_logger - INFO - Adding controller send with edge (1515 -> 1536): mid_out:576 -> mid_in:581.
+Controller log: 2 log lines, 14 STS events not matched.
+2015-11-13 14:46:53,990 - hb_logger - INFO - Adding controller send with edge (1515 -> 1547): mid_out:576 -> mid_in:586.
+Controller log: 1 log lines, 14 STS events not matched.
+2015-11-13 14:46:53,995 - hb_logger - INFO - Adding controller send with edge (1515 -> 1553): mid_out:576 -> mid_in:587.
+Controller log: 0 log lines, 14 STS events not matched.
+Injecting a random packet
+2015-11-13 14:46:53,997 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8efb[123.123.5.2>123.123.6.2]){t:ECHO_REQUEST c:0 chk:f577}{id:642 seq:6}
+Round 39 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 40 completed.
+Forwarding dataplane event
+Round 41 completed.
+Round 42 completed.
+Round 43 completed.
+Round 44 completed.
+Round 45 completed.
+Round 46 completed.
+Round 47 completed.
+Round 48 completed.
+Injecting a random packet
+2015-11-13 14:46:55,015 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8eef[123.123.6.2>123.123.5.3]){t:ECHO_REQUEST c:0 chk:bdf5}{id:14851 seq:7}
+Round 49 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 50 completed.
+Round 51 completed.
+Round 52 completed.
+Round 53 completed.
+Round 54 completed.
+Round 55 completed.
+Injecting a random packet
+2015-11-13 14:46:55,724 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:91ea[123.123.4.2>123.123.4.3]){t:ECHO_REQUEST c:0 chk:5ca}{id:61997 seq:8}
+Round 56 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Round 57 completed.
+2015-11-13 14:46:55,829 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAQDEjRWeAQCCABFAAAc6fsAAEABkep7ewQCe3sEAwgABcryLQAI]
+
+2015-11-13 14:46:55,829 - hb_logger - INFO - Adding controller handle (1603 -> *): mid_out:599.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[4:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAQDEjRWeAQCCABFAAAc6fsAAEABkep7ewQCe3sEAwgABcryLQAI]
+
+2015-11-13 14:46:55,829 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAQDEjRWeAQCCABFAAAc6fsAAEABkep7ewQCe3sEAwgABcryLQAI:4:AQ4ASAAAAAAAP///AAISNFZ4BAISNFZ4BAP//wAACAAAAQAAe3sEAnt7BAMACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+Controller log: 1 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[4:AQoAPAAAAAQAAAAEADwAAgAAEjRWeAQDEjRWeAQCCABFAAAc6fsAAEABkep7ewQCe3sEAwgABcryLQAI:4:AQ4ASAAAAAAAP///AAISNFZ4BAISNFZ4BAP//wAACAAAAQAAe3sEAnt7BAMACAAAACAAAAAAAAAAAAAFAAAAAP///////wAA]
+
+2015-11-13 14:46:55,930 - hb_logger - INFO - Adding controller send with edge (1603 -> 1608): mid_out:599 -> mid_in:601.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 58 completed.
+Round 59 completed.
+No correctness violations!
+Round 60 completed.
+Round 61 completed.
+Round 62 completed.
+Round 63 completed.
+Round 64 completed.
+Injecting a random packet
+2015-11-13 14:46:56,637 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8be4[123.123.7.3>123.123.7.2]){t:ECHO_REQUEST c:0 chk:a6b2}{id:20804 seq:9}
+Round 65 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:46:56,741 - host:[IPAddr('123.123.7.2')] - INFO - sending packet on interface eth7: [12:34:56:78:07:02>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8ddf[123.123.7.2>123.123.5.3]){t:ECHO_REQUEST c:0 chk:de0c}{id:6633 seq:10}
+Round 66 completed.
+Forwarding dataplane event
+Round 67 completed.
+Round 68 completed.
+Round 69 completed.
+Injecting a random packet
+2015-11-13 14:46:57,148 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8dda[123.123.7.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:4312}{id:46306 seq:11}
+No correctness violations!
+Round 70 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:46:57,253 - host:[IPAddr('123.123.6.3')] - INFO - sending packet on interface eth6: [12:34:56:78:06:03>12:34:56:78:07:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8cd4[123.123.6.3>123.123.7.3]){t:ECHO_REQUEST c:0 chk:a685}{id:20846 seq:12}
+Injecting a random packet
+2015-11-13 14:46:57,253 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8ed3[123.123.6.2>123.123.5.3]){t:ECHO_REQUEST c:0 chk:6ec8}{id:35114 seq:13}
+Round 71 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 72 completed.
+Round 73 completed.
+Round 74 completed.
+Round 75 completed.
+Round 76 completed.
+Round 77 completed.
+Round 78 completed.
+Injecting a random packet
+2015-11-13 14:46:58,065 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8fcc[123.123.4.2>123.123.6.2]){t:ECHO_REQUEST c:0 chk:12cb}{id:58662 seq:14}
+Injecting a random packet
+2015-11-13 14:46:58,065 - host:[IPAddr('123.123.7.2')] - INFO - sending packet on interface eth7: [12:34:56:78:07:02>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8ec9[123.123.7.2>123.123.4.3]){t:ECHO_REQUEST c:0 chk:c047}{id:14249 seq:15}
+Round 79 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:46:58,174 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8ec2[123.123.4.2>123.123.7.2]){t:ECHO_REQUEST c:0 chk:5ea9}{id:39238 seq:16}
+Injecting a random packet
+2015-11-13 14:46:58,175 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8ebf[123.123.7.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:bc05}{id:15337 seq:17}
+No correctness violations!
+Round 80 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 81 completed.
+Round 82 completed.
+Round 83 completed.
+Round 84 completed.
+Injecting a random packet
+2015-11-13 14:46:58,685 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8fb6[123.123.4.3>123.123.6.3]){t:ECHO_REQUEST c:0 chk:30cc}{id:50977 seq:18}
+Round 85 completed.
+Forwarding dataplane event
+Round 86 completed.
+Round 87 completed.
+Round 88 completed.
+Injecting a random packet
+2015-11-13 14:46:59,092 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8eb2[123.123.5.2>123.123.6.3]){t:ECHO_REQUEST c:0 chk:3409}{id:50147 seq:19}
+Round 89 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:46:59,199 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8eae[123.123.6.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:70f5}{id:34550 seq:20}
+No correctness violations!
+Round 90 completed.
+Forwarding dataplane event
+Round 91 completed.
+Injecting a random packet
+2015-11-13 14:46:59,404 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8ea8[123.123.7.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:d9de}{id:7692 seq:21}
+Round 92 completed.
+Forwarding dataplane event
+Round 93 completed.
+Round 94 completed.
+Injecting a random packet
+2015-11-13 14:46:59,710 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:90a2[123.123.4.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:66fb}{id:37102 seq:22}
+Round 95 completed.
+Forwarding dataplane event
+Round 96 completed.
+Round 97 completed.
+Round 98 completed.
+Round 99 completed.
+No correctness violations!
+Round 100 completed.
+Round 101 completed.
+Round 102 completed.
+Injecting a random packet
+2015-11-13 14:47:00,521 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:919e[123.123.4.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:58ff}{id:40681 seq:23}
+Round 103 completed.
+Forwarding dataplane event
+Round 104 completed.
+Round 105 completed.
+Round 106 completed.
+Round 107 completed.
+Round 108 completed.
+Injecting a random packet
+2015-11-13 14:47:01,129 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:9199[123.123.4.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:284a}{id:53149 seq:24}
+Round 109 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 110 completed.
+Round 111 completed.
+Round 112 completed.
+Round 113 completed.
+Round 114 completed.
+Round 115 completed.
+Round 116 completed.
+Round 117 completed.
+Injecting a random packet
+2015-11-13 14:47:02,039 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:07:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8e94[123.123.4.2>123.123.7.3]){t:ECHO_REQUEST c:0 chk:965f}{id:24967 seq:25}
+Round 118 completed.
+Forwarding dataplane event
+Round 119 completed.
+No correctness violations!
+Round 120 completed.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Injecting a random packet
+2015-11-13 14:47:02,381 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:908f[123.123.4.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:80cb}{id:30490 seq:26}
+Injecting a random packet
+2015-11-13 14:47:02,382 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8e8c[123.123.7.3>123.123.4.3]){t:ECHO_REQUEST c:0 chk:d5fa}{id:8682 seq:27}
+Round 121 completed.
+Forwarding dataplane event
+2015-11-13 14:47:02,483 - host:[IPAddr('123.123.6.2')] - INFO - Received packet [00:00:00:00:06:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:06><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0105f690><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0105f750><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0105f790><tlv end> on interface eth6
+Forwarding dataplane event
+2015-11-13 14:47:02,484 - host:[IPAddr('123.123.5.2')] - INFO - Received packet [00:00:00:00:05:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:05><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0103fc50><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0103fd10><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0103fd50><tlv end> on interface eth5
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+2015-11-13 14:47:02,492 - host:[IPAddr('123.123.5.3')] - INFO - Received packet [00:00:00:00:05:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:05><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0104a1d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0104a290><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0104a2d0><tlv end> on interface eth5
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+2015-11-13 14:47:02,505 - host:[IPAddr('123.123.6.3')] - INFO - Received packet [00:00:00:00:06:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:06><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0105fbd0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0105fc90><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0105fcd0><tlv end> on interface eth6
+Dropping dataplane event
+Dropping dataplane event
+Dropping dataplane event
+Forwarding dataplane event
+2015-11-13 14:47:02,506 - host:[IPAddr('123.123.7.2')] - INFO - Received packet [00:00:00:00:07:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:07><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac010a56d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac010a5790><pox.lib.packet.lldp.unknown_tlv object at 0x7fac010a57d0><tlv end> on interface eth7
+Forwarding dataplane event
+2015-11-13 14:47:02,506 - host:[IPAddr('123.123.4.3')] - INFO - Received packet [00:00:00:00:04:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:04><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac0103f350><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0103f410><pox.lib.packet.lldp.unknown_tlv object at 0x7fac0103f450><tlv end> on interface eth4
+Forwarding dataplane event
+Forwarding dataplane event
+2015-11-13 14:47:02,510 - host:[IPAddr('123.123.7.3')] - INFO - Received packet [00:00:00:00:07:03>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:07><port ID:00:03><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac010a5c10><pox.lib.packet.lldp.unknown_tlv object at 0x7fac010a5cd0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac010a5d10><tlv end> on interface eth7
+Forwarding dataplane event
+2015-11-13 14:47:02,511 - host:[IPAddr('123.123.4.2')] - INFO - Received packet [00:00:00:00:04:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:04><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fac01030dd0><pox.lib.packet.lldp.unknown_tlv object at 0x7fac01030e90><pox.lib.packet.lldp.unknown_tlv object at 0x7fac01030ed0><tlv end> on interface eth4
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Dropping dataplane event
+Dropping dataplane event
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Dropping dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 122 completed.
+2015-11-13 14:47:02,548 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAkAAAAJAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,549 - hb_logger - INFO - Adding controller handle (2460 -> *): mid_out:807.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAkAAAAJAE8AAwAAAYDCAAAOAAAAAAYBiMwCBwQAAAAAAAYEAwIAAQYCAHj+DAAm4QAAAAAAAAAABhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,549 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAoAAAAKAFcABAAA////////AAAAAAEDiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgADBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,549 - hb_logger - INFO - Adding controller handle (2461 -> *): mid_out:813.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAAoAAAAKAFcABAAA////////AAAAAAEDiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgADBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,549 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAUAAAAFAFcAAwAA////////AAAAAAIEiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgAEBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,550 - hb_logger - INFO - Adding controller handle (2462 -> *): mid_out:816.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAUAAAAFAFcAAwAA////////AAAAAAIEiUIgAAYEAAIAAAIHBAAAAAAAAgQDAgAEBgIAeP4MACbhAAAAAAAAAAACGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,550 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAoAAAAKAFcABAAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,550 - hb_logger - INFO - Adding controller handle (2463 -> *): mid_out:810.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAAoAAAAKAFcABAAA////////AAAAAAECiUIgAAYEAAIAAAIHBAAAAAAAAQQDAgACBgIAeP4MACbhAAAAAAAAAAABGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,550 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAsAAAALAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,551 - hb_logger - INFO - Adding controller handle (2464 -> *): mid_out:822.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAsAAAALAE8AAwAAAYDCAAAOAAAAAAQBiMwCBwQAAAAAAAQEAwIAAQYCAHj+DAAm4QAAAAAAAAAABBgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,551 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAsAAAALAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,551 - hb_logger - INFO - Adding controller handle (2465 -> *): mid_out:825.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAsAAAALAE8AAgAAAYDCAAAOAAAAAAcBiMwCBwQAAAAAAAcEAwIAAQYCAHj+DAAm4QAAAAAAAAAABxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,551 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAYAAAAGAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,552 - hb_logger - INFO - Adding controller handle (2466 -> *): mid_out:819.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAYAAAAGAE8AAgAAAYDCAAAOAAAAAAMEiMwCBwQAAAAAAAMEAwIABAYCAHj+DAAm4QAAAAAAAAAAAxgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,552 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAwAAAAMAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,552 - hb_logger - INFO - Adding controller handle (2467 -> *): mid_out:834.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAAwAAAAMAE8ABAAAAYDCAAAOAAAAAAEDiMwCBwQAAAAAAAEEAwIAAwYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,552 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAwAAAAMAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,553 - hb_logger - INFO - Adding controller handle (2468 -> *): mid_out:831.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoATwAAAAwAAAAMAE8ABAAAAYDCAAAOAAAAAAECiMwCBwQAAAAAAAEEAwIAAgYCAHj+DAAm4QAAAAAAAAAAARgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,553 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAcAAAAHAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,553 - hb_logger - INFO - Adding controller handle (2469 -> *): mid_out:828.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoATwAAAAcAAAAHAE8AAwAAAYDCAAAOAAAAAAIEiMwCBwQAAAAAAAIEAwIABAYCAHj+DAAm4QAAAAAAAAAAAhgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,553 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAA0AAAANAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQEAAA==]
+
+2015-11-13 14:47:02,554 - hb_logger - INFO - Adding controller handle (2470 -> *): mid_out:837.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoATwAAAA0AAAANAE8AAgAAAYDCAAAOAAAAAAUBiMwCBwQAAAAAAAUEAwIAAQYCAHj+DAAm4QAAAAAAAAAABRgIDVCnUhEtEAfmAQEAAA==]
+
+Forwarding dataplane event
+2015-11-13 14:47:02,648 - host:[IPAddr('123.123.5.3')] - INFO - Received packet [00:00:00:00:05:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth5
+Forwarding dataplane event
+2015-11-13 14:47:02,649 - host:[IPAddr('123.123.6.2')] - INFO - Received packet [00:00:00:00:06:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth6
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:47:02,655 - host:[IPAddr('123.123.4.3')] - INFO - Received packet [00:00:00:00:04:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth4
+Forwarding dataplane event
+2015-11-13 14:47:02,655 - host:[IPAddr('123.123.4.2')] - INFO - Received packet [00:00:00:00:04:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth4
+Forwarding dataplane event
+2015-11-13 14:47:02,656 - host:[IPAddr('123.123.5.2')] - INFO - Received packet [00:00:00:00:05:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth5
+Forwarding dataplane event
+2015-11-13 14:47:02,656 - host:[IPAddr('123.123.6.3')] - INFO - Received packet [00:00:00:00:06:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth6
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Controller log: 0 log lines, 14 STS events not matched.
+Round 123 completed.
+2015-11-13 14:47:02,662 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAA0AAAANAFcAAwAA////////AAAAAAYBiUIgAAYEAAIAAAIHBAAAAAAABgQDAgABBgIAeP4MACbhAAAAAAAAAAAGGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,662 - hb_logger - INFO - Adding controller handle (2559 -> *): mid_out:901.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAA0AAAANAFcAAwAA////////AAAAAAYBiUIgAAYEAAIAAAIHBAAAAAAABgQDAgABBgIAeP4MACbhAAAAAAAAAAAGGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,662 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAA4AAAAOAFcAAgAA////////AAAAAAUBiUIgAAYEAAIAAAIHBAAAAAAABQQDAgABBgIAeP4MACbhAAAAAAAAAAAFGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,663 - hb_logger - INFO - Adding controller handle (2560 -> *): mid_out:904.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAA4AAAAOAFcAAgAA////////AAAAAAUBiUIgAAYEAAIAAAIHBAAAAAAABQQDAgABBgIAeP4MACbhAAAAAAAAAAAFGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,663 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAgAAAAIAFcAAgAA////////AAAAAAMEiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgAEBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,663 - hb_logger - INFO - Adding controller handle (2561 -> *): mid_out:907.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAVwAAAAgAAAAIAFcAAgAA////////AAAAAAMEiUIgAAYEAAIAAAIHBAAAAAAAAwQDAgAEBgIAeP4MACbhAAAAAAAAAAADGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,663 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAA8AAAAPAFcAAwAA////////AAAAAAQBiUIgAAYEAAIAAAIHBAAAAAAABAQDAgABBgIAeP4MACbhAAAAAAAAAAAEGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,664 - hb_logger - INFO - Adding controller handle (2562 -> *): mid_out:910.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[2:AQoAVwAAAA8AAAAPAFcAAwAA////////AAAAAAQBiUIgAAYEAAIAAAIHBAAAAAAABAQDAgABBgIAeP4MACbhAAAAAAAAAAAEGAgNUKdSES0QB+YBAQAA]
+
+Forwarding dataplane event
+Controller log: 0 log lines, 14 STS events not matched.
+Forwarding dataplane event
+2015-11-13 14:47:02,763 - host:[IPAddr('123.123.7.2')] - INFO - Received packet [00:00:00:00:07:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth7
+Forwarding dataplane event
+2015-11-13 14:47:02,764 - host:[IPAddr('123.123.7.3')] - INFO - Received packet [00:00:00:00:07:03>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth7
+Injecting a random packet
+2015-11-13 14:47:02,766 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:9084[123.123.4.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:1bd5}{id:56334 seq:28}
+Round 124 completed.
+2015-11-13 14:47:02,766 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAA4AAAAOAFcAAgAA////////AAAAAAcBiUIgAAYEAAIAAAIHBAAAAAAABwQDAgABBgIAeP4MACbhAAAAAAAAAAAHGAgNUKdSES0QB+YBAQAA]
+
+2015-11-13 14:47:02,767 - hb_logger - INFO - Adding controller handle (2581 -> *): mid_out:932.
+Controller log: 0 log lines, 14 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[3:AQoAVwAAAA4AAAAOAFcAAgAA////////AAAAAAcBiUIgAAYEAAIAAAIHBAAAAAAABwQDAgABBgIAeP4MACbhAAAAAAAAAAAHGAgNUKdSES0QB+YBAQAA]
+
+Forwarding dataplane event
+Round 125 completed.
+Round 126 completed.
+Round 127 completed.
+Round 128 completed.
+Injecting a random packet
+2015-11-13 14:47:03,272 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8d80[123.123.5.3>123.123.7.2]){t:ECHO_REQUEST c:0 chk:e67c}{id:4454 seq:29}
+Round 129 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:03,377 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8f7b[123.123.5.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:9875}{id:24428 seq:30}
+No correctness violations!
+Round 130 completed.
+Forwarding dataplane event
+Round 131 completed.
+Round 132 completed.
+Injecting a random packet
+2015-11-13 14:47:03,682 - host:[IPAddr('123.123.6.3')] - INFO - sending packet on interface eth6: [12:34:56:78:06:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8e76[123.123.6.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:a1ed}{id:22003 seq:31}
+Round 133 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:03,787 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d70[123.123.7.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:430c}{id:46291 seq:32}
+Round 134 completed.
+Forwarding dataplane event
+Round 135 completed.
+Round 136 completed.
+Round 137 completed.
+Injecting a random packet
+2015-11-13 14:47:04,193 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8f6c[123.123.4.2>123.123.6.3]){t:ECHO_REQUEST c:0 chk:c88e}{id:12112 seq:33}
+Injecting a random packet
+2015-11-13 14:47:04,194 - host:[IPAddr('123.123.6.3')] - INFO - sending packet on interface eth6: [12:34:56:78:06:03>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8f6a[123.123.6.3>123.123.4.2]){t:ECHO_REQUEST c:0 chk:e593}{id:4682 seq:34}
+Round 138 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:04,300 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:9063[123.123.4.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:1bb2}{id:56362 seq:35}
+Round 139 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 140 completed.
+Round 141 completed.
+Injecting a random packet
+2015-11-13 14:47:04,606 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d5c[123.123.7.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:4cb5}{id:43814 seq:36}
+Round 142 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:04,711 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8c59[123.123.6.2>123.123.7.2]){t:ECHO_REQUEST c:0 chk:1b28}{id:56498 seq:37}
+Round 143 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:04,815 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8e54[123.123.5.2>123.123.6.2]){t:ECHO_REQUEST c:0 chk:b709}{id:16592 seq:38}
+Round 144 completed.
+Forwarding dataplane event
+Round 145 completed.
+Round 146 completed.
+Round 147 completed.
+Injecting a random packet
+2015-11-13 14:47:05,221 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8e4e[123.123.5.3>123.123.6.2]){t:ECHO_REQUEST c:0 chk:9bd1}{id:23559 seq:39}
+Round 148 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:05,326 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:904a[123.123.4.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:52b6}{id:42273 seq:40}
+Injecting a random packet
+2015-11-13 14:47:05,327 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8f47[123.123.6.2>123.123.4.3]){t:ECHO_REQUEST c:0 chk:3215}{id:50625 seq:41}
+Round 149 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+No correctness violations!
+Round 150 completed.
+Round 151 completed.
+Injecting a random packet
+2015-11-13 14:47:05,635 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d3e[123.123.7.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:6a2f}{id:36262 seq:42}
+Round 152 completed.
+Forwarding dataplane event
+Round 153 completed.
+Injecting a random packet
+2015-11-13 14:47:05,840 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8c3a[123.123.7.3>123.123.6.2]){t:ECHO_REQUEST c:0 chk:5919}{id:40635 seq:43}
+Round 154 completed.
+Forwarding dataplane event
+Round 155 completed.
+Round 156 completed.
+Injecting a random packet
+2015-11-13 14:47:06,146 - host:[IPAddr('123.123.4.2')] - INFO - sending packet on interface eth4: [12:34:56:78:04:02>12:34:56:78:06:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8f36[123.123.4.2>123.123.6.2]){t:ECHO_REQUEST c:0 chk:6449}{id:37770 seq:44}
+Round 157 completed.
+Forwarding dataplane event
+Round 158 completed.
+Injecting a random packet
+2015-11-13 14:47:06,351 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8f30[123.123.5.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:391f}{id:48819 seq:45}
+Round 159 completed.
+Forwarding dataplane event
+No correctness violations!
+Round 160 completed.
+Round 161 completed.
+Round 162 completed.
+Injecting a random packet
+2015-11-13 14:47:06,757 - host:[IPAddr('123.123.7.2')] - INFO - sending packet on interface eth7: [12:34:56:78:07:02>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8d2c[123.123.7.2>123.123.5.2]){t:ECHO_REQUEST c:0 chk:90fb}{id:26326 seq:46}
+Round 163 completed.
+Forwarding dataplane event
+Round 164 completed.
+Round 165 completed.
+Injecting a random packet
+2015-11-13 14:47:07,063 - host:[IPAddr('123.123.7.2')] - INFO - sending packet on interface eth7: [12:34:56:78:07:02>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d26[123.123.7.2>123.123.5.3]){t:ECHO_REQUEST c:0 chk:e374}{id:5212 seq:47}
+Round 166 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:07,168 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:9021[123.123.5.2>123.123.4.3]){t:ECHO_REQUEST c:0 chk:1b9c}{id:56371 seq:48}
+Injecting a random packet
+2015-11-13 14:47:07,168 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8d1f[123.123.6.2>123.123.6.3]){t:ECHO_REQUEST c:0 chk:bb31}{id:15517 seq:49}
+Round 167 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 168 completed.
+Round 169 completed.
+No correctness violations!
+Round 170 completed.
+Injecting a random packet
+2015-11-13 14:47:07,577 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8e17[123.123.5.2>123.123.6.3]){t:ECHO_REQUEST c:0 chk:37ca}{id:49155 seq:50}
+Injecting a random packet
+2015-11-13 14:47:07,578 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8e14[123.123.7.3>123.123.4.3]){t:ECHO_REQUEST c:0 chk:8de9}{id:27107 seq:51}
+Round 171 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 172 completed.
+Round 173 completed.
+Injecting a random packet
+2015-11-13 14:47:07,888 - host:[IPAddr('123.123.5.2')] - INFO - sending packet on interface eth5: [12:34:56:78:05:02>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:900e[123.123.5.2>123.123.4.2]){t:ECHO_REQUEST c:0 chk:d851}{id:8058 seq:52}
+Round 174 completed.
+Forwarding dataplane event
+Round 175 completed.
+Round 176 completed.
+Injecting a random packet
+2015-11-13 14:47:08,194 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:04:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8f08[123.123.6.2>123.123.4.3]){t:ECHO_REQUEST c:0 chk:9ae5}{id:23781 seq:53}
+Round 177 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:08,298 - host:[IPAddr('123.123.7.2')] - INFO - sending packet on interface eth7: [12:34:56:78:07:02>12:34:56:78:04:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8e04[123.123.7.2>123.123.4.2]){t:ECHO_REQUEST c:0 chk:5a22}{id:40359 seq:54}
+Round 178 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:08,402 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:05:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8ffd[123.123.4.3>123.123.5.3]){t:ECHO_REQUEST c:0 chk:b6e3}{id:16613 seq:55}
+Round 179 completed.
+Forwarding dataplane event
+Injecting a random packet
+2015-11-13 14:47:08,507 - host:[IPAddr('123.123.5.3')] - INFO - sending packet on interface eth5: [12:34:56:78:05:03>12:34:56:78:05:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8ef9[123.123.5.3>123.123.5.2]){t:ECHO_REQUEST c:0 chk:f22f}{id:1432 seq:56}
+No correctness violations!
+Round 180 completed.
+Forwarding dataplane event
+Round 181 completed.
+Round 182 completed.
+Injecting a random packet
+2015-11-13 14:47:08,813 - host:[IPAddr('123.123.7.3')] - INFO - sending packet on interface eth7: [12:34:56:78:07:03>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8af4[123.123.7.3>123.123.7.2]){t:ECHO_REQUEST c:0 chk:4db6}{id:43536 seq:57}
+Round 183 completed.
+Forwarding dataplane event
+Round 184 completed.
+Round 185 completed.
+Round 186 completed.
+Round 187 completed.
+Round 188 completed.
+Round 189 completed.
+Injecting a random packet
+2015-11-13 14:47:09,521 - host:[IPAddr('123.123.6.3')] - INFO - sending packet on interface eth6: [12:34:56:78:06:03>12:34:56:78:07:02:IP]|([v:4hl:5l:28t:64]ICMP cs:8bef[123.123.6.3>123.123.7.2]){t:ECHO_REQUEST c:0 chk:7df8}{id:31181 seq:58}
+No correctness violations!
+Round 190 completed.
+Forwarding dataplane event
+Round 191 completed.
+Round 192 completed.
+Round 193 completed.
+Round 194 completed.
+Round 195 completed.
+Round 196 completed.
+Injecting a random packet
+2015-11-13 14:47:10,230 - host:[IPAddr('123.123.6.2')] - INFO - sending packet on interface eth6: [12:34:56:78:06:02>12:34:56:78:06:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8cea[123.123.6.2>123.123.6.3]){t:ECHO_REQUEST c:0 chk:36a7}{id:49437 seq:59}
+Round 197 completed.
+Forwarding dataplane event
+Round 198 completed.
+Round 199 completed.
+Injecting a random packet
+2015-11-13 14:47:10,536 - host:[IPAddr('123.123.4.3')] - INFO - sending packet on interface eth4: [12:34:56:78:04:03>12:34:56:78:07:03:IP]|([v:4hl:5l:28t:64]ICMP cs:8de4[123.123.4.3>123.123.7.3]){t:ECHO_REQUEST c:0 chk:5355}{id:42094 seq:60}
+No correctness violations!
+Round 200 completed.
+Killing controller c1 (pid 15122)
+Terminating child controllers... OK
