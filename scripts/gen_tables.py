@@ -50,7 +50,7 @@ con_selected_keys['num_versions'] = None
 con_selected_keys['num_racing_versions'] = None
 
 #con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race', 'num_per_pkt_inconsistent',  'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
-con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race',  'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
+con_value_keys = ['rw_delta', 'num_per_pkt_races', 'num_per_pkt_inconsistent_covered', 'num_per_pkt_entry_version_race',  'num_per_pkt_inconsistent', 'num_per_pkt_inconsistent_no_repeat', 'num_racing_versions']
 
 con_special_keys= {}
 con_special_keys['App'] = None
@@ -120,6 +120,17 @@ def summarize(matrix, special_keys, special_keys_order, summarize, filter_indcie
     timing_header = summarize_timing_header
     subheader = summarize_subheader
     values_rows = summarize_values_rows
+    num_races = None
+    for kk in special_keys:
+      if kk == 'num_races':
+        num_races = float(special_keys[kk])
+    if num_races:
+      for i, h in enumerate(subheader):
+        if 'num_harmful' not in h:
+          break
+        harmful_index = h.index('num_harmful')
+        harmful = int(values_rows[i][harmful_index])
+        values_rows[i][harmful_index] = "%d (%.2f%%)" % (harmful, (float(harmful)/num_races) * 100) 
 
   timing_header = [val for sublist in timing_header for val in sublist]
   subheader = [val for sublist in subheader for val in sublist]
@@ -148,7 +159,7 @@ def main(filename, consistency, time_filter, print_headers):
   pretty_names['num_per_pkt_inconsistent_covered'] = 'Covered'
   pretty_names['num_per_pkt_entry_version_race'] = '1st Switch'
   pretty_names['num_per_pkt_inconsistent'] = 'Inconsistent'
-  pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Incon. Pkt.'
+  pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Incon. Pkt. Sum'
   pretty_names['num_racing_versions'] = 'Incon. Updates'
   
   pretty_names['num_writes'] = 'Writes'
@@ -156,9 +167,11 @@ def main(filename, consistency, time_filter, print_headers):
   pretty_names['num_races'] = 'Races'
   pretty_names['num_commute'] = 'Commute'
   pretty_names['num_covered'] = 'Covered'
-  pretty_names['num_harmful'] = 'Harmful'
+  pretty_names['num_harmful'] = 'Remaining'
   pretty_names['num_versions'] = 'Versions'
   pretty_names['num_time_filtered_races'] = 'Time'
+  pretty_names['2'] = 'With Time Filter(delta=2)'
+  pretty_names['inf'] = 'Without Time'
 
   for i, v in enumerate(header):
     if v in pretty_names:
