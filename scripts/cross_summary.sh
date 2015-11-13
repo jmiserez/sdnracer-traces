@@ -88,6 +88,10 @@ function read_files {
     topology="Linear"
     app="${app/MeshTopology2-/}"
     ;;
+   *"MeshTopology4"*)
+     topology="Linear2"
+     app="${app/MeshTopology4-/}"
+     ;;
    *"BinaryLeafTreeTopology1"*)
     topology="Linear3"
     app="${app/BinaryLeafTreeTopology1-/}"
@@ -107,6 +111,8 @@ function read_files {
  app="${app/learningswitch/LearningSwitch}"
  app="${app/circuitpusher/CircuitPusher}"
  app="${app/forwarding/Forwarding}"
+ app="${app/firewall/Firewall}"
+ app="${app/loadbalancer/LoadBalancer}"
  
 
  # Actually read the file

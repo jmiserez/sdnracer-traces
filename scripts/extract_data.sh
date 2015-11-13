@@ -1,21 +1,17 @@
 #!/bin/bash
 
 
-apps=('LearningSwitch' 'Forwarding' 'CircuitPusher')
-ctrls=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
-topos=('Star' 'Linear' 'BinTree')
-steps=200
-alt='False'
-#reg="${app},${ctrl},${topo},${steps},*,*,${alt}"
-#egrep "forwarding,POX,Star2,200,([0-9]+|inf),([0-9]+|inf),True" cross_summary.csv
+# Get the traces we're interested in
+source scripts/traces.sh
 
-for app in "${apps[@]}"
+
+for app in "${APPS[@]}"
 do
-  for ctrl in "${ctrls[@]}"
+  for ctrl in "${CTRLS[@]}"
   do
-    for topo in "${topos[@]}"
+    for topo in "${TOPOS[@]}"
     do
-      reg="${app},${ctrl},${topo},${steps},([0-9]+|inf),([0-9]+|inf),${alt}"
+      reg="${app},${ctrl},${topo},${STEPS},([0-9]+|inf),([0-9]+|inf),${ALTBARR}"
       
       if egrep "${reg}" cross_summary.csv > /dev/null ;
       then

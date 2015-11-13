@@ -20,16 +20,11 @@ rm -rf table.csv
 SETHEADER=1
 
 
-apps=('LearningSwitch' 'Forwarding' 'CircuitPusher')
-ctrls=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
-topos=('Star' 'Linear' 'BinTree')
-
-
-for app in "${apps[@]}"
+for app in "${APPS[@]}"
 do
-  for topo in "${topos[@]}"
+  for topo in "${TOPOS[@]}"
   do
-    for ctrl in "${ctrls[@]}"
+    for ctrl in "${CTRLS[@]}"
     do
       f=data/"${app}_${topo}_${ctrl}.csv"
       if [ ! -f "${f}" ];
