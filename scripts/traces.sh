@@ -24,7 +24,6 @@ trace_pox_eel_learningswitch-StarTopology2-steps200
 trace_pox_eel_learningswitch-MeshTopology2-steps200
 trace_pox_eel_learningswitch-BinaryLeafTreeTopology2-steps200
 
-
 trace_pox_l2_multi-StarTopology2-steps200
 trace_pox_l2_multi-MeshTopology2-steps200
 trace_pox_l2_multi-BinaryLeafTreeTopology2-steps200
@@ -35,4 +34,19 @@ trace_pox_eel_l2_multi_fixed-BinaryLeafTreeTopology2-steps200
 
 trace_pox_eel_l2_multi-StarTopology2-steps200
 trace_pox_eel_l2_multi-MeshTopology2-steps200
+
+trace_floodlight_firewall-StarTopology4-steps200
+trace_floodlight_firewall-MeshTopology4-steps200
+trace_floodlight_firewall-BinaryLeafTreeTopology2-steps200
+
+trace_floodlight_loadbalancer-StarTopology4-steps200/
+trace_floodlight_loadbalancer-MeshTopology4-steps200/
+trace_floodlight_loadbalancer-MeshTopology4-steps200/
 )
+
+
+export APPS=('LearningSwitch' 'Forwarding' 'CircuitPusher', 'Firewall' 'LoadBalancer')
+export CTRLS=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
+export TOPOS=('Star' 'Star4' 'Linear' 'Linear2' 'BinTree')
+export STEPS=200
+export ALTBARR='False'
