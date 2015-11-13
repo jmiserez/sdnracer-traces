@@ -169,9 +169,10 @@ def main(filename, consistency, time_filter, print_headers):
   pretty_names['num_covered'] = 'Covered'
   pretty_names['num_harmful'] = 'Remaining'
   pretty_names['num_versions'] = 'Versions'
-  pretty_names['num_time_filtered_races'] = 'Time'
-  pretty_names['2'] = 'With Time Filter(delta=2)'
-  pretty_names['inf'] = 'Without Time'
+  if time_filter:
+    pretty_names['num_time_filtered_races'] = 'Time'
+    pretty_names['2'] = 'With Time Filter(delta=2)'
+    pretty_names['inf'] = 'Without Time'
 
   for i, v in enumerate(header):
     if v in pretty_names:

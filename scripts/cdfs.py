@@ -14,7 +14,7 @@ timings['inf'] = None
 keys = {}
 keys['Races'] = None
 keys['Commute'] = None
-keys['Harmful'] = []
+keys['Remaining'] = []
 keys['Covered'] = []
 keys['num_time_filtered_races'] = []
 tt = [i for i in range(0,11)]
@@ -53,7 +53,7 @@ def extract_data(matrix):
   total_reduction = []
 
   for i, t in enumerate(tt):
-    harmful.append([int(v) for v in get_column(matrix, keys['Harmful'][i])])
+    harmful.append([int(v) for v in get_column(matrix, keys['Remaining'][i])])
     covered.append([int(v) for v in get_column(matrix, keys['Covered'][i])])
     tfiltered.append([int(v) for v in get_column(matrix, keys['num_time_filtered_races'][i])])
     x = [races[i] - harmful[-1][i] for i in range(len(harmful[-1]))]
