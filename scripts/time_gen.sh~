@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Get the traces we're interested in
+source scripts/traces.sh
+
+
+for trace in ${ALL_TRACES[@]}
+do
+  for i in {1..2};
+  do
+    export INRUN=${i}
+    echo "XXXXXXXXXXXXXXX In run ${i} for trace: ${trace} XXXXXXXXXXXXXXXXX"
+    cd ../jsts
+    ./gen.sh ../sdnracer-traces/"${trace}" 2>&1 1>/dev/null
+    cd ../sdnracer-traces
+  done
+done

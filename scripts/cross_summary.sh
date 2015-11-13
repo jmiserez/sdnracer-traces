@@ -73,15 +73,15 @@ function read_files {
 
   case $app in
    *"StarTopology2"*)
-    topology="Star"
+    topology="Single"
     app="${app/StarTopology2-/}"
     ;;
    *"StarTopology4"*)
-     topology="Star4"
+     topology="Single4"
      app="${app/StarTopology4-/}"
      ;;
   *"StarTopology8"*)
-       topology="Star8"
+       topology="Single8"
        app="${app/StarTopology4-/}"
        ;;
    *"MeshTopology2"*)
@@ -112,7 +112,7 @@ function read_files {
  app="${app/circuitpusher/CircuitPusher}"
  app="${app/forwarding/Forwarding}"
  app="${app/firewall/Firewall}"
- app="${app/loadbalancer/LoadBalancer}"
+ app="${app/loadbalancer/_LoadBalancer_}"
  
 
  # Actually read the file
