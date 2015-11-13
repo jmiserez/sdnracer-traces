@@ -41,7 +41,7 @@ trace_floodlight_firewall-BinaryLeafTreeTopology2-steps200
 
 trace_floodlight_loadbalancer-StarTopology4-steps200/
 trace_floodlight_loadbalancer-MeshTopology4-steps200/
-trace_floodlight_loadbalancer-MeshTopology4-steps200/
+trace_floodlight_loadbalancer-BinaryLeafTreeTopology2-steps200/
 )
 
 
