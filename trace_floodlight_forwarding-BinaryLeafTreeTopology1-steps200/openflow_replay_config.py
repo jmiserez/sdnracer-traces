@@ -5,7 +5,7 @@ from sts.control_flow.openflow_replayer import OpenFlowReplayer
 from sts.simulation_state import SimulationConfig
 from sts.input_traces.input_logger import InputLogger
 
-simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd='java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_forwarding.properties', label='c1', address='127.0.0.1', cwd='../floodlight')],
+simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd='java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_forwarding.properties', label='c1', address='127.0.0.1', cwd='../jfloodlight')],
                  topology_class=BinaryLeafTreeTopology,
                  topology_params="num_levels=1",
                  patch_panel_class=BufferedPatchPanel,

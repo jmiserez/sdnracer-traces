@@ -1,8 +1,8 @@
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -14,7 +14,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -27,43 +27,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   3549               |
+| Total commuting races: 11766              |
+| Total harmful races:   527                |
 | Total filtered races:  0                  |
 | Total Time Filtered races:  0             |
 | Total Time Edges:      0                  |
 +-------------------------------------------+
-Number of packet traces with races: 296
-Number of packet inconsistencies:  242
-Number of packet inconsistencies that are actually consistent (covered):  18
-Number of packet inconsistencies the first race is already inconsistent:  36
-Number of packet inconsistencies after trimming repeated races:  231
+Number of packet traces with races: 71
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  5
+Number of packet inconsistencies the first race is already inconsistent:  10
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
+Number of races:  12293
 Number of races filtered by time:  0
-Number of commuting races:  180146
-Number of harmful races:  2610
-Number of covered races:  939
-Number of versions: 358
+Number of commuting races:  11766
+Number of harmful races:  329
+Number of covered races:  198
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 49.3671500683 s
-load_trace: 27.8646359444 s
-detect_races: 13.2950601578 s
-extract_traces_time: 0.24178481102 s
-find_reactive_cmds_time: 0.0203850269318 s
-find_proactive_cmds_time: 0.12708902359 s
-find_covered_races_time: 4.8564620018 s
-per_packet_inconsistent_time: 2.95931911469 s
-find_inconsistent_update_time: -0.00236392021179 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.68024492264 s
+load_trace: 2.83652091026 s
+detect_races: 0.612698078156 s
+extract_traces_time: 0.0321099758148 s
+find_reactive_cmds_time: 0.00366902351379 s
+find_proactive_cmds_time: 0.0192461013794 s
+find_covered_races_time: 0.114081859589 s
+per_packet_inconsistent_time: 0.0616941452026 s
+find_inconsistent_update_time: -0.000186920166016 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -75,7 +75,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -88,15 +88,15 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
+| Total commuting races: 11766              |
 | Total harmful races:   0                  |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  3549          |
-| Total Time Edges:      3549               |
+| Total Time Filtered races:  527           |
+| Total Time Edges:      527                |
 +-------------------------------------------+
 Number of packet traces with races: 0
 Number of packet inconsistencies:  0
@@ -104,27 +104,27 @@ Number of packet inconsistencies that are actually consistent (covered):  0
 Number of packet inconsistencies the first race is already inconsistent:  0
 Number of packet inconsistencies after trimming repeated races:  0
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  3549
-Number of commuting races:  180146
+Number of races:  12293
+Number of races filtered by time:  527
+Number of commuting races:  11766
 Number of harmful races:  0
 Number of covered races:  0
-Number of versions: 358
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 43.4489431381 s
-load_trace: 27.7638921738 s
-detect_races: 14.8147878647 s
-extract_traces_time: 0.414967060089 s
-find_reactive_cmds_time: 0.0268580913544 s
-find_proactive_cmds_time: 0.128886938095 s
-find_covered_races_time: 0.29428601265 s
-per_packet_inconsistent_time: 0.00503206253052 s
-find_inconsistent_update_time: -0.000186920166016 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.56812000275 s
+load_trace: 2.84762215614 s
+detect_races: 0.638821840286 s
+extract_traces_time: 0.0369369983673 s
+find_reactive_cmds_time: 0.00368404388428 s
+find_proactive_cmds_time: 0.0195541381836 s
+find_covered_races_time: 0.0206718444824 s
+per_packet_inconsistent_time: 0.000761985778809 s
+find_inconsistent_update_time: -3.40938568115e-05 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -136,7 +136,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -149,43 +149,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   456                |
+| Total commuting races: 11766              |
+| Total harmful races:   176                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  3093          |
-| Total Time Edges:      3093               |
+| Total Time Filtered races:  351           |
+| Total Time Edges:      351                |
 +-------------------------------------------+
-Number of packet traces with races: 190
-Number of packet inconsistencies:  179
+Number of packet traces with races: 47
+Number of packet inconsistencies:  46
 Number of packet inconsistencies that are actually consistent (covered):  0
-Number of packet inconsistencies the first race is already inconsistent:  11
-Number of packet inconsistencies after trimming repeated races:  179
+Number of packet inconsistencies the first race is already inconsistent:  1
+Number of packet inconsistencies after trimming repeated races:  46
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  3093
-Number of commuting races:  180146
-Number of harmful races:  456
+Number of races:  12293
+Number of races filtered by time:  351
+Number of commuting races:  11766
+Number of harmful races:  176
 Number of covered races:  0
-Number of versions: 358
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 43.5459179878 s
-load_trace: 27.0122709274 s
-detect_races: 14.2509670258 s
-extract_traces_time: 0.41108417511 s
-find_reactive_cmds_time: 0.0230269432068 s
-find_proactive_cmds_time: 0.130230903625 s
-find_covered_races_time: 1.190128088 s
-per_packet_inconsistent_time: 0.527621984482 s
-find_inconsistent_update_time: -0.000532865524292 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.60262703896 s
+load_trace: 2.83976197243 s
+detect_races: 0.622213125229 s
+extract_traces_time: 0.0397188663483 s
+find_reactive_cmds_time: 0.00378918647766 s
+find_proactive_cmds_time: 0.0187928676605 s
+find_covered_races_time: 0.0490181446075 s
+per_packet_inconsistent_time: 0.0291578769684 s
+find_inconsistent_update_time: -0.000123023986816 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -197,7 +197,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -210,43 +210,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   684                |
+| Total commuting races: 11766              |
+| Total harmful races:   210                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2865          |
-| Total Time Edges:      2865               |
+| Total Time Filtered races:  317           |
+| Total Time Edges:      317                |
 +-------------------------------------------+
-Number of packet traces with races: 213
-Number of packet inconsistencies:  196
-Number of packet inconsistencies that are actually consistent (covered):  0
-Number of packet inconsistencies the first race is already inconsistent:  17
-Number of packet inconsistencies after trimming repeated races:  196
+Number of packet traces with races: 57
+Number of packet inconsistencies:  52
+Number of packet inconsistencies that are actually consistent (covered):  1
+Number of packet inconsistencies the first race is already inconsistent:  4
+Number of packet inconsistencies after trimming repeated races:  52
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2865
-Number of commuting races:  180146
-Number of harmful races:  684
-Number of covered races:  0
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  317
+Number of commuting races:  11766
+Number of harmful races:  209
+Number of covered races:  1
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 65.0228672028 s
-load_trace: 36.3148112297 s
-detect_races: 25.3442847729 s
-extract_traces_time: 0.55907702446 s
-find_reactive_cmds_time: 0.0256052017212 s
-find_proactive_cmds_time: 0.154979944229 s
-find_covered_races_time: 1.79752492905 s
-per_packet_inconsistent_time: 0.825870037079 s
-find_inconsistent_update_time: -0.000662088394165 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.68196082115 s
+load_trace: 2.87473583221 s
+detect_races: 0.661039113998 s
+extract_traces_time: 0.0351059436798 s
+find_reactive_cmds_time: 0.00393795967102 s
+find_proactive_cmds_time: 0.0184540748596 s
+find_covered_races_time: 0.0576629638672 s
+per_packet_inconsistent_time: 0.0308880805969 s
+find_inconsistent_update_time: -8.89301300049e-05 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -258,7 +258,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -271,43 +271,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   806                |
+| Total commuting races: 11766              |
+| Total harmful races:   220                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2743          |
-| Total Time Edges:      2743               |
+| Total Time Filtered races:  307           |
+| Total Time Edges:      307                |
 +-------------------------------------------+
-Number of packet traces with races: 233
-Number of packet inconsistencies:  210
-Number of packet inconsistencies that are actually consistent (covered):  0
-Number of packet inconsistencies the first race is already inconsistent:  23
-Number of packet inconsistencies after trimming repeated races:  206
+Number of packet traces with races: 59
+Number of packet inconsistencies:  53
+Number of packet inconsistencies that are actually consistent (covered):  2
+Number of packet inconsistencies the first race is already inconsistent:  4
+Number of packet inconsistencies after trimming repeated races:  53
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2743
-Number of commuting races:  180146
-Number of harmful races:  803
-Number of covered races:  3
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  307
+Number of commuting races:  11766
+Number of harmful races:  214
+Number of covered races:  6
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 48.9301660061 s
-load_trace: 30.3686029911 s
-detect_races: 14.6092751026 s
-extract_traces_time: 0.421092987061 s
-find_reactive_cmds_time: 0.0225598812103 s
-find_proactive_cmds_time: 0.13260102272 s
-find_covered_races_time: 2.4355661869 s
-per_packet_inconsistent_time: 0.939584970474 s
-find_inconsistent_update_time: -0.000826835632324 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.61785101891 s
+load_trace: 2.83285117149 s
+detect_races: 0.632789850235 s
+extract_traces_time: 0.0383071899414 s
+find_reactive_cmds_time: 0.00382494926453 s
+find_proactive_cmds_time: 0.0183999538422 s
+find_covered_races_time: 0.0592451095581 s
+per_packet_inconsistent_time: 0.0322909355164 s
+find_inconsistent_update_time: -0.000102996826172 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -319,7 +319,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -332,43 +332,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   900                |
+| Total commuting races: 11766              |
+| Total harmful races:   237                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2649          |
-| Total Time Edges:      2649               |
+| Total Time Filtered races:  290           |
+| Total Time Edges:      290                |
 +-------------------------------------------+
-Number of packet traces with races: 248
-Number of packet inconsistencies:  227
-Number of packet inconsistencies that are actually consistent (covered):  0
-Number of packet inconsistencies the first race is already inconsistent:  21
-Number of packet inconsistencies after trimming repeated races:  221
+Number of packet traces with races: 62
+Number of packet inconsistencies:  55
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  4
+Number of packet inconsistencies after trimming repeated races:  55
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2649
-Number of commuting races:  180146
-Number of harmful races:  889
-Number of covered races:  11
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  290
+Number of commuting races:  11766
+Number of harmful races:  229
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 46.0677978992 s
-load_trace: 26.7507030964 s
-detect_races: 15.7139489651 s
-extract_traces_time: 0.403501033783 s
-find_reactive_cmds_time: 0.0217468738556 s
-find_proactive_cmds_time: 0.129575967789 s
-find_covered_races_time: 2.07618498802 s
-per_packet_inconsistent_time: 0.971306085587 s
-find_inconsistent_update_time: -0.000772953033447 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.60601520538 s
+load_trace: 2.82596802711 s
+detect_races: 0.624974012375 s
+extract_traces_time: 0.0336811542511 s
+find_reactive_cmds_time: 0.0036289691925 s
+find_proactive_cmds_time: 0.0190210342407 s
+find_covered_races_time: 0.0642838478088 s
+per_packet_inconsistent_time: 0.034322977066 s
+find_inconsistent_update_time: -9.91821289062e-05 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -380,7 +380,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -393,43 +393,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   968                |
+| Total commuting races: 11766              |
+| Total harmful races:   246                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2581          |
-| Total Time Edges:      2581               |
+| Total Time Filtered races:  281           |
+| Total Time Edges:      281                |
 +-------------------------------------------+
-Number of packet traces with races: 256
-Number of packet inconsistencies:  233
-Number of packet inconsistencies that are actually consistent (covered):  5
-Number of packet inconsistencies the first race is already inconsistent:  18
-Number of packet inconsistencies after trimming repeated races:  224
+Number of packet traces with races: 63
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  4
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2581
-Number of commuting races:  180146
-Number of harmful races:  934
-Number of covered races:  34
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  281
+Number of commuting races:  11766
+Number of harmful races:  238
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 47.0807390213 s
-load_trace: 27.9198601246 s
-detect_races: 15.3535079956 s
-extract_traces_time: 0.395985841751 s
-find_reactive_cmds_time: 0.0208821296692 s
-find_proactive_cmds_time: 0.128859043121 s
-find_covered_races_time: 2.16958594322 s
-per_packet_inconsistent_time: 1.09119486809 s
-find_inconsistent_update_time: -0.000815153121948 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.63815808296 s
+load_trace: 2.83989500999 s
+detect_races: 0.639710903168 s
+extract_traces_time: 0.0334491729736 s
+find_reactive_cmds_time: 0.00363087654114 s
+find_proactive_cmds_time: 0.0191810131073 s
+find_covered_races_time: 0.0660789012909 s
+per_packet_inconsistent_time: 0.0360751152039 s
+find_inconsistent_update_time: -0.000101089477539 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -441,7 +441,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -454,43 +454,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   1015               |
+| Total commuting races: 11766              |
+| Total harmful races:   256                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2534          |
-| Total Time Edges:      2534               |
+| Total Time Filtered races:  271           |
+| Total Time Edges:      271                |
 +-------------------------------------------+
-Number of packet traces with races: 261
-Number of packet inconsistencies:  236
-Number of packet inconsistencies that are actually consistent (covered):  6
-Number of packet inconsistencies the first race is already inconsistent:  19
-Number of packet inconsistencies after trimming repeated races:  226
+Number of packet traces with races: 65
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  6
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2534
-Number of commuting races:  180146
-Number of harmful races:  960
-Number of covered races:  55
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  271
+Number of commuting races:  11766
+Number of harmful races:  248
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 45.9583759308 s
-load_trace: 27.8081130981 s
-detect_races: 14.444216013 s
-extract_traces_time: 0.410349845886 s
-find_reactive_cmds_time: 0.0200080871582 s
-find_proactive_cmds_time: 0.124209880829 s
-find_covered_races_time: 2.12306308746 s
-per_packet_inconsistent_time: 1.0275080204 s
-find_inconsistent_update_time: -0.000854015350342 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.61228704453 s
+load_trace: 2.8222990036 s
+detect_races: 0.627712011337 s
+extract_traces_time: 0.0326859951019 s
+find_reactive_cmds_time: 0.00402092933655 s
+find_proactive_cmds_time: 0.0217878818512 s
+find_covered_races_time: 0.0662951469421 s
+per_packet_inconsistent_time: 0.0373430252075 s
+find_inconsistent_update_time: -0.000102996826172 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -502,7 +502,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -515,43 +515,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   1100               |
+| Total commuting races: 11766              |
+| Total harmful races:   258                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2449          |
-| Total Time Edges:      2449               |
+| Total Time Filtered races:  269           |
+| Total Time Edges:      269                |
 +-------------------------------------------+
-Number of packet traces with races: 266
-Number of packet inconsistencies:  236
-Number of packet inconsistencies that are actually consistent (covered):  9
-Number of packet inconsistencies the first race is already inconsistent:  21
-Number of packet inconsistencies after trimming repeated races:  226
+Number of packet traces with races: 65
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  6
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2449
-Number of commuting races:  180146
-Number of harmful races:  1004
-Number of covered races:  96
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  269
+Number of commuting races:  11766
+Number of harmful races:  250
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 45.3163790703 s
-load_trace: 27.4638059139 s
-detect_races: 14.0052800179 s
-extract_traces_time: 0.334561109543 s
-find_reactive_cmds_time: 0.0188097953796 s
-find_proactive_cmds_time: 0.122242212296 s
-find_covered_races_time: 2.23810791969 s
-per_packet_inconsistent_time: 1.13263106346 s
-find_inconsistent_update_time: -0.000890970230103 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.61919403076 s
+load_trace: 2.81795597076 s
+detect_races: 0.644278049469 s
+extract_traces_time: 0.0306489467621 s
+find_reactive_cmds_time: 0.00363111495972 s
+find_proactive_cmds_time: 0.0186638832092 s
+find_covered_races_time: 0.0659501552582 s
+per_packet_inconsistent_time: 0.0379128456116 s
+find_inconsistent_update_time: -0.0001060962677 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -563,7 +563,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -576,43 +576,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   1148               |
+| Total commuting races: 11766              |
+| Total harmful races:   260                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2401          |
-| Total Time Edges:      2401               |
+| Total Time Filtered races:  267           |
+| Total Time Edges:      267                |
 +-------------------------------------------+
-Number of packet traces with races: 266
-Number of packet inconsistencies:  237
-Number of packet inconsistencies that are actually consistent (covered):  9
-Number of packet inconsistencies the first race is already inconsistent:  20
-Number of packet inconsistencies after trimming repeated races:  227
+Number of packet traces with races: 65
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  6
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2401
-Number of commuting races:  180146
-Number of harmful races:  1030
-Number of covered races:  118
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  267
+Number of commuting races:  11766
+Number of harmful races:  252
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 46.7984371185 s
-load_trace: 28.680339098 s
-detect_races: 13.9539349079 s
-extract_traces_time: 0.342679023743 s
-find_reactive_cmds_time: 0.0207738876343 s
-find_proactive_cmds_time: 0.123833179474 s
-find_covered_races_time: 2.55491089821 s
-per_packet_inconsistent_time: 1.12096905708 s
-find_inconsistent_update_time: -0.000943899154663 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.66423296928 s
+load_trace: 2.86221599579 s
+detect_races: 0.639107942581 s
+extract_traces_time: 0.0305829048157 s
+find_reactive_cmds_time: 0.00365304946899 s
+find_proactive_cmds_time: 0.0182590484619 s
+find_covered_races_time: 0.0709660053253 s
+per_packet_inconsistent_time: 0.0392470359802 s
+find_inconsistent_update_time: -0.000103950500488 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -624,7 +624,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -637,43 +637,43 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   1220               |
+| Total commuting races: 11766              |
+| Total harmful races:   260                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2329          |
-| Total Time Edges:      2329               |
+| Total Time Filtered races:  267           |
+| Total Time Edges:      267                |
 +-------------------------------------------+
-Number of packet traces with races: 269
-Number of packet inconsistencies:  239
-Number of packet inconsistencies that are actually consistent (covered):  9
-Number of packet inconsistencies the first race is already inconsistent:  21
-Number of packet inconsistencies after trimming repeated races:  229
+Number of packet traces with races: 65
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  6
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2329
-Number of commuting races:  180146
-Number of harmful races:  1075
-Number of covered races:  145
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  267
+Number of commuting races:  11766
+Number of harmful races:  252
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 44.9873590469 s
-load_trace: 27.1099300385 s
-detect_races: 13.7890708447 s
-extract_traces_time: 0.335561990738 s
-find_reactive_cmds_time: 0.0233461856842 s
-find_proactive_cmds_time: 0.143953800201 s
-find_covered_races_time: 2.39906811714 s
-per_packet_inconsistent_time: 1.18532395363 s
-find_inconsistent_update_time: -0.00104999542236 s
-Read 7121 events.
-Added 6366 events.
-Total write operations: 807
-Total read operations: 1138
-Processing 325221 w/w combinations
+Done. Time elapsed: 3.6048579216 s
+load_trace: 2.81834602356 s
+detect_races: 0.624121904373 s
+extract_traces_time: 0.0310869216919 s
+find_reactive_cmds_time: 0.00360202789307 s
+find_proactive_cmds_time: 0.0238740444183 s
+find_covered_races_time: 0.0653400421143 s
+per_packet_inconsistent_time: 0.0383489131927 s
+find_inconsistent_update_time: -0.000102996826172 s
+Read 1963 events.
+Added 1886 events.
+Total write operations: 203
+Total read operations: 323
+Processing 20503 w/w combinations
 Updating has_path path cache...
 10% 
 20% 
@@ -685,7 +685,7 @@ Updating has_path path cache...
 80% 
 90% 
 100% 
-Processing 918366 r/w combinations
+Processing 65569 r/w combinations
 10% 
 20% 
 30% 
@@ -698,35 +698,35 @@ Processing 918366 r/w combinations
 100% 
 Updating has_path path cache...
 +-------------------------------------------+
-| Total operations:      1945               |
-| Total write operations: 807               |
-| Total read operations:  1138              |
+| Total operations:      526                |
+| Total write operations: 203               |
+| Total read operations:  323               |
 +-------------------------------------------+
-| Total commuting races: 180146             |
-| Total harmful races:   1306               |
+| Total commuting races: 11766              |
+| Total harmful races:   261                |
 | Total filtered races:  0                  |
-| Total Time Filtered races:  2243          |
-| Total Time Edges:      2243               |
+| Total Time Filtered races:  266           |
+| Total Time Edges:      266                |
 +-------------------------------------------+
-Number of packet traces with races: 272
-Number of packet inconsistencies:  239
-Number of packet inconsistencies that are actually consistent (covered):  9
-Number of packet inconsistencies the first race is already inconsistent:  24
-Number of packet inconsistencies after trimming repeated races:  228
+Number of packet traces with races: 66
+Number of packet inconsistencies:  56
+Number of packet inconsistencies that are actually consistent (covered):  3
+Number of packet inconsistencies the first race is already inconsistent:  7
+Number of packet inconsistencies after trimming repeated races:  56
 Number of packet inconsistent updates:  0
-Number of races:  183695
-Number of races filtered by time:  2243
-Number of commuting races:  180146
-Number of harmful races:  1130
-Number of covered races:  176
-Number of versions: 358
+Number of races:  12293
+Number of races filtered by time:  266
+Number of commuting races:  11766
+Number of harmful races:  253
+Number of covered races:  8
+Number of versions: 120
 Inconsistent updates: 0
-Done. Time elapsed: 45.755698204 s
-load_trace: 27.6433680058 s
-detect_races: 13.94373703 s
-extract_traces_time: 0.315951108932 s
-find_reactive_cmds_time: 0.0195598602295 s
-find_proactive_cmds_time: 0.124088048935 s
-find_covered_races_time: 2.42003512383 s
-per_packet_inconsistent_time: 1.2871928215 s
-find_inconsistent_update_time: -0.00168800354004 s
+Done. Time elapsed: 3.65699601173 s
+load_trace: 2.88506698608 s
+detect_races: 0.613544940948 s
+extract_traces_time: 0.0320591926575 s
+find_reactive_cmds_time: 0.00361299514771 s
+find_proactive_cmds_time: 0.0189378261566 s
+find_covered_races_time: 0.0652761459351 s
+per_packet_inconsistent_time: 0.0383560657501 s
+find_inconsistent_update_time: -0.000103950500488 s
