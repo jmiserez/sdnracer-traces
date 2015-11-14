@@ -6,7 +6,7 @@ from sts.control_flow.interactive import Interactive
 from sts.input_traces.input_logger import InputLogger
 from sts.simulation_state import SimulationConfig
 from sts.happensbefore.hb_logger import HappensBeforeLogger
-from config.application_events import AppCircuitPusher
+
 
 start_cmd = ('''java -ea -Dlogback.configurationFile=./src/main/resources/logback-trace.xml -jar '''
              '''./target/floodlight.jar '''
@@ -19,8 +19,8 @@ controllers = [ControllerConfig(start_cmd, cwd='../jfloodlight', address="127.0.
 # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address="127.0.0.1", port=6633, controller_type='dummy')]
 
 num = 2
-# topology_class = StarTopology
-# topology_params = "num_hosts=%d" % num
+topology_class = StarTopology
+topology_params = "num_hosts=%d" % num
 topology_class = MeshTopology
 topology_params = "num_switches=%d" % num
 # topology_class = GridTopology
@@ -54,7 +54,7 @@ simulation_config = SimulationConfig(controller_configs=controllers,
 
 control_flow = Fuzzer(simulation_config,
                       input_logger=InputLogger(),
-                      initialization_rounds=20,
+                      initialization_rounds=100,
                       send_all_to_all=False,
                       check_interval=10,
                       delay=0.1,
