@@ -45,7 +45,7 @@ trace_floodlight_loadbalancer-BinaryLeafTreeTopology2-steps200/
 )
 
 
-export APPS=('LearningSwitch' 'Forwarding' 'CircuitPusher', 'Firewall' 'LoadBalancer')
+export APPS=('LearningSwitch' 'Forwarding' 'CircuitPusher' 'Firewall' 'LoadBalancer')
 export CTRLS=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
 export TOPOS=('Single' 'Single4' 'Linear' 'Linear2' 'BinTree')
 export STEPS=200
