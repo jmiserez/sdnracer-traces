@@ -1,0 +1,102 @@
+strict digraph G {
+32 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1077850d0>, label="ID 32 
+ HbMessageHandle
+DPID: 1
+t: 1445939932.815019
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: 
+Actions: []
+MsgType: OFPT_FLOW_MOD
+XID: 5
+InPort: None
+Pkt: None"];
+705 [shape=box, event=<hb_events.HbMessageHandle object at 0x1079867d0>, label="ID 705 
+ HbMessageHandle
+DPID: 1
+t: 1445939936.517991
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 40
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+229 [shape=oval, event=<hb_events.HbMessageSend object at 0x1077d91d0>, label="ID 229 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+XID: 7
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+712 [shape=oval, event=<hb_events.HbPacketSend object at 0x107995c10>, label="ID 712 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+202 [shape=oval, event=<hb_events.HbHostSend object at 0x1077ca2d0>, label="ID 202 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+392 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x107834ed0>, label="ID 392 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.741731
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:01:01 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.1.1 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 33
+InPort: None
+Pkt: None"];
+243 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1077d9e10>, label="ID 243 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.466305
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:01:02 dl_dst: 12:34:56:78:01:01 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.2 nw_dst: 123.123.1.1 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 20
+InPort: None
+Pkt: None"];
+760 [shape=oval, event=<hb_events.HbHostHandle object at 0x10792d290>, label="ID 760 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:01
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+223 [shape=box, event=<hb_events.HbPacketHandle object at 0x1077d2490>, label="ID 223 
+ HbPacketHandle
+DPID: 1
+t: 1445939935.458449
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REQUEST c:0}{id:30469 seq:5}"];
+705 -> 712  [rel=pid, label=pid];
+705 -> 392  [harmful=True, color=red, style=bold, rel=race, label=race];
+705 -> 243  [harmful=True, color=red, style=bold, rel=race, label=race];
+712 -> 760  [rel=pid, label=pid];
+202 -> 223  [rel=pid, label=pid];
+223 -> 32  [harmful=True, color=red, style=bold, rel=race, label=race];
+223 -> 705  [rel=pid, label=pid];
+223 -> 392  [harmful=True, color=red, style=bold, rel=race, label=race];
+223 -> 243  [harmful=True, color=red, style=bold, rel=race, label=race];
+223 -> 229  [rel=mid, label=mid];
+}

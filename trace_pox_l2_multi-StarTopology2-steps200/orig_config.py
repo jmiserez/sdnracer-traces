@@ -32,6 +32,7 @@ topology_params = "num_hosts=%d" % num
 steps = 200
 # Where should the output files be written to
 results_dir = "traces/trace_pox_l2_multi-%s%d-steps%s" % (topology_class.__name__, num, steps)
+#results_dir = "traces/long_angler"
 
 apps = None
 
@@ -57,7 +58,7 @@ simulation_config = SimulationConfig(controller_configs=controllers,
 
 control_flow = Fuzzer(simulation_config,
                       input_logger=InputLogger(),
-                      initialization_rounds=20,
+                      initialization_rounds=100,
                       send_all_to_all=False,
                       check_interval=10,
                       delay=0.1,

@@ -1,0 +1,38 @@
+strict digraph G {
+3081 [shape=oval, event=<hb_events.HbPacketSend object at 0x108301c50>, label="ID 3081 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REPLY c:0}{id:32637 seq:88}"];
+3075 [shape=box, event=<hb_events.HbPacketHandle object at 0x108301810>, label="ID 3075 
+ HbPacketHandle
+DPID: 1
+t: 1445939946.65703
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REPLY c:0}{id:32637 seq:88}"];
+3068 [shape=oval, event=<hb_events.HbHostSend object at 0x1082fa5d0>, label="ID 3068 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REPLY c:0}{id:32637 seq:88}"];
+3150 [shape=oval, event=<hb_events.HbHostHandle object at 0x10832cf90>, label="ID 3150 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:01
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:01:01:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.1.1])
+ICMP: {t:ECHO_REPLY c:0}{id:32637 seq:88}"];
+3081 -> 3150  [rel=pid, label=pid];
+3075 -> 3081  [rel=pid, label=pid];
+3068 -> 3075  [rel=pid, label=pid];
+}

@@ -1,0 +1,58 @@
+strict digraph G {
+2310 [shape=box, event=<hb_events.HbPacketHandle object at 0x104113f50>, label="ID 2310 
+ HbPacketHandle
+DPID: 1
+t: 1446053692.033842
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2377 [shape=box, event=<hb_events.HbPacketHandle object at 0x1042e3050>, label="ID 2377 
+ HbPacketHandle
+DPID: 2
+t: 1446053692.165911
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2316 [shape=oval, event=<hb_events.HbPacketSend object at 0x1041184d0>, label="ID 2316 
+ HbPacketSend
+DPID: 1
+Out Port: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2383 [shape=oval, event=<hb_events.HbPacketSend object at 0x1042d6910>, label="ID 2383 
+ HbPacketSend
+DPID: 2
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2226 [shape=oval, event=<hb_events.HbHostSend object at 0x1040cde90>, label="ID 2226 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2389 [shape=oval, event=<hb_events.HbHostHandle object at 0x1042d66d0>, label="ID 2389 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:02:02
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REPLY c:0}{id:9850 seq:39}"];
+2310 -> 2316  [rel=pid, label=pid];
+2377 -> 2383  [rel=pid, label=pid];
+2316 -> 2377  [rel=pid, label=pid];
+2383 -> 2389  [rel=pid, label=pid];
+2226 -> 2310  [rel=pid, label=pid];
+}

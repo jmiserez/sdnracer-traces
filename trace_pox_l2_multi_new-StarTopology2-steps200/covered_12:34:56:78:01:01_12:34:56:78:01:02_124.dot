@@ -1,0 +1,117 @@
+strict digraph G {
+321 [shape=oval, cmd_type=Proactive, event=<hb_events.HbMessageHandle object at 0x10780e910>, label="ID 321 
+ HbMessageHandle
+DPID: 1
+Proactive
+MsgType: OFPT_BARRIER_REQUEST
+XID: 21
+InPort: None
+Pkt: None"];
+581 [shape=oval, event=<hb_events.HbMessageHandle object at 0x1078f4750>, label="ID 581 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 30
+InPort: None
+Pkt: None"];
+584 [shape=oval, event=<hb_events.HbMessageSend object at 0x1078f47d0>, label="ID 584 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 30"];
+332 [event=<hb_events.HbMessageHandle object at 0x10780e150>, shape=box, cmd_type=Proactive, style=bold, label="ID 332 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.610171
+Proactive
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 31
+InPort: None
+Pkt: None"];
+555 [shape=oval, event=<hb_events.HbHostHandle object at 0x1078e94d0>, label="ID 555 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+524 [shape=box, cmd_type=Proactive, event=<hb_events.HbMessageHandle object at 0x107895cd0>, label="ID 524 
+ HbMessageHandle
+DPID: 1
+t: 1445939936.014311
+Proactive
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 38
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+174 [shape=box, event=<hb_events.HbPacketHandle object at 0x1077bfc50>, label="ID 174 
+ HbPacketHandle
+DPID: 1
+t: 1445939935.338535
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+531 [shape=oval, event=<hb_events.HbPacketSend object at 0x1078a23d0>, label="ID 531 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+180 [shape=oval, event=<hb_events.HbMessageSend object at 0x1077c5450>, label="ID 180 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+XID: 5
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+124 [shape=oval, event=<hb_events.HbHostSend object at 0x1077a2550>, label="ID 124 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+253 [event=<hb_events.HbMessageHandle object at 0x1077de2d0>, shape=box, cmd_type=Proactive, style=bold, label="ID 253 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.472278
+Proactive
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 24
+InPort: None
+Pkt: None"];
+321 -> 332  [rel=barrier_post, label=barrier_post];
+581 -> 584  [rel=mid, label=mid];
+332 -> 524  [rel=dep_raw, label=dep_raw];
+524 -> 531  [rel=pid, label=pid];
+524 -> 332  [harmful=True, color=red, style=bold, rel=race, label=race];
+524 -> 581  [rel=barrier_pre, label=barrier_pre];
+524 -> 253  [harmful=True, color=blue, style=bold, rel=covered, label=covered];
+174 -> 332  [harmful=True, color=red, style=bold, rel=race, label=race];
+174 -> 180  [rel=mid, label=mid];
+174 -> 524  [rel=pid, label=pid];
+174 -> 253  [harmful=True, color=red, style=bold, rel=race, label=race];
+531 -> 555  [rel=pid, label=pid];
+124 -> 174  [rel=pid, label=pid];
+253 -> 321  [rel=barrier_pre, label=barrier_pre];
+}

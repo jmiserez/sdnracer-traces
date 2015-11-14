@@ -5,7 +5,7 @@ from sts.control_flow.mcs_finder import EfficientMCSFinder
 from sts.invariant_checker import InvariantChecker
 from sts.simulation_state import SimulationConfig
 
-simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd=' ./pox.py --verbose openflow.of_01 --address=__address__ --port=__port__  openflow.discovery forwarding.l2_multi_orig ', label='c1', address='127.0.0.1', cwd='/home/ahassany/repos/pox/')],
+simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd=' ./pox.py --verbose openflow.of_01 --address=__address__ --port=__port__  openflow.discovery forwarding.l2_multi_orig', label='c1', address='127.0.0.1', cwd='/home/ahassany/repos/pox/')],
                  topology_class=MeshTopology,
                  topology_params="num_switches=2",
                  patch_panel_class=BufferedPatchPanel,

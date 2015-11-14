@@ -1,0 +1,64 @@
+strict digraph G {
+450 [shape=oval, event=<hb_events.HbPacketSend object at 0x107869b50>, label="ID 450 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:650 seq:9}"];
+99 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10779ac90>, label="ID 99 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.104174
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 11
+InPort: None
+Pkt: None"];
+133 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1077a61d0>, label="ID 133 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.216478
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 15
+InPort: None
+Pkt: None"];
+415 [shape=oval, event=<hb_events.HbHostSend object at 0x10784a290>, label="ID 415 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:650 seq:9}"];
+444 [shape=box, event=<hb_events.HbPacketHandle object at 0x107869cd0>, label="ID 444 
+ HbPacketHandle
+DPID: 1
+t: 1445939935.87567
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:650 seq:9}"];
+485 [shape=oval, event=<hb_events.HbHostHandle object at 0x107883210>, label="ID 485 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:650 seq:9}"];
+450 -> 485  [rel=pid, label=pid];
+415 -> 444  [rel=pid, label=pid];
+444 -> 450  [rel=pid, label=pid];
+444 -> 99  [harmful=True, color=red, style=bold, rel=race, label=race];
+444 -> 133  [harmful=True, color=red, style=bold, rel=race, label=race];
+}

@@ -1,0 +1,75 @@
+strict digraph G {
+581 [shape=oval, event=<hb_events.HbMessageHandle object at 0x1078f4750>, label="ID 581 
+ HbMessageHandle
+DPID: 1
+MsgType: OFPT_BARRIER_REQUEST
+XID: 30
+InPort: None
+Pkt: None"];
+584 [shape=oval, event=<hb_events.HbMessageSend object at 0x1078f47d0>, label="ID 584 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_BARRIER_REPLY
+XID: 30"];
+555 [shape=oval, event=<hb_events.HbHostHandle object at 0x1078e94d0>, label="ID 555 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+524 [shape=box, event=<hb_events.HbMessageHandle object at 0x107895cd0>, label="ID 524 
+ HbMessageHandle
+DPID: 1
+t: 1445939936.014311
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 38
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+174 [shape=box, event=<hb_events.HbPacketHandle object at 0x1077bfc50>, label="ID 174 
+ HbPacketHandle
+DPID: 1
+t: 1445939935.338535
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+531 [shape=oval, event=<hb_events.HbPacketSend object at 0x1078a23d0>, label="ID 531 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+180 [shape=oval, event=<hb_events.HbMessageSend object at 0x1077c5450>, label="ID 180 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+XID: 5
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+124 [shape=oval, event=<hb_events.HbHostSend object at 0x1077a2550>, label="ID 124 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:57800 seq:1}"];
+581 -> 584  [rel=mid, label=mid];
+524 -> 531  [rel=pid, label=pid];
+524 -> 581  [rel=barrier_pre, label=barrier_pre];
+174 -> 524  [rel=pid, label=pid];
+174 -> 180  [rel=mid, label=mid];
+531 -> 555  [rel=pid, label=pid];
+124 -> 174  [rel=pid, label=pid];
+}

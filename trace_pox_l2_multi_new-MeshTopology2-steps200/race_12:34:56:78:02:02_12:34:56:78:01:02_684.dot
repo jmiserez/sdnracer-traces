@@ -1,0 +1,134 @@
+strict digraph G {
+866 [shape=box, event=<hb_events.HbPacketHandle object at 0x103b3ded0>, label="ID 866 
+ HbPacketHandle
+DPID: 1
+t: 1446053689.200795
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+900 [shape=oval, event=<hb_events.HbHostHandle object at 0x103b4f510>, label="ID 900 
+ HbHostHandle
+HID: 1
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+872 [shape=oval, event=<hb_events.HbPacketSend object at 0x103b3db50>, label="ID 872 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+716 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x103b01750>, label="ID 716 
+ HbMessageHandle
+DPID: 1
+t: 1446053688.841594
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: 
+Actions: []
+MsgType: OFPT_FLOW_MOD
+XID: 46
+InPort: None
+Pkt: None"];
+842 [shape=box, event=<hb_events.HbMessageHandle object at 0x103b28350>, label="ID 842 
+ HbMessageHandle
+DPID: 2
+t: 1446053689.088834
+Op: FlowTableRead
+MsgType: OFPT_PACKET_OUT
+XID: 63
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+684 [shape=oval, event=<hb_events.HbHostSend object at 0x103af5d10>, label="ID 684 
+ HbHostSend
+HID: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+770 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x103b0d950>, label="ID 770 
+ HbMessageHandle
+DPID: 2
+t: 1446053688.959169
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 2 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=1)]
+MsgType: OFPT_FLOW_MOD
+XID: 47
+InPort: None
+Pkt: None"];
+849 [shape=oval, event=<hb_events.HbPacketSend object at 0x103b2f990>, label="ID 849 
+ HbPacketSend
+DPID: 2
+Out Port: 1
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+754 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x103b0d110>, label="ID 754 
+ HbMessageHandle
+DPID: 1
+t: 1446053688.952997
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:02:02 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.2.2 nw_dst: 123.123.1.2 tp_src: 8 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 49
+InPort: None
+Pkt: None"];
+693 [shape=box, event=<hb_events.HbPacketHandle object at 0x103af5f50>, label="ID 693 
+ HbPacketHandle
+DPID: 2
+t: 1446053688.834124
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+729 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x103b01ed0>, label="ID 729 
+ HbMessageHandle
+DPID: 2
+t: 1446053688.844712
+Op: FlowTableWrite
+CMD: OFPFC_DELETE
+Match: 
+Actions: []
+MsgType: OFPT_FLOW_MOD
+XID: 46
+InPort: None
+Pkt: None"];
+699 [shape=oval, event=<hb_events.HbMessageSend object at 0x103afa890>, label="ID 699 
+ HbMessageSend
+DPID: 2
+MsgType: OFPT_PACKET_IN
+XID: 12
+Pkt: ETH: [12:34:56:78:02:02>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.2.2>123.123.1.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:5728 seq:16}"];
+866 -> 872  [rel=pid, label=pid];
+866 -> 754  [harmful=True, color=red, style=bold, rel=race, label=race];
+866 -> 716  [harmful=True, color=red, style=bold, rel=race, label=race];
+872 -> 900  [rel=pid, label=pid];
+842 -> 849  [rel=pid, label=pid];
+842 -> 770  [harmful=True, color=red, style=bold, rel=race, label=race];
+842 -> 729  [harmful=True, color=red, style=bold, rel=race, label=race];
+684 -> 693  [rel=pid, label=pid];
+849 -> 866  [rel=pid, label=pid];
+693 -> 842  [rel=pid, label=pid];
+693 -> 699  [rel=mid, label=mid];
+693 -> 770  [harmful=True, color=red, style=bold, rel=race, label=race];
+}

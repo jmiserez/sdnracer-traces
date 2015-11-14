@@ -5,7 +5,7 @@ from sts.control_flow.openflow_replayer import OpenFlowReplayer
 from sts.simulation_state import SimulationConfig
 from sts.input_traces.input_logger import InputLogger
 
-simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd=' ./pox.py --verbose openflow.of_01 --address=__address__ --port=__port__  openflow.discovery forwarding.l2_multi_orig ', label='c1', address='127.0.0.1', cwd='/home/ahassany/repos/pox/')],
+simulation_config = SimulationConfig(controller_configs=[ControllerConfig(start_cmd=' ./pox.py --verbose openflow.of_01 --address=__address__ --port=__port__  openflow.discovery forwarding.l2_multi_orig', label='c1', address='127.0.0.1', cwd='/home/ahassany/repos/pox/')],
                  topology_class=BinaryLeafTreeTopology,
                  topology_params="num_levels=1",
                  patch_panel_class=BufferedPatchPanel,

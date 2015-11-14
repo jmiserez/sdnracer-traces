@@ -1,0 +1,30 @@
+strict digraph G {
+713 [shape=box, event=<hb_events.HbPacketHandle object at 0x10ee39290>, label="ID 713 
+ HbPacketHandle
+DPID: 1
+t: 1446156435.774562
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26676 seq:32}"];
+699 [shape=oval, event=<hb_events.HbHostSend object at 0x10ee2c650>, label="ID 699 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26676 seq:32}"];
+719 [shape=oval, event=<hb_events.HbMessageSend object at 0x10ee3e110>, label="ID 719 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+XID: 19
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:26676 seq:32}"];
+713 -> 719  [rel=mid, label=mid];
+699 -> 713  [rel=pid, label=pid];
+}

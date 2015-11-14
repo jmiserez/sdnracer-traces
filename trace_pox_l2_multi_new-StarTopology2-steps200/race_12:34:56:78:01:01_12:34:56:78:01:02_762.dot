@@ -1,0 +1,64 @@
+strict digraph G {
+800 [shape=oval, event=<hb_events.HbPacketSend object at 0x107946290>, label="ID 800 
+ HbPacketSend
+DPID: 1
+Out Port: 2
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:30469 seq:5}"];
+332 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x10780e150>, label="ID 332 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.610171
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 31
+InPort: None
+Pkt: None"];
+253 [shape=box, style=bold, event=<hb_events.HbMessageHandle object at 0x1077de2d0>, label="ID 253 
+ HbMessageHandle
+DPID: 1
+t: 1445939935.472278
+Op: FlowTableWrite
+CMD: OFPFC_ADD
+Match: in_port: 1 dl_src: 12:34:56:78:01:01 dl_dst: 12:34:56:78:01:02 dl_vlan: 65535 dl_vlan_pcp: 0 dl_type: 2048 nw_tos: 0 nw_proto: 1 nw_src: 123.123.1.1 nw_dst: 123.123.1.2 tp_src: 0 tp_dst: 0 
+Actions: [ofp_action_output(port=2)]
+MsgType: OFPT_FLOW_MOD
+XID: 24
+InPort: None
+Pkt: None"];
+849 [shape=oval, event=<hb_events.HbHostHandle object at 0x107a05850>, label="ID 849 
+ HbHostHandle
+HID: 2
+InPort: 12:34:56:78:01:02
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:30469 seq:5}"];
+762 [shape=oval, event=<hb_events.HbHostSend object at 0x10792d550>, label="ID 762 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:30469 seq:5}"];
+794 [shape=box, event=<hb_events.HbPacketHandle object at 0x107954090>, label="ID 794 
+ HbPacketHandle
+DPID: 1
+t: 1445939936.781598
+Op: FlowTableRead
+InPort: 1
+Pkt: ETH: [12:34:56:78:01:01>12:34:56:78:01:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.1>123.123.1.2])
+ICMP: {t:ECHO_REPLY c:0}{id:30469 seq:5}"];
+800 -> 849  [rel=pid, label=pid];
+762 -> 794  [rel=pid, label=pid];
+794 -> 800  [rel=pid, label=pid];
+794 -> 332  [harmful=True, color=red, style=bold, rel=race, label=race];
+794 -> 253  [harmful=True, color=red, style=bold, rel=race, label=race];
+}

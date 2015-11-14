@@ -1,0 +1,30 @@
+strict digraph G {
+1384 [shape=box, event=<hb_events.HbPacketHandle object at 0x10efebf50>, label="ID 1384 
+ HbPacketHandle
+DPID: 1
+t: 1446156442.396241
+Op: FlowTableRead
+InPort: 2
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:14384 seq:77}"];
+1371 [shape=oval, event=<hb_events.HbHostSend object at 0x10efeb350>, label="ID 1371 
+ HbHostSend
+HID: 1
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:14384 seq:77}"];
+1390 [shape=oval, event=<hb_events.HbMessageSend object at 0x10eff1dd0>, label="ID 1390 
+ HbMessageSend
+DPID: 1
+MsgType: OFPT_PACKET_IN
+XID: 42
+Pkt: ETH: [12:34:56:78:01:02>12:34:56:78:02:02:IP]
+
+IPv4([ttl:64]ICMP[123.123.1.2>123.123.2.2])
+ICMP: {t:ECHO_REQUEST c:0}{id:14384 seq:77}"];
+1384 -> 1390  [rel=mid, label=mid];
+1371 -> 1384  [rel=pid, label=pid];
+}
