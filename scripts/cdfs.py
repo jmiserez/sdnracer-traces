@@ -66,13 +66,13 @@ def extract_data(matrix):
 def get_ratio(races, num_filtered):
   #return [races[i] / (races[i] - num_filtered[i]) for i in range(len(races))]
   return [num_filtered[i] / races[i] for i in range(len(races))]
-     
+
 def get_cdf(data):
   tmp = sorted(data)
   length = len(data)
   out = []
   for i, v in enumerate(tmp):
-    point = (i +1) / length
+    point = (i) / length
     out.append(point)
   return tmp, out
   
