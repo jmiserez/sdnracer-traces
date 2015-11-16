@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_firewall.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124   16021448     288676     171840      89288    3208532\n-/+ buffers/cache:   12723628    3586496\nSwap:     16650236     418720   16231516",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "21:36:54 up 6 days,  9:39, 18 users,  load average: 3.22, 2.32, 1.84"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "85cf31dba661265ad8d63f79e9f92fb55d12f383",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "a157262de8418265f006bdf81f390c85e9163aa6",
+      "diff": "diff --git a/config/trace_floodlight_firewall.py b/config/trace_floodlight_firewall.py\nindex 35cfc24..3daa503 100644\n--- a/config/trace_floodlight_firewall.py\n+++ b/config/trace_floodlight_firewall.py\n@@ -18,19 +18,18 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n # start_cmd = '''echo \"no-op\"'''\n # controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0.1\", port=6633, controller_type='dummy')]\n \n-num = 4\n+num = 2\n # topology_class = StarTopology\n # topology_params = \"num_hosts=%d\" % num\n-topology_class = MeshTopology\n-topology_params = \"num_switches=%d\" % num\n+# topology_class = MeshTopology\n+# topology_params = \"num_switches=%d\" % num\n # topology_class = GridTopology\n # topology_params = \"num_rows=3, num_columns=3\"\n-# topology_class = BinaryLeafTreeTopology\n-# topology_params = \"num_levels=%d\" % num\n+topology_class = BinaryLeafTreeTopology\n+topology_params = \"num_levels=%d\" % num\n \n steps = 200\n-results_dir = \"traces/trace_floodlight_firewall-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n-# results_dir = \"xtraces/trace_floodlight_firewall-%s%d-small\" % (topology_class.__name__, num)\n+results_dir = \"paper/trace_floodlight_firewall-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n apps = [AppFloodlightFirewall('firewall', cwd='./', controller='localhost:8080')]\n \n simulation_config = SimulationConfig(controller_configs=controllers,\ndiff --git a/config/trace_floodlight_loadbalancer.py b/config/trace_floodlight_loadbalancer.py\nindex 22e081d..18ab13c 100644\n--- a/config/trace_floodlight_loadbalancer.py\n+++ b/config/trace_floodlight_loadbalancer.py\n@@ -28,7 +28,8 @@ num = 2\n topology_class = BinaryLeafTreeTopology\n topology_params = \"num_levels=%d\" % num\n \n-steps = 200\n+steps = 400\n+# results_dir = \"paper/trace_floodlight_loadbalancer-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n results_dir = \"paper/trace_floodlight_loadbalancer-fixed-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \n apps = [AppFloodlightLoadBalancer('loadbalancer', cwd='./', controller='localhost:8080')]\ndiff --git a/dbglatesttrace.sh b/dbglatesttrace.sh\nindex 23f42f0..9b20dcc 100755\n--- a/dbglatesttrace.sh\n+++ b/dbglatesttrace.sh\n@@ -44,4 +44,4 @@ function mytracefun() {\n   cat $TRACEDIR/simulator.out | grep -i -c \"XXXX3\"\n }\n export -f mytracefun\n-watch -n 2 bash -c \"mytracefun\"\n+watch -n 1 bash -c \"mytracefun\"\ndiff --git a/sts/happensbefore/hb_shadow_table.py b/sts/happensbefore/hb_shadow_table.py\nindex bd74850..1e7585d 100644\n--- a/sts/happensbefore/hb_shadow_table.py\n+++ b/sts/happensbefore/hb_shadow_table.py\n@@ -126,6 +126,8 @@ class ShadowFlowTable(object):\n             this_entry = ofp_flow_mod()\n             this_entry.unpack(entry.to_flow_mod().pack())\n             this_entry.xid = 0\n+            if op.entry is None:\n+              print \"XXXXXXXXXXX\"\n             assert op.entry is not None\n             trace_entry = ofp_flow_mod()\n             trace_entry.unpack(op.entry.pack())",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_firewall.py\n\tmodified:   config/trace_floodlight_loadbalancer.py\n\tmodified:   dbglatesttrace.sh\n\tmodified:   sts/happensbefore/hb_shadow_table.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tall_traces_add_outputs_to_git.sh~\n\tgen.sh~\n\tpaper/\n\txtraces/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-67-generic #110-Ubuntu SMP Fri Oct 23 13:24:41 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_11_16_21_36_54",
+  "user": "jeremie"
+}
