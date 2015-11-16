@@ -15,10 +15,12 @@ trace_floodlight_learningswitch-BinaryLeafTreeTopology2-steps200
 
 trace_onos_ifwd-StarTopology2-steps200
 trace_onos_ifwd-MeshTopology2-steps200
+trace_onos_ifwd-BinaryLeafTreeTopology2-steps200
 
 trace_onos_ifwdnoinstr-StarTopology2-steps200
 trace_onos_ifwdnoinstr-MeshTopology2-steps200
 trace_onos_ifwdnoinstr-BinaryLeafTreeTopology1-steps200
+trace_onos_ifwdnoinstr-BinaryLeafTreeTopology2-steps200/
 
 trace_pox_eel_learningswitch-StarTopology2-steps200
 trace_pox_eel_learningswitch-MeshTopology2-steps200
@@ -34,6 +36,7 @@ trace_pox_eel_l2_multi_fixed-BinaryLeafTreeTopology2-steps200
 
 trace_pox_eel_l2_multi-StarTopology2-steps200
 trace_pox_eel_l2_multi-MeshTopology2-steps200
+trace_pox_eel_l2_multi-BinaryLeafTreeTopology2-steps200
 
 trace_floodlight_firewall-StarTopology4-steps200
 trace_floodlight_firewall-MeshTopology4-steps200
@@ -45,7 +48,7 @@ trace_floodlight_loadbalancer-BinaryLeafTreeTopology2-steps200/
 )
 
 
-export APPS=('LearningSwitch' 'Forwarding' 'CircuitPusher' 'Firewall' 'LoadBalancer')
+export APPS=('LearningSwitch' 'Forwarding' 'CircuitPusher' 'Firewall')
 export CTRLS=('POX Angler' 'POX EEL' 'POX EEL Fixed' 'ONOS' 'Floodlight')
 export TOPOS=('Single' 'Single4' 'Linear' 'Linear2' 'BinTree')
 export STEPS=200

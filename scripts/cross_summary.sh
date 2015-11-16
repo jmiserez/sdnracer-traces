@@ -112,7 +112,7 @@ function read_files {
  app="${app/circuitpusher/CircuitPusher}"
  app="${app/forwarding/Forwarding}"
  app="${app/firewall/Firewall}"
- app="${app/loadbalancer/_LoadBalancer_}"
+ app="${app/loadbalancer/LoadBalancer}"
  
 
  # Actually read the file
