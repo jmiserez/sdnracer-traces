@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_loadbalancer.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124   15581732     728392     175652     237316    4505624\n-/+ buffers/cache:   10838792    5471332\nSwap:     16650236     391800   16258436",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "21:03:34 up 6 days,  9:06, 18 users,  load average: 2.23, 1.48, 1.28"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "85cf31dba661265ad8d63f79e9f92fb55d12f383",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "d5c9133783850f7cbac31d063244e12e109b0604",
+      "diff": "diff --git a/config/trace_floodlight_loadbalancer.py b/config/trace_floodlight_loadbalancer.py\nindex 22e081d..085f5d2 100644\n--- a/config/trace_floodlight_loadbalancer.py\n+++ b/config/trace_floodlight_loadbalancer.py\n@@ -21,12 +21,12 @@ controllers = [ControllerConfig(start_cmd, cwd='../floodlight', address=\"127.0.0\n num = 2\n # topology_class = StarTopology\n # topology_params = \"num_hosts=%d\" % num\n-# topology_class = MeshTopology\n-# topology_params = \"num_switches=%d\" % num\n+topology_class = MeshTopology\n+topology_params = \"num_switches=%d\" % num\n # topology_class = GridTopology\n # topology_params = \"num_rows=3, num_columns=3\"\n-topology_class = BinaryLeafTreeTopology\n-topology_params = \"num_levels=%d\" % num\n+# topology_class = BinaryLeafTreeTopology\n+# topology_params = \"num_levels=%d\" % num\n \n steps = 200\n results_dir = \"paper/trace_floodlight_loadbalancer-fixed-%s%d-steps%s\" % (topology_class.__name__, num, steps)",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_loadbalancer.py\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tall_traces_add_outputs_to_git.sh~\n\tgen.sh~\n\tpaper/\n\txtraces/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-67-generic #110-Ubuntu SMP Fri Oct 23 13:24:41 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_11_16_21_03_34",
+  "user": "jeremie"
+}

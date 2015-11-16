@@ -1,0 +1,44 @@
+{
+  "additional_metadata": null,
+  "argv": [
+    "./simulator.py",
+    "-L",
+    "logging.cfg",
+    "-c",
+    "config/trace_floodlight_loadbalancer.py"
+  ],
+  "cwd": "/home/jeremie/mscthesis/jmiserez/sts",
+  "host": {
+    "cpu_info": "Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz",
+    "free": "total       used       free     shared    buffers     cached\nMem:      16310124   15050264    1259860     172652     146080    4039272\n-/+ buffers/cache:   10864912    5445212\nSwap:     16650236     413480   16236756",
+    "name": "espresso",
+    "num_cores": "8",
+    "uptime": "21:19:35 up 6 days,  9:22, 18 users,  load average: 0.85, 1.62, 1.66"
+  },
+  "modules": {
+    "hassel": {
+      "branch": "HEAD",
+      "commit": "31afb29fa66783f5a66765bc186509b65ffc023e",
+      "diff": "",
+      "status": "HEAD detached at 31afb29\nnothing to commit, working directory clean"
+    },
+    "pox": {
+      "branch": "hb",
+      "commit": "85cf31dba661265ad8d63f79e9f92fb55d12f383",
+      "diff": "",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nnothing to commit, working directory clean"
+    },
+    "sts": {
+      "branch": "hb",
+      "commit": "d5c9133783850f7cbac31d063244e12e109b0604",
+      "diff": "diff --git a/config/trace_floodlight_loadbalancer.py b/config/trace_floodlight_loadbalancer.py\nindex 22e081d..18ab13c 100644\n--- a/config/trace_floodlight_loadbalancer.py\n+++ b/config/trace_floodlight_loadbalancer.py\n@@ -28,7 +28,8 @@ num = 2\n topology_class = BinaryLeafTreeTopology\n topology_params = \"num_levels=%d\" % num\n \n-steps = 200\n+steps = 400\n+# results_dir = \"paper/trace_floodlight_loadbalancer-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n results_dir = \"paper/trace_floodlight_loadbalancer-fixed-%s%d-steps%s\" % (topology_class.__name__, num, steps)\n \n apps = [AppFloodlightLoadBalancer('loadbalancer', cwd='./', controller='localhost:8080')]\ndiff --git a/dbglatesttrace.sh b/dbglatesttrace.sh\nindex 23f42f0..9b20dcc 100755\n--- a/dbglatesttrace.sh\n+++ b/dbglatesttrace.sh\n@@ -44,4 +44,4 @@ function mytracefun() {\n   cat $TRACEDIR/simulator.out | grep -i -c \"XXXX3\"\n }\n export -f mytracefun\n-watch -n 2 bash -c \"mytracefun\"\n+watch -n 1 bash -c \"mytracefun\"",
+      "status": "On branch hb\nYour branch is up-to-date with 'origin/hb'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git checkout -- <file>...\" to discard changes in working directory)\n\n\tmodified:   config/trace_floodlight_loadbalancer.py\n\tmodified:   dbglatesttrace.sh\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\n\tall_traces_add_outputs_to_git.sh~\n\tgen.sh~\n\tpaper/\n\txtraces/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")"
+    }
+  },
+  "sys": {
+    "lsb_release": "Ubuntu 14.04.3 LTS",
+    "uname": "Linux espresso 3.13.0-67-generic #110-Ubuntu SMP Fri Oct 23 13:24:41 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "timestamp": "2015_11_16_21_19_35",
+  "user": "jeremie"
+}

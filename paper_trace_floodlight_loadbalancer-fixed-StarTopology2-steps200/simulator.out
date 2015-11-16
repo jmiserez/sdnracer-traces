@@ -1,0 +1,1329 @@
+2015-11-16 21:18:14,911 - setup - WARNING - No get_additional_metadata() defined for config file. See config/nox_routing.py for an example.
+2015-11-16 21:18:14,912 - Controller - INFO -  =====> Starting Controller <===== 
+2015-11-16 21:18:14,912 - Controller - INFO - Launching controller c1: java -ea -Dlogback.configurationFile=./src/main/resources/logback-test-trace.xml -jar ./target/floodlight.jar -cf ./src/main/resources/trace_loadbalancer.properties
+connect_socket_with_backoff ('127.0.0.1', 6633)
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 1 seconds ...
+[c1] 21:18:15.297 INFO [n.f.c.m.FloodlightModuleLoader:main] Loading modules from file ./src/main/resources/trace_loadbalancer.properties
+
+[c1] 21:18:15.657 DEBUG [n.f.h.HappensBefore:main] HappensBefore logger loading.
+
+[c1] 21:18:15.667 DEBUG [n.f.d.i.DeviceManagerImpl:main] DeviceListeners: deviceDebugEventLogger,
+
+[c1] 21:18:15.673 INFO [n.f.c.i.Controller:main] Controller role set to MASTER
+
+[c1] 21:18:15.681 INFO [n.f.c.i.Controller:main] Flush switches on reconnect -- Disabled
+
+Error connecting.  -- [Errno 111] Connection refused. Backing off 2 seconds ...
+[c1] 21:18:16.546 INFO [n.f.l.i.LinkDiscoveryManager:main] Setting autoportfast feature to OFF
+
+[c1] 21:18:16.752 INFO [o.s.s.i.c.FallbackCCProvider:main] Cluster not yet configured; using fallback local configuration
+
+[c1] 21:18:16.752 INFO [o.s.s.i.SyncManager:main] [32767] Updating sync configuration ClusterConfig [allNodes={32767=Node [hostname=localhost, port=6642, nodeId=32767, domainId=32767]}, authScheme=NO_AUTH, keyStorePath=null, keyStorePassword is unset]
+
+[c1] 21:18:16.832 INFO [o.s.s.i.r.RPCService:main] Listening for internal floodlight RPC on localhost/127.0.0.1:6642
+
+[c1] 21:18:16.990 INFO [n.f.c.i.Controller:main] Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+
+Controller log: 0 log lines, 1 STS events not matched.
+[c1] 21:18:17.947 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] New switch connection from /127.0.0.1:60186
+
+Installing pool: 1
+['curl', '-s', '-X', 'POST', 'http://localhost:8080/quantum/v1.0/vips/', '-d', '{"id": "1", "name": "vip1", "protocol": "icmp", "address": "10.0.0.101", "port":"8"}']
+{u'port': u'8', u'address': u'167772261', u'protocol': u'1', u'name': u'vip1', u'id': u'1'}
+['curl', '-s', '-X', 'POST', 'http://localhost:8080/quantum/v1.0/pools/', '-d', '{"id": "1", "name": "pool1", "protocol": "icmp", "vip_id": "1"}']
+{u'vipId': u'1', u'name': u'pool1', u'id': u'1'}
+['curl', '-s', '-X', 'POST', 'http://localhost:8080/quantum/v1.0/members/', '-d', '{"id": "1", "address": "123.123.1.2", "port": "8", "pool_id": "1"}']
+{u'port': u'8', u'vipId': u'1', u'poolId': u'1', u'id': u'1', u'address': u'2071658754'}
+['curl', '-s', '-X', 'POST', 'http://localhost:8080/quantum/v1.0/members/', '-d', '{"id": "2", "address": "123.123.1.1", "port": "8", "pool_id": "1"}']
+{u'port': u'8', u'vipId': u'1', u'poolId': u'1', u'id': u'2', u'address': u'2071658753'}
+Controller log: 0 log lines, 2 STS events not matched.
+Round 1 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 2 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 3 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 4 completed.
+[c1] 21:18:18.465 INFO [n.f.c.i.OFChannelHandler:New I/O server worker #2-1] Switch OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]] bound to class class net.floodlightcontroller.core.internal.OFSwitchImpl, writeThrottle=false, description Switch Desc - Vendor: BadAssEmulatedPoxSwitch(TM)  Model: your finest emulated asics  Make: high performance emuswitch. Several packets per second have been observed (but not by reliable witnesses)  Version: pox. reliable, fast, stable. Choose 0 (or more?)  S/N: 1
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 5 completed.
+[c1] 21:18:18.555 INFO [n.f.c.OFSwitchBase:New I/O server worker #2-1] Clearing all flows on switch OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]]
+
+[c1] 21:18:18.558 WARN [n.f.c.i.C.s.notification:main] Switch 00:00:00:00:00:00:00:01 connected.
+
+[c1] 21:18:18.558 DEBUG [n.f.s.StaticFlowEntryPusher:main] Switch 00:00:00:00:00:00:00:01 connected; processing its static entries
+
+[c1] 21:18:18.583 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-0] Topo update: LDUpdate [operation=Switch Updated, src=00:00:00:00:00:00:00:01]
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-11-16 21:18:18,664 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [00:00:00:00:01:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fa2bf13eb90><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2c0193d10><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2c0193dd0><tlv end> on interface eth1
+Forwarding dataplane event
+2015-11-16 21:18:18,666 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [00:00:00:00:01:01>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:01><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fa2bf13e0d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bf13e710><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bf13e750><tlv end> on interface eth1
+Round 6 completed.
+2015-11-16 21:18:18,668 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+2015-11-16 21:18:18,669 - hb_logger - INFO - Adding controller handle (97 -> *): mid_out:23.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:ARMACAAAAAM=]
+
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-11-16 21:18:18,770 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [00:00:00:00:01:01>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Forwarding dataplane event
+2015-11-16 21:18:18,771 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [00:00:00:00:01:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Round 7 completed.
+Round 8 completed.
+Round 9 completed.
+Round 10 completed.
+[c1] 21:18:19.084 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-0] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=1]
+
+[c1] 21:18:19.084 TRACE [n.f.d.i.DeviceManagerImpl:Scheduled-0] Topo update: LDUpdate [operation=Port Up, src=00:00:00:00:00:00:00:01, srcPort=2]
+
+Round 11 completed.
+Round 12 completed.
+Round 13 completed.
+Round 14 completed.
+Round 15 completed.
+Round 16 completed.
+Round 17 completed.
+Round 18 completed.
+Round 19 completed.
+Round 20 completed.
+Round 21 completed.
+Round 22 completed.
+Round 23 completed.
+Round 24 completed.
+2015-11-16 21:18:20,580 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:20,581 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 25 completed.
+Round 26 completed.
+2015-11-16 21:18:20,691 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:20,692 - hb_logger - INFO - Adding controller handle (148 -> *): mid_out:51.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAEAAAABADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+[c1] 21:18:20.695 DEBUG [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] New device created: Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] deviceKey=0, entity=Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705100692, activeSince=1447705100692]
+
+[c1] 21:18:20.696 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Dispatching device update: DeviceUpdate [device=DefaultEntityClass::12:34:56:78:01:02, change=ADD, fieldsChanged=null]
+
+[c1] 21:18:20.705 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=1ofmsg:v=1;t=PACKET_IN;l=60;x=1 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.1.1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:20,706 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAEAAAABADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:20,707 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAIAAAACADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:20,708 - hb_logger - INFO - Adding controller handle (149 -> *): mid_out:54.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAIAAAACADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+[c1] 21:18:20.707 DEBUG [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] New device created: Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] deviceKey=1, entity=Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705100706, activeSince=1447705100706]
+
+[c1] 21:18:20.707 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Dispatching device update: DeviceUpdate [device=DefaultEntityClass::12:34:56:78:01:01, change=ADD, fieldsChanged=null]
+
+[c1] 21:18:20.708 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=2ofmsg:v=1;t=PACKET_IN;l=60;x=2 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:20,710 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAIAAAACADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAIAAAACADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:20,788 - hb_logger - INFO - Adding controller send with edge (148 -> 155): mid_out:51 -> mid_in:57.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:20,790 - hb_logger - INFO - Adding controller send with edge (149 -> 166): mid_out:54 -> mid_in:62.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-11-16 21:18:20,791 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:20,792 - host:[IPAddr('123.123.1.2')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:20,792 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+2015-11-16 21:18:20,793 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:20,793 - host:[IPAddr('123.123.1.1')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+2015-11-16 21:18:20,793 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Round 27 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 28 completed.
+Round 29 completed.
+2015-11-16 21:18:21,001 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB]
+
+2015-11-16 21:18:21,002 - hb_logger - INFO - Adding controller handle (204 -> *): mid_out:73.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB]
+
+[c1] 21:18:21.002 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447705100692, lastSeen=1447705101001]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705101001, activeSince=1447705100692]]
+
+[c1] 21:18:21.002 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=3ofmsg:v=1;t=PACKET_IN;l=60;x=3 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 12:34:56:78:01:01
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.1.1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] ***
+
+2015-11-16 21:18:21,006 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQH//wAACAYAAgAAe3sBAnt7AQEAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB:1:AQ4AUAAAAAAAMADwAAISNFZ4AQISNFZ4AQH//wAACAYAAgAAe3sBAnt7AQEAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAB//8=]
+
+2015-11-16 21:18:21,007 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAMAAAADADwAAgAAEjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAgAAf//EjRWeAEBEjRWeAECCAYAAQgABgQAAhI0VngBAnt7AQISNFZ4AQF7ewEB]
+
+2015-11-16 21:18:21,007 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC]
+
+2015-11-16 21:18:21,008 - hb_logger - INFO - Adding controller handle (205 -> *): mid_out:76.
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC]
+
+[c1] 21:18:21.007 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705101007]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101007, activeSince=1447705100706]]
+
+[c1] 21:18:21.007 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=4ofmsg:v=1;t=PACKET_IN;l=60;x=4 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] ***
+
+2015-11-16 21:18:21,013 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAYAAgAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAYAAgAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+2015-11-16 21:18:21,014 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC]
+
+Controller log: 4 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAQAAAAEADwAAQAAEjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCAYAAQgABgQAAhI0VngBAXt7AQESNFZ4AQJ7ewEC]
+
+2015-11-16 21:18:21,102 - hb_logger - INFO - Adding controller send with edge (204 -> 213): mid_out:73 -> mid_in:79.
+Controller log: 3 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,105 - hb_logger - INFO - Adding controller send with edge (204 -> 219): mid_out:73 -> mid_in:80.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,107 - hb_logger - INFO - Adding controller send with edge (205 -> 230): mid_out:76 -> mid_in:85.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,111 - hb_logger - INFO - Adding controller send with edge (205 -> 236): mid_out:76 -> mid_in:86.
+Controller log: 0 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,113 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:21,114 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+2015-11-16 21:18:21,115 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:21,115 - host:[IPAddr('123.123.1.2')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+2015-11-16 21:18:21,116 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:21,116 - host:[IPAddr('123.123.1.1')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 30 completed.
+Round 31 completed.
+2015-11-16 21:18:21,225 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAAFADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:21,226 - hb_logger - INFO - Adding controller handle (274 -> *): mid_out:97.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAUAAAAFADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+[c1] 21:18:21.225 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447705100692, lastSeen=1447705101225]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705101225, activeSince=1447705100692]]
+
+[c1] 21:18:21.226 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=5ofmsg:v=1;t=PACKET_IN;l=60;x=5 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.1.1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:21,226 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAAFADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAUAAAAFADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:21,227 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAAGADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:21,227 - hb_logger - INFO - Adding controller handle (275 -> *): mid_out:100.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAYAAAAGADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+[c1] 21:18:21.227 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705101227]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101227, activeSince=1447705100706]]
+
+[c1] 21:18:21.227 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=6ofmsg:v=1;t=PACKET_IN;l=60;x=6 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:21,229 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAGADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAYAAAAGADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:21,326 - hb_logger - INFO - Adding controller send with edge (274 -> 281): mid_out:97 -> mid_in:103.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,328 - hb_logger - INFO - Adding controller send with edge (275 -> 292): mid_out:100 -> mid_in:108.
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+2015-11-16 21:18:21,329 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:21,330 - host:[IPAddr('123.123.1.2')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:21,330 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+2015-11-16 21:18:21,331 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:21,331 - host:[IPAddr('123.123.1.1')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+2015-11-16 21:18:21,332 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Round 32 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 33 completed.
+Forwarding dataplane event
+2015-11-16 21:18:21,542 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:21,543 - host:[IPAddr('123.123.1.2')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+2015-11-16 21:18:21,544 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:21,544 - host:[IPAddr('123.123.1.1')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Round 34 completed.
+2015-11-16 21:18:21,646 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:21,647 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 35 completed.
+Round 36 completed.
+2015-11-16 21:18:21,759 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAcAAAAHADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:21,759 - hb_logger - INFO - Adding controller handle (360 -> *): mid_out:129.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAcAAAAHADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+[c1] 21:18:21.759 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447705100692, lastSeen=1447705101759]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705101759, activeSince=1447705100692]]
+
+[c1] 21:18:21.759 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=7ofmsg:v=1;t=PACKET_IN;l=60;x=7 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 123.123.1.1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:21,760 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAHADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAcAAAAHADwAAgAA////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB:1:AQ0AQgAAAAD/////AAIACAAAAAj/+///////////EjRWeAECCAYAAQgABgQAARI0VngBAnt7AQL///////97ewEB]
+
+2015-11-16 21:18:21,760 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAgAAAAIADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:21,761 - hb_logger - INFO - Adding controller handle (361 -> *): mid_out:132.
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAPAAAAAgAAAAIADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+[c1] 21:18:21.760 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705101760]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:21.760 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=8ofmsg:v=1;t=PACKET_IN;l=60;x=8 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] arp
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: ff:ff:ff:ff:ff:ff
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+2015-11-16 21:18:21,762 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAIADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAPAAAAAgAAAAIADwAAQAA////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC:1:AQ0AQgAAAAD/////AAEACAAAAAj/+///////////EjRWeAEBCAYAAQgABgQAARI0VngBAXt7AQH///////97ewEC]
+
+2015-11-16 21:18:21,859 - hb_logger - INFO - Adding controller send with edge (360 -> 367): mid_out:129 -> mid_in:135.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:21,861 - hb_logger - INFO - Adding controller send with edge (361 -> 378): mid_out:132 -> mid_in:140.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 37 completed.
+Forwarding dataplane event
+2015-11-16 21:18:21,963 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:21,964 - host:[IPAddr('123.123.1.2')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:01>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:01>ff:ff:ff:ff:ff:ff 123.123.1.1>123.123.1.2
+2015-11-16 21:18:21,964 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+Forwarding dataplane event
+2015-11-16 21:18:21,965 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:21,965 - host:[IPAddr('123.123.1.1')] - INFO - received valid arp packet on interface eth1: [12:34:56:78:01:02>ff:ff:ff:ff:ff:ff:ARP]|REQUEST hw:1 p:2048 12:34:56:78:01:02>ff:ff:ff:ff:ff:ff 123.123.1.2>123.123.1.1
+2015-11-16 21:18:21,966 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Round 38 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Round 39 completed.
+Forwarding dataplane event
+2015-11-16 21:18:22,178 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2 on interface eth1
+2015-11-16 21:18:22,178 - host:[IPAddr('123.123.1.2')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:01>12:34:56:78:01:02 123.123.1.1>123.123.1.2
+Forwarding dataplane event
+2015-11-16 21:18:22,179 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1 on interface eth1
+2015-11-16 21:18:22,179 - host:[IPAddr('123.123.1.1')] - INFO - received invalid arp packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:ARP]|REPLY hw:1 p:2048 12:34:56:78:01:02>12:34:56:78:01:01 123.123.1.2>123.123.1.1
+No correctness violations!
+Round 40 completed.
+Round 41 completed.
+Round 42 completed.
+Round 43 completed.
+Round 44 completed.
+Round 45 completed.
+Round 46 completed.
+Round 47 completed.
+Round 48 completed.
+Round 49 completed.
+No correctness violations!
+Round 50 completed.
+Round 51 completed.
+Round 52 completed.
+Round 53 completed.
+Round 54 completed.
+Round 55 completed.
+Round 56 completed.
+Round 57 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:23,990 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b9cd[123.123.1.1>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 58 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 59 completed.
+2015-11-16 21:18:24,097 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:24,098 - hb_logger - INFO - Adding controller handle (434 -> *): mid_out:159.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:24.097 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705104097]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705104097, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:24.098 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=9ofmsg:v=1;t=PACKET_IN;l=104;x=9 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:24.099 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:24.102 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:24.103 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:24.103 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:24.106 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:24.107 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:24.108 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:24.108 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:24.109 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:24.109 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:24,110 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAAAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAAAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+[c1] 21:18:24.111 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]] inPort=1 outPort=2
+
+2015-11-16 21:18:24,112 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAAJAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAAJAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+[c1] 21:18:24.111 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] XXXX1
+
+[c1] 21:18:24.112 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:24.113 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:24.113 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:24.113 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:24.114 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:24.114 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:24.115 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:24.115 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:24.115 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:24.116 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:24,117 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAAAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAkAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOgcAAEABuc17ewEBCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAAAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+2015-11-16 21:18:24,197 - hb_logger - INFO - Adding controller send with edge (434 -> 441): mid_out:159 -> mid_in:161.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:24,201 - hb_logger - INFO - Adding controller send with edge (434 -> 447): mid_out:159 -> mid_in:162.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:24,204 - hb_logger - INFO - Adding controller send with edge (434 -> 461): mid_out:159 -> mid_in:165.
+Controller log: 0 log lines, 2 STS events not matched.
+No correctness violations!
+Round 60 completed.
+Forwarding dataplane event
+2015-11-16 21:18:24,309 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:b9cd[123.123.1.1>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:24,309 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:24,309 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:24,311 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b9c1[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 61 completed.
+Forwarding dataplane event
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 62 completed.
+2015-11-16 21:18:24,425 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAoAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOhMAAEABucF7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:24,425 - hb_logger - INFO - Adding controller handle (491 -> *): mid_out:175.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAoAAAAJAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOhMAAEABucF7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:24.425 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705104425]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705104425, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:24.425 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=9ofmsg:v=1;t=PACKET_IN;l=104;x=10 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:24.426 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] Both source and destination are on the same switch/port OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]]/1, Action = NOP
+
+Forwarding dataplane event
+2015-11-16 21:18:24,525 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:47ac[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:24,525 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 63 completed.
+Round 64 completed.
+Round 65 completed.
+Round 66 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:24,928 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b9b6[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 67 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 68 completed.
+2015-11-16 21:18:25,036 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAsAAAAKAGgAAgAAAAAAAAAREjRWeAECCABFAABIOh0AAEABubZ7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:25,037 - hb_logger - INFO - Adding controller handle (507 -> *): mid_out:181.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAsAAAAKAGgAAgAAAAAAAAAREjRWeAECCABFAABIOh0AAEABubZ7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:25.036 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447705100692, lastSeen=1447705105036]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705105036, activeSince=1447705105036], Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705101759, activeSince=1447705100692]]
+
+[c1] 21:18:25.037 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=10ofmsg:v=1;t=PACKET_IN;l=104;x=11 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:25.037 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] Both source and destination are on the same switch/port OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]]/2, Action = NOP
+
+Round 69 completed.
+No correctness violations!
+Round 70 completed.
+Round 71 completed.
+Round 72 completed.
+Round 73 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:25,640 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b9b1[123.123.1.1>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 74 completed.
+Forwarding dataplane event
+Round 75 completed.
+Forwarding dataplane event
+2015-11-16 21:18:25,848 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:b9b1[123.123.1.1>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:25,848 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:25,848 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 76 completed.
+Forwarding dataplane event
+Round 77 completed.
+Forwarding dataplane event
+2015-11-16 21:18:26,057 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:4794[123.123.1.2>123.123.1.1]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:26,057 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REPLY, not responding.
+Round 78 completed.
+Round 79 completed.
+No correctness violations!
+Round 80 completed.
+Round 81 completed.
+Round 82 completed.
+Round 83 completed.
+Round 84 completed.
+Round 85 completed.
+Round 86 completed.
+Round 87 completed.
+Round 88 completed.
+Round 89 completed.
+No correctness violations!
+Round 90 completed.
+Round 91 completed.
+Round 92 completed.
+Round 93 completed.
+Round 94 completed.
+Round 95 completed.
+Round 96 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:27,969 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b9a4[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 97 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 98 completed.
+2015-11-16 21:18:28,081 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:28,082 - hb_logger - INFO - Adding controller handle (558 -> *): mid_out:197.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:28.081 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=2, activeSince=1447705100692, lastSeen=1447705108081]],entities [Entity [macAddress=12:34:56:78:01:02, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705108081, activeSince=1447705105036], Entity [macAddress=12:34:56:78:01:02, ipv4Address=123.123.1.2, vlan=null, switchDPID=1, switchPort=2, lastSeenTimestamp=1447705101759, activeSince=1447705100692]]
+
+[c1] 21:18:28.082 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=11ofmsg:v=1;t=PACKET_IN;l=104;x=12 on switch 00:00:00:00:00:00:00:01, port 2 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:02
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.2
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:28.083 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_NW_DST[123.123.1.1]
+
+[c1] 21:18:28.084 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:01]
+
+[c1] 21:18:28.084 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:28.085 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.1], SET_DL_DST[12:34:56:78:01:01], OUTPUT[1]]
+
+[c1] 21:18:28.085 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:28.086 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_NW_DST[123.123.1.1]
+
+[c1] 21:18:28.087 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:01]
+
+[c1] 21:18:28.087 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:28.087 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.1], SET_DL_DST[12:34:56:78:01:01], OUTPUT[1]]
+
+[c1] 21:18:28.088 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:28,089 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAgAAAAAACAAAAKAAAFo6jCMAAAAAAACAAP///////wAAAAcACHt7AQEABQAQEjRWeAEBAAAAAAAAAAAACAABf/8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAgAAAAAACAAAAKAAAFo6jCMAAAAAAACAAP///////wAAAAcACHt7AQEABQAQEjRWeAEBAAAAAAAAAAAACAABf/8=]
+
+[c1] 21:18:28.089 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]] inPort=2 outPort=1
+
+2015-11-16 21:18:28,091 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAALAAIAIAAHAAh7ewEBAAUAEBI0VngBAQAAAAAAAAAAAAgAAf//]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAALAAIAIAAHAAh7ewEBAAUAEBI0VngBAQAAAAAAAAAAAAgAAf//]
+
+[c1] 21:18:28.089 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] XXXX1
+
+[c1] 21:18:28.090 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:28.091 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:28.091 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:28.091 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[2]]
+
+[c1] 21:18:28.092 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:28.092 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:28.093 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:28.093 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:28.093 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[2]]
+
+[c1] 21:18:28.094 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:28,094 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQIAAAAIAKAAAD9S5BoAAAAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAACf/8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAAwAAAALAGgAAgAAAAAAAAAREjRWeAECCABFAABIOi8AAEABuaR7ewECCgAAZQgABjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQIAAAAIAKAAAD9S5BoAAAAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAACf/8=]
+
+2015-11-16 21:18:28,182 - hb_logger - INFO - Adding controller send with edge (558 -> 565): mid_out:197 -> mid_in:199.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,187 - hb_logger - INFO - Adding controller send with edge (558 -> 571): mid_out:197 -> mid_in:200.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,190 - hb_logger - INFO - Adding controller send with edge (558 -> 585): mid_out:197 -> mid_in:203.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 99 completed.
+Forwarding dataplane event
+2015-11-16 21:18:28,296 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:b9a4[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:28,297 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:28,297 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 100 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:28,407 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b995[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 101 completed.
+2015-11-16 21:18:28,408 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:28,408 - hb_logger - INFO - Adding controller handle (605 -> *): mid_out:208.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:28.408 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705108408]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705108408, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:28.409 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=11ofmsg:v=1;t=PACKET_IN;l=104;x=13 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] ***
+
+2015-11-16 21:18:28,410 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+2015-11-16 21:18:28,412 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AbgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA0AAAALAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AbgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCABFAABIOjgAAEABR4R7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+Forwarding dataplane event
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,515 - hb_logger - INFO - Adding controller send with edge (605 -> 620): mid_out:208 -> mid_in:215.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,522 - hb_logger - INFO - Adding controller send with edge (605 -> 626): mid_out:208 -> mid_in:216.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 102 completed.
+2015-11-16 21:18:28,525 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:28,525 - hb_logger - INFO - Adding controller handle (635 -> *): mid_out:214.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:28.525 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705108525]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705108525, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:28.525 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=12ofmsg:v=1;t=PACKET_IN;l=104;x=14 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:28.526 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:28.527 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:28.528 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:28.528 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:28.528 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:28.529 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:28.529 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:28.530 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:28.530 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:28.531 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:28,532 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAgAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAgAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+[c1] 21:18:28.532 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]] inPort=1 outPort=2
+
+2015-11-16 21:18:28,535 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAAMAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAAMAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+[c1] 21:18:28.533 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] XXXX1
+
+[c1] 21:18:28.533 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:28.534 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:28.535 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:28.535 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:28.536 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:28.536 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:28.537 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:28.537 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:28.537 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:28.538 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:28,539 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAgAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAAA4AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOj8AAEABuZV7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAgAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+Forwarding dataplane event
+2015-11-16 21:18:28,625 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:4784[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}{id:20585 seq:28263} on interface eth1
+2015-11-16 21:18:28,625 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+2015-11-16 21:18:28,627 - hb_logger - INFO - Adding controller send with edge (635 -> 645): mid_out:214 -> mid_in:222.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,635 - hb_logger - INFO - Adding controller send with edge (635 -> 651): mid_out:214 -> mid_in:223.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:28,638 - hb_logger - INFO - Adding controller send with edge (635 -> 665): mid_out:214 -> mid_in:226.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 103 completed.
+Forwarding dataplane event
+2015-11-16 21:18:28,746 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:b995[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:28,746 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 104 completed.
+Round 105 completed.
+Round 106 completed.
+Round 107 completed.
+Round 108 completed.
+Round 109 completed.
+No correctness violations!
+Round 110 completed.
+Round 111 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:29,553 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b986[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 112 completed.
+Forwarding dataplane event
+Round 113 completed.
+Forwarding dataplane event
+2015-11-16 21:18:29,762 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:b986[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:29,762 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:29,763 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 114 completed.
+Forwarding dataplane event
+Round 115 completed.
+Forwarding dataplane event
+2015-11-16 21:18:29,973 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:476a[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:29,973 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 116 completed.
+Round 117 completed.
+Round 118 completed.
+Round 119 completed.
+No correctness violations!
+Round 120 completed.
+Round 121 completed.
+Round 122 completed.
+Round 123 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:30,779 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b97a[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 124 completed.
+Forwarding dataplane event
+Round 125 completed.
+Forwarding dataplane event
+2015-11-16 21:18:30,989 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:b97a[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:30,989 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:30,990 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 126 completed.
+Forwarding dataplane event
+Round 127 completed.
+Forwarding dataplane event
+2015-11-16 21:18:31,213 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:475e[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:31,213 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 128 completed.
+Round 129 completed.
+No correctness violations!
+Round 130 completed.
+Round 131 completed.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 132 completed.
+Forwarding dataplane event
+2015-11-16 21:18:31,726 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [00:00:00:00:01:01>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:01><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fa2bef686d0><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bef68150><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bef6ea50><tlv end> on interface eth1
+Forwarding dataplane event
+2015-11-16 21:18:31,727 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [00:00:00:00:01:02>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Forwarding dataplane event
+2015-11-16 21:18:31,728 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [00:00:00:00:01:02>01:80:c2:00:00:0e:LLDP]|<chasis ID:00:00:00:00:00:01><port ID:00:02><ttl:120><pox.lib.packet.lldp.organizationally_specific object at 0x7fa2bef75810><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bef75950><pox.lib.packet.lldp.unknown_tlv object at 0x7fa2bef75890><tlv end> on interface eth1
+Forwarding dataplane event
+2015-11-16 21:18:31,730 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [00:00:00:00:01:01>ff:ff:ff:ff:ff:ff:8942]|<55 bytes> on interface eth1
+Round 133 completed.
+Round 134 completed.
+Round 135 completed.
+Round 136 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:32,134 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b96f[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 137 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 138 completed.
+2015-11-16 21:18:32,246 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA8AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmUAAEABuW97ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:32,247 - hb_logger - INFO - Adding controller handle (811 -> *): mid_out:271.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAAA8AAAAMAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmUAAEABuW97ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:32.251 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705112246]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705112246, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:32.252 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=12ofmsg:v=1;t=PACKET_IN;l=104;x=15 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:32.252 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] Both source and destination are on the same switch/port OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]]/1, Action = NOP
+
+Round 139 completed.
+No correctness violations!
+Round 140 completed.
+Round 141 completed.
+Round 142 completed.
+Round 143 completed.
+Round 144 completed.
+Round 145 completed.
+Round 146 completed.
+Round 147 completed.
+Round 148 completed.
+Round 149 completed.
+No correctness violations!
+Round 150 completed.
+Round 151 completed.
+Round 152 completed.
+Round 153 completed.
+Round 154 completed.
+Round 155 completed.
+Round 156 completed.
+Round 157 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:34,257 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b969[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 158 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 159 completed.
+2015-11-16 21:18:34,369 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:34,369 - hb_logger - INFO - Adding controller handle (824 -> *): mid_out:277.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:34.369 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705114369]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705114369, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:34.370 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=13ofmsg:v=1;t=PACKET_IN;l=104;x=16 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:34.371 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:34.371 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:34.372 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:34.372 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:34.373 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:34.373 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_NW_DST[123.123.1.2]
+
+[c1] 21:18:34.374 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_DL_DST[12:34:56:78:01:02]
+
+[c1] 21:18:34.374 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[2]
+
+[c1] 21:18:34.375 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_DST[123.123.1.2], SET_DL_DST[12:34:56:78:01:02], OUTPUT[2]]
+
+[c1] 21:18:34.375 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:34,376 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAgAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAP8COAAEAAAAAAAAAAAAAAAD//wAACAAAAQAAe3sBAQAAAAAACAAAAKAAADTEPqAAAgAAAACAAP///////wAAAAcACHt7AQIABQAQEjRWeAECAAAAAAAAAAAACAACf/8=]
+
+[c1] 21:18:34.376 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] PacketOut srcSwitch=OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]] inPort=1 outPort=2
+
+2015-11-16 21:18:34,379 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAANAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AMAAAAAAAAAANAAEAIAAHAAh7ewECAAUAEBI0VngBAgAAAAAAAAAAAAgAAv//]
+
+[c1] 21:18:34.377 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] XXXX1
+
+[c1] 21:18:34.377 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:34.378 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:34.379 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:34.379 DEBUG [n.f.l.LoadBalancer:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:34.380 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Modifying Table controller_staticflowtableentry
+
+[c1] 21:18:34.380 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1]   action SET_NW_SRC[10.0.0.101]
+
+[c1] 21:18:34.381 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action SET_DL_SRC[12:34:56:78:90:12]
+
+[c1] 21:18:34.382 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action OUTPUT[1]
+
+[c1] 21:18:34.382 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] action [SET_NW_SRC[10.0.0.101], SET_DL_SRC[12:34:56:78:90:12], OUTPUT[1]]
+
+[c1] 21:18:34.382 DEBUG [n.f.s.StaticFlowEntryPusher:New I/O server worker #2-1] Sending 1 new entries to 1
+
+2015-11-16 21:18:34,383 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAgAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+Controller log: 3 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABAAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOmsAAEABuWl7ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AaAAAAAAAMD9OAAIAAAAAAAAAAAAAAAD//wAACAAAAQAAAAAAAHt7AQEAAAAIAKAAABnclpcAAgAAAACAAP///////wAAAAYACAoAAGUABAAQEjRWeJASAAAAAAAAAAAACAABf/8=]
+
+2015-11-16 21:18:34,470 - hb_logger - INFO - Adding controller send with edge (824 -> 831): mid_out:277 -> mid_in:279.
+Controller log: 2 log lines, 2 STS events not matched.
+2015-11-16 21:18:34,478 - hb_logger - INFO - Adding controller send with edge (824 -> 837): mid_out:277 -> mid_in:280.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:34,481 - hb_logger - INFO - Adding controller send with edge (824 -> 851): mid_out:277 -> mid_in:283.
+Controller log: 0 log lines, 2 STS events not matched.
+No correctness violations!
+Round 160 completed.
+Forwarding dataplane event
+2015-11-16 21:18:34,588 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:b969[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:34,588 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 161 completed.
+Round 162 completed.
+Round 163 completed.
+Round 164 completed.
+Round 165 completed.
+Round 166 completed.
+Round 167 completed.
+Round 168 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:35,394 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b95f[123.123.1.1>10.0.0.101]){t:ECHO_REPLY c:0 chk:e37}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 169 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+No correctness violations!
+Round 170 completed.
+2015-11-16 21:18:35,503 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABEAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOnUAAEABuV97ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:35,504 - hb_logger - INFO - Adding controller handle (869 -> *): mid_out:288.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABEAAAANAGgAAQAAAAAAAAAREjRWeAEBCABFAABIOnUAAEABuV97ewEBCgAAZQAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:35.504 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705115503]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705115503, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:35.504 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=13ofmsg:v=1;t=PACKET_IN;l=104;x=17 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 00:00:00:00:00:11
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 10.0.0.101
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=null ***
+
+[c1] 21:18:35.505 TRACE [n.f.l.LoadBalancer:New I/O server worker #2-1] Both source and destination are on the same switch/port OFSwitchBase [/127.0.0.1:60186 DPID[00:00:00:00:00:00:00:01]]/1, Action = NOP
+
+Round 171 completed.
+Round 172 completed.
+Round 173 completed.
+Round 174 completed.
+Round 175 completed.
+Round 176 completed.
+Round 177 completed.
+Round 178 completed.
+Round 179 completed.
+No correctness violations!
+Round 180 completed.
+Round 181 completed.
+Round 182 completed.
+Round 183 completed.
+Round 184 completed.
+Round 185 completed.
+Round 186 completed.
+Round 187 completed.
+Round 188 completed.
+Round 189 completed.
+No correctness violations!
+Round 190 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:37,613 - host:[IPAddr('123.123.1.2')] - INFO - sending packet on interface eth1: [12:34:56:78:01:02>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b958[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 191 completed.
+Forwarding dataplane event
+Round 192 completed.
+Forwarding dataplane event
+2015-11-16 21:18:37,826 - host:[IPAddr('123.123.1.1')] - INFO - Received packet [12:34:56:78:01:02>12:34:56:78:01:01:IP]|([v:4hl:5l:72t:64]ICMP cs:b958[123.123.1.2>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing on interface eth1
+2015-11-16 21:18:37,826 - host:[IPAddr('123.123.1.1')] - INFO - Received ECHO_REQUEST, Generating ping echo reply.
+2015-11-16 21:18:37,827 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:20t:64]ICMP cs:0[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:0}PingPingPingPingPingPingPingPingPingPingPingPing
+Round 193 completed.
+Forwarding dataplane event
+Controller log: 0 log lines, 2 STS events not matched.
+Round 194 completed.
+2015-11-16 21:18:37,936 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:37,936 - hb_logger - INFO - Adding controller handle (905 -> *): mid_out:299.
+Controller log: 0 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageIn-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+[c1] 21:18:37.936 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Device attachment point updated: attachment points [AttachmentPoint [sw=1, port=1, activeSince=1447705100706, lastSeen=1447705117936]],entities [Entity [macAddress=12:34:56:78:01:01, ipv4Address=0.0.0.0, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705117936, activeSince=1447705104097], Entity [macAddress=12:34:56:78:01:01, ipv4Address=123.123.1.1, vlan=null, switchDPID=1, switchPort=1, lastSeenTimestamp=1447705101760, activeSince=1447705100706]]
+
+[c1] 21:18:37.937 TRACE [n.f.d.i.DeviceManagerImpl:New I/O server worker #2-1] Received PI: packetIn:bufferId=14ofmsg:v=1;t=PACKET_IN;l=104;x=18 on switch 00:00:00:00:00:00:00:01, port 1 *** eth=
+
+[c1] ip
+
+[c1] dl_vlan: untagged
+
+[c1] dl_vlan_pcp: 0
+
+[c1] dl_src: 12:34:56:78:01:01
+
+[c1] dl_dst: 12:34:56:78:01:02
+
+[c1] nw_src: 123.123.1.1
+
+[c1] nw_dst: 123.123.1.2
+
+[c1] nw_tos: 0
+
+[c1] nw_proto: 1 *** srcDev=Device [deviceKey=1, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:01, IPs=[123.123.1.1], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=1, errorStatus=null]]] *** dstDev=Device [deviceKey=0, entityClass=DefaultEntityClass, MAC=12:34:56:78:01:02, IPs=[123.123.1.2], APs=[SwitchPort [switchDPID=00:00:00:00:00:00:00:01, port=2, errorStatus=null]]] ***
+
+2015-11-16 21:18:37,938 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+Controller log: 1 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ4AUAAAAAAAMADwAAESNFZ4AQESNFZ4AQL//wAACAAAAQAAe3sBAXt7AQIAAAAAACAAAAAAAAAAAAAFAAAAAP///////wAAAAAACAAC//8=]
+
+2015-11-16 21:18:37,938 - hb_logger - INFO - Controller instrumentation: net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AbgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+Controller log: 2 log lines, 2 STS events not matched.
+[c1] net.floodlightcontroller.happensbefore.HappensBefore-MessageOut-[1:AQoAaAAAABIAAAAOAGgAAQAAEjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=:1:AQ0AbgAAAAD/////AAEACAAAAAgAAv//EjRWeAECEjRWeAEBCABFAABIOoAAAEABRzx7ewEBe3sBAgAADjdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1BpbmdQaW5nUGluZ1Bpbmc=]
+
+2015-11-16 21:18:38,036 - hb_logger - INFO - Adding controller send with edge (905 -> 911): mid_out:299 -> mid_in:301.
+Controller log: 1 log lines, 2 STS events not matched.
+2015-11-16 21:18:38,042 - hb_logger - INFO - Adding controller send with edge (905 -> 917): mid_out:299 -> mid_in:302.
+Controller log: 0 log lines, 2 STS events not matched.
+Round 195 completed.
+Forwarding dataplane event
+2015-11-16 21:18:38,145 - host:[IPAddr('123.123.1.2')] - INFO - Received packet [12:34:56:78:01:01>12:34:56:78:01:02:IP]|([v:4hl:5l:72t:64]ICMP cs:473c[123.123.1.1>123.123.1.2]){t:ECHO_REPLY c:0 chk:e37}{id:20585 seq:28263} on interface eth1
+2015-11-16 21:18:38,145 - host:[IPAddr('123.123.1.2')] - INFO - Received ECHO_REPLY, not responding.
+Round 196 completed.
+Round 197 completed.
+Round 198 completed.
+Round 199 completed.
+Injecting a random VIP packet to 10.0.0.101
+2015-11-16 21:18:38,548 - host:[IPAddr('123.123.1.1')] - INFO - sending packet on interface eth1: [12:34:56:78:01:01>00:00:00:00:00:11:IP]|([v:4hl:5l:72t:64]ICMP cs:b949[123.123.1.1>10.0.0.101]){t:ECHO_REQUEST c:0 chk:637}PingPingPingPingPingPingPingPingPingPingPingPing
+No correctness violations!
+Round 200 completed.
+Killing controller c1 (pid 22211)
+Terminating child controllers... OK
