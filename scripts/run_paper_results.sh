@@ -114,3 +114,7 @@ do
   generate_results
   format_results
 done
+
+
+# Now produce the tables and plots
+./scripts/produce_tbl_plots.sh
