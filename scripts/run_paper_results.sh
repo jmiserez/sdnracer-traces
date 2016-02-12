@@ -30,7 +30,7 @@ generate_results(){
   echo "==============================================="
   echo "Running HB Graph with delta=inf for trace: ${result_dir}"
   echo "==============================================="
-  ${STS_HOME}/sts/happensbefore/hb_graph.py ${result_dir}/hb.json  --no-dot-files --pkt --data-deps --no-hbt  2>&1 | tee -a "$teefile"
+  ${STS_HOME}/sts/happensbefore/hb_graph.py ${result_dir}/hb.json  --no-dot-files --pkt --no-hbt  2>&1 | tee -a "$teefile"
 
   #for x in {0..10};
   for x in {0..10};
@@ -38,7 +38,7 @@ generate_results(){
     echo "=============================================="
     echo "Running HB Graph with delta=$x for trace: ${result_dir}"
     echo "=============================================="
-    ${STS_HOME}/sts/happensbefore/hb_graph.py ${result_dir}/hb.json  --no-dot-files --pkt --time-delta=$x --data-deps 2>&1 | tee -a "$teefile"
+    ${STS_HOME}/sts/happensbefore/hb_graph.py ${result_dir}/hb.json  --no-dot-files --pkt --time-delta=$x 2>&1 | tee -a "$teefile"
   done
 
 }
