@@ -110,7 +110,7 @@ fi
 for trace in ${ALL_TRACES[@]}
 do
   echo ../${trace};
-  result_dir=../${trace}
+  result_dir=./${trace}
   generate_results
   format_results
 done
