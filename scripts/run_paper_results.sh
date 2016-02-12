@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the traces we're interested in
-source ./traces.sh
+source ./scripts/traces.sh
 
 
 #####################################################################
