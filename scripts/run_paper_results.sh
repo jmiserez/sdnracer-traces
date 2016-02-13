@@ -64,7 +64,7 @@ format_results(){
   rm -f "${result_dir}/summary_tbl.csv"
   rm -f "${result_dir}/summary_timings_tbl.csv"
 
-  ./format_results.py ${result_dir} 2>&1 | tee -a "$teefile"
+  ./scripts/format_results.py ${result_dir} 2>&1 | tee -a "$teefile"
 
   if [[ ${INRUN} ]];
   then
