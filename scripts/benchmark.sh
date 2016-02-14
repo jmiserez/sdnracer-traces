@@ -122,7 +122,7 @@ do
   for i in {1..20};
   do
     export INRUN=${i}
-   #awk -F "\"*,\"*" '{print $5}' "${result_dir}/summary_timings_tbl_run_${INRUN}.csv" | tail -1 >> "${result_dir}/bench.csv"
+    result_dir=./${trace}
     h="${h}${i},"
     x=`awk -F "\"*,\"*" '{print $5}' "${result_dir}/summary_timings_tbl_run_${INRUN}.csv" | tail -1`
     #echo "XXX", ${x}
@@ -137,6 +137,7 @@ done
 echo "trace,${h}" > ./data/benchmarks.csv
 for trace in ${ALL_TRACES[@]}
 do
+ result_dir=./${trace}
  tail -1 "${result_dir}/bench.csv" >> ./data/benchmarks.csv
 done
 
