@@ -33,10 +33,10 @@ do
       f=data/"${app}_${topo}_${ctrl}.csv"
       if [ ! -f "${f}" ];
       then
-        echo "File ${f} doesn't exist"
+        #echo "File ${f} doesn't exist"
         continue
       fi
-      echo "In file $f"
+      echo "Reading file $f"
       if [ $SETHEADER == 1 ];
       then
         python scripts/gen_tables.py -p "${f}" > ./data/races_table.csv
@@ -52,17 +52,21 @@ do
         python scripts/gen_tables.py -s -c "${f}" >> ./data/consistency_table_sum.csv
         python scripts/gen_tables.py -s -t "${f}" >> ./data/total_table.csv
       fi
+      echo "Done processing $f"
     done
   done
 done
 
-
+echo "Producing figures"
 # Produce CDFs
 ./scripts/cdfs.py  ./data/races_table.csv > ./data/races_cdf.csv
 
 # Plot graphs
 cat plot/fig4_filter_cmp_cdf.gnuplot | gnuplot
 cat plot/fig5_time_cdf.gnuplot | gnuplot
-cat plot/fig5_time_cdf.gnuplot | gnuplot
 
+echo "Done"
+echo "Figure 4 is saved at ./figures/fig4_filter_cmp_cdf.pdf"
+echo "Figure 5 is saved at ./figures/fig5_time_cdf.pdf"
+echo "Table 2 from the paper is saved at ./data/total_table.csv"
 exit 0;
