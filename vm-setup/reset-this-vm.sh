@@ -28,11 +28,11 @@ cd ~/Desktop/sdnracer
 unzip ~/Downloads/pox-eel-hb.zip -d .
 mv pox-eel-hb pox-eel
 # install ONOS
-#cd ~/Desktop/sdnracer
-#unzip ~/Downloads/onos-hb.zip -d .
-#mv onos-hb onos
-#unzip ~/Downloads/onos-app-samples-hb.zip -d .
-#mv onos-app-samples-hb onos-app-samples
+cd ~/Desktop/sdnracer
+unzip ~/Downloads/onos-hb.zip -d .
+mv onos-hb onos
+unzip ~/Downloads/onos-app-samples-hb.zip -d .
+mv onos-app-samples-hb onos-app-samples
 # install traces scripts
 cd ~/Desktop/sdnracer
 unzip ~/Downloads/sdnracer-traces-artifact.zip -d .
