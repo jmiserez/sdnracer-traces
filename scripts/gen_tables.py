@@ -176,13 +176,21 @@ def summarize(matrix, special_keys, special_keys_order, summarize, filter_indcie
         num_races = float(special_keys[kk])
     if num_races:
       for i, h in enumerate(subheader):
-        if 'num_harmful' not in h:
-          break
-        harmful_index = h.index('num_harmful')
-        covered_index = h.index('num_covered')
-        harmful = int(values_rows[i][harmful_index])
-        covered = int(values_rows[i][covered_index])
-        values_rows[i][harmful_index] = "%d (%.2f%%)" % (harmful, (float(harmful)/num_races) * 100) 
+        if 'num_harmful' in h:
+          harmful_index = h.index('num_harmful')
+          covered_index = h.index('num_covered')
+          harmful = int(values_rows[i][harmful_index])
+          covered = int(values_rows[i][covered_index])
+          values_rows[i][harmful_index] = "%d (%.2f%%)" % (harmful, (float(harmful)/num_races) * 100)
+        #total_selected_keys['num_per_pkt_inconsistent_covered'] = None
+
+        #total_selected_keys['num_per_pkt_inconsistent'] = None
+        if 'num_per_pkt_inconsistent' in h:
+          incoh_index = h.index('num_per_pkt_inconsistent')
+          covered_index = h.index('num_per_pkt_inconsistent_covered')
+          incoh = int(values_rows[i][incoh_index])
+          covered = int(values_rows[i][covered_index])
+          values_rows[i][incoh_index] = "%d" % (incoh + covered)
 
   timing_header = [val for sublist in timing_header for val in sublist]
   subheader = [val for sublist in subheader for val in sublist]
