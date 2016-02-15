@@ -42,6 +42,6 @@ set key bottom right
 #set key autotitle columnheader
 
 
-plot  './data/bench_cdf.csv' using 2:4 notitle with steps ls 2, '' using 2:4 title "Median time" with points ls 2, \
+plot  './benchmark_data/bench_cdf.csv' using 2:4 notitle with steps ls 2, '' using 2:4 title "Median time" with points ls 2, \
       '' using 3:5 notitle with steps ls 3, '' using 3:5 title "95th Percentile" with points ls 3
     
