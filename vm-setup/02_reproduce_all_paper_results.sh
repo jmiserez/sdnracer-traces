@@ -7,4 +7,4 @@ cd ~/Desktop/sdnracer/sdnracer-traces
 ./scripts/run_paper_results.sh --sts ../sts/
 
 # view the results in LibreOffice
-xdg-open sdnracer/sdnracer-traces/data/races_table.csv
+xdg-open ~/Desktop/sdnracer/sdnracer-traces/data/total_table.csv
