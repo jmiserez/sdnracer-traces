@@ -2,7 +2,7 @@
 # AH: Some arts and crafts is needed to make this graph prettier!
 
 set terminal pdfcairo font "Gill Sans,9" linewidth 2 rounded fontscale 1.0
-set output "../figures/run_time.pdf"
+set output "./figures/fig6_run_time.pdf"
 
 
 
@@ -22,7 +22,7 @@ set datafile separator ','
 set xlabel 'Time in seconds' offset 0,0.5                  # x-axis label
 set ylabel 'CDF'      # y-axis label
 set yrange [0:1.1]
-set xrange [0:500]
+set xrange [0:250]
 #set xtics 1
 set style func linespoints
 #set logscale x
@@ -42,6 +42,6 @@ set key bottom right
 #set key autotitle columnheader
 
 
-plot  './data/run_time.csv' using 4:5 notitle with steps ls 2, '' using 4:5 title "Median time" with points ls 2, \
-      '' using 6:7 notitle with steps ls 3, '' using 6:7 title "95th Percentile" with points ls 3
+plot  './data/bench_cdf.csv' using 2:4 notitle with steps ls 2, '' using 2:4 title "Median time" with points ls 2, \
+      '' using 3:5 notitle with steps ls 3, '' using 3:5 title "95th Percentile" with points ls 3
     

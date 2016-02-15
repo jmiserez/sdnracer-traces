@@ -64,9 +64,11 @@ echo "Producing figures"
 # Plot graphs
 cat plot/fig4_filter_cmp_cdf.gnuplot | gnuplot
 cat plot/fig5_time_cdf.gnuplot | gnuplot
+cat plot/run_time.gnuplot | gnuplot
 
 echo "Done"
 echo "Figure 4 is saved at ./figures/fig4_filter_cmp_cdf.pdf"
 echo "Figure 5 is saved at ./figures/fig5_time_cdf.pdf"
+echo "Figure 6 is saved at ./figures/fig6_run_time.pdf"
 echo "Table 2 from the paper is saved at ./data/total_table.csv"
 exit 0;
