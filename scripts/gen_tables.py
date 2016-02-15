@@ -191,6 +191,7 @@ def summarize(matrix, special_keys, special_keys_order, summarize, filter_indcie
           incoh = int(values_rows[i][incoh_index])
           covered = int(values_rows[i][covered_index])
           values_rows[i][incoh_index] = "%d" % (incoh + covered)
+          values_rows[i][covered_index] = ""
 
   timing_header = [val for sublist in timing_header for val in sublist]
   subheader = [val for sublist in subheader for val in sublist]
@@ -220,7 +221,7 @@ def main(filename, total, consistency, time_filter, print_headers):
   pretty_names = {}
   pretty_names['rw_delta'] = 't'
   pretty_names['num_per_pkt_races'] = 'Racing Pkts'
-  pretty_names['num_per_pkt_inconsistent_covered'] = 'Covered'
+  pretty_names['num_per_pkt_inconsistent_covered'] = ''
   pretty_names['num_per_pkt_entry_version_race'] = '1st Switch'
   pretty_names['num_per_pkt_inconsistent'] = 'Incon.'
   pretty_names['num_per_pkt_inconsistent_no_repeat'] = 'Incon. Pkt. Sum'
