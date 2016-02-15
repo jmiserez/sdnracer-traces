@@ -27,13 +27,21 @@ ant
 cd ~/Desktop/sdnracer
 unzip ~/Downloads/pox-eel-hb.zip -d .
 mv pox-eel-hb pox-eel
+# install traces scripts
+cd ~/Desktop/sdnracer
+unzip ~/Downloads/sdnracer-traces-artifact.zip -d .
+mv sdnracer-traces-artifact sdnracer-traces
 # install ONOS
 cd ~/Desktop/sdnracer
 unzip ~/Downloads/onos-hb.zip -d .
 mv onos-hb onos
 unzip ~/Downloads/onos-app-samples-hb.zip -d .
 mv onos-app-samples-hb onos-app-samples
-# install traces scripts
-cd ~/Desktop/sdnracer
-unzip ~/Downloads/sdnracer-traces-artifact.zip -d .
-mv sdnracer-traces-artifact sdnracer-traces
+# build ONOS
+/bin/bash -c 'export ONOS_ROOT=~/Desktop/sdnracer/onos;
+export KARAF_ROOT=~/Applications/apache-karaf-3.0.5;
+export MAVEN=~/Applications/apache-maven-3.3.9 && source $ONOS_ROOT/tools/dev/bash_profile;
+cd ~/Desktop/sdnracer/onos;
+$MAVEN/bin/mvn clean install -nsu -DskipIT -DskipTests -Dcheckstyle.skip=true;
+cd ~/Desktop/sdnracer/onos-app-samples;
+$MAVEN/bin/mvn clean install -nsu -DskipIT -DskipTests -Dcheckstyle.skip=true;'
